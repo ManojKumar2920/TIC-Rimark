@@ -162,7 +162,16 @@ body {
   margin-bottom: 20px;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
+  gap:20px
 }
+
+.onboarding-option:hover .onboarding-icon-individual {
+    content: url('/assets/Icons/individual-icon-hover.png'); /* Change the image on hover */
+  }
+
+.onboarding-option:hover .onboarding-icon-business {
+    content: url('/assets/Icons/business-icon-hover.png'); /* Change the image on hover */
+  }
 
 .onboarding-option:hover {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
