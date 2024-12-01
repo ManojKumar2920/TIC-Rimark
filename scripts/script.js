@@ -40,6 +40,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  const backAccTypeBtn = document.getElementById("backToAccountType");
+  if (backAccTypeBtn) {
+    backAccTypeBtn.addEventListener("click", function () {
+
+      stepSignup.classList.remove("active");
+      stepAccountType.classList.add("active");
+    });
+  }
+
+  const backUsernameBtn = document.getElementById("backToUsername");
+  if (backUsernameBtn) {
+    backUsernameBtn.addEventListener("click", function () {
+
+      stepCompletion.classList.remove("active");
+      stepUsername.classList.add("active");
+    });
+  }
+
+  const backSignUpBtn = document.getElementById("backToSignup");
+  if (backSignUpBtn) {
+    backSignUpBtn.addEventListener("click", function () {
+
+      stepLocation.classList.remove("active");
+      stepSignup.classList.add("active");
+    });
+  }
+
   const proceedToRewardsBtn = document.getElementById("proceedToRewards");
   if (proceedToRewardsBtn) {
     proceedToRewardsBtn.addEventListener("click", function () {
@@ -202,6 +229,12 @@ const showStep = (stepIndex) => {
   if (document.getElementById("backToLocation")) {
     document
       .getElementById("backToLocation")
+      .addEventListener("click", prevStep);
+  }
+
+  if (document.getElementById("backToAccountType")) {
+    document
+      .getElementById("backToAccountType")
       .addEventListener("click", prevStep);
   }
 

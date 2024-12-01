@@ -25,8 +25,8 @@
               >"</span
             >
             <p>
-              Optimize your time, earn discounts, and discover <br> recommendations
-              by your friends
+              Optimize your time, earn discounts, and discover <br />
+              recommendations by your friends
             </p>
             <div class="flex flex-row items-center">
               <p class="brand-name">Rimark</p>
@@ -78,11 +78,11 @@
         <div class="onboarding-form" id="onboarding-form">
           <!-- Step 0: Account Type Selection -->
           <div id="step-account-type" class="form-step active">
-            <div class=" flex flex-col center">
+            <div class="flex flex-col center">
               <img
                 src="./assets/logo.png"
                 width="150px"
-                class=" none"
+                class="none"
                 alt="Rimark Logo"
               />
               <img
@@ -105,7 +105,7 @@
             <div class="onboarding-option" data-account-type="individual">
               <div>
                 <img
-                class="onboarding-icon-individual"
+                  class="onboarding-icon-individual"
                   width="50px"
                   height="50px"
                   src="/assets/Icons/individual-icon.png"
@@ -136,7 +136,7 @@
             <div class="onboarding-option" data-account-type="business">
               <div>
                 <img
-                class="onboarding-icon-business"
+                  class="onboarding-icon-business"
                   width="50px"
                   height="50px"
                   src="/assets/Icons/business-icon.png"
@@ -167,7 +167,15 @@
 
           <!-- Step 1: Signup Form -->
           <div id="step-signup" class="form-step">
-            <div class="center">
+            <div class="back-btn" id="backToAccountType">
+              <img
+                src="/assets/Icons/back-arrow.png"
+                width="25px"
+                class="none mobile-back-arrow"
+                alt=""
+              />
+            </div>
+            <div class="center welcome">
               <h1>Welcome to Rimark</h1>
               <p>Create Free account and become a Rimark family</p>
             </div>
@@ -284,11 +292,21 @@
                 Create Account
               </button>
             </div>
-            <p class="center">Already have a account? <a href="">Sign in</a></p>
+            <p class="center existing">
+              Already have a account? <a href="">Sign in</a>
+            </p>
           </div>
 
           <!-- Step 2: Location Preference -->
           <div id="step-location" class="form-step">
+            <div class="back-btn" id="backToSignup">
+              <img
+                src="/assets/Icons/back-arrow.png"
+                width="25px"
+                class="none mobile-back-arrow"
+                alt=""
+              />
+            </div>
             <div class="center">
               <h1>Location Preference</h1>
               <p>
@@ -317,12 +335,20 @@
             </p>
 
             <div class="back">
-              <p class="back-btn">&lt; Back</p>
+              <p class="back-btn desktop-back-btn">&lt; Back</p>
             </div>
           </div>
 
           <!-- Step 3: Rewards and Recommendations -->
           <div id="step-rewards" class="form-step">
+            <div class="back-btn" id="backToLocation">
+              <img
+                src="/assets/Icons/back-arrow.png"
+                width="25px"
+                class="none mobile-back-arrow"
+                alt=""
+              />
+            </div>
             <h1 class="rewards-title">Rewards & Recomendations</h1>
             <p>
               Make your first recommendation, search one of your favorite places
@@ -348,12 +374,20 @@
             </div>
 
             <div class="back">
-              <p class="back-btn" id="backToLocation">&lt; Back</p>
+              <p class="back-btn" id="hideLocationBack">&lt; Back</p>
             </div>
           </div>
 
           <!-- Step 4: Username and Completion -->
           <div id="step-username" class="form-step">
+            <div class="back-btn" id="backToRewards">
+              <img
+                src="/assets/Icons/back-arrow.png"
+                width="25px"
+                class="none mobile-back-arrow"
+                alt=""
+              />
+            </div>
             <h1>Create User Name</h1>
             <p>Choose a unique username for your Rimark account</p>
 
@@ -370,13 +404,28 @@
               <button type="button" id="proceedToCompletion">Next</button>
             </div>
             <div class="back">
-              <p class="back-btn" id="backToRewards">&lt; Back</p>
+              <p class="back-btn" id="hideRewardsBack">&lt; Back</p>
             </div>
           </div>
 
           <!-- Step 5: Completion and invite -->
           <div id="step-completion" class="form-step">
+            <div class="back-btn" id="backToUsername">
+              <img
+                src="/assets/Icons/back-arrow.png"
+                width="25px"
+                class="none mobile-back-arrow"
+                alt=""
+              />
+            </div>
             <div>
+              <div class=" none mobile-social-invite">
+                <h1>Social Invite</h1>
+                <p>
+                  (First Name), as a founding member, you're Invited to enjoy
+                  Rimarke exclusive deals.
+                </p>
+              </div>
               <div class="share-box">
                 <div>
                   <h1>I Like it</h1>
@@ -396,7 +445,7 @@
               <button type="button" id="completeSignup">Complete Signup</button>
             </div>
             <div class="back">
-              <p class="back-btn">&lt; Back</p>
+              <p class="back-btn" id="hideUsernameBack">&lt; Back</p>
             </div>
           </div>
         </div>
