@@ -334,7 +334,7 @@
               <span>Your Info is safely secured</span>
             </p>
 
-            <div class="back">
+            <div class="back " id="backToSignup">
               <p class="back-btn desktop-back-btn">&lt; Back</p>
             </div>
           </div>
@@ -374,7 +374,9 @@
             </div>
 
             <div class="back">
-              <p class="back-btn" id="hideLocationBack">&lt; Back</p>
+              <p class="back-btn desktop-back-btn" id="backToLocation">
+                &lt; Back
+              </p>
             </div>
           </div>
 
@@ -419,7 +421,7 @@
               />
             </div>
             <div>
-              <div class=" none mobile-social-invite">
+              <div class="none mobile-social-invite">
                 <h1>Social Invite</h1>
                 <p>
                   (First Name), as a founding member, you're Invited to enjoy
@@ -448,6 +450,257 @@
               <p class="back-btn" id="hideUsernameBack">&lt; Back</p>
             </div>
           </div>
+
+          <!-- Step 1: Signup Form Business -->
+          <div id="step-signup-business" class="form-step">
+            <div class="back-btn" id="backToAccountType">
+              <img
+                src="/assets/Icons/back-arrow.png"
+                width="25px"
+                class="none mobile-back-arrow"
+                alt=""
+              />
+            </div>
+            <div class="center welcome">
+              <h1>Welcome to Rimark</h1>
+              <p>Create Free account and become a Rimark family</p>
+            </div>
+
+            <div class="name-row">
+              <div class="name-container">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  id="bfirstName"
+                  name="firstName"
+                  class="form-input"
+                  placeholder="John"
+                  required
+                />
+                <div id="bfirstNameError" class="error-message"></div>
+              </div>
+              <div class="name-container">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  id="blastName"
+                  name="lastName"
+                  class="form-input"
+                  placeholder="Doe"
+                  required
+                />
+                <div id="blastNameError" class="error-message"></div>
+              </div>
+            </div>
+
+            <label for="email">Email Id</label>
+            <input
+              type="email"
+              id="bemail"
+              name="email"
+              class="form-input"
+              placeholder="example@gmail.com"
+              required
+            />
+            <div id="bemailError" class="error-message"></div>
+
+            <div class="flex justify-between">
+              <label for="password">Create Password</label>
+            </div>
+            <input
+              type="password"
+              id="bpassword"
+              name="password"
+              class="form-input"
+              placeholder="......."
+              required
+            />
+            <div id="bpasswordError" class="error-message"></div>
+
+            <div class="terms-container">
+              <input type="checkbox" id="btermsCheckbox" required />
+              <label for="termsCheckbox">
+                I agree to the
+                <a href="/terms" target="_blank">Terms and Conditions</a>
+              </label>
+            </div>
+            <div id="btermsError" class="error-message"></div>
+
+            <div class="form-navigation">
+              <button
+                type="button"
+                class="create-acc-btn"
+                id="proceedToclaimName"
+              >
+                Create Account
+              </button>
+            </div>
+            <p class="center existing">
+              Already have a account? <a href="">Sign in</a>
+            </p>
+          </div>
+
+          <!-- Step 2: Claim business name -->
+          <div id="step-claim-name" class="form-step">
+            <div class="back-btn" id="backToSignupBusiness">
+              <img
+                src="/assets/Icons/back-arrow.png"
+                width="25px"
+                class="none mobile-back-arrow"
+                alt=""
+              />
+            </div>
+            <div class="center">
+              <h1>Claim your business Name</h1>
+              <p>
+                Aspernatur ut eaque dignissimos in id similique et perspiciatis.
+                Voluptatem officia explicabo.
+              </p>
+            </div>
+
+            <div class="claimname-box">
+              <input
+                type="text"
+                id="claimNameInput"
+                placeholder="Business Name"
+              />
+            </div>
+
+            <div class="form-navigation">
+              <button type="button" id="proceedTocreateRewards">
+                Next
+              </button>
+            </div>
+
+            <div class="back" id="backToSignupBusiness">
+              <p class="back-btn desktop-back-btn">&lt; Back</p>
+            </div>
+          </div>
+
+          <!-- Step 3: Rewards and Recommendations -->
+          <div id="step-create-rewards" class="form-step">
+            <div class="back-btn" id="backToclaimName">
+              <img
+                src="/assets/Icons/back-arrow.png"
+                width="25px"
+                class="none mobile-back-arrow"
+                alt=""
+              />
+            </div>
+            <h1 class="rewards-title">Create Rewards</h1>
+            <p>
+              Aspernatur ut eaque dignissimos in id similique et perspiciatis.
+              Voluptatem officia explicabo.
+            </p>
+
+            <div class="create-rewards-box">
+              <input
+                type="text"
+                id="createRewardsInput"
+                placeholder="Reward Name"
+              />
+
+              <input
+                type="text"
+                id="descriptionInput"
+                placeholder="Description for the offer. "
+              />
+            </div>
+
+            <div class="form-navigation">
+              <button type="button" id="proceedToclaimUrl">
+                Next
+              </button>
+            </div>
+
+            <div class="back">
+              <p class="back-btn desktop-back-btn" id="backToLocation">
+                &lt; Back
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4: Claim business url -->
+          <div id="step-claim-url" class="form-step">
+            <div class="back-btn" id="backToSignupBusiness">
+              <img
+                src="/assets/Icons/back-arrow.png"
+                width="25px"
+                class="none mobile-back-arrow"
+                alt=""
+              />
+            </div>
+            <div class="center">
+              <h1>Claim your business URL</h1>
+              <p>
+                Aspernatur ut eaque dignissimos in id similique et perspiciatis.
+                Voluptatem officia explicabo.
+              </p>
+            </div>
+
+            <div class="claimurl-box">
+              <div class="url-box">
+                rimark.us/
+              </div>
+              <input
+                type="text"
+                id="claimUrlInput"
+                placeholder="Business URL"
+              />
+            </div>
+
+            <div class="form-navigation">
+              <button type="button" id="proceedToCompletionBusiness">
+                Next
+              </button>
+            </div>
+
+            <div class="back" id="backToSignupBusiness">
+              <p class="back-btn desktop-back-btn">&lt; Back</p>
+            </div>
+          </div>
+          
+          <!-- Step 5: Completion and invite -->
+          <div id="step-completion-business" class="form-step">
+            <div class="back-btn" id="backToUsername">
+              <img
+                src="/assets/Icons/back-arrow.png"
+                width="25px"
+                class="none mobile-back-arrow"
+                alt=""
+              />
+            </div>
+            <div>
+              <div class="none mobile-social-invite">
+                <h1>Social Invite</h1>
+                <p>
+                  (First Name), as a founding member, you're Invited to enjoy
+                  Rimarke exclusive deals.
+                </p>
+              </div>
+              <div class="share-box">
+                <div>
+                  <h1>I Like it</h1>
+                  <p>
+                    Invite up to 5 Friends, and you be entered to win a free
+                    dinner at your favorite spot every week!
+                  </p>
+                </div>
+                <div class="share-socials">
+                  <img src="/assets/Icons/socials.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <p class="center">I will do this later</p>
+            <div class="form-navigation">
+              <button type="button" id="completeSignup">Complete Signup</button>
+            </div>
+            <div class="back">
+              <p class="back-btn" id="hideUsernameBack">&lt; Back</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

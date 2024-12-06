@@ -1,36 +1,246 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Select the onboarding elements
   const stepAccountType = document.getElementById("step-account-type");
+
+  //individual steps
   const stepSignup = document.getElementById("step-signup");
   const stepLocation = document.getElementById("step-location");
   const stepRewards = document.getElementById("step-rewards");
   const stepUsername = document.getElementById("step-username");
   const stepCompletion = document.getElementById("step-completion");
 
+  //business steps
+
+  const stepSignupBusiness = document.getElementById("step-signup-business");
+  const stepClaimName = document.getElementById("step-claim-name");
+  const stepCreateRewards = document.getElementById("step-create-rewards");
+  const stepClaimUrl = document.getElementById("step-claim-url");
+  const stepCompletionBusiness = document.getElementById("step-completion-business");
+
   // Select the account type options
   const accountOptions = document.querySelectorAll(".onboarding-option");
 
-  // Step transition logic for account type selection
   if (accountOptions.length > 0) {
     accountOptions.forEach((option) => {
       option.addEventListener("click", function () {
         const accountType = option.getAttribute("data-account-type");
         console.log("Selected Account Type: ", accountType);
 
+        // Hide account type step
         stepAccountType.classList.remove("active");
-        stepSignup.classList.add("active");
+
+        // Show the appropriate next step based on account type
+        if (accountType === "individual") {
+          stepSignup.classList.add("active");
+        } else if (accountType === "business") {
+          stepSignupBusiness.classList.add("active");
+        }
       });
     });
   }
 
-  // Ensure elements exist before adding event listeners
-  const proceedToLocationBtn = document.getElementById("proceedToLocation");
-  if (proceedToLocationBtn) {
-    proceedToLocationBtn.addEventListener("click", function () {
+  // Select elements
+  const formInputs = {
+    firstName: document.getElementById("firstName"),
+    lastName: document.getElementById("lastName"),
+    email: document.getElementById("email"),
+    password: document.getElementById("password"),
+    termsCheckbox: document.getElementById("termsCheckbox"),
+  };
+
+  const errors = {
+    firstName: document.getElementById("firstNameError"),
+    lastName: document.getElementById("lastNameError"),
+    email: document.getElementById("emailError"),
+    password: document.getElementById("passwordError"),
+    termsCheckbox: document.getElementById("termsError"),
+  };
+
+  const createAccountButton = document.querySelector("#proceedToLocation");
+
+  // Helper function to display error messages
+  function showError(input, message) {
+    errors[input].textContent = message;
+    errors[input].style.display = "block";
+  }
+
+  // Helper function to clear error messages
+  function clearError(input) {
+    errors[input].textContent = "";
+    errors[input].style.display = "none";
+  }
+
+  // Email validation regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // Password validation criteria (at least 8 characters)
+  const passwordRegex = /.{8,}/;
+
+  // Validate the form
+  function validateForm() {
+    let isValid = true;
+
+    // Validate first name
+    if (!formInputs.firstName.value.trim()) {
+      showError("firstName", "First name is required.");
+      isValid = false;
+    } else {
+      clearError("firstName");
+    }
+
+    // Validate last name
+    if (!formInputs.lastName.value.trim()) {
+      showError("lastName", "Last name is required.");
+      isValid = false;
+    } else {
+      clearError("lastName");
+    }
+
+    // Validate email
+    if (!formInputs.email.value.trim()) {
+      showError("email", "Email is required.");
+      isValid = false;
+    } else if (!emailRegex.test(formInputs.email.value.trim())) {
+      showError("email", "Enter a valid email address.");
+      isValid = false;
+    } else {
+      clearError("email");
+    }
+
+    // Validate password
+    if (!formInputs.password.value.trim()) {
+      showError("password", "Password is required.");
+      isValid = false;
+    } else if (!passwordRegex.test(formInputs.password.value.trim())) {
+      showError("password", "Password must be at least 8 characters long.");
+      isValid = false;
+    } else {
+      clearError("password");
+    }
+
+    // Validate terms and conditions
+    if (!formInputs.termsCheckbox.checked) {
+      showError("termsCheckbox", "You must agree to the terms and conditions.");
+      isValid = false;
+    } else {
+      clearError("termsCheckbox");
+    }
+
+    return isValid;
+  }
+
+  // Add event listener to the button
+  createAccountButton.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    if (validateForm()) {
+      // If the form is valid, proceed to the next step
       stepSignup.classList.remove("active");
       stepLocation.classList.add("active");
-    });
+      console.log("Transition to location step.");
+    } else {
+      console.log("Validation failed.");
+    }
+  });
+
+  // Select business signup form elements
+const businessFormInputs = {
+  firstName: document.getElementById("bfirstName"),
+  lastName: document.getElementById("blastName"),
+  email: document.getElementById("bemail"),
+  password: document.getElementById("bpassword"),
+  termsCheckbox: document.getElementById("btermsCheckbox"),
+};
+
+const businessErrors = {
+  firstName: document.getElementById("bfirstNameError"),
+  lastName: document.getElementById("blastNameError"),
+  email: document.getElementById("bemailError"),
+  password: document.getElementById("bpasswordError"),
+  termsCheckbox: document.getElementById("btermsError"),
+};
+
+const proceedToclaimNameButton = document.querySelector("#proceedToclaimName");
+
+// Helper function to display error messages
+function showBusinessError(input, message) {
+  businessErrors[input].textContent = message;
+  businessErrors[input].style.display = "block";
+}
+
+// Helper function to clear error messages
+function clearBusinessError(input) {
+  businessErrors[input].textContent = "";
+  businessErrors[input].style.display = "none";
+}
+
+// Validate the business signup form
+function validateBusinessForm() {
+  let isValid = true;
+
+  // Validate first name
+  if (!businessFormInputs.firstName.value.trim()) {
+    showBusinessError("firstName", "First name is required.");
+    isValid = false;
+  } else {
+    clearBusinessError("firstName");
   }
+
+  // Validate last name
+  if (!businessFormInputs.lastName.value.trim()) {
+    showBusinessError("lastName", "Last name is required.");
+    isValid = false;
+  } else {
+    clearBusinessError("lastName");
+  }
+
+  // Validate email
+  if (!businessFormInputs.email.value.trim()) {
+    showBusinessError("email", "Email is required.");
+    isValid = false;
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(businessFormInputs.email.value.trim())) {
+    showBusinessError("email", "Enter a valid email address.");
+    isValid = false;
+  } else {
+    clearBusinessError("email");
+  }
+
+  // Validate password
+  if (!businessFormInputs.password.value.trim()) {
+    showBusinessError("password", "Password is required.");
+    isValid = false;
+  } else if (!/.{8,}/.test(businessFormInputs.password.value.trim())) {
+    showBusinessError("password", "Password must be at least 8 characters long.");
+    isValid = false;
+  } else {
+    clearBusinessError("password");
+  }
+
+  // Validate terms and conditions
+  if (!businessFormInputs.termsCheckbox.checked) {
+    showBusinessError("termsCheckbox", "You must agree to the terms and conditions.");
+    isValid = false;
+  } else {
+    clearBusinessError("termsCheckbox");
+  }
+
+  return isValid;
+}
+
+// Add event listener to the "Create Account" button
+proceedToclaimNameButton.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent default form submission
+
+  if (validateBusinessForm()) {
+    // If the form is valid, transition to the next step
+    stepSignupBusiness.classList.remove("active");
+    stepClaimName.classList.add("active");
+    console.log("Transitioned to claim name step.");
+  } else {
+    console.log("Validation failed for business signup form.");
+  }
+});
+
 
   const backToRewardsBtn = document.getElementById("backToRewards");
   if (backToRewardsBtn) {
@@ -43,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const backAccTypeBtn = document.getElementById("backToAccountType");
   if (backAccTypeBtn) {
     backAccTypeBtn.addEventListener("click", function () {
-
+      stepSignupBusiness.classList.remove("active");
       stepSignup.classList.remove("active");
       stepAccountType.classList.add("active");
     });
@@ -52,7 +262,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const backUsernameBtn = document.getElementById("backToUsername");
   if (backUsernameBtn) {
     backUsernameBtn.addEventListener("click", function () {
-
       stepCompletion.classList.remove("active");
       stepUsername.classList.add("active");
     });
@@ -61,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const backSignUpBtn = document.getElementById("backToSignup");
   if (backSignUpBtn) {
     backSignUpBtn.addEventListener("click", function () {
-
+      console.log("Sign up back is clicked!!");
       stepLocation.classList.remove("active");
       stepSignup.classList.add("active");
     });
@@ -72,6 +281,22 @@ document.addEventListener("DOMContentLoaded", function () {
     proceedToRewardsBtn.addEventListener("click", function () {
       stepLocation.classList.remove("active");
       stepRewards.classList.add("active");
+    });
+  }
+
+  const proceedToCreateRewardsBtn = document.getElementById("proceedTocreateRewards");
+  if (proceedToCreateRewardsBtn) {
+    proceedToCreateRewardsBtn.addEventListener("click", function () {
+      stepClaimName.classList.remove("active");
+      stepCreateRewards.classList.add("active");
+    });
+  }
+
+  const proceedToClaimUrlBtn = document.getElementById("proceedToclaimUrl");
+  if (proceedToClaimUrlBtn) {
+    proceedToClaimUrlBtn.addEventListener("click", function () {
+      stepCreateRewards.classList.remove("active");
+      stepClaimUrl.classList.add("active");
     });
   }
 
@@ -86,8 +311,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const proceedToCompletionBtn = document.getElementById("proceedToCompletion");
   if (proceedToCompletionBtn) {
     proceedToCompletionBtn.addEventListener("click", function () {
-        stepUsername.classList.remove("active");
+      stepUsername.classList.remove("active");
       stepCompletion.classList.add("active");
+    });
+  }
+
+  const proceedToCompletionBusinessBtn = document.getElementById("proceedToCompletionBusiness");
+  if (proceedToCompletionBusinessBtn) {
+    proceedToCompletionBusinessBtn.addEventListener("click", function () {
+      stepClaimUrl.classList.remove("active");
+      stepCompletionBusiness.classList.add("active");
     });
   }
 
@@ -154,47 +387,46 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const steps = document.querySelectorAll(".form-step");
-let currentStep = 0;
-const progressBar = document.querySelector(".progress-bar-container");
-const progressBarLine = document.querySelector(".progress-bar-line");
-const indicator = document.getElementById("indicator");
+  let currentStep = 0;
+  const progressBar = document.querySelector(".progress-bar-container");
+  const progressBarLine = document.querySelector(".progress-bar-line");
+  const indicator = document.getElementById("indicator");
 
-// Function to move the indicator based on the step
-function moveIndicator(step) {
-  if (step === 0 || step === steps.length - 1) {
-    // Hide the indicator on step-accountype (step 0) and complete it on step-completion (last step)
-    progressBar.style.display = "none";
-    if (step === steps.length - 1) {
-      progressBarLine.style.background = `linear-gradient(to right, #1e88e5 100%, #e0e0e0 100%)`;
+  // Function to move the indicator based on the step
+  function moveIndicator(step) {
+    if (step === 0 || step === steps.length - 1) {
+      // Hide the indicator on step-accountype (step 0) and complete it on step-completion (last step)
+      progressBar.style.display = "none";
+      if (step === steps.length - 1) {
+        progressBarLine.style.background = `linear-gradient(to right, #1e88e5 100%, #e0e0e0 100%)`;
+      } else {
+        progressBarLine.style.background = `linear-gradient(to right, #e0e0e0 0%, #e0e0e0 100%)`;
+      }
     } else {
-      progressBarLine.style.background = `linear-gradient(to right, #e0e0e0 0%, #e0e0e0 100%)`;
-    }
-  } else {
-    // Show and move the indicator for intermediate steps
-    progressBar.style.display = "block";
-    const percentage = (step / (steps.length - 1)) * 100;
+      // Show and move the indicator for intermediate steps
+      progressBar.style.display = "block";
+      const percentage = (step / (steps.length - 1)) * 100;
 
-    // Update the position of the indicator
-    indicator.style.left = `calc(${percentage}% - 5px)`; // Adjust for centering the indicator
+      // Update the position of the indicator
+      indicator.style.left = `calc(${percentage}% - 5px)`; // Adjust for centering the indicator
 
-    // Update the progress bar background
-    progressBarLine.style.background = `linear-gradient(to right, 
+      // Update the progress bar background
+      progressBarLine.style.background = `linear-gradient(to right, 
       #1e88e5 ${percentage}%, 
       #e0e0e0 ${percentage}%)`;
+    }
   }
-}
 
-// Function to show a specific step
-const showStep = (stepIndex) => {
-  steps.forEach((step, index) => {
-    step.classList.toggle("active", index === stepIndex);
-  });
-  currentStep = stepIndex;
+  // Function to show a specific step
+  const showStep = (stepIndex) => {
+    steps.forEach((step, index) => {
+      step.classList.toggle("active", index === stepIndex);
+    });
+    currentStep = stepIndex;
 
-  // Move the indicator to the current step
-  moveIndicator(currentStep);
-};
-
+    // Move the indicator to the current step
+    moveIndicator(currentStep);
+  };
 
   const nextStep = () => {
     if (currentStep < steps.length - 1) {
@@ -208,11 +440,6 @@ const showStep = (stepIndex) => {
     }
   };
 
-  if (document.getElementById("proceedToLocation")) {
-    document
-      .getElementById("proceedToLocation")
-      .addEventListener("click", nextStep);
-  }
 
   if (document.getElementById("proceedToRewards")) {
     document
@@ -370,27 +597,26 @@ const showStep = (stepIndex) => {
   });
 
   // Function to change right container width to 100%
-//   function goToNextStep() {
-//     document.getElementById("right-container").classList.add("full-width");
-//     document.getElementById("left-container").style.display = "none";
-//     document.getElementById("step-location").classList.remove("active");
-//     document.getElementById("step-rewards").classList.add("active");
-//   }
+  //   function goToNextStep() {
+  //     document.getElementById("right-container").classList.add("full-width");
+  //     document.getElementById("left-container").style.display = "none";
+  //     document.getElementById("step-location").classList.remove("active");
+  //     document.getElementById("step-rewards").classList.add("active");
+  //   }
 
-//   // Function to go back to the previous step (Step 1)
-//   function goBackToSignup() {
-//     document.getElementById("right-container").classList.remove("full-width");
-//     document.getElementById("left-container").style.display = "block";
-//     document.getElementById("step-rewards").classList.remove("active");
-//     document.getElementById("step-location").classList.add("active");
-//   }
+  //   // Function to go back to the previous step (Step 1)
+  //   function goBackToSignup() {
+  //     document.getElementById("right-container").classList.remove("full-width");
+  //     document.getElementById("left-container").style.display = "block";
+  //     document.getElementById("step-rewards").classList.remove("active");
+  //     document.getElementById("step-location").classList.add("active");
+  //   }
 
-//   // Example: Adding event listeners for buttons
-//   document
-//     .getElementById("proceedToRewards")
-//     .addEventListener("click", goToNextStep);
-//   document
-//     .getElementById("backToLocation")
-//     .addEventListener("click", goBackToSignup);
-
+  //   // Example: Adding event listeners for buttons
+  //   document
+  //     .getElementById("proceedToRewards")
+  //     .addEventListener("click", goToNextStep);
+  //   document
+  //     .getElementById("backToLocation")
+  //     .addEventListener("click", goBackToSignup);
 });

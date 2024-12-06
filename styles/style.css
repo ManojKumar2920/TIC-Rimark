@@ -238,7 +238,7 @@ body {
 .form-step h1 {
   font-size: 38px;
   font-weight: 500;
-  line-height: 10px;
+  line-height: 35px;
 }
 
 .form-step .rewards-title {
@@ -445,8 +445,20 @@ label {
   margin: 20px 0;
 }
 
+.claimname-box{
+  margin: 20px 0;
+}
+
+.create-rewards-box{
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
 #locationInput {
-  width: 100%;
+  width: 90%;
   padding: 15px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -456,7 +468,100 @@ label {
   cursor: pointer;
 }
 
+
 #locationInput:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+
+#claimNameInput{
+  width: 90%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9fb;
+  color: #333;
+  cursor: pointer;
+}
+
+#claimNameInput:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+#createRewardsInput{
+  width: 92%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9fb;
+  color: #333;
+  cursor: pointer;
+}
+
+#createRewardsInput:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+#descriptionInput{
+  width: 92%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9fb;
+  color: #333;
+  cursor: pointer;
+}
+
+#descriptionInput:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.claimurl-box {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Adjust as needed */
+  max-width: 400px; /* Adjust as needed */
+  border: 1px solid #ddd; /* Border around the entire box */
+  border-radius: 8px;
+  overflow: hidden; /* Ensures rounded corners work properly */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.url-box {
+  background-color: #5367c7; 
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+
+#claimUrlInput::placeholder {
+  color: #aaa; /* Placeholder text color */
+  font-style: italic;
+}
+
+
+#claimUrlInput{
+  width: 90%;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  color: #333;
+  flex: 1; /* Allows the input field to take up the remaining space */
+  border: none;
+  outline: none; /* Removes the default outline */
+}
+
+#claimUrlInput:focus {
   outline: none;
   border-color: #0066cc;
 }
@@ -556,11 +661,12 @@ button:disabled {
   color: #777;
 }
 
-#step-location .back-btn {
+ .form-step .back-btn {
   color: #1f41bb;
 }
 
 .back {
+  z-index: 100;
   position: absolute;
   bottom: 10px;
   right: 30px;
