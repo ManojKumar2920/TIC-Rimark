@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="antialiased ">
+    <div class="  bg-white     px-14  w-full flex justify-between items-center py-4">
+        <img src="./assets//logo.png" class="  h-full w-24 mb-1" alt="">
+        <div class="flex items-center space-x-8">
+            <a href="#" class="text-gray-700 text-[18px]">Rewards</a>
+            <svg width="36" height="36" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18.5" cy="19" r="18.5" fill="black" />
+                <path
+                    d="M23.75 17.875C23.75 19.5658 23.0784 21.1873 21.8828 22.3828C20.6873 23.5784 19.0658 24.25 17.375 24.25C15.6842 24.25 14.0627 23.5784 12.8672 22.3828C11.6716 21.1873 11 19.5658 11 17.875C11 16.1842 11.6716 14.5627 12.8672 13.3672C14.0627 12.1716 15.6842 11.5 17.375 11.5C19.0658 11.5 20.6873 12.1716 21.8828 13.3672C23.0784 14.5627 23.75 16.1842 23.75 17.875Z"
+                    fill="black" />
+                <path
+                    d="M25.25 25.75L21.8855 22.3795M23.75 17.875C23.75 19.5658 23.0784 21.1873 21.8828 22.3828C20.6873 23.5784 19.0658 24.25 17.375 24.25C15.6842 24.25 14.0627 23.5784 12.8672 22.3828C11.6716 21.1873 11 19.5658 11 17.875C11 16.1842 11.6716 14.5627 12.8672 13.3672C14.0627 12.1716 15.6842 11.5 17.375 11.5C19.0658 11.5 20.6873 12.1716 21.8828 13.3672C23.0784 14.5627 23.75 16.1842 23.75 17.875Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <svg width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="19" cy="19" r="19" fill="black" />
+                <path
+                    d="M19 9C23.97 9 28 13.043 28 18.031V27H10V18.031C10 13.043 14.03 9 19 9ZM16.5 28H21.5C21.5 28.663 21.2366 29.2989 20.7678 29.7678C20.2989 30.2366 19.663 30.5 19 30.5C18.337 30.5 17.7011 30.2366 17.2322 29.7678C16.7634 29.2989 16.5 28.663 16.5 28Z"
+                    fill="white" />
+            </svg>
+
+            <img src="./assets//profileico.png" class=" w-9" alt="">
+        </div>
+    </div>
+    <div class=" ">
+
+        <div class="h-fit  pl-32 pt-32 pb-4 w-full bg-cover bg-bottom relative " id="background-swiper"
+            style="background-image: url(./assets//feed3.png);  background-position: 50% 50%; background-size: cover;">
+            <div class="container mx-auto flex   ">
+                <img src="./assets/Left.png" class=" absolute w-10 left-10 top-10  cursor-pointer h-fit" alt="">
+                <div class="flex max-w-6xl  items-end   space-x-14">
+                    <div class="  rounded-[8px] bg-white  w-1/5      ">
+                        <img src="./assets//ProfilePage.png" class="w-fit " alt="">
+                    </div>
+
+                    <div class="border gap-20 flex border-white/15     
+                mx-auto bg-black bg-clip-padding backdrop-filter backdrop-blur 
+                bg-opacity-20 items-end justify-end   rounded-[16px] shadow-xl    px-8 py-2 ">
+                        <div class=" flex flex-col  mt-2 pb-2 ">
+                            <h2 class="text-white text-[16px] font-semibold mb-4 uppercase">your dashboard</h2>
+                            <div class="flex text-center !gap-20 text-white gap-4">
+                                <div>
+                                    <h1 class=" font-bold text-[52px]">27</h1>
+                                    <h2 class="  -mt-2 text-[15px]">My Remarks</h2>
+                                </div>
+                                <div>
+                                    <h1 class=" font-bold text-[52px]">217</h1>
+                                    <h2 class=" -mt-2 text-[15px]">My Followers</h2>
+                                </div>
+                                <div>
+                                    <h1 class=" font-bold text-[52px]">217</h1>
+                                    <h2 class="-mt-2 text-[15px]">My Following</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="text-[#1F41BB]  h-full  flex  flex-col items-center  justify-center px-4 py-6 bg-white rounded-[16px] w-fit">
+                            <h1 class=" font-bold text-[52px]">27</h1>
+                            <h2 class=" text-[15px]">Total Rewards</h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="  pl-40 ">
+            <div class="bg-white  p-6">
+                <div class="flex items-center justify-between">
+                    <div class="flex  flex-col items-start gap-5 space-x-4">
+                        <div>
+                            <h3 class="font-bold text-[#1F41BB] text-[28px]  leading-[28px]">Danial <br> jason la</h3>
+                        </div>
+                        <div class="text-black gap-6 flex  text-sm">
+                            <p class=" flex gap-2 text-sm  -ml-4">
+                                <img src="./assets//Time.png" class=" w-4 h-fit" alt="">
+                                Member Since 2024
+                            </p>
+                            <p class="text-black flex gap-2 text-sm">
+                                <img src="./assets/Location.png" class=" w-4 h-fit" alt="">
+
+                                Los Angeles ,CA
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <p class="text-black text-[15px] w-[80%] mt-4">Expedita consequuntur distinctio soluta sunt dolorum sed
+                    quisquam
+                    molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente voluptates eos consequatur et
+                    consectetur amet ipsum aut. Aspernatur deserunt nihil beatae dolores. Accusamus aut et harum
+                    distinctio dolore. Consequatur omnis aliquam modi.</p>
+                <div class=" text-[20px] font-[500] mt-6 flex gap-4">
+                    <button
+                        class=" flex items-center gap-2   rounded-[16px] px-12 py-3 text-[20px] bg-black text-white"><svg
+                            width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.2398 0.32295C19.3825 0.440834 19.5006 0.585676 19.5873 0.749205C19.674 0.912733 19.7277 1.09174 19.7452 1.27602C19.7628 1.46029 19.7438 1.64621 19.6895 1.82316C19.6352 2.00011 19.5465 2.16463 19.4286 2.30732L8.09743 16.0203L8.0932 16.0231C7.83563 16.3329 7.51221 16.5813 7.1465 16.7502C6.78079 16.9192 6.382 17.0045 5.97917 16.9998C5.57032 16.9948 5.1679 16.8974 4.80203 16.7149C4.43617 16.5323 4.11636 16.2693 3.86655 15.9456L3.86515 15.9428L0.316396 11.3821C0.197902 11.2366 0.109673 11.0688 0.0568873 10.8887C0.00410164 10.7086 -0.0121776 10.5198 0.00900479 10.3333C0.0301872 10.1468 0.0884047 9.96643 0.180241 9.80275C0.272077 9.63906 0.395681 9.49537 0.543801 9.38011C0.691921 9.26484 0.861572 9.18032 1.0428 9.1315C1.22402 9.08269 1.41318 9.07056 1.59915 9.09584C1.78513 9.12111 1.96418 9.18328 2.12581 9.27869C2.28743 9.37411 2.42837 9.50084 2.54035 9.65145L6.013 14.1149L17.254 0.511803C17.3719 0.369091 17.5167 0.250998 17.6803 0.16427C17.8438 0.0775419 18.0228 0.0238768 18.2071 0.0063396C18.3913 -0.0111976 18.5773 0.00773684 18.7542 0.0620614C18.9312 0.116386 19.0957 0.205037 19.2384 0.32295H19.2398Z"
+                                fill="white" />
+                        </svg>
+                        Follow</button>
+                    <button
+                        class=" font-[600]  flex items-center gap-2  rounded-[16px] px-8 py-2.5 text-[20px] bg-white border-[#1F41BB] border text-[#1F41BB]">
+                        <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.5887 1.40289C12.0545 0.849613 12.6801 0.527425 13.3386 0.501672C13.9971 0.475919 14.6392 0.748529 15.1347 1.26422L15.2593 1.40289L15.8709 2.12916C16.3366 2.68226 16.6078 3.42492 16.6295 4.20661C16.6511 4.98831 16.4217 5.75055 15.9877 6.33884L15.8709 6.48677L6.1714 18.0054C6.03426 18.1682 5.86813 18.2924 5.68522 18.369L5.54507 18.4173L1.69192 19.4733C1.55691 19.5106 1.41633 19.5088 1.28203 19.4681C1.14772 19.4274 1.02362 19.349 0.920168 19.2394C0.816718 19.1299 0.736951 18.9924 0.687585 18.8386C0.638219 18.6848 0.620698 18.5192 0.636499 18.3556L0.653801 18.2396L1.54226 13.6632C1.58615 13.4387 1.67188 13.2288 1.79314 13.0489L1.88916 12.9205L11.5887 1.40289ZM10.977 5.03423L3.19979 14.2692L2.64958 17.1024L5.03553 16.448L12.8128 7.21304L10.977 5.03423ZM14.036 2.85543C13.8871 2.67856 13.6889 2.57231 13.4786 2.55661C13.2684 2.54092 13.0605 2.61685 12.8941 2.77017L12.8128 2.85543L12.2003 3.5817L14.036 5.7605L14.6476 5.03423C14.7966 4.85735 14.8861 4.622 14.8993 4.37235C14.9125 4.12271 14.8486 3.87591 14.7194 3.67826L14.6476 3.5817L14.036 2.85543Z"
+                                fill="#1F41BB" />
+                        </svg>
+
+                        Edit Profile</button>
+                    <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22.5" stroke="black" stroke-opacity="0.6" />
+                        <g clip-path="url(#clip0_588_9644)">
+                            <path
+                                d="M30.5108 13.9799L12.3925 20.0208C12.3184 20.0455 12.2534 20.0921 12.2064 20.1546C12.1594 20.217 12.1325 20.2923 12.1292 20.3704C12.126 20.4485 12.1466 20.5258 12.1884 20.5919C12.2301 20.658 12.2909 20.7099 12.3628 20.7406L19.0211 23.5943C19.056 23.6094 19.0942 23.6152 19.132 23.6111C19.1698 23.6071 19.2059 23.5933 19.2368 23.5711L25.7642 18.907C25.9667 18.764 26.2154 19.0127 26.0723 19.2152L21.4082 25.7425C21.3864 25.7734 21.373 25.8094 21.3691 25.8469C21.3652 25.8845 21.3711 25.9225 21.3862 25.9571L24.2388 32.6154C24.2694 32.6873 24.3212 32.7483 24.3872 32.7901C24.4532 32.8319 24.5304 32.8526 24.6086 32.8495C24.6867 32.8464 24.762 32.8196 24.8245 32.7727C24.887 32.7258 24.9338 32.6609 24.9586 32.5868L30.9994 14.4675C31.0222 14.3995 31.0255 14.3266 31.0091 14.2569C30.9927 14.1872 30.9572 14.1235 30.9065 14.0728C30.8559 14.0222 30.7921 13.9866 30.7224 13.9702C30.6527 13.9538 30.5787 13.9572 30.5108 13.9799Z"
+                                fill="black" fill-opacity="0.6" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_588_9644">
+                                <rect width="24" height="19" fill="white" transform="translate(11 14)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="mt-10 border-[#E5E5E5] border-[30px]">
+
+
+    <div class=" py-10">
+        <div class="flex text-[22px] font-semibold justify-center items-center gap-40 mt-10">
+            <h1 class=" text-[#1F41BB]">
+                Rimarks (4)
+            </h1>
+            <h1 class=" text-[#909090] hover:text-[#1F41BB] cursor-pointer">
+                Recommended (0)
+            </h1>
+            <h1 class=" text-[#909090] hover:text-[#1F41BB] cursor-pointer">
+                Followers
+            </h1>
+        </div>
+        <div class=" grid grid-cols-2  px-40 py-20 gap-10">
+            <div class="bg-white rounded-[12px]  px-6 py-8" style="box-shadow: 0px 4px 24px 0px #00000014;">
+                <div class="flex  items-start space-x-4">
+                    <img src="./assets/person2.png" alt="Profile Image" class="w-12 h-12 rounded-full">
+                    <div>
+                        <h3 class="font-bold text-[24px] text-gray-900">Product Review</h3>
+                        <div class="flex items-center space-x-1 text-yellow-500">
+                            <svg width="400" height="16" viewBox="0 0 400 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.99967 1.33331L6.13167 6.33331H1.33301L4.99967 9.66665L3.66634 14.6666L7.99934 11.7956L12.333 14.6666L10.9997 9.66665L14.6663 6.33331H9.86534L7.99967 1.33331Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M27.9997 1.3335L26.1317 6.3335H21.333L24.9997 9.66683L23.6663 14.6668L27.9993 11.7958L32.333 14.6668L30.9997 9.66683L34.6663 6.3335H29.8653L27.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M47.9997 1.3335L46.1317 6.3335H41.333L44.9997 9.66683L43.6663 14.6668L47.9993 11.7958L52.333 14.6668L50.9997 9.66683L54.6663 6.3335H49.8653L47.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M67.9997 1.3335L66.1317 6.3335H61.333L64.9997 9.66683L63.6663 14.6668L67.9993 11.7958L72.333 14.6668L70.9997 9.66683L74.6663 6.3335H69.8653L67.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M87.9997 1.3335L86.1317 6.3335H81.333L84.9997 9.66683L83.6663 14.6668L87.9993 11.7958L92.333 14.6668L90.9997 9.66683L94.6663 6.3335H89.8653L87.9997 1.3335Z"
+                                    fill="#F0F0F0" />
+                            </svg>
+
+                        </div>
+                        <p class="mt-4 text-black/60 text-[15px]">But I must explain to you how all this mistaken idea
+                            of denouncing
+                            pleasure and praising pain was born and I will give you a complete account of the system,
+                            and
+                            expound the actual teachings of the great explorer of the truth, the master-builder of human
+                            happines.</p>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex items-center space-x-2">
+                                <img src="./assets/profileico.png" alt="Profile Image 2" class="w-8 h-8 rounded-full">
+                                <span class="text-black text-[12px]">John Lucas <span class=" text-black/60">• 5 minutes
+                                        ago</span></span>
+                            </div>
+                            <div>
+
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="12" fill="#1F41BB" />
+                                    <path
+                                        d="M12.3799 15.247L12.3355 15.2915L12.2866 15.247C10.1748 13.3309 8.77882 12.0638 8.77882 10.7789C8.77882 9.88978 9.44569 9.22291 10.3349 9.22291C11.0195 9.22291 11.6864 9.66749 11.922 10.2721H12.7489C12.9846 9.66749 13.6514 9.22291 14.3361 9.22291C15.2253 9.22291 15.8921 9.88978 15.8921 10.7789C15.8921 12.0638 14.4962 13.3309 12.3799 15.247ZM14.3361 8.33374C13.5625 8.33374 12.8201 8.69385 12.3355 9.25847C11.8509 8.69385 11.1084 8.33374 10.3349 8.33374C8.96554 8.33374 7.88965 9.40519 7.88965 10.7789C7.88965 12.455 9.40123 13.8288 11.6908 15.905L12.3355 16.4918L12.9801 15.905C15.2697 13.8288 16.7813 12.455 16.7813 10.7789C16.7813 9.40519 15.7054 8.33374 14.3361 8.33374Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[12px]  px-6 py-8" style="box-shadow: 0px 4px 24px 0px #00000014;">
+                <div class="flex  items-start space-x-4">
+                    <img src="./assets/Image-60.png" alt="Profile Image" class="w-12 h-12 rounded-full">
+                    <div>
+                        <h3 class="font-bold text-[24px] text-gray-900">Product Review</h3>
+                        <div class="flex items-center space-x-1 text-yellow-500">
+                            <svg width="400" height="16" viewBox="0 0 400 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.99967 1.33331L6.13167 6.33331H1.33301L4.99967 9.66665L3.66634 14.6666L7.99934 11.7956L12.333 14.6666L10.9997 9.66665L14.6663 6.33331H9.86534L7.99967 1.33331Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M27.9997 1.3335L26.1317 6.3335H21.333L24.9997 9.66683L23.6663 14.6668L27.9993 11.7958L32.333 14.6668L30.9997 9.66683L34.6663 6.3335H29.8653L27.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M47.9997 1.3335L46.1317 6.3335H41.333L44.9997 9.66683L43.6663 14.6668L47.9993 11.7958L52.333 14.6668L50.9997 9.66683L54.6663 6.3335H49.8653L47.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M67.9997 1.3335L66.1317 6.3335H61.333L64.9997 9.66683L63.6663 14.6668L67.9993 11.7958L72.333 14.6668L70.9997 9.66683L74.6663 6.3335H69.8653L67.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M87.9997 1.3335L86.1317 6.3335H81.333L84.9997 9.66683L83.6663 14.6668L87.9993 11.7958L92.333 14.6668L90.9997 9.66683L94.6663 6.3335H89.8653L87.9997 1.3335Z"
+                                    fill="#F0F0F0" />
+                            </svg>
+
+                        </div>
+                        <p class="mt-4 text-black/60 text-[15px]">But I must explain to you how all this mistaken idea
+                            of denouncing
+                            pleasure and praising pain was born and I will give you a complete account of the system,
+                            and
+                            expound the actual teachings of the great explorer of the truth, the master-builder of human
+                            happines.</p>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex items-center space-x-2">
+                                <img src="./assets/person2.png" alt="Profile Image 2" class="w-8 h-8 rounded-full">
+                                <span class="text-black text-[12px]">John Lucas <span class=" text-black/60">• 5 minutes
+                                        ago</span></span>
+                            </div>
+                            <div>
+
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="12" fill="#1F41BB" />
+                                    <path
+                                        d="M12.3799 15.247L12.3355 15.2915L12.2866 15.247C10.1748 13.3309 8.77882 12.0638 8.77882 10.7789C8.77882 9.88978 9.44569 9.22291 10.3349 9.22291C11.0195 9.22291 11.6864 9.66749 11.922 10.2721H12.7489C12.9846 9.66749 13.6514 9.22291 14.3361 9.22291C15.2253 9.22291 15.8921 9.88978 15.8921 10.7789C15.8921 12.0638 14.4962 13.3309 12.3799 15.247ZM14.3361 8.33374C13.5625 8.33374 12.8201 8.69385 12.3355 9.25847C11.8509 8.69385 11.1084 8.33374 10.3349 8.33374C8.96554 8.33374 7.88965 9.40519 7.88965 10.7789C7.88965 12.455 9.40123 13.8288 11.6908 15.905L12.3355 16.4918L12.9801 15.905C15.2697 13.8288 16.7813 12.455 16.7813 10.7789C16.7813 9.40519 15.7054 8.33374 14.3361 8.33374Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[12px]  px-6 py-8" style="box-shadow: 0px 4px 24px 0px #00000014;">
+                <div class="flex  items-start space-x-4">
+                    <img src="./assets/profileico.png" alt="Profile Image" class="w-12 h-12 rounded-full">
+                    <div>
+                        <h3 class="font-bold text-[24px] text-gray-900">Product Review</h3>
+                        <div class="flex items-center space-x-1 text-yellow-500">
+                            <svg width="400" height="16" viewBox="0 0 400 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.99967 1.33331L6.13167 6.33331H1.33301L4.99967 9.66665L3.66634 14.6666L7.99934 11.7956L12.333 14.6666L10.9997 9.66665L14.6663 6.33331H9.86534L7.99967 1.33331Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M27.9997 1.3335L26.1317 6.3335H21.333L24.9997 9.66683L23.6663 14.6668L27.9993 11.7958L32.333 14.6668L30.9997 9.66683L34.6663 6.3335H29.8653L27.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M47.9997 1.3335L46.1317 6.3335H41.333L44.9997 9.66683L43.6663 14.6668L47.9993 11.7958L52.333 14.6668L50.9997 9.66683L54.6663 6.3335H49.8653L47.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M67.9997 1.3335L66.1317 6.3335H61.333L64.9997 9.66683L63.6663 14.6668L67.9993 11.7958L72.333 14.6668L70.9997 9.66683L74.6663 6.3335H69.8653L67.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M87.9997 1.3335L86.1317 6.3335H81.333L84.9997 9.66683L83.6663 14.6668L87.9993 11.7958L92.333 14.6668L90.9997 9.66683L94.6663 6.3335H89.8653L87.9997 1.3335Z"
+                                    fill="#F0F0F0" />
+                            </svg>
+
+                        </div>
+                        <p class="mt-4 text-black/60 text-[15px]">But I must explain to you how all this mistaken idea
+                            of denouncing
+                            pleasure and praising pain was born and I will give you a complete account of the system,
+                            and
+                            expound the actual teachings of the great explorer of the truth, the master-builder of human
+                            happines.</p>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex items-center space-x-2">
+                                <img src="./assets/Image-60.png" alt="Profile Image 2" class="w-8 h-8 rounded-full">
+                                <span class="text-black text-[12px]">John Lucas <span class=" text-black/60">• 5 minutes
+                                        ago</span></span>
+                            </div>
+                            <div>
+
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="12" fill="#1F41BB" />
+                                    <path
+                                        d="M12.3799 15.247L12.3355 15.2915L12.2866 15.247C10.1748 13.3309 8.77882 12.0638 8.77882 10.7789C8.77882 9.88978 9.44569 9.22291 10.3349 9.22291C11.0195 9.22291 11.6864 9.66749 11.922 10.2721H12.7489C12.9846 9.66749 13.6514 9.22291 14.3361 9.22291C15.2253 9.22291 15.8921 9.88978 15.8921 10.7789C15.8921 12.0638 14.4962 13.3309 12.3799 15.247ZM14.3361 8.33374C13.5625 8.33374 12.8201 8.69385 12.3355 9.25847C11.8509 8.69385 11.1084 8.33374 10.3349 8.33374C8.96554 8.33374 7.88965 9.40519 7.88965 10.7789C7.88965 12.455 9.40123 13.8288 11.6908 15.905L12.3355 16.4918L12.9801 15.905C15.2697 13.8288 16.7813 12.455 16.7813 10.7789C16.7813 9.40519 15.7054 8.33374 14.3361 8.33374Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[12px]  px-6 py-8" style="box-shadow: 0px 4px 24px 0px #00000014;">
+                <div class="flex  items-start space-x-4">
+                    <img src="./assets/person2.png" alt="Profile Image" class="w-12 h-12 rounded-full">
+                    <div>
+                        <h3 class="font-bold text-[24px] text-gray-900">Product Review</h3>
+                        <div class="flex items-center space-x-1 text-yellow-500">
+                            <svg width="400" height="16" viewBox="0 0 400 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.99967 1.33331L6.13167 6.33331H1.33301L4.99967 9.66665L3.66634 14.6666L7.99934 11.7956L12.333 14.6666L10.9997 9.66665L14.6663 6.33331H9.86534L7.99967 1.33331Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M27.9997 1.3335L26.1317 6.3335H21.333L24.9997 9.66683L23.6663 14.6668L27.9993 11.7958L32.333 14.6668L30.9997 9.66683L34.6663 6.3335H29.8653L27.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M47.9997 1.3335L46.1317 6.3335H41.333L44.9997 9.66683L43.6663 14.6668L47.9993 11.7958L52.333 14.6668L50.9997 9.66683L54.6663 6.3335H49.8653L47.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M67.9997 1.3335L66.1317 6.3335H61.333L64.9997 9.66683L63.6663 14.6668L67.9993 11.7958L72.333 14.6668L70.9997 9.66683L74.6663 6.3335H69.8653L67.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M87.9997 1.3335L86.1317 6.3335H81.333L84.9997 9.66683L83.6663 14.6668L87.9993 11.7958L92.333 14.6668L90.9997 9.66683L94.6663 6.3335H89.8653L87.9997 1.3335Z"
+                                    fill="#F0F0F0" />
+                            </svg>
+
+                        </div>
+                        <p class="mt-4 text-black/60 text-[15px]">But I must explain to you how all this mistaken idea
+                            of denouncing
+                            pleasure and praising pain was born and I will give you a complete account of the system,
+                            and
+                            expound the actual teachings of the great explorer of the truth, the master-builder of human
+                            happines.</p>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex items-center space-x-2">
+                                <img src="./assets/Image-60.png" alt="Profile Image 2" class="w-8 h-8 rounded-full">
+                                <span class="text-black text-[12px]">John Lucas <span class=" text-black/60">• 5 minutes
+                                        ago</span></span>
+                            </div>
+                            <div>
+
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="12" fill="#1F41BB" />
+                                    <path
+                                        d="M12.3799 15.247L12.3355 15.2915L12.2866 15.247C10.1748 13.3309 8.77882 12.0638 8.77882 10.7789C8.77882 9.88978 9.44569 9.22291 10.3349 9.22291C11.0195 9.22291 11.6864 9.66749 11.922 10.2721H12.7489C12.9846 9.66749 13.6514 9.22291 14.3361 9.22291C15.2253 9.22291 15.8921 9.88978 15.8921 10.7789C15.8921 12.0638 14.4962 13.3309 12.3799 15.247ZM14.3361 8.33374C13.5625 8.33374 12.8201 8.69385 12.3355 9.25847C11.8509 8.69385 11.1084 8.33374 10.3349 8.33374C8.96554 8.33374 7.88965 9.40519 7.88965 10.7789C7.88965 12.455 9.40123 13.8288 11.6908 15.905L12.3355 16.4918L12.9801 15.905C15.2697 13.8288 16.7813 12.455 16.7813 10.7789C16.7813 9.40519 15.7054 8.33374 14.3361 8.33374Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="relative w-full bg-cover bg-center mt-20  pb-20 pt-10"
+        style="background-image: url('../assets//footer.png');">
+
+        <div
+            class="relative max-w-7xl mx-auto py-10 px-6 text-white flex flex-col md:flex-row md:justify-between gap-8">
+
+            <div class="flex flex-col items-start justify-center">
+                <img src="../assets//logo-white.png" class=" w-24" alt="">
+                <p class="text-sm font-semibold text-[#F5F5F1] mt-4">Copyright © 2022. lorem. All rights <br> reserved.
+                </p>
+            </div>
+
+            <div class=" relative whitespace-nowrap flex w-full justify-between  mr-40 items-start md:w-1/2 gap-8">
+
+                <div class=" ml-20">
+                    <h3 class="font-semibold text-lg  mb-4">Inside Prohouse</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Terms and Conditions</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Cancellation Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Guest Rules</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Reservation Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- About -->
+                <div class=" ml-10">
+                    <h3 class="font-semibold  text-lg mb-4">About</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Our Story</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Contact with indie</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Blog</a></li>
+                        <li><a href="#" class="hover:text-gray-100">F.A.Q</a></li>
+                    </ul>
+                </div>
+
+                <!-- Best Homies -->
+                <div class=" ml-10">
+                    <h3 class="font-semibold text-lg mb-4">Best Homies</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                    </ul>
+                </div>
+                <div class="    absolute -right-40">
+                    <img src="../assets//Backtotop.png" class="  w-14" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

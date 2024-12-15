@@ -1,0 +1,510 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rimark Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="antialiased ">
+    <div class="  bg-white     px-14  w-full flex justify-between items-center py-4">
+        <img src="./assets//logo.png" class="  h-full w-24 mb-1" alt="">
+        <div class="flex items-center space-x-8">
+            <a href="#" class="text-gray-700 text-[18px]">Rewards</a>
+            <svg width="36" height="36" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18.5" cy="19" r="18.5" fill="black" />
+                <path
+                    d="M23.75 17.875C23.75 19.5658 23.0784 21.1873 21.8828 22.3828C20.6873 23.5784 19.0658 24.25 17.375 24.25C15.6842 24.25 14.0627 23.5784 12.8672 22.3828C11.6716 21.1873 11 19.5658 11 17.875C11 16.1842 11.6716 14.5627 12.8672 13.3672C14.0627 12.1716 15.6842 11.5 17.375 11.5C19.0658 11.5 20.6873 12.1716 21.8828 13.3672C23.0784 14.5627 23.75 16.1842 23.75 17.875Z"
+                    fill="black" />
+                <path
+                    d="M25.25 25.75L21.8855 22.3795M23.75 17.875C23.75 19.5658 23.0784 21.1873 21.8828 22.3828C20.6873 23.5784 19.0658 24.25 17.375 24.25C15.6842 24.25 14.0627 23.5784 12.8672 22.3828C11.6716 21.1873 11 19.5658 11 17.875C11 16.1842 11.6716 14.5627 12.8672 13.3672C14.0627 12.1716 15.6842 11.5 17.375 11.5C19.0658 11.5 20.6873 12.1716 21.8828 13.3672C23.0784 14.5627 23.75 16.1842 23.75 17.875Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <svg width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="19" cy="19" r="19" fill="black" />
+                <path
+                    d="M19 9C23.97 9 28 13.043 28 18.031V27H10V18.031C10 13.043 14.03 9 19 9ZM16.5 28H21.5C21.5 28.663 21.2366 29.2989 20.7678 29.7678C20.2989 30.2366 19.663 30.5 19 30.5C18.337 30.5 17.7011 30.2366 17.2322 29.7678C16.7634 29.2989 16.5 28.663 16.5 28Z"
+                    fill="white" />
+            </svg>
+
+            <img src="./assets//profileico.png" class=" w-9" alt="">
+        </div>
+    </div>
+
+    <div class="h-fit pb-20 w-full bg-cover bg-bottom relative transition-all duration-1000 ease-in-out"
+        id="background-swiper">
+        <div class="container mx-auto p-8">
+            <img src="./assets/Left.png" class=" absolute w-10 left-10  cursor-pointer h-fit" alt="">
+            <div
+                class="border border-white/15 py-8 max-w-4xl mx-auto bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 p-6 rounded-[16px] shadow-xl mt-20">
+                <h2 class="text-white text-[16px] font-semibold mb-4">Discover the new Places around you</h2>
+                <div class="flex gap-4">
+                    <div class="w-full flex">
+                        <input type="text" class="w-[60%] pr-4 flex-grow h-fit p-4 rounded-l-[41px] outline-none"
+                            placeholder="Search Places...">
+                        <input type="text" class="flex-grow w-[40%] border-l p-4 h-fit rounded-r-[41px] outline-none"
+                            placeholder="City">
+                    </div>
+                    <span class="border border-[1px] top-4 absolute h-[80%] right-36"></span>
+                    <button
+                        class="bg-[#1F41BB] text-white rounded-[41px] px-8 font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vertical Dots using Images -->
+        <div class="absolute top-1/2 right-4 flex flex-col items-center gap-2 -translate-y-1/2">
+            <img src="./assets/inactive-dot.png" alt="Inactive Dot" class="dot w-5 h-5 transition-all duration-500"
+                id="dot-0">
+            <img src="./assets/inactive-dot.png" alt="Inactive Dot" class="dot w-5 h-5 transition-all duration-500"
+                id="dot-1">
+            <img src="./assets/inactive-dot.png" alt="Inactive Dot" class="dot w-5 h-5 transition-all duration-500"
+                id="dot-2">
+        </div>
+    </div>
+
+
+
+    <!-- Maps and Search feed -->
+
+    <div class="flex  justify-center py-20    bg-white  gap-8   items-start ">
+
+        <div class=" flex flex-col gap-10 ">
+            <div class=" flex flex-col items-start gap">
+                <h1 class=" text-[40px] font-bold">Lorem ipsum</h1>
+                <h2 class=" text-[#BDBDBD] text-[18px]">Turpis facilisis tempor pulvinar in lobortis ornare magna.</h2>
+            </div>
+            <div class=" shadow-md h-full mt-2   relative   items-center    flex rounded-[16px] ">
+                <div class="relative h-full overflow-hidden w-96 rounded-l-[16px]">
+                    <img class="h-[110%] w-fit overflow-hidden  object-cover" src="./assets//SearchCard1.png"
+                        alt="Brown Inc">
+                </div>
+                <div class=" relative w-full   justify-between    flex  flex-col">
+
+                    <div class="p-6">
+                        <h2 class="text-[24px] font-semibold ">Brown Inc</h2>
+                        <p class="text-[#78909C] text-[18px]  font-[500] ">Location</p>
+                        <div class="flex mt-1  items-center space-x-0.5 ">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+
+                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[15px]">5.0 (23 review)</p>
+                        </div>
+                    </div>
+
+                    <hr class=" ml-6  w-[80%] border-[1px]  border-[#F1F1F1]">
+
+                    <div class="p-6  ">
+                        <h1 class=" text-[14px] font-medium">Availability</h1>
+                        <p class="text-[#607D8A] font-[600] text-[18px] tracking-wide mb-4">Open 10:00 am - close
+                            10:00pm</p>
+
+                    </div>
+
+
+                    <div class="bg-[#FC3903]   w-full font-[600] text-white px-4 py-4  rounded-ee-[9px]	 text-center">
+                        20% OFF ON NEXT ORDER
+                    </div>
+                </div>
+            </div>
+
+            <div class=" shadow-md h-full  mt-2   relative  items-center    flex rounded-[16px] ">
+                <div class="relative h-full overflow-hidden w-96 ">
+                    <img class="h-[110%] w-fit overflow-hidden rounded-l-[16px] object-cover"
+                        src="./assets//Search2.png" alt="Brown Inc">
+                </div>
+                <div class=" relative w-full   justify-between    flex  flex-col">
+
+                    <div class="p-6">
+                        <h2 class="text-[24px] font-semibold ">Brown Inc</h2>
+                        <p class="text-[#78909C] text-[18px]  font-[500] ">Location</p>
+                        <div class="flex mt-1  items-center space-x-0.5 ">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+
+                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[15px]">5.0 (23 review)</p>
+                        </div>
+                    </div>
+
+                    <hr class=" ml-6  w-[80%] border-[1px]  border-[#F1F1F1]">
+
+                    <div class="p-6  ">
+                        <h1 class=" text-[14px] font-medium">Availability</h1>
+                        <p class="text-[#607D8A] font-[600] text-[18px] tracking-wide mb-4">Open 10:00 am - close
+                            10:00pm</p>
+
+                    </div>
+
+
+                    <div class="bg-[#FC3903]   w-full font-[600] text-white px-4 py-4  rounded-ee-[9px]	 text-center">
+                        20% OFF ON NEXT ORDER
+                    </div>
+                </div>
+                <div class=" absolute -bottom-10 flex left-0 w-full items-center justify-start gap-2  px-2 ">
+                    <img src="./assets//SearchPer.png" class=" w-8" alt="">
+                    <h1 class=" text-[#1F41BB] text-[14px] font-semibold">
+                        Recommended by 1 local resident in community
+                    </h1>
+                </div>
+            </div>
+
+            <div class=" shadow-md h-full   mt-2 relative   items-center    flex rounded-[16px] ">
+                <div class="relative h-full overflow-hidden w-96 rounded-l-[16px]">
+                    <img class="h-[110%] w-fit overflow-hidden  object-cover" src="./assets//SearchCard3.png"
+                        alt="Brown Inc">
+                </div>
+                <div class=" relative w-full   justify-between    flex  flex-col">
+
+                    <div class="p-6">
+                        <h2 class="text-[24px] font-semibold ">Brown Inc</h2>
+                        <p class="text-[#78909C] text-[18px]  font-[500] ">Location</p>
+                        <div class="flex mt-1  items-center space-x-0.5 ">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+
+                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[15px]">5.0 (23 review)</p>
+                        </div>
+                    </div>
+
+                    <hr class=" ml-6  w-[80%] border-[1px]  border-[#F1F1F1]">
+
+                    <div class="p-6  ">
+                        <h1 class=" text-[14px] font-medium">Availability</h1>
+                        <p class="text-[#607D8A] font-[600] text-[18px] tracking-wide mb-4">Open 10:00 am - close
+                            10:00pm</p>
+
+                    </div>
+
+
+                    <div class="bg-[#FC3903]   w-full font-[600] text-white px-4 py-4  rounded-ee-[9px]	 text-center">
+                        20% OFF ON NEXT ORDER
+                    </div>
+                </div>
+
+            </div>
+
+            <div class=" shadow-md h-full mt-2    relative  items-center    flex rounded-[16px] ">
+                <div class="relative h-full overflow-hidden w-96 rounded-l-[16px]">
+                    <img class="h-[110%] w-fit overflow-hidden  object-cover" src="./assets//SearchCard4.png"
+                        alt="Brown Inc">
+                </div>
+                <div class=" relative w-full   justify-between    flex  flex-col">
+
+                    <div class="p-6">
+                        <h2 class="text-[24px] font-semibold ">Brown Inc</h2>
+                        <p class="text-[#78909C] text-[18px]  font-[500] ">Location</p>
+                        <div class="flex mt-1  items-center space-x-0.5 ">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="#EAC800" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                    fill="white" />
+                            </svg>
+
+                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[15px]">5.0 (23 review)</p>
+                        </div>
+                    </div>
+
+                    <hr class=" ml-6  w-[80%] border-[1px]  border-[#F1F1F1]">
+
+                    <div class="p-6  ">
+                        <h1 class=" text-[14px] font-medium">Availability</h1>
+                        <p class="text-[#607D8A] font-[600] text-[18px] tracking-wide mb-4">Open 10:00 am - close
+                            10:00pm</p>
+
+                    </div>
+
+
+                    <div class="bg-[#FC3903]   w-full font-[600] text-white px-4 py-4  rounded-ee-[9px]	 text-center">
+                        20% OFF ON NEXT ORDER
+                    </div>
+                </div>
+                <div class=" absolute -bottom-10 flex left-0 w-full items-center justify-start gap-2  px-2 ">
+                    <img src="./assets//SearchPer.png" class=" w-8" alt="">
+                    <h1 class=" text-[#1F41BB] text-[14px] font-semibold">
+                        Recommended by 1 local resident in community
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class=" mt-20">
+            <div class=" justify-between items-center py-1  px-2 flex">
+                <h1 class=" text-[15px]  font-[600]">Search result : <span class=" text-[#1F41BB]"> Brown
+                        inc-Boston</span></h1>
+                <div class=" flex">
+                    <svg width="30" height="35" viewBox="0 0 30 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M25.6067 4.24569C19.7484 -1.41523 10.2516 -1.41523 4.39331 4.24569C3.00331 5.58063 1.89829 7.17503 1.14329 8.93553C0.38829 10.696 0 12.587 0 14.4972C0 16.4072 0.38829 18.2982 1.14329 20.0587C1.89829 21.8192 3.00331 23.4137 4.39331 24.7485L14.9984 35L25.6067 24.7485C26.9967 23.4137 28.1017 21.8192 28.8567 20.0587C29.6117 18.2982 30 16.4072 30 14.4972C30 12.587 29.6117 10.696 28.8567 8.93553C28.1017 7.17503 26.9967 5.58063 25.6067 4.24569ZM14.9984 19.342C13.7467 19.342 12.5717 18.863 11.6833 17.9935C10.8067 17.129 10.3133 15.9578 10.3133 14.7366C10.3133 13.5154 10.8067 12.3442 11.6833 11.4797C12.5683 10.6103 13.7467 10.1313 14.9984 10.1313C16.2517 10.1313 17.4284 10.6103 18.315 11.4797C19.1917 12.3442 19.685 13.5154 19.685 14.7366C19.685 15.9578 19.1917 17.129 18.315 17.9935C17.4284 18.863 16.2517 19.342 14.9984 19.342Z"
+                            fill="#1F41BB" />
+                    </svg>
+                    <div class=" flex items-center flex-col">
+                        <h1 class=" text-[15px] font-[700]">Brown Inc</h1>
+                        <h2 class=" text-[#717171] text-[14px]  font-[500]">Mehsana,Gujrat</h2>
+                    </div>
+                </div>
+            </div>
+
+            <gmp-map center="43.4142989,-124.2301242" zoom="4" map-id="DEMO_MAP_ID"
+                style="height: 450px; width: 550px; border-radius: 10px; overflow: hidden; border: 2px solid #ccc;">
+                <gmp-advanced-marker position="37.4220656,-122.0840897" title="Mountain View, CA"></gmp-advanced-marker>
+                <gmp-advanced-marker position="47.648994,-122.3503845" title="Seattle, WA"></gmp-advanced-marker>
+            </gmp-map>
+        </div>
+
+
+    </div>
+
+
+    <!-- footer -->
+
+    <div class="relative w-full bg-cover bg-center mt-20  pb-20 pt-10"
+        style="background-image: url('../assets//footer.png');">
+
+        <div
+            class="relative max-w-7xl mx-auto py-10 px-6 text-white flex flex-col md:flex-row md:justify-between gap-8">
+
+            <div class="flex flex-col items-start justify-center">
+                <img src="../assets//logo-white.png" class=" w-24" alt="">
+                <p class="text-sm font-semibold text-[#F5F5F1] mt-4">Copyright © 2022. lorem. All rights <br> reserved.
+                </p>
+            </div>
+
+            <div class=" relative whitespace-nowrap flex w-full justify-between  mr-40 items-start md:w-1/2 gap-8">
+
+                <div class=" ml-20">
+                    <h3 class="font-semibold text-lg  mb-4">Inside Prohouse</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Terms and Conditions</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Cancellation Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Guest Rules</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Reservation Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- About -->
+                <div class=" ml-10">
+                    <h3 class="font-semibold  text-lg mb-4">About</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Our Story</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Contact with indie</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Blog</a></li>
+                        <li><a href="#" class="hover:text-gray-100">F.A.Q</a></li>
+                    </ul>
+                </div>
+
+                <!-- Best Homies -->
+                <div class=" ml-10">
+                    <h3 class="font-semibold text-lg mb-4">Best Homies</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                    </ul>
+                </div>
+                <div class="    absolute -right-40">
+                    <img src="../assets//Backtotop.png" class="  w-14" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Swiper Background Image Array
+
+        const backgroundImages = [
+            "./assets/feed.png",        // First image
+            "./assets/feed2.png",       // Second image
+            "./assets/feed3.png"        // Third image
+        ];
+
+        const activeDotImage = "./assets/activedot.png";    // Path to active dot image
+        const inactiveDotImage = "./assets/dot.png"; // Path to inactive dot image
+
+        let currentImageIndex = 0;
+
+        // Get the background container element
+        const backgroundSwiper = document.getElementById("background-swiper");
+
+        // Get dot elements
+        const dots = document.querySelectorAll('.dot');
+
+        // Function to update the background image
+        function updateBackgroundImage() {
+            // Set the current background image
+            backgroundSwiper.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
+
+            // Update dot indicators
+            updateDots();
+
+            // Increment index to the next image
+            currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+        }
+
+        // Function to update active dot images
+        function updateDots() {
+            dots.forEach((dot, index) => {
+                if (index === currentImageIndex) {
+                    dot.src = activeDotImage; // Active dot image
+                } else {
+                    dot.src = inactiveDotImage; // Inactive dot image
+                }
+            });
+        }
+
+        // Initial call to set the first image
+        updateBackgroundImage();
+
+        // Automatic image swapping every 2 seconds
+        setInterval(updateBackgroundImage, 2000);
+
+
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEbZZhB3YYF_NMpuaSRFOTiKc0FrJKtUw&libraries=maps,marker&v=beta"
+        defer></script>
+</body>
+
+</html>

@@ -1,0 +1,480 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rimark Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="antialiased ">
+    <div class="  bg-white     px-14  w-full flex justify-between items-center py-4">
+        <img src="./assets//logo.png" class="  h-full w-24 mb-1" alt="">
+        <div class="flex items-center space-x-8">
+            <a href="#" class="text-gray-700 text-[18px]">Rewards</a>
+            <svg width="36" height="36" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18.5" cy="19" r="18.5" fill="black" />
+                <path
+                    d="M23.75 17.875C23.75 19.5658 23.0784 21.1873 21.8828 22.3828C20.6873 23.5784 19.0658 24.25 17.375 24.25C15.6842 24.25 14.0627 23.5784 12.8672 22.3828C11.6716 21.1873 11 19.5658 11 17.875C11 16.1842 11.6716 14.5627 12.8672 13.3672C14.0627 12.1716 15.6842 11.5 17.375 11.5C19.0658 11.5 20.6873 12.1716 21.8828 13.3672C23.0784 14.5627 23.75 16.1842 23.75 17.875Z"
+                    fill="black" />
+                <path
+                    d="M25.25 25.75L21.8855 22.3795M23.75 17.875C23.75 19.5658 23.0784 21.1873 21.8828 22.3828C20.6873 23.5784 19.0658 24.25 17.375 24.25C15.6842 24.25 14.0627 23.5784 12.8672 22.3828C11.6716 21.1873 11 19.5658 11 17.875C11 16.1842 11.6716 14.5627 12.8672 13.3672C14.0627 12.1716 15.6842 11.5 17.375 11.5C19.0658 11.5 20.6873 12.1716 21.8828 13.3672C23.0784 14.5627 23.75 16.1842 23.75 17.875Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <svg width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="19" cy="19" r="19" fill="black" />
+                <path
+                    d="M19 9C23.97 9 28 13.043 28 18.031V27H10V18.031C10 13.043 14.03 9 19 9ZM16.5 28H21.5C21.5 28.663 21.2366 29.2989 20.7678 29.7678C20.2989 30.2366 19.663 30.5 19 30.5C18.337 30.5 17.7011 30.2366 17.2322 29.7678C16.7634 29.2989 16.5 28.663 16.5 28Z"
+                    fill="white" />
+            </svg>
+
+            <img src="./assets//profileico.png" class=" w-9" alt="">
+        </div>
+    </div>
+
+    <div class="h-fit pb-20 w-full bg-cover bg-bottom relative transition-all duration-1000 ease-in-out"
+        id="background-swiper">
+        <div class="container mx-auto p-8">
+            <div
+                class="border border-white/15 py-8 max-w-4xl mx-auto bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 p-6 rounded-[16px] shadow-xl mt-20">
+                <h2 class="text-white text-[16px] font-semibold mb-4">Discover the new Places around you</h2>
+                <div class="flex gap-4">
+                    <div class="w-full flex">
+                        <input type="text" class="w-[60%] pr-4 flex-grow h-fit p-4 rounded-l-[41px] outline-none"
+                            placeholder="Search Places...">
+                        <input type="text" class="flex-grow w-[40%] border-l p-4 h-fit rounded-r-[41px] outline-none"
+                            placeholder="City">
+                    </div>
+                    <span class="border border-[1px] top-4 absolute h-[80%] right-36"></span>
+                    <button
+                        class="bg-[#1F41BB] text-white rounded-[41px] px-8 font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vertical Dots using Images -->
+        <div class="absolute top-1/2 right-4 flex flex-col items-center gap-2 -translate-y-1/2">
+            <img src="./assets/inactive-dot.png" alt="Inactive Dot" class="dot w-5 h-5 transition-all duration-500"
+                id="dot-0">
+            <img src="./assets/inactive-dot.png" alt="Inactive Dot" class="dot w-5 h-5 transition-all duration-500"
+                id="dot-1">
+            <img src="./assets/inactive-dot.png" alt="Inactive Dot" class="dot w-5 h-5 transition-all duration-500"
+                id="dot-2">
+        </div>
+    </div>
+
+    <div class="flex  justify-center py-20   bg-white  gap-8   items-start ">
+        <div class=" flex flex-col gap-8 ">
+
+            <div class="bg-white    rounded-[16px] overflow-hidden flex w-full max-w-3xl"
+                style="box-shadow: 0px 4px 40px 0px #00000014;">
+                <div class=" flex flex-col  items-start my-2  scale-90 w-full h-full gap-2">
+                    <img src="./assets//feedcard1.png" alt="Sanjai Kumar" class="w-full  h-fit  object-cover">
+                    <span class=" text-[#424242]/50 text-[10px]">24 - 09 - 2024 </span>
+                </div>
+                <div class="px-6 py-4">
+                    <h2 class="text-[30px] font-semibold   whitespace-nowrap text-[#284B80]">Sanjai Kumar Follows you
+                    </h2>
+                    <div class="flex justify-between bg-[#F7F9FF] px-12 py-1   rounded-[8px] items-center mt-4">
+                        <div class="text-gray-600 text-center">
+                            <p class="text-[16px] text-[#8D98AA]">Remarks</p>
+                            <p class="text-[28px] text-[#284B80]   font-[500">176</p>
+                        </div>
+                        <div class="text-gray-600  text-center">
+                            <p class="text-[16px] text-[#8D98AA]">Followers</p>
+                            <p class="text-[28px] text-[#284B80]   font-[500]">373</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full items-center mt-4 gap-4">
+                        <button
+                            class="bg-black text-white px-4 py-2 rounded-md hover:bg-[#909090] hover:text-white w-full transition-colors duration-300">Follow</button>
+                        <button
+                            class="text-black px-4 py-2 rounded-md hover:bg-gray-100 border-black border w-full transition-colors duration-300">view</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white  rounded-[16px] overflow-hidden flex w-full max-w-3xl"
+                style="box-shadow: 0px 4px 40px 0px #00000014;">
+                <div class=" flex flex-col  items-start my-2  scale-90 w-full h-full gap-2">
+                    <img src="./assets//Recfeed3.png" alt="Sanjai Kumar" class="w-full  h-fit  object-cover">
+                    <span class=" text-[#424242]/50 text-[10px]">24 - 09 - 2024 </span>
+                </div>
+                <div class="px-6 py-4">
+                    <h2 class="text-[30px] font-semibold   whitespace-nowrap text-[#284B80]">Sanjai Kumar Follows you
+                    </h2>
+                    <div class="flex justify-between bg-[#F7F9FF] px-12 py-1   rounded-[8px] items-center mt-4">
+                        <div class="text-gray-600 text-center">
+                            <p class="text-[16px] text-[#8D98AA]">Remarks</p>
+                            <p class="text-[28px] text-[#284B80]   font-[500">176</p>
+                        </div>
+                        <div class="text-gray-600  text-center">
+                            <p class="text-[16px] text-[#8D98AA]">Followers</p>
+                            <p class="text-[28px] text-[#284B80]   font-[500]">373</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full items-center mt-4 gap-4">
+                        <button
+                            class="bg-black text-white px-4 py-2 rounded-md hover:bg-[#909090] hover:text-white w-full transition-colors duration-300">Follow</button>
+                        <button
+                            class="text-black px-4 py-2 rounded-md hover:bg-gray-100 border-black border w-full transition-colors duration-300">view</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white   rounded-[16px] overflow-hidden flex w-full max-w-3xl"
+                style="box-shadow: 0px 4px 40px 0px #00000014;">
+                <div class=" flex flex-col  items-start my-2  scale-90 w-full h-full gap-2">
+                    <img src="./assets//Recfeed4.png" alt="Sanjai Kumar" class="w-full  h-fit  object-cover">
+                    <span class=" text-[#424242]/50 text-[10px]">24 - 09 - 2024 </span>
+                </div>
+                <div class="px-6 py-4">
+                    <h2 class="text-[30px] font-semibold   whitespace-nowrap text-[#284B80]">Sanjai Kumar Follows you
+                    </h2>
+                    <div class="flex justify-between bg-[#F7F9FF] px-12 py-1   rounded-[8px] items-center mt-4">
+                        <div class="text-gray-600 text-center">
+                            <p class="text-[16px] text-[#8D98AA]">Remarks</p>
+                            <p class="text-[28px] text-[#284B80]   font-[500">176</p>
+                        </div>
+                        <div class="text-gray-600  text-center">
+                            <p class="text-[16px] text-[#8D98AA]">Followers</p>
+                            <p class="text-[28px] text-[#284B80]   font-[500]">373</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full items-center mt-4 gap-4">
+                        <button
+                            class="bg-black text-white px-4 py-2 rounded-md hover:bg-[#909090] hover:text-white w-full transition-colors duration-300">Follow</button>
+                        <button
+                            class="text-black px-4 py-2 rounded-md hover:bg-gray-100 border-black border w-full transition-colors duration-300">view</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white   rounded-[16px] overflow-hidden flex w-full max-w-3xl"
+                style="box-shadow: 0px 4px 40px 0px #00000014;">
+                <div class=" flex flex-col  items-start my-2  scale-90 w-full h-full gap-2">
+                    <img src="./assets//recfeed2.png" alt="Sanjai Kumar" class="w-full  h-fit  object-cover">
+                    <span class=" text-[#424242]/50 text-[10px]">24 - 09 - 2024 </span>
+                </div>
+                <div class="px-6 py-4">
+                    <h2 class="text-[30px] font-semibold   whitespace-nowrap text-[#284B80]">Sanjai Kumar Follows you
+                    </h2>
+                    <div class="flex justify-between bg-[#F7F9FF] px-12 py-1   rounded-[8px] items-center mt-4">
+                        <div class="text-gray-600 text-center">
+                            <p class="text-[16px] text-[#8D98AA]">Remarks</p>
+                            <p class="text-[28px] text-[#284B80]   font-[500">176</p>
+                        </div>
+                        <div class="text-gray-600  text-center">
+                            <p class="text-[16px] text-[#8D98AA]">Followers</p>
+                            <p class="text-[28px] text-[#284B80]   font-[500]">373</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full items-center mt-4 gap-4">
+                        <button
+                            class="bg-black text-white px-4 py-2 rounded-md hover:bg-[#909090] hover:text-white w-full transition-colors duration-300">Follow</button>
+                        <button
+                            class="text-black px-4 py-2 rounded-md hover:bg-gray-100 border-black border w-full transition-colors duration-300">view</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" flex flex-col gap-4 ">
+            <div class=" max-h-6xl bg-white   rounded-[16px] overflow-hidden flex flex-col w-72  h-80"
+                style="box-shadow: 0px 4px 40px 0px #00000014;">
+                <div class=" text-[14px] flex w-full">
+                    <button class=" text-[#1F41BB] bg-[#F6F5F5]  font-[500] py-4 px-6  w-full"
+                        style="box-shadow: 0px 4px 4px 0px #1F41BB17;">
+                        My
+                        Rimark</button>
+                    <button class=" hover:text-[#1F41BB] hover:bg-[#F6F5F5] font-[500] w-full py-4 px-6">My
+                        Freinds</button>
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div class=" bg-white   rounded-[16px] overflow-hidden text-center pt-4 pb-14"
+                style="box-shadow: 0px 4px 40px 0px #00000014;">
+                <h1 class=" text-[#1F41BB] text-[14px] font-[600]">My Rewards</h1>
+                <h1 class=" font-[700] text-[50px]">223</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Testimonials Wrapper -->
+    <section class="pt-12 px-20">
+        <div class="container mx-auto px-24     ">
+            <!-- Heading -->
+            <div class="mb-8 text-left">
+                <h3 class="text-[40px] font-bold text-[#1E3240] tracking-wide  ">Top Remarks</h3>
+                <div class=" flex items-center justify-start gap-2  ">
+                    <h2 class="text-[18px] font-normal text-[#BDBDBD] ">Turpis facilisis tempor pulvinar in lobortis
+                        ornare magna.</h2>
+
+                </div>
+            </div>
+
+
+            <div class="relative ">
+
+                <div
+                    class="flex space-x-4    bg-gray-50/0  testimonial-scroll-container  overflow-x-auto scrollbar-hide -mx-6 h-full px-6 snap-x">
+                    <div
+                        class="relative min-w-fit shadow-xl h-fit  cursor-pointer  hover:scale-105 transition-all   flex items-center justify-center  rounded-2xl  overflow-hidden">
+                        <div class="bg-white rounded-[20px]  overflow-hidden shadow-xl p-3  w-[20rem]  "
+                            style="box-shadow: 0px 4px 40px 0px #00000014;">
+                            <!-- Image placeholder for card 1 -->
+                            <img src="../assets//Rectangle 1763.png" alt="Placeholder image of a forest landscape"
+                                class="w-full  rounded-[16px]  h-48 overflow-hidden object-cover">
+                            <div class=" px- py-4">
+                                <h3 class=" text-[#284B80] font-bold text-[22px] mb-2">Qui optio quod explicabo. Ea
+                                    ipsum soluta
+                                    et assumenda.</h3>
+                                <div class="mb-6 gap-4 mt-6 text-gray-700 flex">
+                                    <img src="../assets//Image-60.png" class=" w-14 h-full" alt="">
+                                    <div>
+                                        <p class=" text-[20px] text-[#284B80]">Ajay</p>
+                                        <p class=" text-[#8D98AA] text-[16px] whitespace-nowrap">Smoothie maker of
+                                            the year</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6 mt-4 items-center justify-start text-gray-800">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6425 20.7833 11.8195 20.8327 12 20.8327C12.1805 20.8327 12.3575 20.7833 12.512 20.69C21.126 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                            stroke="#B21C1C" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.2222 0V4.8C4.44444 6 1.11111 12 0 18C2.77778 13.8 6.66667 11.88 12.2222 11.88V16.8L20 8.4L12.2222 0ZM14.4444 5.796L16.8556 8.4L14.4444 11.004V9.48H12.2222C9.92222 9.48 7.85556 9.936 5.93333 10.62C7.48889 8.952 9.48889 7.644 12.5333 7.2L14.4444 6.876V5.796Z"
+                                            fill="#9F9F9F" />
+                                    </svg>
+
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.0508 0H3.32422C2.82422 0 2.41406 0.40625 2.41406 0.910156V20L9.6875 12.7266L16.9609 20V0.910156C16.9609 0.40625 16.5547 0 16.0508 0Z"
+                                            fill="#9F9F9F" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative  min-w-fit shadow-xl h-fit   cursor-pointer  hover:scale-105 transition-all   flex items-center justify-center   rounded-2xl  overflow-hidden">
+                        <div class="bg-white rounded-[20px] overflow-hidden shadow-xl p-3 h-fit  w-[20rem]"
+                            style="box-shadow: 0px 4px 40px 0px #00000014;">
+                            <!-- Image placeholder for card 1 -->
+                            <img src="../assets/Rec2.png" alt="Placeholder image of a forest landscape"
+                                class="w-full  rounded-[16px]  h-48 overflow-hidden object-cover">
+                            <div class=" px- py-4">
+                                <h3 class=" text-[#284B80] font-bold text-[22px] mb-2">Qui optio quod explicabo. Ea
+                                    ipsum soluta
+                                    et assumenda.</h3>
+                                <div class="mb-6 gap-4 mt-6 text-gray-700 flex">
+                                    <img src="../assets//Image-60.png" class=" w-14 h-full" alt="">
+                                    <div>
+                                        <p class=" text-[20px] text-[#284B80]">Ajay</p>
+                                        <p class=" text-[#8D98AA] text-[16px] whitespace-nowrap">Smoothie maker of
+                                            the year</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6 mt-4 items-center justify-start text-gray-800">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6425 20.7833 11.8195 20.8327 12 20.8327C12.1805 20.8327 12.3575 20.7833 12.512 20.69C21.126 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                            stroke="#B21C1C" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.2222 0V4.8C4.44444 6 1.11111 12 0 18C2.77778 13.8 6.66667 11.88 12.2222 11.88V16.8L20 8.4L12.2222 0ZM14.4444 5.796L16.8556 8.4L14.4444 11.004V9.48H12.2222C9.92222 9.48 7.85556 9.936 5.93333 10.62C7.48889 8.952 9.48889 7.644 12.5333 7.2L14.4444 6.876V5.796Z"
+                                            fill="#9F9F9F" />
+                                    </svg>
+
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.0508 0H3.32422C2.82422 0 2.41406 0.40625 2.41406 0.910156V20L9.6875 12.7266L16.9609 20V0.910156C16.9609 0.40625 16.5547 0 16.0508 0Z"
+                                            fill="#9F9F9F" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative min-w-fit  shadow-xl h-fit   cursor-pointer  hover:scale-105 transition-all   flex items-center justify-center  rounded-2xl  overflow-hidden">
+                        <div class="bg-white rounded-[20px] overflow-hidden   p-3  w-[20rem] "
+                            style="box-shadow: 0px 4px 40px 0px #00000014;">
+                            <!-- Image placeholder for card 1 -->
+                            <img src="../assets/Rec3.png" alt="Placeholder image of a forest landscape"
+                                class="w-full  rounded-[16px]  h-48 overflow-hidden object-cover">
+                            <div class=" px- py-4">
+                                <h3 class=" text-[#284B80] font-bold text-[22px] mb-2">Qui optio quod explicabo. Ea
+                                    ipsum soluta
+                                    et assumenda.</h3>
+                                <div class="mb-6 gap-4 mt-6 text-gray-700 flex">
+                                    <img src="../assets//Image-60.png" class=" w-14 h-full" alt="">
+                                    <div>
+                                        <p class=" text-[20px] text-[#284B80]">Ajay</p>
+                                        <p class=" text-[#8D98AA] text-[16px] whitespace-nowrap">Smoothie maker of
+                                            the year</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6 mt-4 items-center justify-start text-gray-800">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6425 20.7833 11.8195 20.8327 12 20.8327C12.1805 20.8327 12.3575 20.7833 12.512 20.69C21.126 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                            stroke="#B21C1C" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.2222 0V4.8C4.44444 6 1.11111 12 0 18C2.77778 13.8 6.66667 11.88 12.2222 11.88V16.8L20 8.4L12.2222 0ZM14.4444 5.796L16.8556 8.4L14.4444 11.004V9.48H12.2222C9.92222 9.48 7.85556 9.936 5.93333 10.62C7.48889 8.952 9.48889 7.644 12.5333 7.2L14.4444 6.876V5.796Z"
+                                            fill="#9F9F9F" />
+                                    </svg>
+
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.0508 0H3.32422C2.82422 0 2.41406 0.40625 2.41406 0.910156V20L9.6875 12.7266L16.9609 20V0.910156C16.9609 0.40625 16.5547 0 16.0508 0Z"
+                                            fill="#9F9F9F" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="relative w-full bg-cover bg-center -mt-20 pb-20 pt-10"
+        style="background-image: url('../assets//footer.png');">
+
+        <div
+            class="relative max-w-7xl mx-auto py-10 px-6 text-white flex flex-col md:flex-row md:justify-between gap-8">
+
+            <div class="flex flex-col items-start justify-center">
+                <img src="../assets//logo-white.png" class=" w-24" alt="">
+                <p class="text-sm font-semibold text-[#F5F5F1] mt-4">Copyright © 2022. lorem. All rights <br> reserved.
+                </p>
+            </div>
+
+            <div class=" relative whitespace-nowrap flex w-full justify-between  mr-40 items-start md:w-1/2 gap-8">
+
+                <div class=" ml-20">
+                    <h3 class="font-semibold text-lg  mb-4">Inside Prohouse</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Terms and Conditions</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Cancellation Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Guest Rules</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Reservation Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- About -->
+                <div class=" ml-10">
+                    <h3 class="font-semibold  text-lg mb-4">About</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Our Story</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Contact with indie</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Blog</a></li>
+                        <li><a href="#" class="hover:text-gray-100">F.A.Q</a></li>
+                    </ul>
+                </div>
+
+                <!-- Best Homies -->
+                <div class=" ml-10">
+                    <h3 class="font-semibold text-lg mb-4">Best Homies</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                    </ul>
+                </div>
+                <div class="    absolute -right-40">
+                    <img src="../assets//Backtotop.png" class="  w-14" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Swiper Background Image Array
+        const backgroundImages = [
+            "./assets/feed.png",        // First image
+            "./assets/feed2.png",       // Second image
+            "./assets/feed3.png"        // Third image
+        ];
+
+        const activeDotImage = "./assets/activedot.png";    // Path to active dot image
+        const inactiveDotImage = "./assets/dot.png"; // Path to inactive dot image
+
+        let currentImageIndex = 0;
+
+        // Get the background container element
+        const backgroundSwiper = document.getElementById("background-swiper");
+
+        // Get dot elements
+        const dots = document.querySelectorAll('.dot');
+
+        // Function to update the background image
+        function updateBackgroundImage() {
+            // Set the current background image
+            backgroundSwiper.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
+
+            // Update dot indicators
+            updateDots();
+
+            // Increment index to the next image
+            currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+        }
+
+        // Function to update active dot images
+        function updateDots() {
+            dots.forEach((dot, index) => {
+                if (index === currentImageIndex) {
+                    dot.src = activeDotImage; // Active dot image
+                } else {
+                    dot.src = inactiveDotImage; // Inactive dot image
+                }
+            });
+        }
+
+        // Initial call to set the first image
+        updateBackgroundImage();
+
+        // Automatic image swapping every 2 seconds
+        setInterval(updateBackgroundImage, 2000);
+    </script>
+</body>
+
+</html>

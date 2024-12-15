@@ -1,0 +1,10 @@
+/* Hide scrollbar for this section only */
+.testimonial-scroll-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE and Edge */
+}
+
+.testimonial-scroll-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
