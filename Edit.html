@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #remarkPopup {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        #remarkPopup.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Exit animation for the thanksPopup */
+        #thanksPopup {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        #thanksPopup.hidden {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        /* Button hover effect */
+        button {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Close button hover effect */
+        #cancelBtn {
+            transition: color 0.2s ease;
+        }
+
+        #cancelBtn:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body class="antialiased ">
+    <div class="  bg-white     px-14  w-full flex justify-between items-center py-4">
+        <img src="./assets//logo.png" class="  h-full w-24 mb-1" alt="">
+        <div class="flex items-center space-x-8">
+            <a href="#" class="text-gray-700 text-[18px]">Rewards</a>
+            <svg width="36" height="36" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18.5" cy="19" r="18.5" fill="black" />
+                <path
+                    d="M23.75 17.875C23.75 19.5658 23.0784 21.1873 21.8828 22.3828C20.6873 23.5784 19.0658 24.25 17.375 24.25C15.6842 24.25 14.0627 23.5784 12.8672 22.3828C11.6716 21.1873 11 19.5658 11 17.875C11 16.1842 11.6716 14.5627 12.8672 13.3672C14.0627 12.1716 15.6842 11.5 17.375 11.5C19.0658 11.5 20.6873 12.1716 21.8828 13.3672C23.0784 14.5627 23.75 16.1842 23.75 17.875Z"
+                    fill="black" />
+                <path
+                    d="M25.25 25.75L21.8855 22.3795M23.75 17.875C23.75 19.5658 23.0784 21.1873 21.8828 22.3828C20.6873 23.5784 19.0658 24.25 17.375 24.25C15.6842 24.25 14.0627 23.5784 12.8672 22.3828C11.6716 21.1873 11 19.5658 11 17.875C11 16.1842 11.6716 14.5627 12.8672 13.3672C14.0627 12.1716 15.6842 11.5 17.375 11.5C19.0658 11.5 20.6873 12.1716 21.8828 13.3672C23.0784 14.5627 23.75 16.1842 23.75 17.875Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <svg width="36" height="36" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="19" cy="19" r="19" fill="black" />
+                <path
+                    d="M19 9C23.97 9 28 13.043 28 18.031V27H10V18.031C10 13.043 14.03 9 19 9ZM16.5 28H21.5C21.5 28.663 21.2366 29.2989 20.7678 29.7678C20.2989 30.2366 19.663 30.5 19 30.5C18.337 30.5 17.7011 30.2366 17.2322 29.7678C16.7634 29.2989 16.5 28.663 16.5 28Z"
+                    fill="white" />
+            </svg>
+
+            <img src="./assets//profileico.png" class=" w-9" alt="">
+        </div>
+    </div>
+
+    <div class="h-[50vh] !-z-[1]  pl-32 pt-28 pb-4 w-full bg-cover bg-bottom relative " id="background-swiper"
+        style="background-image: url(./assets/companypage.jpeg);  background-position: 50% 50%; background-size: cover;">
+
+
+
+    </div>
+
+
+    <!-- 2nd Section -->
+    <div class="flex -mt-52 justify-center px-20 rounded-[10px] gap-10  items-start ">
+
+        <div class=" flex flex-col w-[35%] gap-10 ">
+            <!-- Profile Card -->
+            <div class="max-w-md mx-auto bg-white  rounded-md p-6 border"
+                style="box-shadow: 0px 0px 18px 0px #0000001F;">
+                <div class="flex  justify-center gap-6 items-center">
+                    <!-- Profile Image -->
+                    <img src="https://via.placeholder.com/100" alt="Profile Picture"
+                        class="rounded-full w-24 h-24 mb-4" />
+                    <!-- Username -->
+                    <h2
+                        class="text-2xl font-bold text-gray-800 mb-2 bg-gradient-to-r from-[#1F41BB] to-[#0E1E55] bg-clip-text text-transparent">
+                        @Dan2345</h2>
+                </div>
+                <!-- Personal Info -->
+                <div class="mt-4 border px-4    space-y-4 rounded-[5px] py-4">
+                    <p class="text-[#1F1F1FB2] mb-1 flex flex-col"><span class="font-semibold">Your Name:</span> <span
+                            class="text-black">dan</span></p>
+                    <p class="text-[#1F1F1FB2] mb-1 flex flex-col"><span class="font-semibold">Email:</span> <span
+                            class="text-black">siddxd@growthx.com</span></p>
+                    <p class="text-[#1F1F1FB2] mb-1 flex flex-col"><span class="font-semibold">Phone Number:</span>
+                        <span class="text-black">+91 49652845732</span></p>
+                </div>
+                <!-- About Section -->
+                <div class="mt-4  border px-4 py-5 rounded-md">
+                    <h3 class="text-lg font-semibold mb-2">About <span class="text-blue-600">Sid</span></h3>
+                    <p class="text-[#49454FCC] leading-relaxed">
+                        Lorem ipsum dolor sit amet consectetur. Erat auctor a aliquam vel congue luctus. Leo diam.
+                    </p>
+                </div>
+            </div>
+            <!-- Change Password Form -->
+            <div class="  w-full mx-auto bg-white p-6 rounded-md shadow-md"
+                style="box-shadow: 0px 0px 18px 0px #0000001F;">
+                <h2 class="text-[15px] font-bold mb-4">Change Password</h2>
+                <!-- Old Password -->
+                <div class="mb-4">
+                    <label class="block text-[12px] text-gray-700 mb-1">Old Password</label>
+                    <div class="relative">
+                        <input type="password" class="w-full border rounded-md px-3 py-3"
+                            placeholder="Enter Old Password" />
+                        <span class="absolute right-3 top-5 cursor-pointer text-gray-400">
+                            <svg width="23" height="14" viewBox="0 0 23 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.1523 13C16.6753 13 21.1523 7 21.1523 7C21.1523 7 16.6753 1 11.1523 1C5.62934 1 1.15234 7 1.15234 7C1.15234 7 5.62934 13 11.1523 13Z"
+                                    stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linejoin="round" />
+                                <path
+                                    d="M11.1523 9.5C11.8154 9.5 12.4513 9.23661 12.9201 8.76777C13.389 8.29893 13.6523 7.66304 13.6523 7C13.6523 6.33696 13.389 5.70107 12.9201 5.23223C12.4513 4.76339 11.8154 4.5 11.1523 4.5C10.4893 4.5 9.85342 4.76339 9.38458 5.23223C8.91574 5.70107 8.65234 6.33696 8.65234 7C8.65234 7.66304 8.91574 8.29893 9.38458 8.76777C9.85342 9.23661 10.4893 9.5 11.1523 9.5Z"
+                                    stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+
+                <!-- New Password -->
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-1">New Password</label>
+                    <div class="relative">
+                        <input type="password" class="w-full border rounded-md px-3 py-3"
+                            placeholder="Enter New Password" />
+                        <span class="absolute  right-3 top-5 cursor-pointer text-gray-400">
+                            <svg width="23" height="14" viewBox="0 0 23 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.1523 13C16.6753 13 21.1523 7 21.1523 7C21.1523 7 16.6753 1 11.1523 1C5.62934 1 1.15234 7 1.15234 7C1.15234 7 5.62934 13 11.1523 13Z"
+                                    stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linejoin="round" />
+                                <path
+                                    d="M11.1523 9.5C11.8154 9.5 12.4513 9.23661 12.9201 8.76777C13.389 8.29893 13.6523 7.66304 13.6523 7C13.6523 6.33696 13.389 5.70107 12.9201 5.23223C12.4513 4.76339 11.8154 4.5 11.1523 4.5C10.4893 4.5 9.85342 4.76339 9.38458 5.23223C8.91574 5.70107 8.65234 6.33696 8.65234 7C8.65234 7.66304 8.91574 8.29893 9.38458 8.76777C9.85342 9.23661 10.4893 9.5 11.1523 9.5Z"
+                                    stroke="black" stroke-opacity="0.5" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <!-- Save Button -->
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-md">
+                    Save
+                </button>
+            </div>
+
+            <div class="flex bg-white rounded-md items-center  justify-center h-full"
+                style="box-shadow: 0px 0px 18px 0px #0000001F;">
+                <div class=" p-8   w-full max-w-md">
+                    <h1 class="text-[15px] font-bold mb-4">Delete Account</h1>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Are you sure you want to delete your account? Once your account has been deleted, all of your
+                        personal information will be removed.
+                    </p>
+                    <div class="flex justify-end space-x-4">
+                        <button
+                            class="bg-white border-black border hover:bg-gray-100 text-gray-700 font-medium py-2 px-6 rounded-[10px]">
+                            Delete
+                        </button>
+                        <button class="bg-[#BB221F] hover:bg-red-600 text-white font-medium py-2 px-4 rounded-[10px]">
+                            Deactivate
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="  rounded-md  px-6   py-4  w-[65%]  bg-white " style="box-shadow: 0px 0px 18px 0px #0000001F;">
+            <!-- Edit Profile Form -->
+            <div class="max-w-3xl mx-auto w-full    py-6">
+                <h2 class="text-2xl font-semibold mb-6">Edit Profile</h2>
+                <div class=" w-full  py-4 gap-20 flex">
+
+                    <div class=" w-full gap-6">
+                        <!-- First Name -->
+                        <div>
+                            <label class="block text-gray-900 font-medium text-[15px] mb-1">First Name</label>
+                            <input type="text"
+                                class="w-full    outline-[#1F41BBCF] border-1 border   rounded  px-3 py-2"
+                                placeholder="Enter First Name" />
+                        </div>
+                        <!-- Last Name -->
+                        <div>
+                            <label class="block text-gray-900 font-medium text-[15px] mt-2 mb-1">Last Name</label>
+                            <input type="text" class="w-full  outline-[#1F41BBCF] border-1 border rounded px-3 py-2"
+                                placeholder="Enter Last Name" />
+                        </div>
+                        <!-- Mobile Number -->
+                        <div class=" mt-6">
+                            <label class="block text-gray-900 font-medium text-[15px] mb-1">Mobile Number</label>
+                            <input type="text" class="w-full   outline-[#1F41BBCF] border-1 border rounded px-3 py-2"
+                                placeholder="Enter Mobile Number" />
+                        </div>
+                        <!-- Email ID -->
+                        <div>
+                            <label class="block text-gray-900 mt-4 font-medium text-[15px] mb-1">Email ID</label>
+                            <input type="email" class="w-full outline-[#1F41BBCF] border rounded px-3 py-2"
+                                placeholder="Enter Email" />
+                        </div>
+                        <!-- User Name -->
+                        <div>
+                            <label class="block text-gray-900 mt-4 font-medium text-[15px] mb-1">User Name</label>
+                            <input type="text" class="w-full border outline-[#1F41BBCF] rounded-md px-3 py-2"
+                                placeholder="Enter User Name" />
+                        </div>
+                        <!-- Bio -->
+                        <div class="col-span-1 mt-4 md:col-span-2">
+                            <label class="block text-gray-900 font-medium text-[15px] mb-1">Bio</label>
+                            <textarea class="w-full outline-[#1F41BBCF] border rounded-md px-3 py-2" rows="4"
+                                placeholder="Enter Bio"></textarea>
+                        </div>
+                    </div>
+                    <div style="box-shadow: 0px 0px 18px 0px #0000001F;" class=" h-fit px-14 py-4 rounded-lg bg-white">
+                        <div
+                            class="w-[120px] relative h-[120px] rounded-full overflow-hidden  border-[5px] border-[#1F41BB]">
+                            <img src="./assets/editphoto.jpeg" class=" rounded-full  !-z-10  object-cover" alt="">
+                            <div
+                                class="absolute  bottom-0 right-0 bg-[#1F41BB] w-12 p-3  !z-20  rounded-full cursor-pointer">
+                                <img src="./assets/camera.png" class=" " alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex justify-end gap-4 mt-6">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md">Update</button>
+                    <button class="border border-gray-300 text-gray-700 px-6 py-2 rounded-md">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Footer -->
+    <div class="relative w-full bg-cover bg-center rounded-[10px] mt-20  pb-20 pt-10"
+        style="background-image: url('../assets//footer.png');">
+
+        <div
+            class="relative max-w-7xl mx-auto py-10 px-6 text-white flex flex-col md:flex-row md:justify-between gap-8">
+
+            <div class="flex flex-col items-start justify-center">
+                <img src="../assets//logo-white.png" class=" w-24" alt="">
+                <p class="text-sm font-semibold text-[#F5F5F1] mt-4">Copyright © 2022. lorem. All rights <br> reserved.
+                </p>
+            </div>
+
+            <div class=" relative whitespace-nowrap flex w-full justify-between  mr-40 items-start md:w-1/2 gap-8">
+
+                <div class=" ml-20">
+                    <h3 class="font-semibold text-lg  mb-4">Inside Prohouse</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Terms and Conditions</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Cancellation Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Guest Rules</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Reservation Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- About -->
+                <div class=" ml-10">
+                    <h3 class="font-semibold  text-lg mb-4">About</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Our Story</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Contact with indie</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Blog</a></li>
+                        <li><a href="#" class="hover:text-gray-100">F.A.Q</a></li>
+                    </ul>
+                </div>
+
+                <!-- Best Homies -->
+                <div class=" ml-10">
+                    <h3 class="font-semibold text-lg mb-4">Best Homies</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                    </ul>
+                </div>
+                <div class="    absolute -right-40">
+                    <img src="../assets//Backtotop.png" class="  w-14" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
