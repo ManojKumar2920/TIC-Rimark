@@ -1,485 +1,701 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rimark | Onboarding</title>
-  <link rel="stylesheet" href="/styles/style.css" />
-  <style>
-    /* Additional styles for multistep form */
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="../styles//home.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
 
-<body>
-  <div class="onboarding-container">
-    <div class="left-container" id="left-container">
-      <div class="theme-overlay">
-        <img src="./assets/RiMark Logo.png" width="100px" class="logo" alt="Rimark Logo" />
-        <div class="quote">
-          <span class="font-parkinsans text-large secondary-color quotation-mark">"</span>
-          <p>
-            Optimize your time, earn discounts, and discover <br />
-            recommendations by your friends
-          </p>
-          <div class="flex flex-row items-center">
-            <p class="brand-name">Rimark</p>
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,300,150">
-              <g fill="#eac800" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                style="mix-blend-mode: normal">
-                <g transform="scale(8.53333,8.53333)">
-                  <path
-                    d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-2.17938 -0.59,-4.21686 -1.60547,-5.97852l-11.24805,11.24609c-0.187,0.187 -0.44103,0.29297 -0.70703,0.29297c-0.265,0 -0.52003,-0.10497 -0.70703,-0.29297l-4.45313,-4.45312c-0.391,-0.391 -0.391,-1.02306 0,-1.41406c0.391,-0.391 1.02306,-0.391 1.41406,0l3.74609,3.74609l10.80078,-10.80078c-2.201,-2.655 -5.52223,-4.3457 -9.24023,-4.3457zM24.24023,7.3457c0.43165,0.52058 0.81351,1.08435 1.1543,1.67383l2.3125,-2.3125c0.391,-0.392 0.391,-1.02306 0,-1.41406c-0.391,-0.391 -1.02306,-0.391 -1.41406,0z">
-                  </path>
-                </g>
-              </g>
-            </svg>
-          </div>
-          <div class="quote-vector">
-            <img src="/assets/Icons/Vector.png" width="20px" alt="" />
-          </div>
+<body class=" w-full">
+
+    <!-- Navigation -->
+    <div class=" min-h-screen    w-full flex flex-col justify-center items-center">
+
+        <!-- Navigation -->
+        <nav class="absolute top-0  left-0 right-0 flex justify-between items-center py-6 px-12 bg-white">
+            <div class="text-3xl font-bold uppercase flex items-center  -mt-2 mb-2 justify-center">
+                <img src="/assets/logo.png" alt="Logo" class="w-28">
+            </div>
+            <div class="flex gap-2 items-center">
+                <a href="#" class="text-lg text-[#1F41BB] mx-4 font-semibold">Home</a>
+                <a href="#" class="text-lg mx-4 hover:text-[#1F41BB] font-semibold">About</a>
+                <a href="#" class="text-lg mx-4 hover:text-[#1F41BB] font-semibold">Blog</a>
+                <a href="#" class="text-lg mx-4  hover:text-[#1F41BB] font-semibold">Contact</a>
+            </div>
+            <div class="  mr-6 gap-4">
+                <a href="./Onboarding.html" class="bg-blue-600  text-white py-2 px-6 rounded-lg text-lg font-semibold">For Business</a>
+                <a href="./Onboarding.html"
+                    class="text-lg ml-4 mr-2 font-semibold text-black  px-6 py-2 rounded-lg border-2  border-black">Signup</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="flex items-end justify-end  ml-40 py-12 px-20">
+            <!-- Left Column -->
+            <div class=" z-[2]  top-52   left-0 px-28 absolute">
+                <h1
+                    class="text-[42px] w-[60%]  bg-gradient-to-r from-[#2A2D39] to-[#1F41BBF0] bg-clip-text text-transparent   !line-clamp-3 font-bold leading-tight mb-12">
+                    Ever Wish Google Worked Like Your Group Chat? Now It Does With Real Recomendagtions, No Ads.
+                </h1>
+                <ul class="text-lg mb-10 space-y-4">
+                    <li class="flex items-center">
+                        <div class="bg-blue-600 w-8 h-8 mr-4 rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        Discover real suggestion from friends you trust
+                    </li>
+                    <li class="flex items-center">
+                        <div class="bg-blue-600 w-8 h-8 mr-4 rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        Unlock exclusive discounts at your favorite place
+                    </li>
+                    <li class="flex items-center">
+                        <div class="bg-blue-600 w-8 h-8 mr-4 rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        Save time with search tailored to your preference
+                    </li>
+                </ul>
+                <a href="./Onboarding.html"
+                    class="bg-blue-600 text-white py-4 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+                    Sign up for free
+                </a>
+            </div>
+
+            <!-- Right Column -->
+            <!-- <div class="  bg-black"> -->
+            <div class=" pl-40 z-[1] scale-110   ml-20 mt-10 w-[80%]">
+                <div class=" bg-blu-100"></div>
+                <img src="/assets//ip.png" class="  "
+                    alt="Mockup image of a mobile phone displaying a user interface with features such as 'Discover recommendations from friends', 'Individual and Business account options'."
+                    class="max-w-xs mx-auto">
+            </div>
+            <!-- </div> -->
         </div>
-      </div>
+
+
     </div>
 
-    <div class="right-container" id="right-container">
-      <div class="progress-bar-container">
-        <div class="progress-bar-line"></div>
-        <div class="progress-indicator" id="indicator"></div>
-      </div>
 
-      <div class="onboarding-form" id="onboarding-form">
-        <!-- Step 0: Account Type Selection -->
-        <div id="step-account-type" class="form-step active">
-          <div class="flex flex-col center">
-            <img src="./assets/logo.png" width="150px" class="none" alt="Rimark Logo" />
-            <img src="/assets/mobile-open-img.png" class="none" width="400px" alt="" />
-          </div>
-          <div class="signin-link">
-            <span>Already have an account? </span>
-            <a href="#" id="signInLink">Sign In</a>
-          </div>
-          <h1>Join Us!</h1>
-          <p>
-            To begin this journey, tell us what type of account you'd be
-            opening.
-          </p>
+    <!-- Facilities Section -->
+    <div class="  px-10 my-20 ">
+        <div class=" flex py-16">
+            <div class="max-w-7xl flex items-center mx-auto gap-20 px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center  mb-12">
+                    <h2 class="text-[40px] font-semibold text-gray-800 text-left">
+                        We do our <span class="text-blue-600">Best</span> <br> facilities provide you
+                    </h2>
+                    <p class="mt-4  text-left text-base text-gray-600">
+                        Est officiis nesciunt explicabo accusamus et sed omnis explicabo dolores.
+                    </p>
+                </div>
 
-          <div class="onboarding-option" data-account-type="individual">
-            <div>
-              <img class="onboarding-icon-individual" width="50px" height="50px" src="/assets/Icons/individual-icon.png"
-                alt="user" />
-            </div>
-            <div>
-              <h4>Individual</h4>
-              <p>Personal account to manage all your activities.</p>
-            </div>
-            <svg class="feather feather-arrow-right" fill="none" height="24" stroke="#1F41BB" stroke-linecap="round"
-              stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
-              xmlns="http://www.w3.org/2000/svg">
-              <line x1="5" x2="19" y1="12" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </div>
+                <!-- Facilities Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-white     border   border-[#E8E8E8] rounded-lg   px-16 py-14 gap-5 flex flex-col items-center text-center">
+                        <svg width="40" height="38" viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M30.833 3H26.6663C26.4453 3 26.2334 3.0878 26.0771 3.24408C25.9208 3.40036 25.833 3.61232 25.833 3.83333V3.93167L31.6663 8.59833V3.83333C31.6663 3.61232 31.5785 3.40036 31.4223 3.24408C31.266 3.0878 31.054 3 30.833 3Z"
+                                fill="#1F41BB" />
+                            <path
+                                d="M17.917 13.8333C17.917 13.2808 18.1365 12.7509 18.5272 12.3602C18.9179 11.9695 19.4478 11.75 20.0003 11.75C20.5529 11.75 21.0828 11.9695 21.4735 12.3602C21.8642 12.7509 22.0837 13.2808 22.0837 13.8333C22.0837 14.3859 21.8642 14.9158 21.4735 15.3065C21.0828 15.6972 20.5529 15.9167 20.0003 15.9167C19.4478 15.9167 18.9179 15.6972 18.5272 15.3065C18.1365 14.9158 17.917 14.3859 17.917 13.8333Z"
+                                fill="#1F41BB" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M34.583 16.2667L35.8863 17.3101C36.1458 17.5123 36.4745 17.604 36.8012 17.5655C37.1278 17.527 37.4262 17.3612 37.6314 17.1042C37.8367 16.8471 37.9324 16.5196 37.8977 16.1924C37.8631 15.8653 37.7009 15.5651 37.4463 15.3567L23.9047 4.52342C22.7964 3.63652 21.4192 3.15332 19.9997 3.15332C18.5802 3.15332 17.203 3.63652 16.0947 4.52342L2.55301 15.3567C2.29398 15.5638 2.12783 15.8653 2.0911 16.1949C2.05438 16.5245 2.15008 16.8552 2.35717 17.1143C2.56426 17.3733 2.86577 17.5394 3.19537 17.5762C3.52496 17.6129 3.85565 17.5172 4.11467 17.3101L5.41634 16.2667V33.4167H3.33301C3.00149 33.4167 2.68354 33.5484 2.44912 33.7829C2.2147 34.0173 2.08301 34.3352 2.08301 34.6667C2.08301 34.9983 2.2147 35.3162 2.44912 35.5506C2.68354 35.7851 3.00149 35.9167 3.33301 35.9167H36.6663C36.9979 35.9167 37.3158 35.7851 37.5502 35.5506C37.7846 35.3162 37.9163 34.9983 37.9163 34.6667C37.9163 34.3352 37.7846 34.0173 37.5502 33.7829C37.3158 33.5484 36.9979 33.4167 36.6663 33.4167H34.583V16.2667ZM15.4163 13.8334C15.4163 12.6178 15.8992 11.4521 16.7588 10.5925C17.6183 9.73297 18.7841 9.25008 19.9997 9.25008C21.2153 9.25008 22.381 9.73297 23.2406 10.5925C24.1001 11.4521 24.583 12.6178 24.583 13.8334C24.583 15.049 24.1001 16.2148 23.2406 17.0743C22.381 17.9339 21.2153 18.4167 19.9997 18.4167C18.7841 18.4167 17.6183 17.9339 16.7588 17.0743C15.8992 16.2148 15.4163 15.049 15.4163 13.8334ZM20.083 20.0834C21.1897 20.0834 22.1447 20.0834 22.9097 20.1868C23.7297 20.2968 24.5147 20.5451 25.1513 21.1818C25.788 21.8184 26.0363 22.6034 26.1463 23.4234C26.243 24.1401 26.2497 25.0234 26.2497 26.0451V33.4167H23.7497V26.3334C23.7497 25.1201 23.7463 24.3334 23.6697 23.7568C23.5963 23.2151 23.4797 23.0451 23.383 22.9501C23.2863 22.8551 23.118 22.7367 22.5763 22.6634C21.998 22.5868 21.213 22.5834 19.9997 22.5834C18.7863 22.5834 17.9997 22.5868 17.423 22.6634C16.8813 22.7367 16.7113 22.8551 16.6163 22.9501C16.5213 23.0451 16.403 23.2151 16.3297 23.7568C16.253 24.3351 16.2497 25.1201 16.2497 26.3334V33.4167H13.7497V26.2501C13.7497 25.1434 13.7497 24.1884 13.853 23.4234C13.963 22.6034 14.2113 21.8184 14.848 21.1818C15.4847 20.5451 16.2713 20.2968 17.0897 20.1868C17.8547 20.0834 18.8097 20.0834 19.918 20.0834H20.083Z"
+                                fill="#1F41BB" />
+                            <path
+                                d="M17.917 13.8333C17.917 13.2808 18.1365 12.7509 18.5272 12.3602C18.9179 11.9695 19.4478 11.75 20.0003 11.75C20.5529 11.75 21.0828 11.9695 21.4735 12.3602C21.8642 12.7509 22.0837 13.2808 22.0837 13.8333C22.0837 14.3859 21.8642 14.9158 21.4735 15.3065C21.0828 15.6972 20.5529 15.9167 20.0003 15.9167C19.4478 15.9167 18.9179 15.6972 18.5272 15.3065C18.1365 14.9158 17.917 14.3859 17.917 13.8333Z"
+                                fill="#1F41BB" />
+                        </svg>
 
-          <div class="onboarding-option" data-account-type="business">
-            <div>
-              <img class="onboarding-icon-business" width="50px" height="50px" src="/assets/Icons/business-icon.png"
-                alt="business" />
+                        <p class="text-base  text-gray-800 whitespace-nowrap">Home Service</p>
+                    </div>
+                    <div
+                        class="bg-white     border   border-[#E8E8E8] rounded-lg px-16 py-14 gap-5 flex flex-col items-center text-center">
+                        <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_138_497)">
+                                <path
+                                    d="M3.66699 36.6667C3.66699 37.5667 4.41699 38.3334 5.33366 38.3334H27.0003C27.9337 38.3334 28.667 37.5667 28.667 36.6667V35.0001H3.66699V36.6667ZM16.167 15.0001C9.91699 15.0001 3.66699 18.3334 3.66699 25.0001H28.667C28.667 18.3334 22.417 15.0001 16.167 15.0001ZM8.03366 21.6667C9.88366 19.0834 13.817 18.3334 16.167 18.3334C18.517 18.3334 22.4503 19.0834 24.3003 21.6667H8.03366ZM3.66699 28.3334H28.667V31.6667H3.66699V28.3334ZM32.0003 8.33342V1.66675H28.667V8.33342H20.3337L20.717 11.6667H36.6503L34.317 35.0001H32.0003V38.3334H34.867C36.267 38.3334 37.417 37.2501 37.5837 35.8834L40.3337 8.33342H32.0003Z"
+                                    fill="#1F41BB" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_138_497">
+                                    <rect width="40" height="40" fill="white" transform="translate(0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                        <p class="text-base  text-gray-800">food</p>
+                    </div>
+                    <div
+                        class="bg-white     border   border-[#E8E8E8] rounded-lg px-16 py-14 gap-5 flex flex-col items-center text-center">
+                        <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_138_502)">
+                                <path
+                                    d="M16.667 3.33326C15.3409 3.33326 14.0691 3.86004 13.1315 4.79772C12.1938 5.7354 11.667 7.00717 11.667 8.33326V11.6666H8.75033C8.19779 11.6666 7.66789 11.8861 7.27719 12.2768C6.88649 12.6675 6.66699 13.1974 6.66699 13.7499V31.2499C6.66699 31.9612 6.8071 32.6656 7.07931 33.3228C7.35152 33.98 7.75051 34.5771 8.2535 35.0801C8.75648 35.5831 9.35361 35.9821 10.0108 36.2543C10.668 36.5265 11.3723 36.6666 12.0837 36.6666H27.917C28.6283 36.6666 29.3327 36.5265 29.9899 36.2543C30.647 35.9821 31.2442 35.5831 31.7472 35.0801C32.2501 34.5771 32.6491 33.98 32.9213 33.3228C33.1936 32.6656 33.3337 31.9612 33.3337 31.2499V13.7499C33.3337 13.1974 33.1142 12.6675 32.7235 12.2768C32.3328 11.8861 31.8029 11.6666 31.2503 11.6666H28.3337V8.33326C28.3336 7.36805 28.0542 6.42349 27.5292 5.61357C27.0042 4.80366 26.256 4.16302 25.3748 3.76899C24.4937 3.37496 23.5174 3.24438 22.5637 3.393C21.61 3.54163 20.7197 3.96312 20.0003 4.60659C19.0845 3.78526 17.8972 3.33172 16.667 3.33326ZM31.2503 13.7499V31.2499C31.2503 32.134 30.8991 32.9818 30.274 33.6069C29.6489 34.2321 28.801 34.5833 27.917 34.5833C27.0329 34.5833 26.1851 34.2321 25.56 33.6069C24.9348 32.9818 24.5837 32.134 24.5837 31.2499V13.7499H31.2503ZM23.647 34.5833H12.0837C11.1996 34.5833 10.3518 34.2321 9.72664 33.6069C9.10151 32.9818 8.75033 32.134 8.75033 31.2499V13.7499H22.5003V31.2499C22.5003 32.5066 22.9287 33.6641 23.647 34.5833ZM26.2503 11.6666H21.667V8.33326C21.6675 7.63465 21.5216 6.94369 21.2387 6.30492C21.6427 5.88778 22.1621 5.60076 22.7303 5.48062C23.2984 5.36048 23.8896 5.41268 24.4279 5.63056C24.9662 5.84843 25.4272 6.22204 25.7519 6.70355C26.0766 7.18505 26.2501 7.75251 26.2503 8.33326V11.6666ZM19.5837 8.33326V11.6666H13.7503V8.33326C13.7503 7.95023 13.8258 7.57096 13.9723 7.2171C14.1189 6.86323 14.3338 6.5417 14.6046 6.27086C14.8754 6.00002 15.197 5.78518 15.5508 5.63861C15.9047 5.49203 16.284 5.41659 16.667 5.41659C17.05 5.41659 17.4293 5.49203 17.7832 5.63861C18.137 5.78518 18.4585 6.00002 18.7294 6.27086C19.0002 6.5417 19.2151 6.86323 19.3616 7.2171C19.5082 7.57096 19.5837 7.95023 19.5837 8.33326Z"
+                                    fill="#1F41BB" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_138_502">
+                                    <rect width="40" height="40" fill="white" transform="translate(0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                        <p class="text-base  text-gray-800">Shopping</p>
+                    </div>
+                    <div
+                        class="bg-white     border   border-[#E8E8E8] rounded-lg px-16 py-14 gap-5 flex flex-col items-center text-center">
+                        <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_138_507)">
+                                <path
+                                    d="M20.9995 3.33325C23.9179 3.33325 26.3162 4.31992 27.9462 5.26492C30.1528 6.54325 30.9995 8.94825 30.9995 11.0949V13.9449C32.5114 14.895 33.9712 15.9253 35.3729 17.0316C35.7053 17.3115 35.9152 17.7102 35.9579 18.1427C36.0006 18.5752 35.8727 19.0073 35.6014 19.3468C35.3301 19.6863 34.937 19.9065 34.5057 19.9603C34.0745 20.0141 33.6393 19.8974 33.2928 19.6349C32.5471 19.0477 31.7822 18.4852 30.9995 17.9483V29.3099C30.9995 31.261 30.2244 33.1322 28.8448 34.5119C27.4652 35.8915 25.594 36.6666 23.6429 36.6666H18.3562C16.4051 36.6666 14.5339 35.8915 13.1542 34.5119C11.7746 33.1322 10.9995 31.261 10.9995 29.3099V17.9483C10.2212 18.4883 9.44952 19.0433 8.70785 19.6349C8.36263 19.9112 7.9218 20.039 7.48234 19.9902C7.04288 19.9415 6.64078 19.7201 6.36452 19.3749C6.08825 19.0297 5.96044 18.5889 6.0092 18.1494C6.05796 17.7099 6.27929 17.3079 6.62452 17.0316C8.02672 15.9259 9.48714 14.8961 10.9995 13.9466V11.0949C10.9995 8.94659 11.8462 6.54325 14.0529 5.26492C15.6829 4.31992 18.0829 3.33325 20.9995 3.33325ZM27.6662 19.0233L27.4645 19.2266L27.2379 19.4666C26.5216 20.2846 26.0916 21.3138 26.0129 22.3983L25.9995 22.7616V28.3333L25.9912 28.5833C25.9315 29.3769 25.5899 30.123 25.0281 30.6866C24.4662 31.2503 23.7213 31.5944 22.9279 31.6566L22.6662 31.6666H19.3329L19.0829 31.6583C18.2892 31.5986 17.5431 31.257 16.9795 30.6952C16.4158 30.1333 16.0717 29.3883 16.0095 28.5949L15.9995 28.3333V22.7616L15.9879 22.4316C15.9165 21.3466 15.4935 20.3145 14.7829 19.4916L14.5345 19.2249L14.3329 19.0249V29.3083L14.3462 29.6283C14.422 30.5821 14.8354 31.4776 15.5119 32.1542C16.1885 32.8307 17.084 33.2441 18.0379 33.3199L18.3562 33.3333H23.6429L23.9612 33.3199C24.915 33.2441 25.8105 32.8307 26.4871 32.1542C27.1637 31.4776 27.577 30.5821 27.6528 29.6283L27.6662 29.3099V19.0233ZM20.9995 13.3333C20.0762 13.3333 18.8595 13.6533 17.4529 14.2449C16.9784 14.446 16.5012 14.6671 16.0212 14.9083L15.3045 15.2799L16.8929 16.8683C18.3476 18.3234 19.2125 20.2652 19.3212 22.3199L19.3329 22.7616V28.3333H22.6662V22.7616C22.6658 20.7037 23.4269 18.7185 24.8029 17.1883L25.1062 16.8683L26.6945 15.2799C25.9947 14.9009 25.2772 14.5555 24.5445 14.2449C23.1412 13.6533 21.9245 13.3333 20.9995 13.3333ZM20.9995 6.66659C18.8379 6.66659 17.0162 7.39992 15.7245 8.14992C14.8712 8.64158 14.3329 9.70492 14.3329 11.0933V12.0266C14.9345 11.7183 15.5479 11.4283 16.1595 11.1699C17.7229 10.5133 19.4229 9.99992 20.9995 9.99992C22.5762 9.99992 24.2762 10.5133 25.8395 11.1716C26.4512 11.4299 27.0645 11.7199 27.6662 12.0266V11.0933C27.6662 9.70659 27.1279 8.64325 26.2745 8.14825C24.9829 7.39992 23.1612 6.66659 20.9995 6.66659Z"
+                                    fill="#1F41BB" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_138_507">
+                                    <rect width="40" height="40" fill="white" transform="translate(0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                        <p class="text-base whitespace-nowrap  text-gray-800">Car Service</p>
+                    </div>
+                    <div
+                        class="bg-white     border   border-[#E8E8E8] rounded-lg px-16 py-14 gap-5 flex flex-col items-center text-center">
+                        <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_138_514)">
+                                <path
+                                    d="M38.7846 35.8H25.7998V39H38.9174C39.2065 39.0138 39.4915 38.928 39.7249 38.7569C39.9583 38.5858 40.126 38.3398 40.1998 38.06V37.284C40.1998 37.284 40.1902 35.8 38.7846 35.8ZM36.9886 35.168C37.841 35.1667 38.658 34.8271 39.2601 34.2238C39.8622 33.6205 40.2002 32.8028 40.1998 31.9504C40.1998 30.1688 38.7598 28.732 36.9886 28.732C36.5668 28.7327 36.1493 28.8166 35.7599 28.9787C35.3705 29.1409 35.0169 29.3782 34.7193 29.6771C34.4217 29.976 34.1859 30.3306 34.0253 30.7207C33.8648 31.1107 33.7828 31.5286 33.7838 31.9504C33.7838 33.7256 35.2198 35.168 36.9886 35.168ZM30.2254 35C31.9102 35 33.2654 33.8128 33.2654 32.1304C33.2646 30.4512 31.9046 29.5704 30.2326 29.5576L25.7998 30.1192V35H30.2254ZM15.8182 14.1464C17.7854 14.1464 19.3766 12.5464 19.3766 10.5728C19.3766 8.5992 17.7854 7 15.8182 7C13.8526 7 12.259 8.5992 12.259 10.5728C12.259 12.5464 13.8526 14.1464 15.8182 14.1464ZM12.1846 25.7112L12.1526 25.6648L10.5398 21.9096L10.5374 29.4H15.3574L16.4102 28.28L13.555 27.1808C12.8782 26.9264 12.3974 26.3504 12.1846 25.7112ZM13.2062 25.3744C13.3622 25.7248 13.651 26.0088 14.0142 26.1392L19.5158 28.1784C19.6834 28.2519 19.8639 28.2917 20.047 28.2954C20.23 28.2991 20.412 28.2666 20.5824 28.1999C20.7529 28.1332 20.9085 28.0335 21.0404 27.9065C21.1723 27.7795 21.2778 27.6278 21.351 27.46C21.4995 27.1196 21.5075 26.7343 21.3732 26.388C21.239 26.0417 20.9734 25.7625 20.6342 25.6112L15.5582 23.6944L13.9902 19.9336L15.0126 19.5528L16.3414 22.7752L20.1998 24.2056V20.268L22.2478 21.4864L23.2686 26.6288C23.3274 26.8028 23.4201 26.9634 23.5413 27.1014C23.6626 27.2393 23.8099 27.3518 23.9749 27.4325C24.1399 27.5131 24.3193 27.5603 24.5026 27.5712C24.6859 27.5821 24.8696 27.5565 25.043 27.496C25.3922 27.3718 25.6783 27.1149 25.8393 26.7811C26.0003 26.4472 26.0232 26.0634 25.903 25.7128L24.759 20.76C24.6838 20.4859 24.527 20.2412 24.3094 20.0584C23.723 19.4088 20.7574 16.0928 20.5462 15.8712C20.2366 15.5608 19.5286 15 18.191 15H13.391C10.663 15 10.1382 17.784 10.6958 19.2L13.2062 25.3744ZM24.9998 30.2H3.3734C2.5862 30.2 1.7998 30.644 1.7998 31.6208V39H24.9998V30.2Z"
+                                    fill="#1F41BB" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_138_514">
+                                    <rect width="40" height="40" fill="white" transform="translate(0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                        <p class="text-base  text-gray-800">Spa</p>
+                    </div>
+                    <div
+                        class="bg-white     border   border-[#E8E8E8] rounded-lg px-16 py-14 gap-5 flex flex-col items-center text-center">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_138_521)">
+                                <path
+                                    d="M5 25C2.24333 25 0 22.7567 0 20C0 17.2433 2.24333 15 5 15C7.75667 15 10 17.2433 10 20C10 22.7567 7.75667 25 5 25ZM5 16.6667C3.16167 16.6667 1.66667 18.1617 1.66667 20C1.66667 21.8383 3.16167 23.3333 5 23.3333C6.83833 23.3333 8.33333 21.8383 8.33333 20C8.33333 18.1617 6.83833 16.6667 5 16.6667Z"
+                                    fill="#1F41BB" />
+                                <path
+                                    d="M20 25C17.2433 25 15 22.7567 15 20C15 17.2433 17.2433 15 20 15C22.7567 15 25 17.2433 25 20C25 22.7567 22.7567 25 20 25ZM20 16.6667C18.1617 16.6667 16.6667 18.1617 16.6667 20C16.6667 21.8383 18.1617 23.3333 20 23.3333C21.8383 23.3333 23.3333 21.8383 23.3333 20C23.3333 18.1617 21.8383 16.6667 20 16.6667Z"
+                                    fill="#1F41BB" />
+                                <path
+                                    d="M35 25C32.2433 25 30 22.7567 30 20C30 17.2433 32.2433 15 35 15C37.7567 15 40 17.2433 40 20C40 22.7567 37.7567 25 35 25ZM35 16.6667C33.1617 16.6667 31.6667 18.1617 31.6667 20C31.6667 21.8383 33.1617 23.3333 35 23.3333C36.8383 23.3333 38.3333 21.8383 38.3333 20C38.3333 18.1617 36.8383 16.6667 35 16.6667Z"
+                                    fill="#1F41BB" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_138_521">
+                                    <rect width="40" height="40" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                        <p class="text-base  text-gray-800">More</p>
+                    </div>
+
+                </div>
             </div>
-            <div>
-              <h4>Business</h4>
-              <p>Own or belong to a company, this is for you.</p>
-            </div>
-            <svg class="feather feather-arrow-right" fill="none" height="24" stroke="#1F41BB" stroke-linecap="round"
-              stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
-              xmlns="http://www.w3.org/2000/svg">
-              <line x1="5" x2="19" y1="12" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </div>
         </div>
 
-        <!-- Step 1: Signup Form -->
-        <div id="step-signup" class="form-step">
-          <div class="back-btn" id="backToAccountType">
-            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
-          </div>
-          <div class="center welcome">
-            <h1>Welcome to Rimark</h1>
-            <p>Create Free account and become a Rimark family</p>
-          </div>
-
-          <!-- Google Sign-In Button -->
-          <div class="google-signup">
-            <button type="button" class="google-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0,0,256,256">
-                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                  style="mix-blend-mode: normal">
-                  <g transform="scale(8.53333,8.53333)">
-                    <path
-                      d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.016 4.432,10.984 10.206,11.852v-8.672h-2.969v-3.154h2.969v-2.099c0,-3.475 1.693,-5 4.581,-5c1.383,0 2.115,0.103 2.461,0.149v2.753h-1.97c-1.226,0 -1.654,1.163 -1.654,2.473v1.724h3.593l-0.487,3.154h-3.106v8.697c5.857,-0.794 10.376,-5.802 10.376,-11.877c0,-6.627 -5.373,-12 -12,-12z">
-                    </path>
-                  </g>
-                </g>
-              </svg>
-
-              Sign up with Facebook
-            </button>
-          </div>
-
-          <div class="or-divider">
-            <span>or</span>
-          </div>
-
-          <div class="name-row">
-            <div class="name-container">
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" class="form-input" placeholder="John" required />
-              <div id="firstNameError" class="error-message"></div>
-            </div>
-            <div class="name-container">
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Doe" required />
-              <div id="lastNameError" class="error-message"></div>
-            </div>
-          </div>
-
-          <label for="email">Email Id</label>
-          <input type="email" id="email" name="email" class="form-input" placeholder="example@gmail.com" required />
-          <div id="emailError" class="error-message"></div>
-
-          <div class="flex justify-between">
-            <label for="password">Create Password</label>
-          </div>
-          <input type="password" id="password" name="password" class="form-input"
-            placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" required />
-          <div id="passwordError" class="error-message"></div>
-
-          <div class="terms-container">
-            <input type="checkbox" id="termsCheckbox" required />
-            <label for="termsCheckbox">
-              I agree to the
-              <a href="/terms" target="_blank">Terms and Conditions</a>
-            </label>
-          </div>
-          <div id="termsError" class="error-message"></div>
-
-          <div class="form-navigation">
-            <button type="button" class="create-acc-btn" id="proceedToLocation">
-              Create Account
-            </button>
-          </div>
-          <p class="center existing">
-            Already have a account? <a href="">Sign in</a>
-          </p>
-        </div>
-
-        <!-- Step 2: Location Preference -->
-        <div id="step-location" class="form-step">
-          <div class="back-btn" id="backToSignup">
-            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
-          </div>
-          <div class="center">
-            <h1>Location Preference</h1>
-            <p>
-              Aspernatur ut eaque dignissimos in id similique et perspiciatis.
-              Voluptatem officia explicabo.
-            </p>
-          </div>
-
-          <div class="location-box">
-            <input type="text" id="locationInput" placeholder="Find Your Location" />
-            <ul id="suggestions" class="suggestions-list"></ul>
-          </div>
-
-          <div class="form-navigation">
-            <button type="button" id="proceedToRewards" disabled>
-              Save & Continue
-            </button>
-          </div>
-
-          <p class="info-secured">
-            <span>Your Info is safely secured</span>
-          </p>
-
-          <div class="back " id="backToSignup">
-            <p class="back-btn desktop-back-btn">&lt; Back</p>
-          </div>
-        </div>
-
-        <!-- Step 3: Rewards and Recommendations -->
-        <div id="step-rewards" class="form-step">
-          <div class="back-btn" id="backToLocation">
-            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
-          </div>
-          <h1 class="rewards-title">Rewards & Recomendations</h1>
-          <p>
-            Make your first recommendation, search one of your favorite places
-            and earn rewards
-          </p>
-
-          <div class="recommendation-box">
-            <input type="text" id="recommendationInput" placeholder="Recommend your first business " />
-          </div>
-
-          <div id="businessResults" class="business-results">
-            <!-- Business results will appear here -->
-          </div>
-
-          <div class="form-navigation">
-            <button type="button" id="proceedToUsername" disabled>
-              Next
-            </button>
-          </div>
-
-          <div class="back">
-            <p class="back-btn desktop-back-btn" id="backToLocation">
-              &lt; Back
-            </p>
-          </div>
-        </div>
-
-        <!-- Step 4: Username and Completion -->
-        <div id="step-username" class="form-step">
-          <div class="back-btn" id="backToRewards">
-            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
-          </div>
-          <h1>Create User Name</h1>
-          <p>Choose a unique username for your Rimark account</p>
-
-          <input type="text" id="username" class="form-input" placeholder="Choose a unique username" required />
-          <div id="usernameError" class="error-message"></div>
-
-          <div class="form-navigation">
-            <button type="button" id="proceedToCompletion">Next</button>
-          </div>
-          <div class="back">
-            <p class="back-btn" id="hideRewardsBack">&lt; Back</p>
-          </div>
-        </div>
-
-        <!-- Step 5: Completion and invite -->
-        <div id="step-completion" class="form-step">
-          <div class="back-btn" id="backToUsername">
-            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
-          </div>
-          <div>
-            <div class="none mobile-social-invite">
-              <h1>Social Invite</h1>
-              <p>
-                (First Name), as a founding member, you're Invited to enjoy
-                Rimarke exclusive deals.
-              </p>
-            </div>
-            <div class="share-box">
-              <div>
-                <h1>I Like it</h1>
-                <p>
-                  Invite up to 5 Friends, and you be entered to win a free
-                  dinner at your favorite spot every week!
-                </p>
-              </div>
-              <div class="share-socials">
-                <img src="/assets/Icons/socials.png" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <p class="center">I will do this later</p>
-          <div class="form-navigation">
-            <button type="button" id="completeSignup">Complete Signup</button>
-          </div>
-          <div class="back">
-            <p class="back-btn" id="hideUsernameBack">&lt; Back</p>
-          </div>
-        </div>
-
-        <!-- Step 1: Signup Form Business -->
-        <div id="step-signup-business" class="form-step">
-          <div class="back-btn" id="backToAccountType">
-            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
-          </div>
-          <div class="center welcome">
-            <h1>Welcome to Rimark</h1>
-            <p>Create Free account and become a Rimark family</p>
-          </div>
-
-          <div class="name-row">
-            <div class="name-container">
-              <label for="firstName">First Name</label>
-              <input type="text" id="bfirstName" name="firstName" class="form-input" placeholder="John" required />
-              <div id="bfirstNameError" class="error-message"></div>
-            </div>
-            <div class="name-container">
-              <label for="lastName">Last Name</label>
-              <input type="text" id="blastName" name="lastName" class="form-input" placeholder="Doe" required />
-              <div id="blastNameError" class="error-message"></div>
-            </div>
-          </div>
-
-          <label for="email">Email Id</label>
-          <input type="email" id="bemail" name="email" class="form-input" placeholder="example@gmail.com" required />
-          <div id="bemailError" class="error-message"></div>
-
-          <div class="flex justify-between">
-            <label for="password">Create Password</label>
-          </div>
-          <input type="password" id="bpassword" name="password" class="form-input" placeholder="......." required />
-          <div id="bpasswordError" class="error-message"></div>
-
-          <div class="terms-container">
-            <input type="checkbox" id="btermsCheckbox" required />
-            <label for="termsCheckbox">
-              I agree to the
-              <a href="/terms" target="_blank">Terms and Conditions</a>
-            </label>
-          </div>
-          <div id="btermsError" class="error-message"></div>
-
-          <div class="form-navigation">
-            <button type="button" class="create-acc-btn" id="proceedToclaimName">
-              Create Account
-            </button>
-          </div>
-          <p class="center existing">
-            Already have a account? <a href="">Sign in</a>
-          </p>
-        </div>
-
-        <!-- Step 2: Claim business name -->
-        <div id="step-claim-name" class="form-step">
-          <div class="back-btn" id="backToSignupBusiness">
-            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
-          </div>
-          <div class="center">
-            <h1>Claim your business Name</h1>
-            <p>
-              Aspernatur ut eaque dignissimos in id similique et perspiciatis.
-              Voluptatem officia explicabo.
-            </p>
-          </div>
-
-          <div class="claimname-box">
-            <input type="text" id="claimNameInput" placeholder="Business Name" />
-          </div>
-
-          <div class="form-navigation">
-            <button type="button" id="proceedTocreateRewards">
-              Next
-            </button>
-          </div>
-
-          <div class="back" id="backToSignupBusiness">
-            <p class="back-btn desktop-back-btn">&lt; Back</p>
-          </div>
-        </div>
-
-        <!-- Step 3: Rewards and Recommendations -->
-        <div id="step-create-rewards" class="form-step">
-          <div class="back-btn" id="backToclaimName">
-            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
-          </div>
-          <h1 class="rewards-title">Create Rewards</h1>
-          <p>
-            Aspernatur ut eaque dignissimos in id similique et perspiciatis.
-            Voluptatem officia explicabo.
-          </p>
-
-          <div class="create-rewards-box">
-            <input type="text" id="createRewardsInput" placeholder="Reward Name" />
-
-            <input type="text" id="descriptionInput" placeholder="Description for the offer. " />
-          </div>
-
-          <div class="form-navigation">
-            <button type="button" id="proceedToclaimUrl">
-              Next
-            </button>
-          </div>
-
-          <div class="back">
-            <p class="back-btn desktop-back-btn" id="backToLocation">
-              &lt; Back
-            </p>
-          </div>
-        </div>
-
-        <!-- Step 4: Claim business url -->
-        <div id="step-claim-url" class="form-step">
-          <div class="back-btn" id="backToSignupBusiness">
-            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
-          </div>
-          <div class="center">
-            <h1>Claim your business URL</h1>
-            <p>
-              Aspernatur ut eaque dignissimos in id similique et perspiciatis.
-              Voluptatem officia explicabo.
-            </p>
-          </div>
-
-          <div class="claimurl-box">
-            <div class="url-box">
-              rimark.us/
-            </div>
-            <input type="text" id="claimUrlInput" placeholder="Business URL" />
-          </div>
-
-          <div class="form-navigation">
-            <button type="button" id="proceedToCompletionBusiness">
-              Next
-            </button>
-          </div>
-
-          <div class="back" id="backToSignupBusiness">
-            <p class="back-btn desktop-back-btn">&lt; Back</p>
-          </div>
-        </div>
-
-        <!-- Step 5: Completion and invite -->
-        <div id="step-completion-business" class="form-step">
-          <div class="back-btn" id="backToUsername">
-            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
-          </div>
-          <div>
-            <div class="none mobile-social-invite">
-              <h1>Social Invite</h1>
-              <p>
-                (First Name), as a founding member, you're Invited to enjoy
-                Rimarke exclusive deals.
-              </p>
-            </div>
-            <div class="share-box">
-              <div>
-                <h1>I Like it</h1>
-                <p>
-                  Invite up to 5 Friends, and you be entered to win a free
-                  dinner at your favorite spot every week!
-                </p>
-              </div>
-              <div class="share-socials">
-                <img src="/assets/Icons/socials.png" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <p class="center">I will do this later</p>
-          <div class="form-navigation">
-            <button type="button" id="completeSignup">Complete Signup</button>
-          </div>
-          <div class="back">
-            <p class="back-btn" id="hideUsernameBack">&lt; Back</p>
-          </div>
-        </div>
-
-      </div>
     </div>
-  </div>
-  <script src="scripts/script.js"></script>
+
+    <!-- Recent Activity -->
+    <div class=" w-full  bg-[#fcfcfc]">
+        <div class=" flex flex-col   text-center  w-full bg-white">
+            <h2 class="text-[42px] font-bold mb-1 ">Recent Activity</h2>
+            <p class="mb-4 text-[20px]">Lorembit Ipsumus needum a mobilo appum that tracker actives and <br> providum
+                personized workouts plan</p>
+        </div>
+        <div class="mx-auto relative  max-w-4xl p-2 w-full">
+
+            <div class="grid gap-10  w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+                <!-- Article card 1 -->
+                <div class="bg-white rounded-[20px] mt-20 overflow-hidden shadow-xl p-3  w-[20rem] scale-90">
+                    <!-- Image placeholder for card 1 -->
+                    <img src="../assets//Rectangle 1763.png" alt="Placeholder image of a forest landscape"
+                        class="w-full  rounded-[16px]  h-48 overflow-hidden object-cover">
+                    <div class=" px- py-4">
+                        <h3 class=" text-[#284B80] font-bold text-[22px] mb-2">Qui optio quod explicabo. Ea ipsum soluta
+                            et assumenda.</h3>
+                        <div class="mb-6 gap-4 mt-6 text-gray-700 flex">
+                            <img src="../assets//Image-60.png" class=" w-14 h-full" alt="">
+                            <div>
+                                <p class=" text-[20px] text-[#284B80]">Ajay</p>
+                                <p class=" text-[#8D98AA] text-[16px] whitespace-nowrap">Smoothie maker of the year</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 mt-4 items-center justify-start text-gray-800">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6425 20.7833 11.8195 20.8327 12 20.8327C12.1805 20.8327 12.3575 20.7833 12.512 20.69C21.126 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                    stroke="#B21C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.2222 0V4.8C4.44444 6 1.11111 12 0 18C2.77778 13.8 6.66667 11.88 12.2222 11.88V16.8L20 8.4L12.2222 0ZM14.4444 5.796L16.8556 8.4L14.4444 11.004V9.48H12.2222C9.92222 9.48 7.85556 9.936 5.93333 10.62C7.48889 8.952 9.48889 7.644 12.5333 7.2L14.4444 6.876V5.796Z"
+                                    fill="#9F9F9F" />
+                            </svg>
+
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.0508 0H3.32422C2.82422 0 2.41406 0.40625 2.41406 0.910156V20L9.6875 12.7266L16.9609 20V0.910156C16.9609 0.40625 16.5547 0 16.0508 0Z"
+                                    fill="#9F9F9F" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Article card 2 -->
+                <div class="bg-white rounded-[20px] overflow-hidden shadow-xl p-3 h-fit  w-[20rem] scale-90">
+                    <!-- Image placeholder for card 1 -->
+                    <img src="../assets/Rec2.png" alt="Placeholder image of a forest landscape"
+                        class="w-full  rounded-[16px]  h-48 overflow-hidden object-cover">
+                    <div class=" px- py-4">
+                        <h3 class=" text-[#284B80] font-bold text-[22px] mb-2">Qui optio quod explicabo. Ea ipsum soluta
+                            et assumenda.</h3>
+                        <div class="mb-6 gap-4 mt-6 text-gray-700 flex">
+                            <img src="../assets//Image-60.png" class=" w-14 h-full" alt="">
+                            <div>
+                                <p class=" text-[20px] text-[#284B80]">Ajay</p>
+                                <p class=" text-[#8D98AA] text-[16px] whitespace-nowrap">Smoothie maker of the year</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 mt-4 items-center justify-start text-gray-800">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6425 20.7833 11.8195 20.8327 12 20.8327C12.1805 20.8327 12.3575 20.7833 12.512 20.69C21.126 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                    stroke="#B21C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.2222 0V4.8C4.44444 6 1.11111 12 0 18C2.77778 13.8 6.66667 11.88 12.2222 11.88V16.8L20 8.4L12.2222 0ZM14.4444 5.796L16.8556 8.4L14.4444 11.004V9.48H12.2222C9.92222 9.48 7.85556 9.936 5.93333 10.62C7.48889 8.952 9.48889 7.644 12.5333 7.2L14.4444 6.876V5.796Z"
+                                    fill="#9F9F9F" />
+                            </svg>
+
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.0508 0H3.32422C2.82422 0 2.41406 0.40625 2.41406 0.910156V20L9.6875 12.7266L16.9609 20V0.910156C16.9609 0.40625 16.5547 0 16.0508 0Z"
+                                    fill="#9F9F9F" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Article card 3 -->
+                <div class="bg-white rounded-[20px] mt-20 overflow-hidden shadow-xl p-3  w-[20rem] scale-90">
+                    <!-- Image placeholder for card 1 -->
+                    <img src="../assets/Rec3.png" alt="Placeholder image of a forest landscape"
+                        class="w-full  rounded-[16px]  h-48 overflow-hidden object-cover">
+                    <div class=" px- py-4">
+                        <h3 class=" text-[#284B80] font-bold text-[22px] mb-2">Qui optio quod explicabo. Ea ipsum soluta
+                            et assumenda.</h3>
+                        <div class="mb-6 gap-4 mt-6 text-gray-700 flex">
+                            <img src="../assets//Image-60.png" class=" w-14 h-full" alt="">
+                            <div>
+                                <p class=" text-[20px] text-[#284B80]">Ajay</p>
+                                <p class=" text-[#8D98AA] text-[16px] whitespace-nowrap">Smoothie maker of the year</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 mt-4 items-center justify-start text-gray-800">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6425 20.7833 11.8195 20.8327 12 20.8327C12.1805 20.8327 12.3575 20.7833 12.512 20.69C21.126 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                    stroke="#B21C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.2222 0V4.8C4.44444 6 1.11111 12 0 18C2.77778 13.8 6.66667 11.88 12.2222 11.88V16.8L20 8.4L12.2222 0ZM14.4444 5.796L16.8556 8.4L14.4444 11.004V9.48H12.2222C9.92222 9.48 7.85556 9.936 5.93333 10.62C7.48889 8.952 9.48889 7.644 12.5333 7.2L14.4444 6.876V5.796Z"
+                                    fill="#9F9F9F" />
+                            </svg>
+
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.0508 0H3.32422C2.82422 0 2.41406 0.40625 2.41406 0.910156V20L9.6875 12.7266L16.9609 20V0.910156C16.9609 0.40625 16.5547 0 16.0508 0Z"
+                                    fill="#9F9F9F" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article card 4 -->
+                <div class="bg-white rounded-[20px] overflow-hidden shadow-xl p-3  -mt-20  w-[20rem] scale-90">
+                    <!-- Image placeholder for card 1 -->
+                    <img src="../assets/Rec4.png" alt="Placeholder image of a forest landscape"
+                        class="w-full  rounded-[16px]  h-48 overflow-hidden object-cover">
+                    <div class=" px- py-4">
+                        <h3 class=" text-[#284B80] font-bold text-[22px] mb-2">Qui optio quod explicabo. Ea ipsum soluta
+                            et assumenda.</h3>
+                        <div class="mb-6 gap-4 mt-6 text-gray-700 flex">
+                            <img src="../assets//Image-60.png" class=" w-14 h-full" alt="">
+                            <div>
+                                <p class=" text-[20px] text-[#284B80]">Ajay</p>
+                                <p class=" text-[#8D98AA] text-[16px] whitespace-nowrap">Smoothie maker of the year</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 mt-4 items-center justify-start text-gray-800">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6425 20.7833 11.8195 20.8327 12 20.8327C12.1805 20.8327 12.3575 20.7833 12.512 20.69C21.126 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                    stroke="#B21C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.2222 0V4.8C4.44444 6 1.11111 12 0 18C2.77778 13.8 6.66667 11.88 12.2222 11.88V16.8L20 8.4L12.2222 0ZM14.4444 5.796L16.8556 8.4L14.4444 11.004V9.48H12.2222C9.92222 9.48 7.85556 9.936 5.93333 10.62C7.48889 8.952 9.48889 7.644 12.5333 7.2L14.4444 6.876V5.796Z"
+                                    fill="#9F9F9F" />
+                            </svg>
+
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.0508 0H3.32422C2.82422 0 2.41406 0.40625 2.41406 0.910156V20L9.6875 12.7266L16.9609 20V0.910156C16.9609 0.40625 16.5547 0 16.0508 0Z"
+                                    fill="#9F9F9F" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Article card 5 -->
+                <div class="bg-white rounded-[20px] overflow-hidden shadow-xl p-3  h-fit -mt-40 w-[20rem] scale-90">
+                    <!-- Image placeholder for card 1 -->
+                    <img src="../assets//Rec5.png" alt="Placeholder image of a forest landscape"
+                        class="w-full  rounded-[16px]  h-48 overflow-hidden object-cover">
+                    <div class=" px- py-4">
+                        <h3 class=" text-[#284B80] font-bold text-[22px] mb-2">Qui optio quod explicabo. Ea ipsum soluta
+                            et assumenda.</h3>
+                        <div class="mb-6 gap-4 mt-6 text-gray-700 flex">
+                            <img src="../assets//Image-60.png" class=" w-14 h-full" alt="">
+                            <div>
+                                <p class=" text-[20px] text-[#284B80]">Ajay</p>
+                                <p class=" text-[#8D98AA] text-[16px] whitespace-nowrap">Smoothie maker of the year</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 mt-4 items-center justify-start text-gray-800">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6425 20.7833 11.8195 20.8327 12 20.8327C12.1805 20.8327 12.3575 20.7833 12.512 20.69C21.126 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                    stroke="#B21C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.2222 0V4.8C4.44444 6 1.11111 12 0 18C2.77778 13.8 6.66667 11.88 12.2222 11.88V16.8L20 8.4L12.2222 0ZM14.4444 5.796L16.8556 8.4L14.4444 11.004V9.48H12.2222C9.92222 9.48 7.85556 9.936 5.93333 10.62C7.48889 8.952 9.48889 7.644 12.5333 7.2L14.4444 6.876V5.796Z"
+                                    fill="#9F9F9F" />
+                            </svg>
+
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.0508 0H3.32422C2.82422 0 2.41406 0.40625 2.41406 0.910156V20L9.6875 12.7266L16.9609 20V0.910156C16.9609 0.40625 16.5547 0 16.0508 0Z"
+                                    fill="#9F9F9F" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Article card 6 -->
+                <div class="bg-white rounded-[20px] overflow-hidden shadow-xl p-3  -mt-20  w-[20rem] scale-90">
+                    <!-- Image placeholder for card 1 -->
+                    <img src="../assets/Rec6.png" alt="Placeholder image of a forest landscape"
+                        class="w-full  rounded-[16px]  h-48 overflow-hidden object-cover">
+                    <div class=" px- py-4">
+                        <h3 class=" text-[#284B80] font-bold text-[22px] mb-2">Qui optio quod explicabo. Ea ipsum soluta
+                            et assumenda.</h3>
+                        <div class="mb-6 gap-4 mt-6 text-gray-700 flex">
+                            <img src="../assets//Image-60.png" class=" w-14 h-full" alt="">
+                            <div>
+                                <p class=" text-[20px] text-[#284B80]">Ajay</p>
+                                <p class=" text-[#8D98AA] text-[16px] whitespace-nowrap">Smoothie maker of the year</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 mt-4 items-center justify-start text-gray-800">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6425 20.7833 11.8195 20.8327 12 20.8327C12.1805 20.8327 12.3575 20.7833 12.512 20.69C21.126 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                    stroke="#B21C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.2222 0V4.8C4.44444 6 1.11111 12 0 18C2.77778 13.8 6.66667 11.88 12.2222 11.88V16.8L20 8.4L12.2222 0ZM14.4444 5.796L16.8556 8.4L14.4444 11.004V9.48H12.2222C9.92222 9.48 7.85556 9.936 5.93333 10.62C7.48889 8.952 9.48889 7.644 12.5333 7.2L14.4444 6.876V5.796Z"
+                                    fill="#9F9F9F" />
+                            </svg>
+
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.0508 0H3.32422C2.82422 0 2.41406 0.40625 2.41406 0.910156V20L9.6875 12.7266L16.9609 20V0.910156C16.9609 0.40625 16.5547 0 16.0508 0Z"
+                                    fill="#9F9F9F" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View more button -->
+            <div
+                class="text-center mt-8 absolute  flex items-center justify-center bottom-0 left-0 w-[110%] h-1/4 bg-gradient-to-t from-white to-white/20 ml-">
+                <!-- <div class="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-white to-transparent"></div> -->
+
+                <a href="#"
+                    class=" bg-gray-200 rounded-full  px-4 py-1 hover:text-indigo-800  text-gray-600 mt-32 ">View
+                    more</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CTA Section -->
+    <div class="flex items-center  justify-center">
+
+        <div
+            class="relative flex items-center  justify-center w-[95%] md:w-[90%] rounded-xl py-16  my-20 md:my-40 bg-gradient-to-r from-[#1F41BB] to-[#0C1538]  z-[-1] text-white flex items-center justify-center">
+            <div class="absolute inset-0 flex justify-center items-center">
+                <div class="absolute md:w-[60%] w-[80%] md:h-screen h-[120%] border-4 border-white/30 rounded-full">
+                </div>
+                <div class="absolute md:w-[80%] w-[100%]  md:h-screen h-[140%] border-4 border-white/20 rounded-full">
+                </div>
+            </div>
+
+            <div class="relative z-10 text-center">
+                <h2 class="text-[48px] font-bold mb-4">Be a remark family</h2>
+                <p
+                    class="text-lg text-white/80                                                                                                                                                                                                                                         mb-6">
+                    Ut aliquip anim laboris deserunt do cillum id amet aute veniam do do.
+                </p>
+                <button
+                    class="px-6 py-2 bg-white/10 backdrop-blur text-white border rounded-lg font-semibold hover:bg-gray-100 transition">
+                    Sign up
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <div class=" pl-20">
+
+        <section class="py-12">
+            <div class="container mx-auto px-6">
+                <!-- Heading -->
+                <div class="mb-8 text-left">
+                    <h3 class="text-sm font-semibold text-blue-600 tracking-wide uppercase">Testimonials</h3>
+                    <div class=" flex items-center justify-start gap-2  ">
+                        <h2 class="text-4xl font-bold text-gray-900 mt-2">Our Client Reviews</h2>
+                        <div class="  shadow-xl    rounded-full p-2">
+                            <svg width="28" height="28" viewBox="0 0 28 28" class=" " fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.30371 14.4355H22.5138M22.5138 14.4355C22.5138 14.4355 17.6355 11.2272 16.6443 8.56592M22.5138 14.4355C22.5138 14.4355 18.2012 17.45 16.6443 20.305"
+                                    stroke="#1E1E1E" stroke-width="2.17391" stroke-linecap="square" />
+                            </svg>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Testimonials Wrapper -->
+                <div class="relative">
+                    <!-- Horizontal Scroll Container -->
+                    <div
+                        class="flex space-x-6  mb-20 testimonial-scroll-container  overflow-x-auto scrollbar-hide -mx-6 px-6 snap-x">
+                        <!-- Testimonial Card 1 -->
+                        <div
+                            class="relative min-w-[30%] mb-10     flex items-center justify-center bg-white rounded-2xl shadow-2xl overflow-hidden">
+                            <img src="../assets/test1.png" alt="Client 1" class="h-full w-full object-cover">
+                            <div
+                                class="absolute z-[20] bottom-[38%] bg-white rounded-full left-1/2 transform -translate-x-1/2">
+                                <img src="../assets/person.png" alt="Profile"
+                                    class="w-20 h-20 rounded-full border-white">
+                            </div>
+                            <div
+                                class="p-6 h-56 mx-4 flex flex-col items-center justify-end my-4 rounded-[18px] absolute pt-10 text-center bottom-0 bg-white">
+                                <h3 class="text-lg font-bold text-gray-800">Bang Upin</h3>
+                                <p class="text-xs mb-4 text-gray-500">Pedagang Asongan</p>
+                                <p class="mb-4 text-gray-600 text-[14px]">
+                                    “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
+                                </p>
+                                <!-- Stars -->
+                                <div class="mt-4 flex items-center justify-center">
+                                    <img src="../assets/star.png" class="w-1/3" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Card 2 -->
+                        <div
+                            class="relative  min-w-[30%] mb-10 flex items-center justify-center bg-white rounded-2xl shadow-2xl overflow-hidden">
+                            <img src="../assets/test2.png" alt="Client 2" class="h-full w-full object-cover">
+                            <div
+                                class="absolute bottom-[38%] bg-white rounded-full z-[20] left-1/2 transform -translate-x-1/2">
+                                <img src="../assets/person.png" alt="Profile"
+                                    class="w-20 h-20 rounded-full border-white">
+                            </div>
+                            <div
+                                class="p-6  flex flex-col items-center justify-end h-56 mx-4 my-4 rounded-[18px] absolute pt-10 text-center bottom-0 bg-white">
+                                <h3 class="text-lg font-bold text-gray-800">Ibu Rumah Tangga</h3>
+                                <p class="text-xs text-gray-500">Ibu Rumah Tangga</p>
+                                <p class="mt-2 text-gray-600 text-[14px]">
+                                    “Makasih Panto, aku sekarang berasa tinggal di apartment karena barang-barang yang
+                                    terlihat mewah“
+                                </p>
+                                <!-- Stars -->
+                                <div class="mt-4 flex items-center justify-center">
+                                    <img src="../assets/star.png" class="w-1/3" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Card 3 -->
+                        <div
+                            class="relative min-w-[30%] mb-10   flex items-center justify-center bg-white rounded-2xl shadow-2xl overflow-hidden">
+                            <img src="../assets/test3.png" alt="Client 3" class="h-full w-full object-cover">
+                            <div
+                                class="absolute bottom-[38%] bg-white rounded-full left-1/2 transform z-[200] -translate-x-1/2">
+                                <img src="../assets/person.png" alt="Profile"
+                                    class="w-20 h-20 rounded-full border-white">
+                            </div>
+                            <div
+                                class="p-6 flex flex-col items-center justify-end h-56 mx-4 my-4 rounded-[18px] absolute pt-10 text-center bottom-0 bg-white">
+                                <h3 class="text-lg font-bold text-gray-800">Mpok Ina</h3>
+                                <p class="text-xs mb-4 text-gray-500">Karyawan Swasta</p>
+                                <p class="mb-4 text-gray-600 text-[14px]">
+                                    “Sangat terjangkau untuk kantong saya yang tidak terlalu banyak“
+                                </p>
+                                <!-- Stars -->
+                                <div class="mt-4 flex items-center justify-center">
+                                    <img src="../assets/star.png" class="w-1/3" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="relative min-w-[30%] mb-10    flex items-center justify-center bg-white rounded-2xl shadow-2xl overflow-hidden">
+                            <img src="../assets/test1.png" alt="Client 1" class="h-full w-full object-cover">
+                            <div
+                                class="absolute z-[20] bottom-[38%] bg-white rounded-full left-1/2 transform -translate-x-1/2">
+                                <img src="../assets/person.png" alt="Profile"
+                                    class="w-20 h-20 rounded-full border-white">
+                            </div>
+                            <div
+                                class="p-6 h-56 mx-4 flex flex-col items-center justify-end my-4 rounded-[18px] absolute pt-10 text-center bottom-0 bg-white">
+                                <h3 class="text-lg font-bold text-gray-800">Bang Upin</h3>
+                                <p class="text-xs mb-4 text-gray-500">Pedagang Asongan</p>
+                                <p class="mb-4 text-gray-600 text-[14px]">
+                                    “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
+                                </p>
+                                <!-- Stars -->
+                                <div class="mt-4 flex items-center justify-center">
+                                    <img src="../assets/star.png" class="w-1/3" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!--Footer-->
+    <div class=" px-20 relative w-full bg-cover bg-center pb-20 pt-10" style="background-image: url('../assets//footer.png');">
+        <!-- Overlay for better text visibility -->
+        <!-- <div class="absolute inset-0  "></div> -->
+
+        <!-- Footer Content -->
+        <div
+            class="relative max-w-7xl mx-auto py-10 px-6 text-white flex flex-col md:flex-row md:justify-between gap-8">
+
+            <!-- Brand and Copyright -->
+            <div class="flex flex-col items-start justify-center">
+                <img src="../assets//logo-white.png" class=" w-24" alt="">
+                <p class="text-sm font-semibold text-[#F5F5F1] mt-4">Copyright © 2022. lorem. All rights <br> reserved.
+                </p>
+            </div>
+
+            <!-- Inside Prohouse -->
+            <div class=" relative whitespace-nowrap flex w-full justify-between  mr-40 items-start md:w-1/2 gap-8">
+
+                <div class=" ml-20">
+                    <h3 class="font-semibold text-lg  mb-4">Inside Prohouse</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Terms and Conditions</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Cancellation Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Guest Rules</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Reservation Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- About -->
+                <div class=" ml-10">
+                    <h3 class="font-semibold  text-lg mb-4">About</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Our Story</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Contact with indie</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Blog</a></li>
+                        <li><a href="#" class="hover:text-gray-100">F.A.Q</a></li>
+                    </ul>
+                </div>
+
+                <!-- Best Homies -->
+                <div class=" ml-10">
+                    <h3 class="font-semibold text-lg mb-4">Best Homies</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                    </ul>
+                </div>
+                <div class="    absolute -right-40">
+                    <img src="../assets//Backtotop.png" class="  w-14" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

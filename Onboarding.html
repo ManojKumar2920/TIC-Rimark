@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rimark | Onboarding</title>
+  <link rel="stylesheet" href="/styles/style.css" />
+  <style>
+    /* Additional styles for multistep form */
+  </style>
+</head>
+
+<body>
+  <div class="onboarding-container">
+    <div class="left-container" id="left-container">
+      <div class="theme-overlay">
+        <img src="./assets/RiMark Logo.png" width="100px" class="logo" alt="Rimark Logo" />
+        <div class="quote">
+          <span class="font-parkinsans text-large secondary-color quotation-mark">"</span>
+          <p>
+            Optimize your time, earn discounts, and discover <br />
+            recommendations by your friends
+          </p>
+          <div class="flex flex-row items-center">
+            <p class="brand-name">Rimark</p>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,300,150">
+              <g fill="#eac800" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                style="mix-blend-mode: normal">
+                <g transform="scale(8.53333,8.53333)">
+                  <path
+                    d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-2.17938 -0.59,-4.21686 -1.60547,-5.97852l-11.24805,11.24609c-0.187,0.187 -0.44103,0.29297 -0.70703,0.29297c-0.265,0 -0.52003,-0.10497 -0.70703,-0.29297l-4.45313,-4.45312c-0.391,-0.391 -0.391,-1.02306 0,-1.41406c0.391,-0.391 1.02306,-0.391 1.41406,0l3.74609,3.74609l10.80078,-10.80078c-2.201,-2.655 -5.52223,-4.3457 -9.24023,-4.3457zM24.24023,7.3457c0.43165,0.52058 0.81351,1.08435 1.1543,1.67383l2.3125,-2.3125c0.391,-0.392 0.391,-1.02306 0,-1.41406c-0.391,-0.391 -1.02306,-0.391 -1.41406,0z">
+                  </path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="quote-vector">
+            <img src="/assets/Icons/Vector.png" width="20px" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-container" id="right-container">
+      <div class="progress-bar-container">
+        <div class="progress-bar-line"></div>
+        <div class="progress-indicator" id="indicator"></div>
+      </div>
+
+      <div class="onboarding-form" id="onboarding-form">
+        <!-- Step 0: Account Type Selection -->
+        <div id="step-account-type" class="form-step active">
+          <div class="flex flex-col center">
+            <img src="./assets/logo.png" width="150px" class="none" alt="Rimark Logo" />
+            <img src="/assets/mobile-open-img.png" class="none" width="400px" alt="" />
+          </div>
+          <div class="signin-link">
+            <span>Already have an account? </span>
+            <a href="#" id="signInLink">Sign In</a>
+          </div>
+          <h1>Join Us!</h1>
+          <p>
+            To begin this journey, tell us what type of account you'd be
+            opening.
+          </p>
+
+          <div class="onboarding-option" data-account-type="individual">
+            <div>
+              <img class="onboarding-icon-individual" width="50px" height="50px" src="/assets/Icons/individual-icon.png"
+                alt="user" />
+            </div>
+            <div>
+              <h4>Individual</h4>
+              <p>Personal account to manage all your activities.</p>
+            </div>
+            <svg class="feather feather-arrow-right" fill="none" height="24" stroke="#1F41BB" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+              xmlns="http://www.w3.org/2000/svg">
+              <line x1="5" x2="19" y1="12" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </div>
+
+          <div class="onboarding-option" data-account-type="business">
+            <div>
+              <img class="onboarding-icon-business" width="50px" height="50px" src="/assets/Icons/business-icon.png"
+                alt="business" />
+            </div>
+            <div>
+              <h4>Business</h4>
+              <p>Own or belong to a company, this is for you.</p>
+            </div>
+            <svg class="feather feather-arrow-right" fill="none" height="24" stroke="#1F41BB" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+              xmlns="http://www.w3.org/2000/svg">
+              <line x1="5" x2="19" y1="12" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Step 1: Signup Form -->
+        <div id="step-signup" class="form-step">
+          <div class="back-btn" id="backToAccountType">
+            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
+          </div>
+          <div class="center welcome">
+            <h1>Welcome to Rimark</h1>
+            <p>Create Free account and become a Rimark family</p>
+          </div>
+
+          <!-- Google Sign-In Button -->
+          <div class="google-signup">
+            <button type="button" class="google-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.016 4.432,10.984 10.206,11.852v-8.672h-2.969v-3.154h2.969v-2.099c0,-3.475 1.693,-5 4.581,-5c1.383,0 2.115,0.103 2.461,0.149v2.753h-1.97c-1.226,0 -1.654,1.163 -1.654,2.473v1.724h3.593l-0.487,3.154h-3.106v8.697c5.857,-0.794 10.376,-5.802 10.376,-11.877c0,-6.627 -5.373,-12 -12,-12z">
+                    </path>
+                  </g>
+                </g>
+              </svg>
+
+              Sign up with Facebook
+            </button>
+          </div>
+
+          <div class="or-divider">
+            <span>or</span>
+          </div>
+
+          <div class="name-row">
+            <div class="name-container">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" class="form-input" placeholder="John" required />
+              <div id="firstNameError" class="error-message"></div>
+            </div>
+            <div class="name-container">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Doe" required />
+              <div id="lastNameError" class="error-message"></div>
+            </div>
+          </div>
+
+          <label for="email">Email Id</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="example@gmail.com" required />
+          <div id="emailError" class="error-message"></div>
+
+          <div class="flex justify-between">
+            <label for="password">Create Password</label>
+          </div>
+          <input type="password" id="password" name="password" class="form-input"
+            placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" required />
+          <div id="passwordError" class="error-message"></div>
+
+          <div class="terms-container">
+            <input type="checkbox" id="termsCheckbox" required />
+            <label for="termsCheckbox">
+              I agree to the
+              <a href="/terms" target="_blank">Terms and Conditions</a>
+            </label>
+          </div>
+          <div id="termsError" class="error-message"></div>
+
+          <div class="form-navigation">
+            <button type="button" class="create-acc-btn" id="proceedToLocation">
+              Create Account
+            </button>
+          </div>
+          <p class="center existing">
+            Already have a account? <a href="">Sign in</a>
+          </p>
+        </div>
+
+        <!-- Step 2: Location Preference -->
+        <div id="step-location" class="form-step">
+          <div class="back-btn" id="backToSignup">
+            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
+          </div>
+          <div class="center">
+            <h1>Location Preference</h1>
+            <p>
+              Aspernatur ut eaque dignissimos in id similique et perspiciatis.
+              Voluptatem officia explicabo.
+            </p>
+          </div>
+
+          <div class="location-box">
+            <input type="text" id="locationInput" placeholder="Find Your Location" />
+            <ul id="suggestions" class="suggestions-list"></ul>
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" id="proceedToRewards" disabled>
+              Save & Continue
+            </button>
+          </div>
+
+          <p class="info-secured">
+            <span>Your Info is safely secured</span>
+          </p>
+
+          <div class="back " id="backToSignup">
+            <p class="back-btn desktop-back-btn">&lt; Back</p>
+          </div>
+        </div>
+
+        <!-- Step 3: Rewards and Recommendations -->
+        <div id="step-rewards" class="form-step">
+          <div class="back-btn" id="backToLocation">
+            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
+          </div>
+          <h1 class="rewards-title">Rewards & Recomendations</h1>
+          <p>
+            Make your first recommendation, search one of your favorite places
+            and earn rewards
+          </p>
+
+          <div class="recommendation-box">
+            <input type="text" id="recommendationInput" placeholder="Recommend your first business " />
+          </div>
+
+          <div id="businessResults" class="business-results">
+            <!-- Business results will appear here -->
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" id="proceedToUsername" disabled>
+              Next
+            </button>
+          </div>
+
+          <div class="back">
+            <p class="back-btn desktop-back-btn" id="backToLocation">
+              &lt; Back
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4: Username and Completion -->
+        <div id="step-username" class="form-step">
+          <div class="back-btn" id="backToRewards">
+            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
+          </div>
+          <h1>Create User Name</h1>
+          <p>Choose a unique username for your Rimark account</p>
+
+          <input type="text" id="username" class="form-input" placeholder="Choose a unique username" required />
+          <div id="usernameError" class="error-message"></div>
+
+          <div class="form-navigation">
+            <button type="button" id="proceedToCompletion">Next</button>
+          </div>
+          <div class="back">
+            <p class="back-btn" id="hideRewardsBack">&lt; Back</p>
+          </div>
+        </div>
+
+        <!-- Step 5: Completion and invite -->
+        <div id="step-completion" class="form-step">
+          <div class="back-btn" id="backToUsername">
+            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
+          </div>
+          <div>
+            <div class="none mobile-social-invite">
+              <h1>Social Invite</h1>
+              <p>
+                (First Name), as a founding member, you're Invited to enjoy
+                Rimarke exclusive deals.
+              </p>
+            </div>
+            <div class="share-box">
+              <div>
+                <h1>I Like it</h1>
+                <p>
+                  Invite up to 5 Friends, and you be entered to win a free
+                  dinner at your favorite spot every week!
+                </p>
+              </div>
+              <div class="share-socials">
+                <img src="/assets/Icons/socials.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <p class="center">I will do this later</p>
+          <div class="form-navigation">
+            <button type="button" id="completeSignup">Complete Signup</button>
+          </div>
+          <div class="back">
+            <p class="back-btn" id="hideUsernameBack">&lt; Back</p>
+          </div>
+        </div>
+
+        <!-- Step 1: Signup Form Business -->
+        <div id="step-signup-business" class="form-step">
+          <div class="back-btn" id="backToAccountType">
+            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
+          </div>
+          <div class="center welcome">
+            <h1>Welcome to Rimark</h1>
+            <p>Create Free account and become a Rimark family</p>
+          </div>
+
+          <div class="name-row">
+            <div class="name-container">
+              <label for="firstName">First Name</label>
+              <input type="text" id="bfirstName" name="firstName" class="form-input" placeholder="John" required />
+              <div id="bfirstNameError" class="error-message"></div>
+            </div>
+            <div class="name-container">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="blastName" name="lastName" class="form-input" placeholder="Doe" required />
+              <div id="blastNameError" class="error-message"></div>
+            </div>
+          </div>
+
+          <label for="email">Email Id</label>
+          <input type="email" id="bemail" name="email" class="form-input" placeholder="example@gmail.com" required />
+          <div id="bemailError" class="error-message"></div>
+
+          <div class="flex justify-between">
+            <label for="password">Create Password</label>
+          </div>
+          <input type="password" id="bpassword" name="password" class="form-input" placeholder="......." required />
+          <div id="bpasswordError" class="error-message"></div>
+
+          <div class="terms-container">
+            <input type="checkbox" id="btermsCheckbox" required />
+            <label for="termsCheckbox">
+              I agree to the
+              <a href="/terms" target="_blank">Terms and Conditions</a>
+            </label>
+          </div>
+          <div id="btermsError" class="error-message"></div>
+
+          <div class="form-navigation">
+            <button type="button" class="create-acc-btn" id="proceedToclaimName">
+              Create Account
+            </button>
+          </div>
+          <p class="center existing">
+            Already have a account? <a href="">Sign in</a>
+          </p>
+        </div>
+
+        <!-- Step 2: Claim business name -->
+        <div id="step-claim-name" class="form-step">
+          <div class="back-btn" id="backToSignupBusiness">
+            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
+          </div>
+          <div class="center">
+            <h1>Claim your business Name</h1>
+            <p>
+              Aspernatur ut eaque dignissimos in id similique et perspiciatis.
+              Voluptatem officia explicabo.
+            </p>
+          </div>
+
+          <div class="claimname-box">
+            <input type="text" id="claimNameInput" placeholder="Business Name" />
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" id="proceedTocreateRewards">
+              Next
+            </button>
+          </div>
+
+          <div class="back" id="backToSignupBusiness">
+            <p class="back-btn desktop-back-btn">&lt; Back</p>
+          </div>
+        </div>
+
+        <!-- Step 3: Rewards and Recommendations -->
+        <div id="step-create-rewards" class="form-step">
+          <div class="back-btn" id="backToclaimName">
+            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
+          </div>
+          <h1 class="rewards-title">Create Rewards</h1>
+          <p>
+            Aspernatur ut eaque dignissimos in id similique et perspiciatis.
+            Voluptatem officia explicabo.
+          </p>
+
+          <div class="create-rewards-box">
+            <input type="text" id="createRewardsInput" placeholder="Reward Name" />
+
+            <input type="text" id="descriptionInput" placeholder="Description for the offer. " />
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" id="proceedToclaimUrl">
+              Next
+            </button>
+          </div>
+
+          <div class="back">
+            <p class="back-btn desktop-back-btn" id="backToLocation">
+              &lt; Back
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4: Claim business url -->
+        <div id="step-claim-url" class="form-step">
+          <div class="back-btn" id="backToSignupBusiness">
+            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
+          </div>
+          <div class="center">
+            <h1>Claim your business URL</h1>
+            <p>
+              Aspernatur ut eaque dignissimos in id similique et perspiciatis.
+              Voluptatem officia explicabo.
+            </p>
+          </div>
+
+          <div class="claimurl-box">
+            <div class="url-box">
+              rimark.us/
+            </div>
+            <input type="text" id="claimUrlInput" placeholder="Business URL" />
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" id="proceedToCompletionBusiness">
+              Next
+            </button>
+          </div>
+
+          <div class="back" id="backToSignupBusiness">
+            <p class="back-btn desktop-back-btn">&lt; Back</p>
+          </div>
+        </div>
+
+        <!-- Step 5: Completion and invite -->
+        <div id="step-completion-business" class="form-step">
+          <div class="back-btn" id="backToUsername">
+            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
+          </div>
+          <div>
+            <div class="none mobile-social-invite">
+              <h1>Social Invite</h1>
+              <p>
+                (First Name), as a founding member, you're Invited to enjoy
+                Rimarke exclusive deals.
+              </p>
+            </div>
+            <div class="share-box">
+              <div>
+                <h1>I Like it</h1>
+                <p>
+                  Invite up to 5 Friends, and you be entered to win a free
+                  dinner at your favorite spot every week!
+                </p>
+              </div>
+              <div class="share-socials">
+                <img src="/assets/Icons/socials.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <p class="center">I will do this later</p>
+          <div class="form-navigation">
+            <button type="button" id="completeSignup">Complete Signup</button>
+          </div>
+          <div class="back">
+            <p class="back-btn" id="hideUsernameBack">&lt; Back</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
