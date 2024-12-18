@@ -12,6 +12,42 @@
             font-family: 'Open Sans', sans-serif;
         }
     </style>
+     <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+    
+        body {
+          background: #eee;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+    
+        swiper-container {
+          width: 100%;
+          height: 100%;
+        }
+    
+        swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      </style>
 </head>
 
 <body class="antialiased ">
@@ -100,6 +136,19 @@
 
     <div class="h-fit pb-20 w-full bg-cover bg-bottom relative transition-all duration-1000 ease-in-out"
         id="background-swiper">
+        <swiper-container class="mySwiper absolute z-[-1]"  space-between="0" loop="true" 
+        centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        <swiper-slide>
+            <img src="./assets/feed.png" class="w-full h-[500px] object-cover" alt="">
+        </swiper-slide>
+        <swiper-slide>
+            <img src="./assets/feed2.png" class="w-full h-[500px] object-cover" alt="">
+        </swiper-slide>
+        <swiper-slide>
+            <img src="./assets/feed3.png" class="w-full h-[500px] object-cover" alt="">
+        </swiper-slide>
+      
+      </swiper-container>
         <div class="container mx-auto p-8">
             <img src="./assets/Left.png" class=" absolute w-10 left-10  cursor-pointer h-fit" alt="">
             <div
@@ -529,7 +578,7 @@
             </div>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 
     <script>
@@ -555,7 +604,7 @@
         // Function to update the background image
         function updateBackgroundImage() {
             // Set the current background image
-            backgroundSwiper.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
+            // backgroundSwiper.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
 
             // Update dot indicators
             updateDots();
@@ -579,7 +628,7 @@
         updateBackgroundImage();
 
         // Automatic image swapping every 2 seconds
-        setInterval(updateBackgroundImage, 2000);
+        setInterval(updateBackgroundImage, 2500);
 
 
     </script>

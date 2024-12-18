@@ -106,7 +106,7 @@
 
     <div class=" flex flex-col items-center justify-center">
 
-        <div class="h-fit  pl-40 flex items-center justify-center w-full    pt-32 pb-4 w-full bg-cover bg-bottom relative " id="background-swiper"
+        <div class="h-fit  pl-40 flex items-center justify-center w-full    pt-32 pb-4 w-full bg-cover bg-bottom relative " id="background-"
             style="background-image: url(./assets//feed3.png);  background-position: 50% 50%; background-size: cover;">
             <div class=" container   flex   ">
                 <div >
@@ -231,7 +231,7 @@
                 Followers
             </h1>
         </div>
-        <div class=" grid grid-cols-2   px-20 py-20 gap-10">
+        <div id="Rimarks" class=" grid grid-cols-2   px-20 py-20 gap-10">
             <div class="bg-white w-full overflow-hidden rounded-[12px]  px-6 py-8" style="box-shadow: 0px 4px 24px 0px #00000014;">
                 <div class="flex  items-start space-x-4">
                     <img src="./assets/person2.png" alt="Profile Image" class="w-12 h-12 rounded-full">
@@ -445,8 +445,106 @@
                 </div>
             </div>
         </div>
-    </div>
 
+        <div id="follower" class="max-w-5xl  mx-auto py-10">
+            <!-- User List -->
+            <div class="space-y-6">
+              <!-- User Item -->
+              <div class="flex items-center justify-between bg-white p-4 rounded-lg shadow">
+                <div class="flex items-center space-x-4">
+                  <!-- Profile Image -->
+                  <img
+                    src="https://via.placeholder.com/50"
+                    alt="Lowell"
+                    class="w-14 h-14 rounded-full object-cover"
+                  />
+                  <!-- User Info -->
+                  <div>
+                    <h2 class="text-lg font-semibold text-gray-800">Lowell</h2>
+                    <p class="text-blue-600 text-sm flex items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 mr-1"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 2a6 6 0 00-6 6c0 4.5 6 9 6 9s6-4.5 6-9a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      Location Here
+                    </p>
+                  </div>
+                </div>
+                <!-- View Profile Button -->
+                <button
+                  class="text-gray-800 border border-gray-400 px-4 py-2 rounded-md flex items-center hover:bg-gray-100"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M8.5 8a3.5 3.5 0 117 0 3.5 3.5 0 01-7 0zM6 15a6 6 0 0112 0v2H6v-2z"
+                    />
+                  </svg>
+                  View Profile
+                </button>
+              </div>
+      
+              <!-- Duplicate the same structure for other users -->
+              <div class="flex items-center justify-between bg-white p-4 rounded-lg shadow">
+                <div class="flex items-center space-x-4">
+                  <img
+                    src="https://via.placeholder.com/50"
+                    alt="Brandon"
+                    class="w-14 h-14 rounded-full object-cover"
+                  />
+                  <div>
+                    <h2 class="text-lg font-semibold text-gray-800">Brandon</h2>
+                    <p class="text-blue-600 text-sm flex items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 mr-1"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 2a6 6 0 00-6 6c0 4.5 6 9 6 9s6-4.5 6-9a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      Location Here
+                    </p>
+                  </div>
+                </div>
+                <button
+                  class="text-gray-800 border border-gray-400 px-4 py-2 rounded-md flex items-center hover:bg-gray-100"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M8.5 8a3.5 3.5 0 117 0 3.5 3.5 0 01-7 0zM6 15a6 6 0 0112 0v2H6v-2z"
+                    />
+                  </svg>
+                  View Profile
+                </button>
+              </div>
+      
+              <!-- Add additional users here following the same structure -->
+            </div>
+        </div>
+    </div>
+   
     <!-- Footer -->
     <div class="relative px-20 w-full bg-cover bg-center mt-20  pb-20 pt-10"
         style="background-image: url('../assets//footer.png');">
