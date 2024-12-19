@@ -223,8 +223,30 @@
 
     <!-- Maps and Search feed -->
 
-    <div class="flex  justify-center py-20  md:px-32   bg-white     items-start ">
+    <div class="flex  relative md:flex-row flex-col justify-center py-20  md:px-32   bg-white items-center     md:items-start ">
         
+        <div class=" mb-6  md:hidden flex  flex-col items-center  justify-center ">
+            <div class=" absolute top-0 left-0 mt-4 ml-4 cursor-pointer">
+                <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18.5" cy="18.5" r="18.5" fill="#D9D9D9"/>
+                    <path d="M10.5 18L16.75 24.25L17.6312 23.3688L12.8938 18.625L25.5 18.625V17.375L12.8938 17.375L17.6312 12.6312L16.75 11.75L10.5 18Z" fill="black"/>
+                    </svg>
+                    
+            </div>
+            <div class=" flex flex-col items-center gap-2">
+                <h1 class=" text-[12px] font-[600]">Search result : <span class=" text-[#1F41BB]">Brown inc-Boston</span></h1>
+                <div class=" flex items-center gap-4">
+                    <svg width="17" height="23" viewBox="0 0 17 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6781 3.16873C10.5488 -0.389575 5.47604 -0.389575 2.34674 3.16873C1.60425 4.00782 1.01399 5.01002 0.610702 6.11662C0.20741 7.22322 0 8.41183 0 9.61253C0 10.8131 0.20741 12.0017 0.610702 13.1083C1.01399 14.2149 1.60425 15.2172 2.34674 16.0562L8.01156 22.5L13.6781 16.0562C14.4206 15.2172 15.0109 14.2149 15.4142 13.1083C15.8175 12.0017 16.0249 10.8131 16.0249 9.61253C16.0249 8.41183 15.8175 7.22322 15.4142 6.11662C15.0109 5.01002 14.4206 4.00782 13.6781 3.16873ZM8.01156 12.6578C7.34297 12.6578 6.71532 12.3567 6.2408 11.8102C5.77252 11.2668 5.50898 10.5306 5.50898 9.76302C5.50898 8.99542 5.77252 8.25922 6.2408 7.71582C6.71354 7.16932 7.34297 6.86823 8.01156 6.86823C8.68105 6.86823 9.30957 7.16932 9.78319 7.71582C10.2515 8.25922 10.515 8.99542 10.515 9.76302C10.515 10.5306 10.2515 11.2668 9.78319 11.8102C9.30957 12.3567 8.68105 12.6578 8.01156 12.6578Z" fill="#1F41BB"/>
+                        </svg>
+                    <div>
+                        <h1 class=" font-[700] text-[16px]">Brown Inc</h1>
+                        <h2 class=" text-[#717171]  text-xs">Mehsana,Gujrat</h2>
+                    </div>                        
+                </div>
+            </div>
+        </div>
+
         <div class="  flex flex-col gap-4  ">
             <div class=" hidden md:block flex flex-col items-start  mb-4 gap">
                 <h1 class=" text-[40px] font-bold">Lorem ipsum</h1>
