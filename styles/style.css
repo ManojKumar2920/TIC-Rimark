@@ -43,8 +43,8 @@ body {
   justify-content: space-between;
 }
 
-.none{
-    display: none;
+.none {
+  display: none;
 }
 
 .w-full {
@@ -79,7 +79,8 @@ body {
 /* Updated Styles for Logo Placement */
 .theme-overlay {
   position: relative;
-  background-color: rgba(31, 65, 187, 0.9); /* Blue with 90% opacity */
+  background-color: rgba(31, 65, 187, 0.9);
+  /* Blue with 90% opacity */
   width: 100%;
   height: 100%;
   display: flex;
@@ -95,7 +96,7 @@ body {
   top: 40px;
   left: 40px;
   width: 100px;
-  
+
   transition: background-image 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
@@ -103,14 +104,14 @@ body {
   margin-left: 80px;
   color: white;
   position: relative;
-  
+
   transition: background-image 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .quote .quotation-mark {
   position: absolute;
   top: -40px;
-  
+
   transition: background-image 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
@@ -118,11 +119,11 @@ body {
   margin-bottom: 10px;
   line-height: 1.5;
   width: 100%;
-  
+
   transition: background-image 0.5s ease-in-out, transform 0.5s ease-in-out;
   /* transform: translateY(20px); */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-   /* white-space: nowrap; */
+  /* white-space: nowrap; */
 }
 
 .brand-name {
@@ -149,9 +150,9 @@ body {
 }
 
 .right-container.full-width {
-    width: 100%;
-    padding-left: 0;
-  }
+  width: 100%;
+  padding-left: 0;
+}
 
 .onboarding-form {
   max-width: 400px;
@@ -166,7 +167,7 @@ body {
 .onboarding-form p {
   font-size: 16px;
   color: gray;
-  width:100%;
+  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -181,20 +182,23 @@ body {
   margin-bottom: 20px;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
-  gap:20px
+  gap: 20px
 }
 
-.onboarding-option:hover{
+.onboarding-option:hover {
 
   border: #1565D8 1px solid;
 }
+
 .onboarding-option:hover .onboarding-icon-individual {
-    content: url('/assets/Icons/individual-icon-hover.png'); /* Change the image on hover */
-  }
+  content: url('/assets/Icons/individual-icon-hover.png');
+  /* Change the image on hover */
+}
 
 .onboarding-option:hover .onboarding-icon-business {
-    content: url('/assets/Icons/business-icon-hover.png'); /* Change the image on hover */
-  }
+  content: url('/assets/Icons/business-icon-hover.png');
+  /* Change the image on hover */
+}
 
 .onboarding-option:hover {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -277,6 +281,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -432,10 +437,11 @@ label {
 
 /* Container for progress bar */
 .progress-bar-container {
-  position:   absolute;
+  position: absolute;
   width: 600px;
-  height: 26px; /* Adjust according to need */
-   top: 40px;
+  height: 26px;
+  /* Adjust according to need */
+  top: 40px;
   left: 50%;
 }
 
@@ -446,7 +452,8 @@ label {
   left: 0;
   transform: translateY(-50%);
   width: 100%;
-  height: 2.5px; /* Thickness of the line */
+  height: 2.5px;
+  /* Thickness of the line */
   background-color: #1F41BB;
   border-radius: 2px;
 }
@@ -457,23 +464,27 @@ label {
   top: 50%;
   left: 0;
   transform: translate(-50%, -50%);
-  width: 10px; /* Size of the circle */
+  width: 10px;
+  /* Size of the circle */
   height: 10px;
-  background-color: #1F41BB; /* Blue color */
+  background-color: #1F41BB;
+  /* Blue color */
   border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional shadow for better visibility */
-  transition: left 0.3s ease-in-out; /* Smooth animation */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  /* Optional shadow for better visibility */
+  transition: left 0.3s ease-in-out;
+  /* Smooth animation */
 }
 
 .location-box {
   margin: 20px 0;
 }
 
-.claimname-box{
+.claimname-box {
   margin: 20px 0;
 }
 
-.create-rewards-box{
+.create-rewards-box {
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -499,7 +510,7 @@ label {
 }
 
 
-#claimNameInput{
+#claimNameInput {
   width: 90%;
   padding: 15px;
   font-size: 16px;
@@ -515,7 +526,7 @@ label {
   border-color: #0066cc;
 }
 
-#createRewardsInput{
+#createRewardsInput {
   width: 92%;
   padding: 15px;
   font-size: 16px;
@@ -531,7 +542,7 @@ label {
   border-color: #0066cc;
 }
 
-#descriptionInput{
+#descriptionInput {
   width: 92%;
   padding: 15px;
   font-size: 16px;
@@ -550,16 +561,20 @@ label {
 .claimurl-box {
   display: flex;
   align-items: center;
-  width: 100%; /* Adjust as needed */
-  max-width: 400px; /* Adjust as needed */
-  border: 1px solid #ddd; /* Border around the entire box */
+  width: 100%;
+  /* Adjust as needed */
+  max-width: 400px;
+  /* Adjust as needed */
+  border: 1px solid #ddd;
+  /* Border around the entire box */
   border-radius: 8px;
-  overflow: hidden; /* Ensures rounded corners work properly */
+  overflow: hidden;
+  /* Ensures rounded corners work properly */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .url-box {
-  background-color: #5367c7; 
+  background-color: #5367c7;
   color: white;
   padding: 15px;
   font-size: 14px;
@@ -569,20 +584,23 @@ label {
 
 
 #claimUrlInput::placeholder {
-  color: #aaa; /* Placeholder text color */
+  color: #aaa;
+  /* Placeholder text color */
   font-style: italic;
 }
 
 
-#claimUrlInput{
+#claimUrlInput {
   width: 90%;
   padding: 15px;
   font-size: 16px;
   border-radius: 4px;
   color: #333;
-  flex: 1; /* Allows the input field to take up the remaining space */
+  flex: 1;
+  /* Allows the input field to take up the remaining space */
   border: none;
-  outline: none; /* Removes the default outline */
+  outline: none;
+  /* Removes the default outline */
 }
 
 #claimUrlInput:focus {
@@ -615,11 +633,13 @@ label {
 
 .suggestions-list li:hover {
   background-color: #f9f9f9;
-  color: #007bff; /* Highlight with a primary color */
+  color: #007bff;
+  /* Highlight with a primary color */
 }
 
 .suggestions-list li:not(:last-child) {
-  border-bottom: 1px solid #f0f0f0; /* Subtle separator between items */
+  border-bottom: 1px solid #f0f0f0;
+  /* Subtle separator between items */
 }
 
 /* Smooth scrollbar styling for better UX */
@@ -685,7 +705,7 @@ button:disabled {
   color: #777;
 }
 
- .form-step .back-btn {
+.form-step .back-btn {
   color: #1f41bb;
 }
 
@@ -745,14 +765,14 @@ button:disabled {
   margin: 5px 0;
 }
 
-.business-item .offer{
-    background-color: red;
-    color: white;
-    width: 100%;
-    position: absolute;
-    padding: 10px;
-    bottom: 0;
-    left: 0;
+.business-item .offer {
+  background-color: red;
+  color: white;
+  width: 100%;
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+  left: 0;
 }
 
 .rating {
@@ -778,181 +798,190 @@ button:disabled {
   margin-top: 30px;
 }
 
-.share-box{
-    background-color: #1f41bb;
-    padding: 40px;
-    color: white;
-    box-sizing: border-box;
-    border-radius: 20px;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.share-box {
+  background-color: #1f41bb;
+  padding: 40px;
+  color: white;
+  box-sizing: border-box;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.share-box p{
-    color: white;
-    margin-bottom: 100px;
+.share-box p {
+  color: white;
+  margin-bottom: 100px;
 }
 
-.share-socials{
-    background-color: white;
-    position: absolute;
-    border-radius: 20px;
-    padding :18px;
-    left: 0;
-    bottom: 0;
+.share-socials {
+  background-color: white;
+  position: absolute;
+  border-radius: 20px;
+  padding: 18px;
+  left: 0;
+  bottom: 0;
 }
 
 /* Global Styles for mobile responsiveness */
 @media screen and (max-width: 768px) {
-    /* Hide the left container on mobile */
-    .left-container {
-      display: none;
-    }
-  
-    /* Make right container take full width on mobile */
-    .right-container {
-      width: 100%;
-      padding-left: 0;
-    }
-  
-    /* Adjust onboarding-form for mobile */
-    .onboarding-form {
-      max-width: 100%;
-      margin: 20px;
-      height: 90dvh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-  
-    .onboarding-form h1 {
-      font-size: 26px;
-    }
-  
-    .onboarding-form p {
-      font-size: 12px;
-    }
 
-    #step-account-type{
-        text-align: center;
-    }
-
-    #step-account-type img{
-        display: block;
-    }
-
-    .signin-link{
-        display: none;
-    }
-  
-    .desktop-back-btn{
-        display: none;
-       
-    }
-
-    .form-step{
-        height: 100%;
-        justify-content: space-between;
-    }
-  
-    /* Update the form step font size for mobile */
-    .form-step h1 {
-      font-size: 28px;
-    }
-  
-    /* Reduce the button size for mobile */
-    .form-navigation button {
-      padding: 15px;
-      position: absolute;
-      bottom: 40px;
-    }
-
-    .info-secured{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    .rewards-title{
-        font-size: 22px !important;
-    }
-
-    #step-signup .existing{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    .mobile-back-arrow{
-        display: block;
-        position: absolute;
-        left: 0;
-        top: -20px;
-        background-color: #D9D9D9;
-        border-radius: 100%;
-        padding: 5px;
-    }
-
-    .mobile-social-invite{
-        display: block;
-    }
-
-    #hideLocationBack, #hideRewardsBack, #hideUsernameBack{
-        display: none;
-    }
-
-    #step-rewards, #step-location, #step-signup, #step-username, #step-completion{
-        margin-top: 60px;
-    }
-    .welcome{
-        margin-top: 10px;
-    }
-  
-    /* Adjust the terms container for mobile */
-    .terms-container {
-      font-size: 14px;
-    }
-  
-    /* Update the error message for mobile */
-    .error-message {
-      font-size: 10px;
-    }
-  
-    /* Adjust the input field size for mobile */
-    .form-input {
-      width: 100%;
-    }
-  
-    /* Adjust progress bar and indicators for mobile */
-    .progress-bar-container {
-      width: 80%;
-    }
-  
-    .progress-indicator {
-      width: 8px;
-      height: 8px;
-    }
-  
-    /* Ensure the location and recommendation boxes fit on mobile */
-    .location-box, .recommendation-box {
-      margin: 15px 0;
-    }
-  
-    #locationInput, #recommendationInput {
-      width: 93%;
-      padding: 12px;
-    }
-  
-    .suggestions-list {
-      max-height: 150px;
-      width: 100%;
-    }
-  
-    .google-btn {
-      width: 100%;
-    }
+  /* Hide the left container on mobile */
+  .left-container {
+    display: none;
   }
-  
+
+  /* Make right container take full width on mobile */
+  .right-container {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  /* Adjust onboarding-form for mobile */
+  .onboarding-form {
+    max-width: 100%;
+    margin: 20px;
+    height: 90dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .onboarding-form h1 {
+    font-size: 26px;
+  }
+
+  .onboarding-form p {
+    font-size: 12px;
+  }
+
+  #step-account-type {
+    text-align: center;
+  }
+
+  #step-account-type img {
+    display: block;
+  }
+
+  .signin-link {
+    display: none;
+  }
+
+  .desktop-back-btn {
+    display: none;
+
+  }
+
+  .form-step {
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  /* Update the form step font size for mobile */
+  .form-step h1 {
+    font-size: 28px;
+  }
+
+  /* Reduce the button size for mobile */
+  .form-navigation button {
+    padding: 15px;
+    position: absolute;
+    bottom: 40px;
+  }
+
+  .info-secured {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .rewards-title {
+    font-size: 22px !important;
+  }
+
+  #step-signup .existing {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .mobile-back-arrow {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    background-color: #D9D9D9;
+    border-radius: 100%;
+    padding: 5px;
+  }
+
+  .mobile-social-invite {
+    display: block;
+  }
+
+  #hideLocationBack,
+  #hideRewardsBack,
+  #hideUsernameBack {
+    display: none;
+  }
+
+  #step-rewards,
+  #step-location,
+  #step-signup,
+  #step-username,
+  #step-completion {
+    margin-top: 60px;
+  }
+
+  .welcome {
+    margin-top: 10px;
+  }
+
+  /* Adjust the terms container for mobile */
+  .terms-container {
+    font-size: 14px;
+  }
+
+  /* Update the error message for mobile */
+  .error-message {
+    font-size: 10px;
+  }
+
+  /* Adjust the input field size for mobile */
+  .form-input {
+    width: 100%;
+  }
+
+  /* Adjust progress bar and indicators for mobile */
+  .progress-bar-container {
+    width: 80%;
+  }
+
+  .progress-indicator {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Ensure the location and recommendation boxes fit on mobile */
+  .location-box,
+  .recommendation-box {
+    margin: 15px 0;
+  }
+
+  #locationInput,
+  #recommendationInput {
+    width: 93%;
+    padding: 12px;
+  }
+
+  .suggestions-list {
+    max-height: 150px;
+    width: 100%;
+  }
+
+  .google-btn {
+    width: 100%;
+  }
+}

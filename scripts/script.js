@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
       leftContainer.style.backgroundImage = "url('../assets/ThridStep.png')";
       themeoverlay.style.background = "rgba(31, 65, 187,  0.8)";
       changeText.innerHTML = "Unlock local recommendations personalized for you! Select your current city to find and share local hidden gems in your community.!";
-      changeText.style.fontSize  = "16px";
+      changeText.style.fontSize = "16px";
       changeText.style.width = "90%";
 
       console.log("Transition to location step.");
@@ -160,102 +160,102 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Select business signup form elements
-const businessFormInputs = {
-  firstName: document.getElementById("bfirstName"),
-  lastName: document.getElementById("blastName"),
-  email: document.getElementById("bemail"),
-  password: document.getElementById("bpassword"),
-  termsCheckbox: document.getElementById("btermsCheckbox"),
-};
+  const businessFormInputs = {
+    firstName: document.getElementById("bfirstName"),
+    lastName: document.getElementById("blastName"),
+    email: document.getElementById("bemail"),
+    password: document.getElementById("bpassword"),
+    termsCheckbox: document.getElementById("btermsCheckbox"),
+  };
 
-const businessErrors = {
-  firstName: document.getElementById("bfirstNameError"),
-  lastName: document.getElementById("blastNameError"),
-  email: document.getElementById("bemailError"),
-  password: document.getElementById("bpasswordError"),
-  termsCheckbox: document.getElementById("btermsError"),
-};
+  const businessErrors = {
+    firstName: document.getElementById("bfirstNameError"),
+    lastName: document.getElementById("blastNameError"),
+    email: document.getElementById("bemailError"),
+    password: document.getElementById("bpasswordError"),
+    termsCheckbox: document.getElementById("btermsError"),
+  };
 
-const proceedToclaimNameButton = document.querySelector("#proceedToclaimName");
+  const proceedToclaimNameButton = document.querySelector("#proceedToclaimName");
 
-// Helper function to display error messages
-function showBusinessError(input, message) {
-  businessErrors[input].textContent = message;
-  businessErrors[input].style.display = "block";
-}
-
-// Helper function to clear error messages
-function clearBusinessError(input) {
-  businessErrors[input].textContent = "";
-  businessErrors[input].style.display = "none";
-}
-
-// Validate the business signup form
-function validateBusinessForm() {
-  let isValid = true;
-
-  // Validate first name
-  if (!businessFormInputs.firstName.value.trim()) {
-    showBusinessError("firstName", "First name is required.");
-    isValid = false;
-  } else {
-    clearBusinessError("firstName");
+  // Helper function to display error messages
+  function showBusinessError(input, message) {
+    businessErrors[input].textContent = message;
+    businessErrors[input].style.display = "block";
   }
 
-  // Validate last name
-  if (!businessFormInputs.lastName.value.trim()) {
-    showBusinessError("lastName", "Last name is required.");
-    isValid = false;
-  } else {
-    clearBusinessError("lastName");
+  // Helper function to clear error messages
+  function clearBusinessError(input) {
+    businessErrors[input].textContent = "";
+    businessErrors[input].style.display = "none";
   }
 
-  // Validate email
-  if (!businessFormInputs.email.value.trim()) {
-    showBusinessError("email", "Email is required.");
-    isValid = false;
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(businessFormInputs.email.value.trim())) {
-    showBusinessError("email", "Enter a valid email address.");
-    isValid = false;
-  } else {
-    clearBusinessError("email");
+  // Validate the business signup form
+  function validateBusinessForm() {
+    let isValid = true;
+
+    // Validate first name
+    if (!businessFormInputs.firstName.value.trim()) {
+      showBusinessError("firstName", "First name is required.");
+      isValid = false;
+    } else {
+      clearBusinessError("firstName");
+    }
+
+    // Validate last name
+    if (!businessFormInputs.lastName.value.trim()) {
+      showBusinessError("lastName", "Last name is required.");
+      isValid = false;
+    } else {
+      clearBusinessError("lastName");
+    }
+
+    // Validate email
+    if (!businessFormInputs.email.value.trim()) {
+      showBusinessError("email", "Email is required.");
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(businessFormInputs.email.value.trim())) {
+      showBusinessError("email", "Enter a valid email address.");
+      isValid = false;
+    } else {
+      clearBusinessError("email");
+    }
+
+    // Validate password
+    if (!businessFormInputs.password.value.trim()) {
+      showBusinessError("password", "Password is required.");
+      isValid = false;
+    } else if (!/.{8,}/.test(businessFormInputs.password.value.trim())) {
+      showBusinessError("password", "Password must be at least 8 characters long.");
+      isValid = false;
+    } else {
+      clearBusinessError("password");
+    }
+
+    // Validate terms and conditions
+    if (!businessFormInputs.termsCheckbox.checked) {
+      showBusinessError("termsCheckbox", "You must agree to the terms and conditions.");
+      isValid = false;
+    } else {
+      clearBusinessError("termsCheckbox");
+    }
+
+    return isValid;
   }
 
-  // Validate password
-  if (!businessFormInputs.password.value.trim()) {
-    showBusinessError("password", "Password is required.");
-    isValid = false;
-  } else if (!/.{8,}/.test(businessFormInputs.password.value.trim())) {
-    showBusinessError("password", "Password must be at least 8 characters long.");
-    isValid = false;
-  } else {
-    clearBusinessError("password");
-  }
+  // Add event listener to the "Create Account" button
+  proceedToclaimNameButton.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default form submission
 
-  // Validate terms and conditions
-  if (!businessFormInputs.termsCheckbox.checked) {
-    showBusinessError("termsCheckbox", "You must agree to the terms and conditions.");
-    isValid = false;
-  } else {
-    clearBusinessError("termsCheckbox");
-  }
-
-  return isValid;
-}
-
-// Add event listener to the "Create Account" button
-proceedToclaimNameButton.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent default form submission
-
-  if (validateBusinessForm()) {
-    // If the form is valid, transition to the next step
-    stepSignupBusiness.classList.remove("active");
-    stepClaimName.classList.add("active");
-    console.log("Transitioned to claim name step.");
-  } else {
-    console.log("Validation failed for business signup form.");
-  }
-});
+    if (validateBusinessForm()) {
+      // If the form is valid, transition to the next step
+      stepSignupBusiness.classList.remove("active");
+      stepClaimName.classList.add("active");
+      console.log("Transitioned to claim name step.");
+    } else {
+      console.log("Validation failed for business signup form.");
+    }
+  });
 
 
   const backToRewardsBtn = document.getElementById("backToRewards");
@@ -474,8 +474,8 @@ proceedToclaimNameButton.addEventListener("click", function (event) {
       //change the background image 
       leftContainer.style.backgroundImage = "url('../assets/FourthStep.png')";
       themeoverlay.style.background = "rgba(31, 65, 187,  0.8)";
-      changeText.innerHTML = "Every recommendation helps friends and locals discover trusted spots while you earn rewards." ;
-      changeText.style.fontSize  = "16px";
+      changeText.innerHTML = "Every recommendation helps friends and locals discover trusted spots while you earn rewards.";
+      changeText.style.fontSize = "16px";
     }
   };
 
