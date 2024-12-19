@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //business steps
 
+
+
   const stepSignupBusiness = document.getElementById("step-signup-business");
   const stepClaimName = document.getElementById("step-claim-name");
   const stepCreateRewards = document.getElementById("step-create-rewards");
@@ -19,7 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Select the account type options
   const accountOptions = document.querySelectorAll(".onboarding-option");
-
+  const leftContainer = document.querySelector(".left-container");
+  const themeoverlay = document.querySelector(".theme-overlay");
+  const changeText = document.querySelector(".change-text");
   if (accountOptions.length > 0) {
     accountOptions.forEach((option) => {
       option.addEventListener("click", function () {
@@ -28,6 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Hide account type step
         stepAccountType.classList.remove("active");
+        leftContainer.style.backgroundImage = "url('../assets/SecondStep.png')";
+        themeoverlay.style.background = "rgba(31, 65, 187,  0.8)";
+        changeText.innerHTML = "Join Rimark to attract new customers with powerful, referral-driven recommendations. Let's get your business set up!";
+        changeText.style.width = "90%";
+        moveIndicator(1);
 
         // Show the appropriate next step based on account type
         if (accountType === "individual") {
@@ -136,7 +145,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (validateForm()) {
       // If the form is valid, proceed to the next step
       stepSignup.classList.remove("active");
+      moveIndicator(2);
       stepLocation.classList.add("active");
+      leftContainer.style.backgroundImage = "url('../assets/ThridStep.png')";
+      themeoverlay.style.background = "rgba(31, 65, 187,  0.8)";
+      changeText.innerHTML = "Unlock local recommendations personalized for you! Select your current city to find and share local hidden gems in your community.!";
+      changeText.style.fontSize  = "16px";
+      changeText.style.width = "90%";
+
       console.log("Transition to location step.");
     } else {
       console.log("Validation failed.");
@@ -308,10 +324,20 @@ proceedToclaimNameButton.addEventListener("click", function (event) {
     });
   }
 
+  const socialsh1 = document.getElementById("socials-h1");
+  const forSocials = document.getElementById("forSocial");
+
   const proceedToCompletionBtn = document.getElementById("proceedToCompletion");
   if (proceedToCompletionBtn) {
     proceedToCompletionBtn.addEventListener("click", function () {
       stepUsername.classList.remove("active");
+      moveIndicator(5);
+      leftContainer.style.backgroundImage = "url('../assets/sixthstep.png')";
+      socialsh1.style.display = "block";
+      socialsh1.style.marginTop = "0px";
+      forSocials.style.position = "absolute";
+      forSocials.style.top = "-10px";
+      changeText.innerHTML = "you’re all set! Invite friends to earn cash rewards and discover new places recommended by them today.";
       stepCompletion.classList.add("active");
     });
   }
@@ -405,7 +431,8 @@ proceedToclaimNameButton.addEventListener("click", function (event) {
     } else {
       // Show and move the indicator for intermediate steps
       progressBar.style.display = "block";
-      const percentage = (step / (steps.length - 1)) * 100;
+      const percentage = (step / (steps.length - 1)) * 200;
+
 
       // Update the position of the indicator
       indicator.style.left = `calc(${percentage}% - 5px)`; // Adjust for centering the indicator
@@ -440,17 +467,36 @@ proceedToclaimNameButton.addEventListener("click", function (event) {
     }
   };
 
+  const nextSteptoRewards = () => {
+    if (currentStep < steps.length - 1) {
+      showStep(currentStep + 3);
+      moveIndicator(3);
+      //change the background image 
+      leftContainer.style.backgroundImage = "url('../assets/FourthStep.png')";
+      themeoverlay.style.background = "rgba(31, 65, 187,  0.8)";
+      changeText.innerHTML = "Every recommendation helps friends and locals discover trusted spots while you earn rewards." ;
+      changeText.style.fontSize  = "16px";
+    }
+  };
+
+  const nextSteptoUsername = () => {
+    if (currentStep < steps.length - 1) {
+      showStep(currentStep + 1);
+      moveIndicator(4);
+      leftContainer.style.backgroundImage = "url('../assets/fifthstep.png')";
+    }
+  };
 
   if (document.getElementById("proceedToRewards")) {
     document
       .getElementById("proceedToRewards")
-      .addEventListener("click", nextStep);
+      .addEventListener("click", nextSteptoRewards);
   }
 
   if (document.getElementById("proceedToUsername")) {
     document
       .getElementById("proceedToUsername")
-      .addEventListener("click", nextStep);
+      .addEventListener("click", nextSteptoUsername);
   }
 
   if (document.getElementById("backToLocation")) {
