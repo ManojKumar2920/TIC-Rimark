@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="./styles/search.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
@@ -161,8 +162,16 @@
                 <h2 class="text-white text-[16px] font-semibold mb-4">Discover the new Places around you</h2>
                 <div class="flex gap-4">
                     <div class="w-full flex">
-                        <input type="text" class="w-[60%] pr-4 flex-grow h-fit p-4 rounded-l-[41px] outline-none"
-                            placeholder="Search Places...">
+                       
+                        <div class="container2 w-[60%] -pr-20 -pr-4 flex-grow h-fit  rounded-l-[41px] outline-none bg-white">
+                            <div class=" w-[60%]">
+                              <label for="inputField" class=" -ml-14 anim-label">
+                                Search by <span class="placeholder-text"></span>
+                              </label>
+                              <input type="text" id="inputField"   class="styled-input  -ml-20 -pr-6 flex-grow h-fit p-2  rounded-l-[41px] outline-none bg-white h-fit  !w-[400px] outline-none" />
+                            </div>
+                          </div>
+
                         <input type="text" class="flex-grow w-[40%] border-l p-4 h-fit rounded-r-[41px] outline-none"
                             placeholder="City">
                     </div>
@@ -805,6 +814,33 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEbZZhB3YYF_NMpuaSRFOTiKc0FrJKtUw&libraries=maps,marker&v=beta"
         defer></script>
     <script>
+        // your code goes here
+document.addEventListener("DOMContentLoaded", () => {
+  const placeholders = ["Category", "Price", "Occasion", "Relationship"];
+  const placeholderText = document.querySelector(".placeholder-text");
+  const inputField = document.querySelector("#inputField");
+
+  let updateCount = 0;
+
+  function updatePlaceholder() {
+    placeholderText.textContent = placeholders[updateCount];
+    updateCount = (updateCount + 1) % placeholders.length;
+  }
+
+  setInterval(updatePlaceholder, 1600);
+
+  inputField.addEventListener("input", () => {
+    const animLabel = document.querySelector(".anim-label");
+    if (inputField.value.trim()) {
+      animLabel.classList.add("hidden");
+    } else {
+      animLabel.classList.remove("hidden");
+    }
+  });
+
+  updatePlaceholder();
+});
+
         // Elements
         const activeNotification = document.getElementById('activeNotification');
         const inactiveNotification = document.getElementById('inactiveNotification');

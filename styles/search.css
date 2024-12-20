@@ -1,0 +1,89 @@
+ 
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .container2 {
+    max-width: 1140px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .container2 > div {
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  .anim-label {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    line-height: 24px;
+    color: #909090;
+    width: calc(100% - 18px);
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .anim-label.hidden {
+    display: none;
+  }
+  
+  .placeholder-text {
+    position: relative;
+    display: inline-block;
+    color: #1F41BB;
+    animation: placeholderAnimation 1.6s infinite;
+  }
+  
+  @keyframes placeholderAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(20px);
+    }
+  }
+  
+  .styled-input {
+    font-size: 18px;
+    text-align: left;
+    color: #4f3267;
+     background-color: black;
+    max-width: 300px !important;
+    padding: 0 1px;
+    margin: 0;
+    line-height: 2;
+    width: 300px !important;
+    height: inherit;
+    /* border: #e9e9e9 1px solid; */
+    /* border-radius: 4px; */
+    cursor: text;
+    outline: none;
+  }
+  /* Inside your global.css or styles.css */
+@layer utilities {
+    input:-webkit-autofill {
+      background-color: transparent !important;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+  
