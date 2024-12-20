@@ -144,14 +144,15 @@
 
     <div class=" flex flex-col items-center justify-center">
 
-        <div class="h-fit  md:pl-40 flex items-center justify-center w-full    pt-32 pb-4 w-full bg-cover bg-bottom relative "
+        <div class="h-fit  md:pl-40 flex items-center justify-center w-full    pt-20 md:pt-32 pb-4 w-full bg-cover bg-bottom relative "
             id="background-"
             style="background-image: url(./assets//feed3.png);  background-position: 50% 50%; background-size: cover;">
             <div class=" container   flex   ">
                 <div>
                     <a href="./index.html">
                         <img src="./assets/Left.png"
-                            class="  hover:scale-105 absolute w-10 left-10 top-10  cursor-pointer h-fit" alt="">
+                            class="  hover:scale-105 absolute w-10 left-4 md:left-10 top-10  cursor-pointer h-fit"
+                            alt="">
                     </a>
                 </div>
                 <div
@@ -228,7 +229,7 @@
                 </div>
                 <div class=" text-[20px] font-[500] mt-6 flex gap-4">
                     <button
-                        class=" flex items-center gap-2 rounded-[8px]   md:rounded-[16px] px-8 md:px-12 md:py-3 text-[15px] md:text-[20px] bg-black text-white"><svg
+                        class=" flex items-center gap-2 rounded-[8px]   md:rounded-[16px] px-6 md:px-12 py-1 md:py-3 text-[15px] md:text-[20px] bg-black text-white"><svg
                             width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M19.2398 0.32295C19.3825 0.440834 19.5006 0.585676 19.5873 0.749205C19.674 0.912733 19.7277 1.09174 19.7452 1.27602C19.7628 1.46029 19.7438 1.64621 19.6895 1.82316C19.6352 2.00011 19.5465 2.16463 19.4286 2.30732L8.09743 16.0203L8.0932 16.0231C7.83563 16.3329 7.51221 16.5813 7.1465 16.7502C6.78079 16.9192 6.382 17.0045 5.97917 16.9998C5.57032 16.9948 5.1679 16.8974 4.80203 16.7149C4.43617 16.5323 4.11636 16.2693 3.86655 15.9456L3.86515 15.9428L0.316396 11.3821C0.197902 11.2366 0.109673 11.0688 0.0568873 10.8887C0.00410164 10.7086 -0.0121776 10.5198 0.00900479 10.3333C0.0301872 10.1468 0.0884047 9.96643 0.180241 9.80275C0.272077 9.63906 0.395681 9.49537 0.543801 9.38011C0.691921 9.26484 0.861572 9.18032 1.0428 9.1315C1.22402 9.08269 1.41318 9.07056 1.59915 9.09584C1.78513 9.12111 1.96418 9.18328 2.12581 9.27869C2.28743 9.37411 2.42837 9.50084 2.54035 9.65145L6.013 14.1149L17.254 0.511803C17.3719 0.369091 17.5167 0.250998 17.6803 0.16427C17.8438 0.0775419 18.0228 0.0238768 18.2071 0.0063396C18.3913 -0.0111976 18.5773 0.00773684 18.7542 0.0620614C18.9312 0.116386 19.0957 0.205037 19.2384 0.32295H19.2398Z"
@@ -237,7 +238,7 @@
                         Follow</button>
                     <a href="./Edit.html">
                         <button
-                            class=" font-[600]  flex items-center gap-2  rounded-[8px] md:rounded-[16px] px-8 py-2.5 text-[15px] whitespace-nowrap md:text-[20px] bg-white border-[#1F41BB] border text-[#1F41BB]">
+                            class=" font-[600]  flex items-center gap-2  rounded-[8px] md:rounded-[16px] px-4 md:px-12 py-1 md:py-3 text-[15px] whitespace-nowrap md:text-[20px] bg-white border-[#1F41BB] border text-[#1F41BB]">
                             <svg width="17" height="20" viewBox="0 0 17 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -269,10 +270,25 @@
 
     </div>
 
-    <hr class="mt-10 border-[#E5E5E5] md:border-[30px]">
+    <div class=" text-[#1F41BB]   text-[15px] flex gap-6 py-6 px-10 items-center justify-center">
+        <div class=" text-center tracking-tighter">
+            <h1 class=" text-[52px] font-bold">217</h1>
+            <h2>Followers</h2>
+        </div>
+        <div class=" text-center tracking-tighter">
+            <h1 class=" text-[52px] font-bold">117</h1>
+            <h2>Followers</h2>
+        </div>
+        <div class=" text-center tracking-tighter">
+            <h1 class=" text-[52px] font-bold">17</h1>
+            <h2>Followers</h2>
+        </div>
+    </div>
+
+    <hr class="mt-10 hidden md:block border-[#E5E5E5] md:border-[30px]">
 
 
-    <div class=" py-10">
+    <div class=" md:py-10">
         <div class="flex text-[12px] md:text-[22px] font-semibold justify-center items-center gap-10 md:gap-40 mt-10">
             <h1 class="tab-header text-[#1F41BB] hover:text-[#1F41BB] cursor-pointer" data-tab="Rimarks">
                 Rimarks (4)
@@ -284,12 +300,15 @@
                 Followers
             </h1>
         </div>
-        <div id="Rimarks" class="tab-content grid md:grid-cols-2  px-4  md:px-20 py-10 md:py-20 gap-10">
-            <div class=" bg-white   rounded-[12px] md:w-full w-[80%]  px-10 md:px-6 py-8"
+        <div id="Rimarks" class="tab-content overflow-hidden grid md:grid-cols-2  px-4  md:px-20 py-10 md:py-20 gap-10">
+            <div class=" bg-white   rounded-[12px] md:w-full w-[100%]  px-2 md:px-6 py-8"
                 style="box-shadow: 0px 4px 24px 0px #00000014;">
                 <div class="flex  justify-center md:w-full w-[100%]  md:items-start space-x-4">
-                    <img src="./assets/profileico.png" alt="Profile Image" class="w-12 h-12 rounded-full">
+                    <img src="./assets/profileico.png" alt="Profile Image"
+                        class="hidden md:block w-12 h-12 rounded-full">
                     <div class="  md:w-full w-[100%]">
+                        <img src="./assets/profileico.png" alt="Profile Image"
+                            class=" md:hidden block w-12 h-12 rounded-full">
                         <h3 class="font-bold text-[24px] text-gray-900">Product Review</h3>
                         <div class="flex items-center space-x-1 text-yellow-500">
                             <svg width="400" height="16" viewBox="0 0 400 16" fill="none"
@@ -312,7 +331,7 @@
                             </svg>
 
                         </div>
-                        <p class="mt-4 md:w-full w-[100%]  text-black/60 text-[13px] md:text-[15px]">But I must explain
+                        <p class="mt-4 md:w-full w-[60%]  text-black/60 text-[13px] md:text-[15px]">But I must explain
                             to you how all this mistaken idea
                             of denouncing
                             pleasure and praising pain was born and I will give you a complete account of the system,
@@ -347,11 +366,14 @@
                 </div>
             </div>
 
-            <div class=" bg-white   rounded-[12px] md:w-full w-[80%]  px-10 md:px-6 py-8"
+            <div class=" bg-white   rounded-[12px] md:w-full w-[100%]  px-2 md:px-6 py-8"
                 style="box-shadow: 0px 4px 24px 0px #00000014;">
                 <div class="flex  justify-center md:w-full w-[100%]  md:items-start space-x-4">
-                    <img src="./assets/Image-60.png" alt="Profile Image" class="w-12 h-12 rounded-full">
+                    <img src="./assets/person3.png" alt="Profile Image"
+                        class="hidden md:block w-12 h-12 rounded-full">
                     <div class="  md:w-full w-[100%]">
+                        <img src="./assets/person3.png" alt="Profile Image"
+                            class=" md:hidden block w-12 h-12 rounded-full">
                         <h3 class="font-bold text-[24px] text-gray-900">Product Review</h3>
                         <div class="flex items-center space-x-1 text-yellow-500">
                             <svg width="400" height="16" viewBox="0 0 400 16" fill="none"
@@ -374,69 +396,7 @@
                             </svg>
 
                         </div>
-                        <p class="mt-4 md:w-full w-[100%]  text-black/60 text-[13px] md:text-[15px]">But I must explain
-                            to you how all this mistaken idea
-                            of denouncing
-                            pleasure and praising pain was born and I will give you a complete account of the system,
-                            and
-                            expound the actual teachings of the great explorer of the truth, the master-builder of human
-                            happines.</p>
-                        <div class="flex items-center md:gap-0 gap-10 md:justify-between mt-4">
-                            <div class="flex items-center space-x-2">
-                                <img src="./assets/person2.png" alt="Profile Image 2" class="w-8 h-8 rounded-full">
-                                <span class="text-black text-[12px]">John Lucas <span class=" text-black/60">• 5 minutes
-                                        ago</span></span>
-                            </div>
-                            <div>
-
-                                <svg width="40" height="40" class="  md:hidden block" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="24" height="24" rx="12" fill="#1F41BB" />
-                                    <path
-                                        d="M12.3799 15.247L12.3355 15.2915L12.2866 15.247C10.1748 13.3309 8.77882 12.0638 8.77882 10.7789C8.77882 9.88978 9.44569 9.22291 10.3349 9.22291C11.0195 9.22291 11.6864 9.66749 11.922 10.2721H12.7489C12.9846 9.66749 13.6514 9.22291 14.3361 9.22291C15.2253 9.22291 15.8921 9.88978 15.8921 10.7789C15.8921 12.0638 14.4962 13.3309 12.3799 15.247ZM14.3361 8.33374C13.5625 8.33374 12.8201 8.69385 12.3355 9.25847C11.8509 8.69385 11.1084 8.33374 10.3349 8.33374C8.96554 8.33374 7.88965 9.40519 7.88965 10.7789C7.88965 12.455 9.40123 13.8288 11.6908 15.905L12.3355 16.4918L12.9801 15.905C15.2697 13.8288 16.7813 12.455 16.7813 10.7789C16.7813 9.40519 15.7054 8.33374 14.3361 8.33374Z"
-                                        fill="white" />
-                                </svg>
-                                <svg width="28" height="28" class=" md:block hidden" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="24" height="24" rx="12" fill="#1F41BB" />
-                                    <path
-                                        d="M12.3799 15.247L12.3355 15.2915L12.2866 15.247C10.1748 13.3309 8.77882 12.0638 8.77882 10.7789C8.77882 9.88978 9.44569 9.22291 10.3349 9.22291C11.0195 9.22291 11.6864 9.66749 11.922 10.2721H12.7489C12.9846 9.66749 13.6514 9.22291 14.3361 9.22291C15.2253 9.22291 15.8921 9.88978 15.8921 10.7789C15.8921 12.0638 14.4962 13.3309 12.3799 15.247ZM14.3361 8.33374C13.5625 8.33374 12.8201 8.69385 12.3355 9.25847C11.8509 8.69385 11.1084 8.33374 10.3349 8.33374C8.96554 8.33374 7.88965 9.40519 7.88965 10.7789C7.88965 12.455 9.40123 13.8288 11.6908 15.905L12.3355 16.4918L12.9801 15.905C15.2697 13.8288 16.7813 12.455 16.7813 10.7789C16.7813 9.40519 15.7054 8.33374 14.3361 8.33374Z"
-                                        fill="white" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class=" bg-white   rounded-[12px] md:w-full w-[80%]  px-10 md:px-6 py-8"
-                style="box-shadow: 0px 4px 24px 0px #00000014;">
-                <div class="flex  justify-center md:w-full w-[100%]  md:items-start space-x-4">
-                    <img src="./assets/profileico.png" alt="Profile Image" class="w-12 h-12 rounded-full">
-                    <div class="  md:w-full w-[100%]">
-                        <h3 class="font-bold text-[24px] text-gray-900">Product Review</h3>
-                        <div class="flex items-center space-x-1 text-yellow-500">
-                            <svg width="400" height="16" viewBox="0 0 400 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M7.99967 1.33331L6.13167 6.33331H1.33301L4.99967 9.66665L3.66634 14.6666L7.99934 11.7956L12.333 14.6666L10.9997 9.66665L14.6663 6.33331H9.86534L7.99967 1.33331Z"
-                                    fill="#1F41BB" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M27.9997 1.3335L26.1317 6.3335H21.333L24.9997 9.66683L23.6663 14.6668L27.9993 11.7958L32.333 14.6668L30.9997 9.66683L34.6663 6.3335H29.8653L27.9997 1.3335Z"
-                                    fill="#1F41BB" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M47.9997 1.3335L46.1317 6.3335H41.333L44.9997 9.66683L43.6663 14.6668L47.9993 11.7958L52.333 14.6668L50.9997 9.66683L54.6663 6.3335H49.8653L47.9997 1.3335Z"
-                                    fill="#1F41BB" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M67.9997 1.3335L66.1317 6.3335H61.333L64.9997 9.66683L63.6663 14.6668L67.9993 11.7958L72.333 14.6668L70.9997 9.66683L74.6663 6.3335H69.8653L67.9997 1.3335Z"
-                                    fill="#1F41BB" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M87.9997 1.3335L86.1317 6.3335H81.333L84.9997 9.66683L83.6663 14.6668L87.9993 11.7958L92.333 14.6668L90.9997 9.66683L94.6663 6.3335H89.8653L87.9997 1.3335Z"
-                                    fill="#F0F0F0" />
-                            </svg>
-
-                        </div>
-                        <p class="mt-4 md:w-full w-[100%]  text-black/60 text-[13px] md:text-[15px]">But I must explain
+                        <p class="mt-4 md:w-full w-[60%]  text-black/60 text-[13px] md:text-[15px]">But I must explain
                             to you how all this mistaken idea
                             of denouncing
                             pleasure and praising pain was born and I will give you a complete account of the system,
@@ -471,11 +431,15 @@
                 </div>
             </div>
 
-            <div class=" bg-white   rounded-[12px] md:w-full w-[80%]  px-10 md:px-6 py-8"
+
+            <div class=" bg-white   rounded-[12px] md:w-full w-[100%]  px-2 md:px-6 py-8"
                 style="box-shadow: 0px 4px 24px 0px #00000014;">
                 <div class="flex  justify-center md:w-full w-[100%]  md:items-start space-x-4">
-                    <img src="./assets/person2.png" alt="Profile Image" class="w-12 h-12 rounded-full">
+                    <img src="./assets/person2.png" alt="Profile Image"
+                        class="hidden md:block w-12 h-12 rounded-full">
                     <div class="  md:w-full w-[100%]">
+                        <img src="./assets/person2.png" alt="Profile Image"
+                            class=" md:hidden block w-12 h-12 rounded-full">
                         <h3 class="font-bold text-[24px] text-gray-900">Product Review</h3>
                         <div class="flex items-center space-x-1 text-yellow-500">
                             <svg width="400" height="16" viewBox="0 0 400 16" fill="none"
@@ -498,7 +462,7 @@
                             </svg>
 
                         </div>
-                        <p class="mt-4 md:w-full w-[100%]  text-black/60 text-[13px] md:text-[15px]">But I must explain
+                        <p class="mt-4 md:w-full w-[60%]  text-black/60 text-[13px] md:text-[15px]">But I must explain
                             to you how all this mistaken idea
                             of denouncing
                             pleasure and praising pain was born and I will give you a complete account of the system,
@@ -532,6 +496,72 @@
                     </div>
                 </div>
             </div>
+
+            <div class=" bg-white   rounded-[12px] md:w-full w-[100%]  px-2 md:px-6 py-8"
+                style="box-shadow: 0px 4px 24px 0px #00000014;">
+                <div class="flex  justify-center md:w-full w-[100%]  md:items-start space-x-4">
+                    <img src="./assets/Image-60.png" alt="Profile Image"
+                        class="hidden md:block w-12 h-12 rounded-full">
+                    <div class="  md:w-full w-[100%]">
+                        <img src="./assets/Image-60.png" alt="Profile Image"
+                            class=" md:hidden block w-12 h-12 rounded-full">
+                        <h3 class="font-bold text-[24px] text-gray-900">Product Review</h3>
+                        <div class="flex items-center space-x-1 text-yellow-500">
+                            <svg width="400" height="16" viewBox="0 0 400 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.99967 1.33331L6.13167 6.33331H1.33301L4.99967 9.66665L3.66634 14.6666L7.99934 11.7956L12.333 14.6666L10.9997 9.66665L14.6663 6.33331H9.86534L7.99967 1.33331Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M27.9997 1.3335L26.1317 6.3335H21.333L24.9997 9.66683L23.6663 14.6668L27.9993 11.7958L32.333 14.6668L30.9997 9.66683L34.6663 6.3335H29.8653L27.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M47.9997 1.3335L46.1317 6.3335H41.333L44.9997 9.66683L43.6663 14.6668L47.9993 11.7958L52.333 14.6668L50.9997 9.66683L54.6663 6.3335H49.8653L47.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M67.9997 1.3335L66.1317 6.3335H61.333L64.9997 9.66683L63.6663 14.6668L67.9993 11.7958L72.333 14.6668L70.9997 9.66683L74.6663 6.3335H69.8653L67.9997 1.3335Z"
+                                    fill="#1F41BB" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M87.9997 1.3335L86.1317 6.3335H81.333L84.9997 9.66683L83.6663 14.6668L87.9993 11.7958L92.333 14.6668L90.9997 9.66683L94.6663 6.3335H89.8653L87.9997 1.3335Z"
+                                    fill="#F0F0F0" />
+                            </svg>
+
+                        </div>
+                        <p class="mt-4 md:w-full w-[60%]  text-black/60 text-[13px] md:text-[15px]">But I must explain
+                            to you how all this mistaken idea
+                            of denouncing
+                            pleasure and praising pain was born and I will give you a complete account of the system,
+                            and
+                            expound the actual teachings of the great explorer of the truth, the master-builder of human
+                            happines.</p>
+                        <div class="flex items-center md:gap-0 gap-10 md:justify-between mt-4">
+                            <div class="flex items-center space-x-2">
+                                <img src="./assets/Image-60.png" alt="Profile Image 2" class="w-8 h-8 rounded-full">
+                                <span class="text-black text-[12px]">John Lucas <span class=" text-black/60">• 5 minutes
+                                        ago</span></span>
+                            </div>
+                            <div>
+
+                                <svg width="40" height="40" class="  md:hidden block" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="12" fill="#1F41BB" />
+                                    <path
+                                        d="M12.3799 15.247L12.3355 15.2915L12.2866 15.247C10.1748 13.3309 8.77882 12.0638 8.77882 10.7789C8.77882 9.88978 9.44569 9.22291 10.3349 9.22291C11.0195 9.22291 11.6864 9.66749 11.922 10.2721H12.7489C12.9846 9.66749 13.6514 9.22291 14.3361 9.22291C15.2253 9.22291 15.8921 9.88978 15.8921 10.7789C15.8921 12.0638 14.4962 13.3309 12.3799 15.247ZM14.3361 8.33374C13.5625 8.33374 12.8201 8.69385 12.3355 9.25847C11.8509 8.69385 11.1084 8.33374 10.3349 8.33374C8.96554 8.33374 7.88965 9.40519 7.88965 10.7789C7.88965 12.455 9.40123 13.8288 11.6908 15.905L12.3355 16.4918L12.9801 15.905C15.2697 13.8288 16.7813 12.455 16.7813 10.7789C16.7813 9.40519 15.7054 8.33374 14.3361 8.33374Z"
+                                        fill="white" />
+                                </svg>
+                                <svg width="28" height="28" class=" md:block hidden" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" rx="12" fill="#1F41BB" />
+                                    <path
+                                        d="M12.3799 15.247L12.3355 15.2915L12.2866 15.247C10.1748 13.3309 8.77882 12.0638 8.77882 10.7789C8.77882 9.88978 9.44569 9.22291 10.3349 9.22291C11.0195 9.22291 11.6864 9.66749 11.922 10.2721H12.7489C12.9846 9.66749 13.6514 9.22291 14.3361 9.22291C15.2253 9.22291 15.8921 9.88978 15.8921 10.7789C15.8921 12.0638 14.4962 13.3309 12.3799 15.247ZM14.3361 8.33374C13.5625 8.33374 12.8201 8.69385 12.3355 9.25847C11.8509 8.69385 11.1084 8.33374 10.3349 8.33374C8.96554 8.33374 7.88965 9.40519 7.88965 10.7789C7.88965 12.455 9.40123 13.8288 11.6908 15.905L12.3355 16.4918L12.9801 15.905C15.2697 13.8288 16.7813 12.455 16.7813 10.7789C16.7813 9.40519 15.7054 8.33374 14.3361 8.33374Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <div id="follower" class="tab-content hidden  max-w-5xl  mx-auto py-10">
@@ -541,7 +571,8 @@
                 <div class="flex items-center justify-between bg-white p-4 rounded-lg  ">
                     <div class="flex items-center space-x-4">
                         <!-- Profile Image -->
-                        <img src="./assets//person2.png" alt="Lowell" class="md:w-14 w-10 h-10 md:h-14 rounded-full object-cover" />
+                        <img src="./assets//person2.png" alt="Lowell"
+                            class="md:w-14 w-10 h-10 md:h-14 rounded-full object-cover" />
                         <!-- User Info -->
                         <div>
                             <h2 class="md:text-[30px] text-[12px] font-normal text-gray-800">Lowell</h2>
@@ -552,7 +583,7 @@
                                         d="M10 2a6 6 0 00-6 6c0 4.5 6 9 6 9s6-4.5 6-9a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                
+
                                 Location Here
                             </p>
                         </div>
@@ -566,10 +597,13 @@
                                 d="M5.44727 4.5C5.44727 3.43913 5.86869 2.42172 6.61884 1.67157C7.36898 0.921427 8.3864 0.5 9.44727 0.5C10.5081 0.5 11.5255 0.921427 12.2757 1.67157C13.0258 2.42172 13.4473 3.43913 13.4473 4.5C13.4473 5.56087 13.0258 6.57828 12.2757 7.32843C11.5255 8.07857 10.5081 8.5 9.44727 8.5C8.3864 8.5 7.36898 8.07857 6.61884 7.32843C5.86869 6.57828 5.44727 5.56087 5.44727 4.5ZM5.44727 10.5C4.12118 10.5 2.84941 11.0268 1.91173 11.9645C0.97405 12.9021 0.447266 14.1739 0.447266 15.5C0.447266 16.2956 0.763336 17.0587 1.32595 17.6213C1.88855 18.1839 2.65162 18.5 3.44727 18.5H15.4473C16.2429 18.5 17.006 18.1839 17.5686 17.6213C18.1312 17.0587 18.4473 16.2956 18.4473 15.5C18.4473 14.1739 17.9205 12.9021 16.9828 11.9645C16.0451 11.0268 14.7733 10.5 13.4473 10.5H5.44727Z"
                                 fill="#3C3C3C" />
                         </svg>
-                        <svg width="16" height="16" class="md:hidden block mr-2" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.16667 6.41667C8.16667 5.44421 8.57053 4.51157 9.28942 3.82394C10.0083 3.13631 10.9833 2.75 12 2.75C13.0167 2.75 13.9917 3.13631 14.7106 3.82394C15.4295 4.51157 15.8333 5.44421 15.8333 6.41667C15.8333 7.38913 15.4295 8.32176 14.7106 9.00939C13.9917 9.69703 13.0167 10.0833 12 10.0833C10.9833 10.0833 10.0083 9.69703 9.28942 9.00939C8.57053 8.32176 8.16667 7.38913 8.16667 6.41667ZM8.16667 11.9167C6.89584 11.9167 5.67706 12.3996 4.77845 13.2591C3.87983 14.1186 3.375 15.2844 3.375 16.5C3.375 17.2293 3.6779 17.9288 4.21707 18.4445C4.75624 18.9603 5.4875 19.25 6.25 19.25H17.75C18.5125 19.25 19.2438 18.9603 19.7829 18.4445C20.3221 17.9288 20.625 17.2293 20.625 16.5C20.625 15.2844 20.1202 14.1186 19.2216 13.2591C18.3229 12.3996 17.1042 11.9167 15.8333 11.9167H8.16667Z" fill="white"/>
-                            </svg>
-                            
+                        <svg width="16" height="16" class="md:hidden block mr-2" viewBox="0 0 19 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.16667 6.41667C8.16667 5.44421 8.57053 4.51157 9.28942 3.82394C10.0083 3.13631 10.9833 2.75 12 2.75C13.0167 2.75 13.9917 3.13631 14.7106 3.82394C15.4295 4.51157 15.8333 5.44421 15.8333 6.41667C15.8333 7.38913 15.4295 8.32176 14.7106 9.00939C13.9917 9.69703 13.0167 10.0833 12 10.0833C10.9833 10.0833 10.0083 9.69703 9.28942 9.00939C8.57053 8.32176 8.16667 7.38913 8.16667 6.41667ZM8.16667 11.9167C6.89584 11.9167 5.67706 12.3996 4.77845 13.2591C3.87983 14.1186 3.375 15.2844 3.375 16.5C3.375 17.2293 3.6779 17.9288 4.21707 18.4445C4.75624 18.9603 5.4875 19.25 6.25 19.25H17.75C18.5125 19.25 19.2438 18.9603 19.7829 18.4445C20.3221 17.9288 20.625 17.2293 20.625 16.5C20.625 15.2844 20.1202 14.1186 19.2216 13.2591C18.3229 12.3996 17.1042 11.9167 15.8333 11.9167H8.16667Z"
+                                fill="white" />
+                        </svg>
+
                         View Profile
                     </button>
                 </div>
@@ -578,7 +612,8 @@
                 <div class="flex items-center justify-between bg-white p-4 rounded-lg  ">
                     <div class="flex items-center space-x-4">
                         <!-- Profile Image -->
-                        <img src="./assets//person2.png" alt="Lowell" class="md:w-14 w-10 h-10 md:h-14 rounded-full object-cover" />
+                        <img src="./assets//person2.png" alt="Lowell"
+                            class="md:w-14 w-10 h-10 md:h-14 rounded-full object-cover" />
                         <!-- User Info -->
                         <div>
                             <h2 class="md:text-[30px] text-[12px] font-normal text-gray-800">Lowell</h2>
@@ -589,7 +624,7 @@
                                         d="M10 2a6 6 0 00-6 6c0 4.5 6 9 6 9s6-4.5 6-9a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                
+
                                 Location Here
                             </p>
                         </div>
@@ -603,10 +638,13 @@
                                 d="M5.44727 4.5C5.44727 3.43913 5.86869 2.42172 6.61884 1.67157C7.36898 0.921427 8.3864 0.5 9.44727 0.5C10.5081 0.5 11.5255 0.921427 12.2757 1.67157C13.0258 2.42172 13.4473 3.43913 13.4473 4.5C13.4473 5.56087 13.0258 6.57828 12.2757 7.32843C11.5255 8.07857 10.5081 8.5 9.44727 8.5C8.3864 8.5 7.36898 8.07857 6.61884 7.32843C5.86869 6.57828 5.44727 5.56087 5.44727 4.5ZM5.44727 10.5C4.12118 10.5 2.84941 11.0268 1.91173 11.9645C0.97405 12.9021 0.447266 14.1739 0.447266 15.5C0.447266 16.2956 0.763336 17.0587 1.32595 17.6213C1.88855 18.1839 2.65162 18.5 3.44727 18.5H15.4473C16.2429 18.5 17.006 18.1839 17.5686 17.6213C18.1312 17.0587 18.4473 16.2956 18.4473 15.5C18.4473 14.1739 17.9205 12.9021 16.9828 11.9645C16.0451 11.0268 14.7733 10.5 13.4473 10.5H5.44727Z"
                                 fill="#3C3C3C" />
                         </svg>
-                        <svg width="16" height="16" class="md:hidden block mr-2" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.16667 6.41667C8.16667 5.44421 8.57053 4.51157 9.28942 3.82394C10.0083 3.13631 10.9833 2.75 12 2.75C13.0167 2.75 13.9917 3.13631 14.7106 3.82394C15.4295 4.51157 15.8333 5.44421 15.8333 6.41667C15.8333 7.38913 15.4295 8.32176 14.7106 9.00939C13.9917 9.69703 13.0167 10.0833 12 10.0833C10.9833 10.0833 10.0083 9.69703 9.28942 9.00939C8.57053 8.32176 8.16667 7.38913 8.16667 6.41667ZM8.16667 11.9167C6.89584 11.9167 5.67706 12.3996 4.77845 13.2591C3.87983 14.1186 3.375 15.2844 3.375 16.5C3.375 17.2293 3.6779 17.9288 4.21707 18.4445C4.75624 18.9603 5.4875 19.25 6.25 19.25H17.75C18.5125 19.25 19.2438 18.9603 19.7829 18.4445C20.3221 17.9288 20.625 17.2293 20.625 16.5C20.625 15.2844 20.1202 14.1186 19.2216 13.2591C18.3229 12.3996 17.1042 11.9167 15.8333 11.9167H8.16667Z" fill="white"/>
-                            </svg>
-                            
+                        <svg width="16" height="16" class="md:hidden block mr-2" viewBox="0 0 19 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.16667 6.41667C8.16667 5.44421 8.57053 4.51157 9.28942 3.82394C10.0083 3.13631 10.9833 2.75 12 2.75C13.0167 2.75 13.9917 3.13631 14.7106 3.82394C15.4295 4.51157 15.8333 5.44421 15.8333 6.41667C15.8333 7.38913 15.4295 8.32176 14.7106 9.00939C13.9917 9.69703 13.0167 10.0833 12 10.0833C10.9833 10.0833 10.0083 9.69703 9.28942 9.00939C8.57053 8.32176 8.16667 7.38913 8.16667 6.41667ZM8.16667 11.9167C6.89584 11.9167 5.67706 12.3996 4.77845 13.2591C3.87983 14.1186 3.375 15.2844 3.375 16.5C3.375 17.2293 3.6779 17.9288 4.21707 18.4445C4.75624 18.9603 5.4875 19.25 6.25 19.25H17.75C18.5125 19.25 19.2438 18.9603 19.7829 18.4445C20.3221 17.9288 20.625 17.2293 20.625 16.5C20.625 15.2844 20.1202 14.1186 19.2216 13.2591C18.3229 12.3996 17.1042 11.9167 15.8333 11.9167H8.16667Z"
+                                fill="white" />
+                        </svg>
+
                         View Profile
                     </button>
                 </div>
@@ -614,7 +652,8 @@
                 <div class="flex items-center justify-between bg-white p-4 rounded-lg  ">
                     <div class="flex items-center space-x-4">
                         <!-- Profile Image -->
-                        <img src="./assets//person2.png" alt="Lowell" class="md:w-14 w-10 h-10 md:h-14 rounded-full object-cover" />
+                        <img src="./assets//person2.png" alt="Lowell"
+                            class="md:w-14 w-10 h-10 md:h-14 rounded-full object-cover" />
                         <!-- User Info -->
                         <div>
                             <h2 class="md:text-[30px] text-[12px] font-normal text-gray-800">Lowell</h2>
@@ -625,7 +664,7 @@
                                         d="M10 2a6 6 0 00-6 6c0 4.5 6 9 6 9s6-4.5 6-9a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                
+
                                 Location Here
                             </p>
                         </div>
@@ -639,10 +678,13 @@
                                 d="M5.44727 4.5C5.44727 3.43913 5.86869 2.42172 6.61884 1.67157C7.36898 0.921427 8.3864 0.5 9.44727 0.5C10.5081 0.5 11.5255 0.921427 12.2757 1.67157C13.0258 2.42172 13.4473 3.43913 13.4473 4.5C13.4473 5.56087 13.0258 6.57828 12.2757 7.32843C11.5255 8.07857 10.5081 8.5 9.44727 8.5C8.3864 8.5 7.36898 8.07857 6.61884 7.32843C5.86869 6.57828 5.44727 5.56087 5.44727 4.5ZM5.44727 10.5C4.12118 10.5 2.84941 11.0268 1.91173 11.9645C0.97405 12.9021 0.447266 14.1739 0.447266 15.5C0.447266 16.2956 0.763336 17.0587 1.32595 17.6213C1.88855 18.1839 2.65162 18.5 3.44727 18.5H15.4473C16.2429 18.5 17.006 18.1839 17.5686 17.6213C18.1312 17.0587 18.4473 16.2956 18.4473 15.5C18.4473 14.1739 17.9205 12.9021 16.9828 11.9645C16.0451 11.0268 14.7733 10.5 13.4473 10.5H5.44727Z"
                                 fill="#3C3C3C" />
                         </svg>
-                        <svg width="16" height="16" class="md:hidden block mr-2" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.16667 6.41667C8.16667 5.44421 8.57053 4.51157 9.28942 3.82394C10.0083 3.13631 10.9833 2.75 12 2.75C13.0167 2.75 13.9917 3.13631 14.7106 3.82394C15.4295 4.51157 15.8333 5.44421 15.8333 6.41667C15.8333 7.38913 15.4295 8.32176 14.7106 9.00939C13.9917 9.69703 13.0167 10.0833 12 10.0833C10.9833 10.0833 10.0083 9.69703 9.28942 9.00939C8.57053 8.32176 8.16667 7.38913 8.16667 6.41667ZM8.16667 11.9167C6.89584 11.9167 5.67706 12.3996 4.77845 13.2591C3.87983 14.1186 3.375 15.2844 3.375 16.5C3.375 17.2293 3.6779 17.9288 4.21707 18.4445C4.75624 18.9603 5.4875 19.25 6.25 19.25H17.75C18.5125 19.25 19.2438 18.9603 19.7829 18.4445C20.3221 17.9288 20.625 17.2293 20.625 16.5C20.625 15.2844 20.1202 14.1186 19.2216 13.2591C18.3229 12.3996 17.1042 11.9167 15.8333 11.9167H8.16667Z" fill="white"/>
-                            </svg>
-                            
+                        <svg width="16" height="16" class="md:hidden block mr-2" viewBox="0 0 19 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.16667 6.41667C8.16667 5.44421 8.57053 4.51157 9.28942 3.82394C10.0083 3.13631 10.9833 2.75 12 2.75C13.0167 2.75 13.9917 3.13631 14.7106 3.82394C15.4295 4.51157 15.8333 5.44421 15.8333 6.41667C15.8333 7.38913 15.4295 8.32176 14.7106 9.00939C13.9917 9.69703 13.0167 10.0833 12 10.0833C10.9833 10.0833 10.0083 9.69703 9.28942 9.00939C8.57053 8.32176 8.16667 7.38913 8.16667 6.41667ZM8.16667 11.9167C6.89584 11.9167 5.67706 12.3996 4.77845 13.2591C3.87983 14.1186 3.375 15.2844 3.375 16.5C3.375 17.2293 3.6779 17.9288 4.21707 18.4445C4.75624 18.9603 5.4875 19.25 6.25 19.25H17.75C18.5125 19.25 19.2438 18.9603 19.7829 18.4445C20.3221 17.9288 20.625 17.2293 20.625 16.5C20.625 15.2844 20.1202 14.1186 19.2216 13.2591C18.3229 12.3996 17.1042 11.9167 15.8333 11.9167H8.16667Z"
+                                fill="white" />
+                        </svg>
+
                         View Profile
                     </button>
                 </div>
@@ -651,7 +693,8 @@
                 <div class="flex items-center justify-between bg-white p-4 rounded-lg  ">
                     <div class="flex items-center space-x-4">
                         <!-- Profile Image -->
-                        <img src="./assets//person2.png" alt="Lowell" class="md:w-14 w-10 h-10 md:h-14 rounded-full object-cover" />
+                        <img src="./assets//person2.png" alt="Lowell"
+                            class="md:w-14 w-10 h-10 md:h-14 rounded-full object-cover" />
                         <!-- User Info -->
                         <div>
                             <h2 class="md:text-[30px] text-[12px] font-normal text-gray-800">Lowell</h2>
@@ -662,7 +705,7 @@
                                         d="M10 2a6 6 0 00-6 6c0 4.5 6 9 6 9s6-4.5 6-9a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                
+
                                 Location Here
                             </p>
                         </div>
@@ -676,10 +719,13 @@
                                 d="M5.44727 4.5C5.44727 3.43913 5.86869 2.42172 6.61884 1.67157C7.36898 0.921427 8.3864 0.5 9.44727 0.5C10.5081 0.5 11.5255 0.921427 12.2757 1.67157C13.0258 2.42172 13.4473 3.43913 13.4473 4.5C13.4473 5.56087 13.0258 6.57828 12.2757 7.32843C11.5255 8.07857 10.5081 8.5 9.44727 8.5C8.3864 8.5 7.36898 8.07857 6.61884 7.32843C5.86869 6.57828 5.44727 5.56087 5.44727 4.5ZM5.44727 10.5C4.12118 10.5 2.84941 11.0268 1.91173 11.9645C0.97405 12.9021 0.447266 14.1739 0.447266 15.5C0.447266 16.2956 0.763336 17.0587 1.32595 17.6213C1.88855 18.1839 2.65162 18.5 3.44727 18.5H15.4473C16.2429 18.5 17.006 18.1839 17.5686 17.6213C18.1312 17.0587 18.4473 16.2956 18.4473 15.5C18.4473 14.1739 17.9205 12.9021 16.9828 11.9645C16.0451 11.0268 14.7733 10.5 13.4473 10.5H5.44727Z"
                                 fill="#3C3C3C" />
                         </svg>
-                        <svg width="16" height="16" class="md:hidden block mr-2" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.16667 6.41667C8.16667 5.44421 8.57053 4.51157 9.28942 3.82394C10.0083 3.13631 10.9833 2.75 12 2.75C13.0167 2.75 13.9917 3.13631 14.7106 3.82394C15.4295 4.51157 15.8333 5.44421 15.8333 6.41667C15.8333 7.38913 15.4295 8.32176 14.7106 9.00939C13.9917 9.69703 13.0167 10.0833 12 10.0833C10.9833 10.0833 10.0083 9.69703 9.28942 9.00939C8.57053 8.32176 8.16667 7.38913 8.16667 6.41667ZM8.16667 11.9167C6.89584 11.9167 5.67706 12.3996 4.77845 13.2591C3.87983 14.1186 3.375 15.2844 3.375 16.5C3.375 17.2293 3.6779 17.9288 4.21707 18.4445C4.75624 18.9603 5.4875 19.25 6.25 19.25H17.75C18.5125 19.25 19.2438 18.9603 19.7829 18.4445C20.3221 17.9288 20.625 17.2293 20.625 16.5C20.625 15.2844 20.1202 14.1186 19.2216 13.2591C18.3229 12.3996 17.1042 11.9167 15.8333 11.9167H8.16667Z" fill="white"/>
-                            </svg>
-                            
+                        <svg width="16" height="16" class="md:hidden block mr-2" viewBox="0 0 19 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.16667 6.41667C8.16667 5.44421 8.57053 4.51157 9.28942 3.82394C10.0083 3.13631 10.9833 2.75 12 2.75C13.0167 2.75 13.9917 3.13631 14.7106 3.82394C15.4295 4.51157 15.8333 5.44421 15.8333 6.41667C15.8333 7.38913 15.4295 8.32176 14.7106 9.00939C13.9917 9.69703 13.0167 10.0833 12 10.0833C10.9833 10.0833 10.0083 9.69703 9.28942 9.00939C8.57053 8.32176 8.16667 7.38913 8.16667 6.41667ZM8.16667 11.9167C6.89584 11.9167 5.67706 12.3996 4.77845 13.2591C3.87983 14.1186 3.375 15.2844 3.375 16.5C3.375 17.2293 3.6779 17.9288 4.21707 18.4445C4.75624 18.9603 5.4875 19.25 6.25 19.25H17.75C18.5125 19.25 19.2438 18.9603 19.7829 18.4445C20.3221 17.9288 20.625 17.2293 20.625 16.5C20.625 15.2844 20.1202 14.1186 19.2216 13.2591C18.3229 12.3996 17.1042 11.9167 15.8333 11.9167H8.16667Z"
+                                fill="white" />
+                        </svg>
+
                         View Profile
                     </button>
                 </div>
