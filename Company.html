@@ -149,38 +149,50 @@
         </div>
     </div>
 
-    <!-- Mobile Navbar -->
-    <div class=" bg-[#1F41BB] px-4 py-4 flex flex-col     gap-5 md:hidden block">
-        <div class="  items-center justify-between flex">
+<!-- Mobile Navbar -->
+<div class="bg-[#1F41BB] px-4 py-4 flex flex-col gap-5 md:hidden block">
+    <div class="items-center justify-between flex">
+        <!-- Hamburger Menu -->
+        <button id="hamburger-menu" class="focus:outline-none">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M2.25 5C2.25 4.586 2.586 4.25 3 4.25H16C16.414 4.25 16.75 4.586 16.75 5C16.75 5.414 16.414 5.75 16 5.75H3C2.586 5.75 2.25 5.414 2.25 5ZM21 11.25H3C2.586 11.25 2.25 11.586 2.25 12C2.25 12.414 2.586 12.75 3 12.75H21C21.414 12.75 21.75 12.414 21.75 12C21.75 11.586 21.414 11.25 21 11.25ZM12 18.25H3C2.586 18.25 2.25 18.586 2.25 19C2.25 19.414 2.586 19.75 3 19.75H12C12.414 19.75 12.75 19.414 12.75 19C12.75 18.586 12.414 18.25 12 18.25Z"
                     fill="white" />
             </svg>
+        </button>
 
-            <img src="./assets//logo-white.png" class=" w-20 h-fit" alt="">
+        <img src="./assets/logo-white.png" class="w-20 h-fit" alt="Logo">
 
-            <div class=" flex gap-2 items-center">
-                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
-                        fill="white" />
-                </svg>
-                <img src="./assets//profileico.png" class=" w-8 h-fit" alt="">
-            </div>
-        </div>
-
-        <div class="w-full text-gray-500 shadow flex justify-between px-4 py-2  rounded-[10px] outline-none bg-white">
-            <input type="text" class=" w-full flex justify-between  outline-none bg-white "
-                placeholder="Search Places..." />
-            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="15.5" cy="15.5" r="15.5" fill="#1F41BB" />
-                <path d="M19.898 14.558a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0" fill="#1F41BB" />
-                <path d="m21.155 21.156-2.819-2.824m1.562-3.774a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0Z"
-                    stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        <div class="flex gap-2 items-center">
+            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
+                    fill="white" />
             </svg>
+            <img src="./assets/profileico.png" class="w-8 h-fit" alt="Profile Icon">
         </div>
     </div>
+    <div class="w-full text-gray-500 shadow flex justify-between px-4 py-2 rounded-[10px] outline-none bg-white">
+        <input type="text" class="w-full flex justify-between outline-none bg-white"
+            placeholder="Search Places..." />
+        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15.5" cy="15.5" r="15.5" fill="#1F41BB" />
+            <path d="M19.898 14.558a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0" fill="#1F41BB" />
+            <path d="m21.155 21.156-2.819-2.824m1.562-3.774a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0Z"
+                stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        </svg>
+    </div>
+</div>
+<div id="side-nav" class="fixed z-[500] top-0 left-0 h-full w-3/4 bg-[#1F41BB] transform -translate-x-full transition-transform duration-300">
+    <div class="p-4 text-white">
+        <h2 class="text-lg font-bold">Navigation</h2>
+        <ul class="mt-4 space-y-3">
+            <li><a href="#" class="hover:text-gray-300">Home</a></li>
+            <li><a href="#" class="hover:text-gray-300">About</a></li>
+            <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+    </div>
+</div>
     <img src="./assets//companypage.jpeg" style="  background-position: 50% 50%; background-size: cover;" class=" z-[-1]
       absolute md:h-[60%] h-[40%]  w-full object-cover bg-cover bg-bottom" alt="">
 
@@ -939,6 +951,27 @@
     </div>
     <script>
 
+const hamburgerMenu = document.getElementById('hamburger-menu');
+    const sideNav = document.getElementById('side-nav');
+
+    // Function to toggle navigation visibility
+    const toggleNav = (show) => {
+        sideNav.classList.toggle('-translate-x-full', !show);
+        sideNav.classList.toggle('translate-x-0', show);
+    };
+
+    // Open navigation on hamburger menu click
+    hamburgerMenu.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent click from propagating to the document
+        toggleNav(true);
+    });
+
+    // Close navigation on outside click
+    document.addEventListener('click', (event) => {
+        if (!sideNav.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+            toggleNav(false);
+        }
+    });
         // JavaScript for Tab Switching
         const tabHeaders = document.querySelectorAll('.tab-header');
         const tabContents = document.querySelectorAll('.tab-content');
