@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/search.css" />
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
@@ -163,18 +164,35 @@
                 <h2 class="text-white text-[16px] font-semibold mb-4">Discover the new Places around you</h2>
                 <div class="flex gap-4">
                     <div class="w-full flex">
-                        <input type="text" class="w-[60%] pr-4 flex-grow h-fit p-4 rounded-l-[41px] outline-none"
-                            placeholder="Search Places...">
-                        <input type="text" class="flex-grow w-[40%] border-l p-4 h-fit rounded-r-[41px] outline-none"
-                            placeholder="City">
+
+                        <div
+                            class="container2 w-[60%]  -pr-20 -pr-4 flex-grow h-fit  rounded-l-[41px] outline-none bg-white">
+                            <div class=" w-[60%]">
+                                <label for="inputField" class=" -ml-14 anim-label">
+                                    Search by <span class="placeholder-text"></span>
+                                </label>
+                                <input type="text" id="inputField"
+                                    class="styled-input  -ml-20 -pr-6 flex-grow h-fit p-2  rounded-l-[41px] outline-none bg-white h-fit  !w-[400px] outline-none" />
+                            </div>
+                        </div>
+                        <div
+                            class="container2 w-[40%]  -pr-20 -pr-4 flex-grow h-fit  rounded-r-[41px] outline-none bg-white">
+                            <div class=" w-[60%]">
+                                <label for="inputField" class=" -ml-14 anim-label">
+                                    City
+                                </label>
+                                <input type="text" id="inputField"
+                                    class="styled-input !border-l !border-[#909090] -ml-20 -pr-6 flex-grow h-fit p-2  rounded-r-[41px] outline-none bg-white h-fit  !w-[400px] outline-none" />
+                            </div>
+                        </div>
+                        <!-- <input type="text" class="flex-grow text-[18px] w-[40%] border-l p-2 h-fit rounded-r-[41px] outline-none"
+                            placeholder="City"> -->
                     </div>
                     <span class="border border-[1px] top-4 absolute h-[80%] right-36"></span>
-                    <a href="/Search.html"
-                        class="bg-[#1F41BB] flex   text-white rounded-[41px] px-8 font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
-                        <button class=" ">
-                            Search
-                        </button>
-                    </a>
+                    <button
+                        class="bg-[#1F41BB] text-white rounded-[41px] px-8 font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                        Search
+                    </button>
                 </div>
             </div>
         </div>
@@ -191,35 +209,68 @@
     </div>
 
     <!-- Mobile Navbar -->
-    <div class=" bg-[#1F41BB] px-4 py-4 flex flex-col     gap-5 md:hidden block">
+    <div class=" bg-[#1F41BB] z-[600] px-4 py-4 flex flex-col    gap-5 md:hidden block">
         <div class="  items-center justify-between flex">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M2.25 5C2.25 4.586 2.586 4.25 3 4.25H16C16.414 4.25 16.75 4.586 16.75 5C16.75 5.414 16.414 5.75 16 5.75H3C2.586 5.75 2.25 5.414 2.25 5ZM21 11.25H3C2.586 11.25 2.25 11.586 2.25 12C2.25 12.414 2.586 12.75 3 12.75H21C21.414 12.75 21.75 12.414 21.75 12C21.75 11.586 21.414 11.25 21 11.25ZM12 18.25H3C2.586 18.25 2.25 18.586 2.25 19C2.25 19.414 2.586 19.75 3 19.75H12C12.414 19.75 12.75 19.414 12.75 19C12.75 18.586 12.414 18.25 12 18.25Z"
-                    fill="white" />
-            </svg>
-
-            <img src="./assets//logo-white.png" class=" w-20 h-fit" alt="">
-
+            <button id="hamburger-menu" class="focus:outline-none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M2.25 5C2.25 4.586 2.586 4.25 3 4.25H16C16.414 4.25 16.75 4.586 16.75 5C16.75 5.414 16.414 5.75 16 5.75H3C2.586 5.75 2.25 5.414 2.25 5ZM21 11.25H3C2.586 11.25 2.25 11.586 2.25 12C2.25 12.414 2.586 12.75 3 12.75H21C21.414 12.75 21.75 12.414 21.75 12C21.75 11.586 21.414 11.25 21 11.25ZM12 18.25H3C2.586 18.25 2.25 18.586 2.25 19C2.25 19.414 2.586 19.75 3 19.75H12C12.414 19.75 12.75 19.414 12.75 19C12.75 18.586 12.414 18.25 12 18.25Z"
+                        fill="white" />
+                </svg>
+            </button>
+            <a href="./index.html">
+                <img src="./assets//logo-white.png" class=" w-20 h-auto" alt="">
+            </a>
             <div class=" flex gap-2 items-center">
                 <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
                         fill="white" />
                 </svg>
-                <img src="./assets//profileico.png" class=" w-8 h-fit" alt="">
+                <a href="./Profile.html">
+                    <img src="./assets//profileico.png" class=" w-8 h-auto" alt="">
+                </a>
             </div>
         </div>
 
-        <div class="w-full text-gray-500 shadow flex justify-between px-4 py-2  rounded-[10px] outline-none bg-white">
-            <input type="text" class=" w-full flex justify-between  outline-none bg-white "
-                placeholder="Search Places..." />
-            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="15.5" cy="15.5" r="15.5" fill="#1F41BB" />
-                <path d="M19.898 14.558a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0" fill="#1F41BB" />
-                <path d="m21.155 21.156-2.819-2.824m1.562-3.774a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0Z"
-                    stroke="#fff" stroke-width="2" stroke-linecap="round" />
-            </svg>
+        <div class=" ">
+            <!-- First Input Container -->
+            <div id="first-container"
+                class="w-full text-gray-500 shadow flex justify-between px-4 py-2 rounded-[10px] outline-none bg-white relative">
+                <input id="first-input" type="text" class="w-full flex justify-between outline-none bg-white"
+                    placeholder="Search Places..." />
+                <svg id="first-svg" class="transition-opacity duration-300" width="31" height="31" viewBox="0 0 31 31"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15.5" cy="15.5" r="15.5" fill="#1F41BB" />
+                    <path d="M19.898 14.558a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0" fill="#1F41BB" />
+                    <path
+                        d="m21.155 21.156-2.819-2.824m1.562-3.774a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0Z"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+
+            <!-- Second Input Container and Search Button -->
+            <div id="second-container"
+                class="w-full text-gray-500 hidden shadow flex justify-between px-4 py-3 mt-2 rounded-[10px] outline-none bg-white transform scale-0 opacity-0 transition-transform transition-opacity duration-300">
+                <input type="text" id="second-input" class="w-full flex justify-between outline-none bg-white"
+                    placeholder="City or zip code" />
+            </div>
+            <button id="search-button" class=" mt-2 w-full px-4 py-2 hidden bg-black text-white rounded-[10px] transform 
+            scale-0 opacity-0 transition-transform transition-opacity duration-300">
+                Search
+            </button>
+        </div>
+    </div>
+
+    <div id="side-nav"
+        class="fixed z-[500] top-0 left-0 h-full w-3/4 bg-[#1F41BB] transform -translate-x-full transition-transform duration-300">
+        <div class="p-4 text-white">
+            <h2 class="text-lg font-bold">Navigation</h2>
+            <ul class="mt-4 space-y-3">
+                <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#" class="hover:text-gray-300">About</a></li>
+                <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+            </ul>
         </div>
     </div>
 
@@ -304,7 +355,7 @@
                         class="flex md:justify-between md:gap-0 gap-6 md:bg-[#F7F9FF] md:px-12 py-1   rounded-[8px] items-center mt-4">
                         <div class="text-gray-600 md:text-center">
                             <p class="md:text-[16px]  text-[12px] text-[#8D98AA] font-[500]">Rimarks</p>
-                            <p class="md:text-[28px]  text-[18px] text-[#284B80]   font-[500]">176</p>
+                            <p class="md:text-[28px]  text-[18px] t ext-[#284B80]   font-[500]">176</p>
                         </div>
                         <div class="text-gray-600  md:text-center">
                             <p class="md:text-[16px]  text-[12px] text-[#8D98AA]">Followers</p>
@@ -354,11 +405,11 @@
                 </div>
             </div>
             <div
-                class="text-center md:mt-10 pt-40  absolute  flex items-center justify-center bottom-0 left-0 w-full md:w-[110%] h-1/4 bg-gradient-to-t from-white to-white/10 ml-">
+                class="text-center  md:mt-10 pt-40  absolute  flex items-center justify-center bottom-0 left-0 w-full md:w-[110%] h-1/4 bg-gradient-to-t from-white to-white/10 ml-">
                 <!-- <div class="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-white to-transparent"></div> -->
 
                 <a href="#"
-                    class=" bg-gray-200 rounded-full  px-4 py-1 hover:text-indigo-800  text-gray-600 mt-60 md:mt-60 ">View
+                    class=" bg-gray-200 rounded-full  px-4 py-1 hover:text-indigo-800  text-gray-600 mt-40 md:mt-60 ">View
                     more</a>
             </div>
         </div>
@@ -553,7 +604,7 @@
     </section>
 
     <!-- footer Wrapper -->
-    <div class=" md:px-20 relative w-full bg-cover bg-center md:pb-20 pb-8 pt-10"
+    <div class=" md:px-20 relative w-full bg-cover bg-center md:pb-20 pb-8 md:mt-0  pt-10"
         style="background-image: url('../assets//footer.png');">
         <!-- Overlay for better text visibility -->
         <!-- <div class="absolute inset-0  "></div> -->
@@ -751,6 +802,100 @@
             }
         });
     </script>
+
+    <script>
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const sideNav = document.getElementById('side-nav');
+
+        // Function to toggle navigation visibility
+        const toggleNav = (show) => {
+            sideNav.classList.toggle('-translate-x-full', !show);
+            sideNav.classList.toggle('translate-x-0', show);
+        };
+
+        // Open navigation on hamburger menu click
+        hamburgerMenu.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent click from propagating to the document
+            toggleNav(true);
+        });
+
+        // Close navigation on outside click
+        document.addEventListener('click', (event) => {
+            if (!sideNav.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+                toggleNav(false);
+            }
+        });
+
+        const firstInput = document.getElementById("first-input");
+        const secondContainer = document.getElementById("second-container");
+        const searchButton = document.getElementById("search-button");
+        const firstSvg = document.getElementById("first-svg");
+        firstInput.addEventListener("focus", () => {
+            // Show the second input and search button with animation (coming down)
+            secondContainer.classList.remove("hidden", "scale-0", "opacity-0");
+            secondContainer.classList.add("scale-100", "opacity-100");
+            searchButton.classList.remove("hidden", "scale-0", "opacity-0");
+            searchButton.classList.add("scale-100", "opacity-100");
+            firstSvg.style.opacity = "0";
+        });
+
+        // Optional: Add blur to reset states
+        firstInput.addEventListener("blur", () => {
+            setTimeout(() => {
+                secondContainer.classList.add("hidden", "scale-0", "opacity-0");
+                secondContainer.classList.remove("scale-100", "opacity-100");
+                searchButton.classList.add("hidden", "scale-0", "opacity-0");
+                searchButton.classList.remove("scale-100", "opacity-100");
+                firstSvg.style.opacity = "1";
+            }, 200); // Delay to allow click event on the search button
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const placeholders = ["Category", "Price", "Occasion", "Relationship"];
+            const placeholderText = document.querySelector(".placeholder-text");
+            const inputField = document.querySelector("#inputField");
+
+            let updateCount = 0;
+
+            function updatePlaceholder() {
+                placeholderText.textContent = placeholders[updateCount];
+                updateCount = (updateCount + 1) % placeholders.length;
+            }
+
+            setInterval(updatePlaceholder, 1600);
+
+            inputField.addEventListener("input", () => {
+                const animLabel = document.querySelector(".anim-label");
+                if (inputField.value.trim()) {
+                    animLabel.classList.add("hidden");
+                } else {
+                    animLabel.classList.remove("hidden");
+                }
+            });
+
+            updatePlaceholder();
+        });
+
+
+
+
+
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const placeholders = ['Category', 'Price', 'Occasion', 'Relationship'];
+            let index = 0;
+
+            const placeholderElement = document.querySelector('.placeholder');
+
+            setInterval(() => {
+                index = (index + 1) % placeholders.length;
+                placeholderElement.textContent = placeholders[index];
+            }, 2000);
+        });
+    </script>
+
 </body>
 
 </html>
