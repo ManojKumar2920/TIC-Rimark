@@ -114,7 +114,7 @@
     <div class=" bg-[#1F41BB] z-[600] px-4 py-4 flex flex-col  h-full  gap-5 md:hidden block">
         <div class="  items-center justify-between flex">
             <button id="hamburger-menu" class="focus:outline-none">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M2.25 5C2.25 4.586 2.586 4.25 3 4.25H16C16.414 4.25 16.75 4.586 16.75 5C16.75 5.414 16.414 5.75 16 5.75H3C2.586 5.75 2.25 5.414 2.25 5ZM21 11.25H3C2.586 11.25 2.25 11.586 2.25 12C2.25 12.414 2.586 12.75 3 12.75H21C21.414 12.75 21.75 12.414 21.75 12C21.75 11.586 21.414 11.25 21 11.25ZM12 18.25H3C2.586 18.25 2.25 18.586 2.25 19C2.25 19.414 2.586 19.75 3 19.75H12C12.414 19.75 12.75 19.414 12.75 19C12.75 18.586 12.414 18.25 12 18.25Z"
                         fill="white" />
@@ -123,12 +123,21 @@
             <a href="./index.html">
                 <img src="./assets//logo-white.png" class=" w-20 h-auto" alt="">
             </a>
+            
             <div class=" flex gap-2 items-center">
-                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="27" id="activeNotification" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
                         fill="white" />
                 </svg>
+                 <!-- Inactive Notification Icon -->
+            <svg id="inactiveNotification" class="cursor-pointer hidden" width="36" height="36" viewBox="0 0 38 38" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="19" cy="19" r="19" fill="black" />
+            <path
+                d="M19 9C23.97 9 28 13.043 28 18.031V27H10V18.031C10 13.043 14.03 9 19 9ZM16.5 28H21.5C21.5 28.663 21.2366 29.2989 20.7678 29.7678C20.2989 30.2366 19.663 30.5 19 30.5C18.337 30.5 17.7011 30.2366 17.2322 29.7678C16.7634 29.2989 16.5 28.663 16.5 28Z"
+                fill="white" />
+        </svg>
                 <a href="./Profile.html">
                     <img src="./assets//profileico.png" class=" w-8 h-auto" alt="">
                 </a>
@@ -170,8 +179,12 @@
             <h2 class="text-lg font-bold">Navigation</h2>
             <ul class="mt-4 space-y-3">
                 <li><a href="#" class="hover:text-gray-300">Home</a></li>
-                <li><a href="#" class="hover:text-gray-300">About</a></li>
-                <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+                <li><a href="./Rewards.html" class="hover:text-gray-300">Rewards</a></li>
+                <li><a href="./Company.html" class="hover:text-gray-300">Company</a></li>
+                <li><a href="./Feed.html" class="hover:text-gray-300">Feed</a></li>
+                <li><a href="./Search.html" class="hover:text-gray-300">Search</a></li>
+                <li><a href="./Profile.html" class="hover:text-gray-300">Profile</a></li>
+
             </ul>
         </div>
     </div>
