@@ -53,6 +53,11 @@
         #cancelBtn:hover {
             color: red;
         }
+        .no-scroll {
+    overflow: hidden;
+    height: 100vh; /* Ensure the page doesn't scroll vertically */
+}
+
     </style>
 </head>
 
@@ -150,8 +155,9 @@
     </div>
 
      <!-- Mobile Navbar -->
-<div class=" bg-[#1F41BB] z-[600] px-4 py-4 flex flex-col  h-full  gap-5 md:hidden block">
-    <div class="  items-center justify-between flex">
+  <!-- Mobile Navbar -->
+  <div class=" bg-[#1F41BB] z-[600]  py-4 flex flex-col  h-full  gap-5 md:hidden block">
+    <div class=" px-4 items-center justify-between flex">
         <button id="hamburger-menu" class="focus:outline-none">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -160,67 +166,158 @@
             </svg>
         </button>
         <a href="./index.html">
-        <img src="./assets//logo-white.png" class=" w-20 h-auto" alt="">
+            <img src="./assets//logo-white.png" class=" w-20 h-auto" alt="">
         </a>
-        <div class=" flex gap-2 items-center">
-            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+
+        <div class="flex gap-2 items-center">
+            <!-- Active Notification Icon -->
+            <svg width="27" id="activeNotification2" height="27" viewBox="0 0 27 27" fill="none"
+                xmlns="http://www.w3.org/2000/svg" class="cursor-pointer" onclick="toggleNotification()">
                 <path
                     d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
                     fill="white" />
             </svg>
+
+            <!-- Inactive Notification Icon -->
+            <svg id="inactiveNotification2" class="cursor-pointer  hidden " width="27" height="27"
+                viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="toggleNotification()">
+                <path
+                    d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
+                    fill="white" />
+            </svg>
+
+            <!-- Profile Link -->
             <a href="./Profile.html">
-            <img src="./assets//profileico.png" class=" w-8 h-auto" alt="">
+                <img src="./assets/profileico.png" class="w-8 h-auto" alt="">
             </a>
         </div>
+
+
     </div>
 
-    <div class=" ">
+    <div class=" px-4 ">
         <!-- First Input Container -->
-        <div
-            id="first-container"
+        <div id="first-container"
             class="w-full text-gray-500 shadow flex justify-between px-4 py-2 rounded-[10px] outline-none bg-white relative">
-            <input
-                id="first-input"
-                type="text"
-                class="w-full flex justify-between outline-none bg-white"
-                placeholder="Search Places..."
-            />
-            <svg
-                id="first-svg"
-                class="transition-opacity duration-300"
-                width="31"
-                height="31"
-                viewBox="0 0 31 31"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+            <input id="first-input" type="text" class="w-full flex justify-between outline-none bg-white"
+                placeholder="Search Places..." />
+            <svg id="first-svg" class="transition-opacity duration-300" width="31" height="31" viewBox="0 0 31 31"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="15.5" cy="15.5" r="15.5" fill="#1F41BB" />
                 <path d="M19.898 14.558a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0" fill="#1F41BB" />
                 <path
                     d="m21.155 21.156-2.819-2.824m1.562-3.774a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0Z"
-                    stroke="#fff"
-                    stroke-width="2"
-                    stroke-linecap="round" />
+                    stroke="#fff" stroke-width="2" stroke-linecap="round" />
             </svg>
         </div>
-    
+
         <!-- Second Input Container and Search Button -->
-        <div
-            id="second-container"
+        <div id="second-container"
             class="w-full text-gray-500 hidden shadow flex justify-between px-4 py-3 mt-2 rounded-[10px] outline-none bg-white transform scale-0 opacity-0 transition-transform transition-opacity duration-300">
-            <input
-                type="text"
-                id="second-input"
-                class="w-full flex justify-between outline-none bg-white"
-                placeholder="City or zip code"
-            />
+            <input type="text" id="second-input" class="w-full flex justify-between outline-none bg-white"
+                placeholder="City or zip code" />
         </div>
-        <button
-            id="search-button"
-            class=" mt-2 w-full px-4 py-2 hidden bg-black text-white rounded-[10px] transform 
-            scale-0 opacity-0 transition-transform transition-opacity duration-300">
+        <button id="search-button" class=" mt-2 w-full px-4 py-2 hidden bg-black text-white rounded-[10px] transform 
+        scale-0 opacity-0 transition-transform transition-opacity duration-300">
             Search
         </button>
     </div>
+    <div id="notificationDropdown2"
+    class="  z-[300]  select-none   md:block hidden   overflow-scroll  !p-0   -mb-10 right-0 -mt-2 top-40  w-screen bg-white border   shadow-lg  ">
+    <div class=" px-4 pt-3 pb-5 gap-2 flex items-center">
+        <!-- <h1 class=" text-[14px]  font-[500]">Your Notification</h1>
+        <span
+            class="  bg-[#1F41BB]      rounded-full w-6 h-6 text-center flex   items-center  justify-center text-white text-[12px]">01</span> -->
+            <img src="./assets/Left.png" id="inactiveNotification2"  class=" mt-1.5   w-10 left-4 md:left-10 md:top-10   cursor-pointer h-auto"
+            alt="" onclick="toggleNotification()">
+    </div>
+    <div class="px-4 py-3 border-l-[4px] border-[#4E8CFF] rounded-[4px] bg-[#1F41BB1A]   flex items-start">
+        <div class="text-green-600 mr-2 mt-1">
+            <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M11 7V8M11 10.5V15M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
+                    stroke="#6CBC6E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+        </div>
+        <div>
+            <h3 class="font-semibold text-[14px] text-gray-800">Note</h3>
+            <p class="text-xs text-gray-600 w-[95%]">
+                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
+            </p>
+        </div>
+    </div>
+
+    <!-- Notification Item -->
+    <div class="p-4 flex  gap-4">
+        <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
+        <div class=" ">
+            <h1 class="font-semibold text-[14px]">
+                @Sherin
+            </h1>
+            <p class="text-gray-600 text-xs  w-[95%]">
+                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
+            </p>
+        </div>
+    </div>
+    <div class="p-4 flex  gap-4">
+        <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
+        <div class=" ">
+            <h1 class="font-semibold text-[14px]">
+                @Sherin
+            </h1>
+            <p class="text-gray-600 text-xs  w-[95%]">
+                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
+            </p>
+        </div>
+    </div>
+    <div class="p-4 flex  gap-4">
+        <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
+        <div class=" ">
+            <h1 class="font-semibold text-[14px]">
+                @Sherin
+            </h1>
+            <p class="text-gray-600 text-xs  w-[95%]">
+                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
+            </p>
+        </div>
+    </div>
+    <div class="p-4 flex  gap-4">
+        <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
+        <div class=" ">
+            <h1 class="font-semibold text-[14px]">
+                @Sherin
+            </h1>
+            <p class="text-gray-600 text-xs  w-[95%]">
+                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
+            </p>
+        </div>
+    </div>
+    <div class="p-4 flex  gap-4">
+        <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
+        <div class=" ">
+            <h1 class="font-semibold text-[14px]">
+                @Sherin
+            </h1>
+            <p class="text-gray-600 text-xs  w-[95%]">
+                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
+            </p>
+        </div>
+    </div>
+    <div class="p-4 flex  gap-4">
+        <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
+        <div class=" ">
+            <h1 class="font-semibold text-[14px]">
+                @Sherin
+            </h1>
+            <p class="text-gray-600 text-xs  w-[95%]">
+                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
+            </p>
+        </div>
+    </div>
+     
+</div>
 </div>
 
 <div id="side-nav" class="fixed z-[500] top-0 left-0 h-full w-3/4 bg-[#1F41BB] transform -translate-x-full transition-transform duration-300">
@@ -597,6 +694,45 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function toggleNotification() {
+            const activeIcon = document.getElementById('activeNotification2');
+            const inactiveIcon = document.getElementById('inactiveNotification2');
+            const notificationDropdown = document.getElementById('notificationDropdown2');
+    
+            // Toggle icons visibility
+            activeIcon.classList.toggle('hidden');
+            inactiveIcon.classList.toggle('hidden');
+    
+            // Toggle dropdown visibility
+            if (notificationDropdown.classList.contains('hidden')) {
+                notificationDropdown.classList.remove('hidden');
+                // Prevent scrolling of the background page
+                document.body.classList.add('no-scroll');
+            } else {
+                notificationDropdown.classList.add('hidden');
+                // Allow scrolling of the background page
+                document.body.classList.remove('no-scroll');
+            }
+        }
+    
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            const notificationDropdown = document.getElementById('notificationDropdown2');
+            const activeIcon = document.getElementById('activeNotification2');
+            const inactiveIcon = document.getElementById('inactiveNotification2');
+    
+            if (
+                !notificationDropdown.contains(event.target) &&
+                !activeIcon.contains(event.target) &&
+                !inactiveIcon.contains(event.target)
+            ) {
+                notificationDropdown.classList.add('hidden');
+                document.body.classList.remove('no-scroll'); // Allow scrolling
+            }
+        });
+    </script>
     <script>
         // Elements
         const activeNotification = document.getElementById('activeNotification');
