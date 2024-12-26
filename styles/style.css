@@ -821,7 +821,13 @@ button:disabled {
   left: 0;
   bottom: 0;
 }
-
+.join-us-mobile{
+  display: none;
+}
+.join-us-mobile2
+{
+  display: none;
+}
 /* Global Styles for mobile responsiveness */
 @media screen and (max-width: 768px) {
 
@@ -838,7 +844,7 @@ button:disabled {
   /* Make right container take full width on mobile */
   .right-container {
     width: 100%;
-    padding-left: 0;
+    padding: 0;
   }
 
   /* Adjust onboarding-form for mobile */
@@ -850,6 +856,50 @@ button:disabled {
     align-items: center;
     justify-content: center;
     position: relative;
+  }
+.join-us{
+   display: none;
+}
+.join-us-mobile{
+  display: block;
+  font-size: 26px !important;
+  color: #1F41BB;
+  font-weight: 600;
+  width: 100% !important;
+  text-align: center;
+}
+.join-us-desc{
+  display: none;
+}
+.join-us-mobile2{
+  display: block;
+  font-size: 12px;
+  text-align: center;
+}
+.holder{
+  width: 90%;
+}
+.mobile-img{
+  width: 350px;
+}
+  .onboarding-option {
+    width: 90%;
+    display: flex;
+     align-items: center;
+     justify-content: center;
+  }
+  .onboarding-option h4{
+    width: 100%;
+    font-size: 16px;
+    
+  }
+  .onboarding-icon-individual{
+    width: 40px;
+    height: 40px;
+  }
+  .onboarding-icon-business{
+    width: 40px;
+    height: 40px;
   }
 
   .onboarding-form h1 {

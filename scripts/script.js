@@ -145,7 +145,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (validateForm()) {
       // If the form is valid, proceed to the next step
       stepSignup.classList.remove("active");
-      moveIndicator(2);
       stepLocation.classList.add("active");
       leftContainer.style.backgroundImage = "url('../assets/ThridStep.png')";
       themeoverlay.style.background = "rgba(31, 65, 187,  0.8)";
@@ -246,11 +245,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add event listener to the "Create Account" button
   proceedToclaimNameButton.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent default form submission
-
+  
     if (validateBusinessForm()) {
       // If the form is valid, transition to the next step
       stepSignupBusiness.classList.remove("active");
       stepClaimName.classList.add("active");
+      moveIndicator(2) 
+      leftContainer.style.backgroundImage = "url('../assets/ThridStep.png')";
       console.log("Transitioned to claim name step.");
     } else {
       console.log("Validation failed for business signup form.");
@@ -305,6 +306,8 @@ document.addEventListener("DOMContentLoaded", function () {
     proceedToCreateRewardsBtn.addEventListener("click", function () {
       stepClaimName.classList.remove("active");
       stepCreateRewards.classList.add("active");
+      moveIndicator(3);
+      leftContainer.style.backgroundImage = "url('../assets/fourthStep.png')";
     });
   }
 
@@ -313,6 +316,9 @@ document.addEventListener("DOMContentLoaded", function () {
     proceedToClaimUrlBtn.addEventListener("click", function () {
       stepCreateRewards.classList.remove("active");
       stepClaimUrl.classList.add("active");
+      moveIndicator(4);
+      leftContainer.style.backgroundImage = "url('../assets/fifthstep.png')";
+      // leftContainer.style.backgroundImage = "url('../assets/sixthstep.png')";
     });
   }
 
@@ -321,6 +327,7 @@ document.addEventListener("DOMContentLoaded", function () {
     proceedToUsernameBtn.addEventListener("click", function () {
       stepRewards.classList.remove("active");
       stepUsername.classList.add("active");
+      
     });
   }
 
@@ -347,6 +354,8 @@ document.addEventListener("DOMContentLoaded", function () {
     proceedToCompletionBusinessBtn.addEventListener("click", function () {
       stepClaimUrl.classList.remove("active");
       stepCompletionBusiness.classList.add("active");
+      moveIndicator(5);
+      leftContainer.style.backgroundImage = "url('../assets/sixthstep.png')";
     });
   }
 
