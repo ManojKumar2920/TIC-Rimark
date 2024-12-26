@@ -825,6 +825,11 @@ button:disabled {
 /* Global Styles for mobile responsiveness */
 @media screen and (max-width: 768px) {
 
+  .progress-bar-container {
+    top:60px;
+    left: 10%;
+  }
+
   /* Hide the left container on mobile */
   .left-container {
     display: none;
@@ -856,7 +861,7 @@ button:disabled {
   }
 
   #step-account-type {
-    text-align: center;
+    text-align: start;
   }
 
   #step-account-type img {
@@ -886,7 +891,7 @@ button:disabled {
   .form-navigation button {
     padding: 15px;
     position: absolute;
-    bottom: 40px;
+    bottom: 60px;
   }
 
   .info-secured {
@@ -905,6 +910,7 @@ button:disabled {
     bottom: 0;
     left: 0;
     right: 0;
+    
   }
 
   .mobile-back-arrow {
