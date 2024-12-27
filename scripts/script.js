@@ -127,13 +127,25 @@ document.addEventListener("DOMContentLoaded", function () {
       clearError("password");
     }
 
-    // Validate terms and conditions
-    if (!formInputs.termsCheckbox.checked) {
-      showError("termsCheckbox", "You must agree to the terms and conditions.");
-      isValid = false;
+    // Function to detect if the user is on a mobile device
+    function isMobileScreen() {
+      return window.innerWidth <= 768; // Adjust the width threshold as needed for your design
+    }
+
+    // Validation logic for terms and conditions
+    if (!isMobileScreen()) {
+      // Validate terms and conditions only if not on mobile screen
+      if (!formInputs.termsCheckbox.checked) {
+        showError("termsCheckbox", "You must agree to the terms and conditions.");
+        isValid = false;
+      } else {
+        clearError("termsCheckbox");
+      }
     } else {
+      // Clear any errors if on mobile and the checkbox is optional
       clearError("termsCheckbox");
     }
+
 
     return isValid;
   }
@@ -151,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
       changeText.innerHTML = "Unlock local recommendations personalized for you! Select your current city to find and share local hidden gems in your community.!";
       changeText.style.fontSize = "16px";
       changeText.style.width = "90%";
+      moveIndicator(2)
 
       console.log("Transition to location step.");
     } else {
@@ -192,7 +205,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Validate the business signup form
   function validateBusinessForm() {
     let isValid = true;
-
+  
+    // Function to detect if the screen size is mobile
+    function isMobileScreen() {
+      return window.innerWidth <= 768; // Adjust breakpoint as needed
+    }
+  
     // Validate first name
     if (!businessFormInputs.firstName.value.trim()) {
       showBusinessError("firstName", "First name is required.");
@@ -200,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       clearBusinessError("firstName");
     }
-
+  
     // Validate last name
     if (!businessFormInputs.lastName.value.trim()) {
       showBusinessError("lastName", "Last name is required.");
@@ -208,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       clearBusinessError("lastName");
     }
-
+  
     // Validate email
     if (!businessFormInputs.email.value.trim()) {
       showBusinessError("email", "Email is required.");
@@ -219,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       clearBusinessError("email");
     }
-
+  
     // Validate password
     if (!businessFormInputs.password.value.trim()) {
       showBusinessError("password", "Password is required.");
@@ -230,27 +248,32 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       clearBusinessError("password");
     }
-
-    // Validate terms and conditions
-    if (!businessFormInputs.termsCheckbox.checked) {
-      showBusinessError("termsCheckbox", "You must agree to the terms and conditions.");
-      isValid = false;
+  
+    // Validate terms and conditions (optional on mobile screens)
+    if (!isMobileScreen()) {
+      if (!businessFormInputs.termsCheckbox.checked) {
+        showBusinessError("termsCheckbox", "You must agree to the terms and conditions.");
+        isValid = false;
+      } else {
+        clearBusinessError("termsCheckbox");
+      }
     } else {
-      clearBusinessError("termsCheckbox");
+      clearBusinessError("termsCheckbox"); // Clear any previous error for mobile
     }
-
+  
     return isValid;
   }
+  
 
   // Add event listener to the "Create Account" button
   proceedToclaimNameButton.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent default form submission
-  
+
     if (validateBusinessForm()) {
       // If the form is valid, transition to the next step
       stepSignupBusiness.classList.remove("active");
       stepClaimName.classList.add("active");
-      moveIndicator(2) 
+      moveIndicator(2)
       leftContainer.style.backgroundImage = "url('../assets/ThridStep.png')";
       console.log("Transitioned to claim name step.");
     } else {
@@ -327,7 +350,7 @@ document.addEventListener("DOMContentLoaded", function () {
     proceedToUsernameBtn.addEventListener("click", function () {
       stepRewards.classList.remove("active");
       stepUsername.classList.add("active");
-      
+
     });
   }
 

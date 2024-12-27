@@ -828,6 +828,8 @@ button:disabled {
 {
   display: none;
 }
+
+
 /* Global Styles for mobile responsiveness */
 @media screen and (max-width: 768px) {
 
@@ -846,7 +848,49 @@ button:disabled {
     width: 100%;
     padding: 0;
   }
-
+#locationInput{
+  border-radius: 10px;
+  background-color: #F1F4FF;
+}
+#step-location{
+  /* text-align: left !important; */
+  /* margin-top: 100px !important; */
+}
+.center{
+  /* text-align: left; */
+}
+.form-step input{
+  border-radius: 10px !important;
+  background-color: #F1F4FF !important;
+}
+#step-signup-business{
+  margin-top: 150px;
+}
+#step-claim-name{
+  margin-top: 150px;
+}
+#step-create-rewards{
+  margin-top: 150px;
+}
+#step-claim-url{
+  margin-top: 150px;
+}
+#step-completion-business{
+  margin-top: 100px;
+}
+.btermsCheckbox{
+  display: none !important;
+}
+#step-location{
+  margin-top: 100px !important;
+}
+#step-rewards{
+  margin-top: 100px !important;
+}
+#step-username{
+  margin-top: 100px !important;
+}
+ 
   /* Adjust onboarding-form for mobile */
   .onboarding-form {
     max-width: 100%;
