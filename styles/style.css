@@ -837,7 +837,7 @@ button:disabled {
   }
 
   /* Hide the left container on mobile */
-  .left-container {
+  .left-container { 
     display: none;
   }
 
@@ -911,7 +911,7 @@ button:disabled {
   }
 
   #step-account-type {
-    text-align: start;
+    margin-top: -20px;
   }
 
   #step-account-type img {
@@ -954,13 +954,26 @@ button:disabled {
   .rewards-title {
     font-size: 22px !important;
   }
-
+  #step-signup{
+    width: 90%;
+  }
+  .google-btn{
+    font-size: 16px !important;
+    font-weight: 700;
+    width: 100% !important;
+  }
   #step-signup .existing {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     
+  }
+  .center h1{
+    font-size: 26px !important;
+  }
+  .center p{
+    font-size: 10px !important;
   }
 
   .mobile-back-arrow {
@@ -1007,9 +1020,11 @@ button:disabled {
 
   /* Adjust the input field size for mobile */
   .form-input {
-    width: 100%;
+    width: 90%;
   }
-
+  .create-acc-btn{
+    width: 90% !important;
+  }
   /* Adjust progress bar and indicators for mobile */
   .progress-bar-container {
     width: 80%;
@@ -1018,6 +1033,18 @@ button:disabled {
   .progress-indicator {
     width: 8px;
     height: 8px;
+  }
+  .form-step label{
+     display: none !important;
+  }
+  .terms-container label{
+    display: none !important;
+  }
+  .termsCheckbox{
+    display: none !important;
+  }
+  .terms-container{
+    display: none !important;
   }
 
   /* Ensure the location and recommendation boxes fit on mobile */
