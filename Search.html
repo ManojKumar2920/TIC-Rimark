@@ -12,6 +12,11 @@
         body {
             font-family: 'Open Sans', sans-serif;
         }
+        .no-scroll {
+            overflow: hidden;
+            height: 100vh;
+            /* Ensure the page doesn't scroll vertically */
+        }
     </style>
     <style>
         html,
@@ -215,8 +220,8 @@
     <!-- Mobile Navbar -->
     <div class=" flex flex-col   w-full">
 
-        <div class=" bg-[#1F41BB] px-4 py-4 flex flex-col  h-full  gap-5 md:hidden block">
-            <div class="  items-center justify-between flex">
+        <div class=" bg-[#1F41BB] z-[600]  py-4 flex flex-col  h-full  gap-5 md:hidden block">
+            <div class=" px-4 items-center justify-between flex">
                 <button id="hamburger-menu" class="focus:outline-none">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -227,26 +232,42 @@
                 <a href="./index.html">
                     <img src="./assets//logo-white.png" class=" w-20 h-auto" alt="">
                 </a>
-                <div class=" flex gap-2 items-center">
-                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+    
+    
+                <div class="flex gap-2 items-center">
+                    <!-- Active Notification Icon -->
+                    <svg width="27" id="activeNotification2" height="27" viewBox="0 0 27 27" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="cursor-pointer" onclick="toggleNotification()">
                         <path
                             d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
                             fill="white" />
                     </svg>
+    
+                    <!-- Inactive Notification Icon -->
+                    <svg id="inactiveNotification2" class="cursor-pointer  hidden " width="27" height="27"
+                        viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="toggleNotification()">
+                        <path
+                            d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
+                            fill="white" />
+                    </svg>
+    
+                    <!-- Profile Link -->
                     <a href="./Profile.html">
-                        <img src="./assets//profileico.png" class=" w-8 h-auto" alt="">
+                        <img src="./assets/profileico.png" class="w-8 h-auto" alt="">
                     </a>
                 </div>
+    
+    
             </div>
-
-            <div class=" ">
+    
+            <div class=" px-4 ">
                 <!-- First Input Container -->
                 <div id="first-container"
                     class="w-full text-gray-500 shadow flex justify-between px-4 py-2 rounded-[10px] outline-none bg-white relative">
                     <input id="first-input" type="text" class="w-full flex justify-between outline-none bg-white"
                         placeholder="Search Places..." />
-                    <svg id="first-svg" class="transition-opacity duration-300" width="31" height="31"
-                        viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="first-svg" class="transition-opacity duration-300" width="31" height="31" viewBox="0 0 31 31"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="15.5" cy="15.5" r="15.5" fill="#1F41BB" />
                         <path d="M19.898 14.558a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0" fill="#1F41BB" />
                         <path
@@ -254,7 +275,7 @@
                             stroke="#fff" stroke-width="2" stroke-linecap="round" />
                     </svg>
                 </div>
-
+    
                 <!-- Second Input Container and Search Button -->
                 <div id="second-container"
                     class="w-full text-gray-500 hidden shadow flex justify-between px-4 py-3 mt-2 rounded-[10px] outline-none bg-white transform scale-0 opacity-0 transition-transform transition-opacity duration-300">
@@ -262,9 +283,25 @@
                         placeholder="City or zip code" />
                 </div>
                 <button id="search-button" class=" mt-2 w-full px-4 py-2 hidden bg-black text-white rounded-[10px] transform 
-                    scale-0 opacity-0 transition-transform transition-opacity duration-300">
+            scale-0 opacity-0 transition-transform transition-opacity duration-300">
                     Search
                 </button>
+            </div>
+    
+            <!-- mobile notification-->
+            <div id="notificationDropdown2"
+                class="z-[300] select-none md:block hidden overflow-scroll !p-0 -mb-10 right-0 -mt-2 top-40 w-screen bg-white border shadow-lg">
+                <!-- Header -->
+                <div class="px-4 pt-3 pb-5 gap-2 flex items-center">
+                    <img src="./assets/Left.png" id="inactiveNotification2"
+                        class="mt-1.5 w-10 left-4 md:left-10 md:top-10 cursor-pointer h-auto" alt=""
+                        onclick="toggleNotification()">
+                </div>
+    
+                <!-- Dynamic Notifications -->
+                <div id="notificationContainer" class="flex flex-col h-screen">
+                    <!-- Notifications will be rendered here -->
+                </div>
             </div>
         </div>
 
@@ -810,7 +847,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
-
+<script src="./scripts/search.js"></script>
     <script>
         // Swiper Background Image Array
 

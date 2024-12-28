@@ -12,6 +12,12 @@
         body {
             font-family: 'Open Sans', sans-serif;
         }
+        
+        .no-scroll {
+            overflow: hidden;
+            height: 100vh;
+            /* Ensure the page doesn't scroll vertically */
+        }
     </style>
 </head>
 
@@ -110,9 +116,9 @@
 
 
 
-    <!-- Mobile Navbar -->
-    <div class=" bg-[#1F41BB] z-[600] px-4 py-4 flex flex-col  h-full  gap-5 md:hidden ">
-        <div class="  items-center justify-between flex">
+     <!-- Mobile Navbar -->
+     <div class=" bg-[#1F41BB] z-[600]  py-4 flex flex-col  h-fit  gap-5 md:hidden block">
+        <div class=" px-4 items-center justify-between flex">
             <button id="hamburger-menu" class="focus:outline-none">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -123,19 +129,35 @@
             <a href="./index.html">
                 <img src="./assets//logo-white.png" class=" w-20 h-auto" alt="">
             </a>
-            <div class=" flex gap-2 items-center">
-                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+
+            <div class="flex gap-2 items-center">
+                <!-- Active Notification Icon -->
+                <svg width="27" id="activeNotification2" height="27" viewBox="0 0 27 27" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" class="cursor-pointer" onclick="toggleNotification()">
                     <path
                         d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
                         fill="white" />
                 </svg>
+
+                <!-- Inactive Notification Icon -->
+                <svg id="inactiveNotification2" class="cursor-pointer  hidden " width="27" height="27"
+                    viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="toggleNotification()">
+                    <path
+                        d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
+                        fill="white" />
+                </svg>
+
+                <!-- Profile Link -->
                 <a href="./Profile.html">
-                    <img src="./assets//profileico.png" class=" w-8 h-auto" alt="">
+                    <img src="./assets/profileico.png" class="w-8 h-auto" alt="">
                 </a>
             </div>
+
+
         </div>
 
-        <div class=" ">
+        <div class=" px-4 ">
             <!-- First Input Container -->
             <div id="first-container"
                 class="w-full text-gray-500 shadow flex justify-between px-4 py-2 rounded-[10px] outline-none bg-white relative">
@@ -158,11 +180,27 @@
                     placeholder="City or zip code" />
             </div>
             <button id="search-button" class=" mt-2 w-full px-4 py-2 hidden bg-black text-white rounded-[10px] transform 
-            scale-0 opacity-0 transition-transform transition-opacity duration-300">
+        scale-0 opacity-0 transition-transform transition-opacity duration-300">
                 Search
             </button>
         </div>
+        <!-- mobile notification-->
+        <div id="notificationDropdown2"
+            class="z-[300] select-none md:block hidden overflow-scroll !p-0 -mb-10 right-0 -mt-2 top-40 w-screen bg-white border shadow-lg">
+            <!-- Header -->
+            <div class="px-4 pt-3 pb-5 gap-2 flex items-center">
+                <img src="./assets/Left.png" id="inactiveNotification2"
+                    class="mt-1.5 w-10 left-4 md:left-10 md:top-10 cursor-pointer h-auto" alt=""
+                    onclick="toggleNotification()">
+            </div>
+
+            <!-- Dynamic Notifications -->
+            <div id="notificationContainer" class="flex flex-col h-screen">
+                <!-- Notifications will be rendered here -->
+            </div>
+        </div>
     </div>
+
 
     <div id="side-nav"
         class="fixed z-[500] top-0 left-0 h-full w-3/4 bg-[#1F41BB] transform -translate-x-full transition-transform duration-300">
@@ -217,650 +255,13 @@
             <h1 class=" hover:text-[#1F41BB] tab-header cursor-pointer text-[#909090]" data-tab="Expired">Expired</h1>
         </div>
 
-        <div class="tab-content grid md:grid-cols-3 md:my-10 gap-4 md:gap-10 w-full container mx-auto" id="Rewards">
-            <div class=" shadow-md  w-full mt-2    relative   items-center    flex rounded-[16px] ">
-                <div class="relative h-full w-[40%] overflow-hidden  rounded-l-[16px]">
-                    <img class="h-full w-full overflow-hidden  object-cover" src="./assets//Rewards1.png"
-                        alt="Brown Inc">
-                </div>
-                <div class=" -ml-2 md:ml-0 relative py-10 w-[60%]  -mt-10 flex  flex-col">
-                    <div class="p-6 ">
-                        <h2 class="text-[14px] font-semibold ">Brown Inc</h2>
-                        <p class="text-[#78909C] text-[12px]   font-[500] ">Gurugram</p>
-                        <div class="flex    whitespace-nowrap  mt-2 items-center space-x-0.5 ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
+        <div id="Rewards" class="tab-content grid md:grid-cols-3 md:my-10 gap-4 md:gap-10 w-full container mx-auto"></div>
 
-                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[10px] md:text-[15px]">5.0 (23)</p>
-                        </div>
-                        <button class=" mt-2  text-white bg-black text-[13px] px-8 py-2 rounded-[8px]">Followed</button>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-[#FC3903]  absolute bottom-0  md:text-base text-xs w-full font-[600] text-white px-3 py-3  rounded-b-[16px]	 text-center">
-                    20% OFF ON NEXT ORDER
-                </div>
-            </div>
-
-            <div class=" shadow-md  w-full mt-2    relative   items-center    flex rounded-[16px] ">
-                <div class="relative h-full w-[40%] overflow-hidden  rounded-l-[16px]">
-                    <img class="h-full w-full overflow-hidden  object-cover" src="./assets//Rewards1.png"
-                        alt="Brown Inc">
-                </div>
-                <div class=" -ml-2 md:ml-0 relative py-10 w-[60%]  -mt-10 flex  flex-col">
-                    <div class="p-6 ">
-                        <h2 class="text-[14px] font-semibold ">Brown Inc</h2>
-                        <p class="text-[#78909C] text-[12px]   font-[500] ">Gurugram</p>
-                        <div class="flex    whitespace-nowrap  mt-2 items-center space-x-0.5 ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-
-                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[10px] md:text-[15px]">5.0 (23)</p>
-                        </div>
-                        <button class=" mt-2  text-white bg-black text-[13px] px-8 py-2 rounded-[8px]">Followed</button>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-[#FC3903]  absolute bottom-0  md:text-base text-xs w-full font-[600] text-white px-3 py-3  rounded-b-[16px]	 text-center">
-                    20% OFF ON NEXT ORDER
-                </div>
-            </div>
-            <div class=" shadow-md  w-full mt-2    relative   items-center    flex rounded-[16px] ">
-                <div class="relative h-full w-[40%] overflow-hidden  rounded-l-[16px]">
-                    <img class="h-full w-full overflow-hidden  object-cover" src="./assets//Rewards1.png"
-                        alt="Brown Inc">
-                </div>
-                <div class=" -ml-2 md:ml-0 relative py-10 w-[60%]  -mt-10 flex  flex-col">
-                    <div class="p-6 ">
-                        <h2 class="text-[14px] font-semibold ">Brown Inc</h2>
-                        <p class="text-[#78909C] text-[12px]   font-[500] ">Gurugram</p>
-                        <div class="flex    whitespace-nowrap  mt-2 items-center space-x-0.5 ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-
-                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[10px] md:text-[15px]">5.0 (23)</p>
-                        </div>
-                        <button class=" mt-2  text-white bg-black text-[13px] px-8 py-2 rounded-[8px]">Followed</button>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-[#FC3903]  absolute bottom-0  md:text-base text-xs w-full font-[600] text-white px-3 py-3  rounded-b-[16px]	 text-center">
-                    20% OFF ON NEXT ORDER
-                </div>
-            </div>
-
-            <div class=" shadow-md  w-full mt-2    relative   items-center    flex rounded-[16px] ">
-                <div class="relative h-full w-[40%] overflow-hidden  rounded-l-[16px]">
-                    <img class="h-full w-full overflow-hidden  object-cover" src="./assets//Rewards1.png"
-                        alt="Brown Inc">
-                </div>
-                <div class=" -ml-2 md:ml-0 relative py-10 w-[60%]  -mt-10 flex  flex-col">
-                    <div class="p-6 ">
-                        <h2 class="text-[14px] font-semibold ">Brown Inc</h2>
-                        <p class="text-[#78909C] text-[12px]   font-[500] ">Gurugram</p>
-                        <div class="flex    whitespace-nowrap  mt-2 items-center space-x-0.5 ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-
-                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[10px] md:text-[15px]">5.0 (23)</p>
-                        </div>
-                        <button class=" mt-2  text-white bg-black text-[13px] px-8 py-2 rounded-[8px]">Followed</button>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-[#FC3903]  absolute bottom-0  md:text-base text-xs w-full font-[600] text-white px-3 py-3  rounded-b-[16px]	 text-center">
-                    20% OFF ON NEXT ORDER
-                </div>
-            </div>
-
-            <div class=" shadow-md  w-full mt-2    relative   items-center    flex rounded-[16px] ">
-                <div class="relative h-full w-[40%] overflow-hidden  rounded-l-[16px]">
-                    <img class="h-full w-full overflow-hidden  object-cover" src="./assets//Rewards1.png"
-                        alt="Brown Inc">
-                </div>
-                <div class=" -ml-2 md:ml-0 relative py-10 w-[60%]  -mt-10 flex  flex-col">
-                    <div class="p-6 ">
-                        <h2 class="text-[14px] font-semibold ">Brown Inc</h2>
-                        <p class="text-[#78909C] text-[12px]   font-[500] ">Gurugram</p>
-                        <div class="flex    whitespace-nowrap  mt-2 items-center space-x-0.5 ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-
-                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[10px] md:text-[15px]">5.0 (23)</p>
-                        </div>
-                        <button class=" mt-2  text-white bg-black text-[13px] px-8 py-2 rounded-[8px]">Followed</button>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-[#FC3903]  absolute bottom-0  md:text-base text-xs w-full font-[600] text-white px-3 py-3  rounded-b-[16px]	 text-center">
-                    20% OFF ON NEXT ORDER
-                </div>
-            </div>
-
-            <div class=" shadow-md  w-full mt-2    relative   items-center    flex rounded-[16px] ">
-                <div class="relative h-full w-[40%] overflow-hidden  rounded-l-[16px]">
-                    <img class="h-full w-full overflow-hidden  object-cover" src="./assets//Rewards1.png"
-                        alt="Brown Inc">
-                </div>
-                <div class=" -ml-2 md:ml-0 relative py-10 w-[60%]  -mt-10 flex  flex-col">
-                    <div class="p-6 ">
-                        <h2 class="text-[14px] font-semibold ">Brown Inc</h2>
-                        <p class="text-[#78909C] text-[12px]   font-[500] ">Gurugram</p>
-                        <div class="flex    whitespace-nowrap  mt-2 items-center space-x-0.5 ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-
-                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[10px] md:text-[15px]">5.0 (23)</p>
-                        </div>
-                        <button class=" mt-2  text-white bg-black text-[13px] px-8 py-2 rounded-[8px]">Followed</button>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-[#FC3903]  absolute bottom-0  md:text-base text-xs w-full font-[600] text-white px-3 py-3  rounded-b-[16px]	 text-center">
-                    20% OFF ON NEXT ORDER
-                </div>
-            </div>
-
-            <div class=" shadow-md  w-full mt-2    relative   items-center    flex rounded-[16px] ">
-                <div class="relative h-full w-[40%] overflow-hidden  rounded-l-[16px]">
-                    <img class="h-full w-full overflow-hidden  object-cover" src="./assets//Rewards1.png"
-                        alt="Brown Inc">
-                </div>
-                <div class=" -ml-2 md:ml-0 relative py-10 w-[60%]  -mt-10 flex  flex-col">
-                    <div class="p-6 ">
-                        <h2 class="text-[14px] font-semibold ">Brown Inc</h2>
-                        <p class="text-[#78909C] text-[12px]   font-[500] ">Gurugram</p>
-                        <div class="flex    whitespace-nowrap  mt-2 items-center space-x-0.5 ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-
-                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[10px] md:text-[15px]">5.0 (23)</p>
-                        </div>
-                        <button class=" mt-2  text-white bg-black text-[13px] px-8 py-2 rounded-[8px]">Followed</button>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-[#FC3903]  absolute bottom-0  md:text-base text-xs w-full font-[600] text-white px-3 py-3  rounded-b-[16px]	 text-center">
-                    20% OFF ON NEXT ORDER
-                </div>
-            </div>
-
-            <div class=" shadow-md  w-full mt-2    relative   items-center    flex rounded-[16px] ">
-                <div class="relative h-full w-[40%] overflow-hidden  rounded-l-[16px]">
-                    <img class="h-full w-full overflow-hidden  object-cover" src="./assets//Rewards1.png"
-                        alt="Brown Inc">
-                </div>
-                <div class=" -ml-2 md:ml-0 relative py-10 w-[60%]  -mt-10 flex  flex-col">
-                    <div class="p-6 ">
-                        <h2 class="text-[14px] font-semibold ">Brown Inc</h2>
-                        <p class="text-[#78909C] text-[12px]   font-[500] ">Gurugram</p>
-                        <div class="flex    whitespace-nowrap  mt-2 items-center space-x-0.5 ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-
-                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[10px] md:text-[15px]">5.0 (23)</p>
-                        </div>
-                        <button class=" mt-2  text-white bg-black text-[13px] px-8 py-2 rounded-[8px]">Followed</button>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-[#FC3903]  absolute bottom-0  md:text-base text-xs w-full font-[600] text-white px-3 py-3  rounded-b-[16px]	 text-center">
-                    20% OFF ON NEXT ORDER
-                </div>
-            </div>
-
-
-            <div class=" shadow-md  w-full mt-2    relative   items-center    flex rounded-[16px] ">
-                <div class="relative h-full w-[40%] overflow-hidden  rounded-l-[16px]">
-                    <img class="h-full w-full overflow-hidden  object-cover" src="./assets//Rewards1.png"
-                        alt="Brown Inc">
-                </div>
-                <div class=" -ml-2 md:ml-0 relative py-10 w-[60%]  -mt-10 flex  flex-col">
-                    <div class="p-6 ">
-                        <h2 class="text-[14px] font-semibold ">Brown Inc</h2>
-                        <p class="text-[#78909C] text-[12px]   font-[500] ">Gurugram</p>
-                        <div class="flex    whitespace-nowrap  mt-2 items-center space-x-0.5 ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-
-                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[10px] md:text-[15px]">5.0 (23)</p>
-                        </div>
-                        <button class=" mt-2  text-white bg-black text-[13px] px-8 py-2 rounded-[8px]">Followed</button>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-[#FC3903]  absolute bottom-0  md:text-base text-xs w-full font-[600] text-white px-3 py-3  rounded-b-[16px]	 text-center">
-                    20% OFF ON NEXT ORDER
-                </div>
-            </div>
-
-        </div>
-        <div class="tab-content hidden grid md:grid-cols-3 md:my-10 gap-4 md:gap-10 w-full container mx-auto"
-            id="Expired">
-            <div class=" shadow-md  w-full mt-2    relative   items-center    flex rounded-[16px] ">
-                <div class="relative h-full w-[40%] overflow-hidden  rounded-l-[16px]">
-                    <img class="h-full w-full overflow-hidden  object-cover" src="./assets//Rewards1.png"
-                        alt="Brown Inc">
-                </div>
-                <div class=" -ml-2 md:ml-0 relative py-10 w-[60%]  -mt-10 flex  flex-col">
-                    <div class="p-6 ">
-                        <h2 class="text-[14px] font-semibold ">Brown Inc</h2>
-                        <p class="text-[#78909C] text-[12px]   font-[500] ">Gurugram</p>
-                        <div class="flex    whitespace-nowrap  mt-2 items-center space-x-0.5 ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-
-                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[10px] md:text-[15px]">5.0 (23)</p>
-                        </div>
-                        <button class=" mt-2  text-white bg-black text-[13px] px-8 py-2 rounded-[8px]">Followed</button>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-[#909090]  absolute bottom-0  md:text-base text-xs w-full font-[600] text-white px-3 py-3  rounded-b-[16px]	 text-center">
-                    20% OFF ON NEXT ORDER
-                </div>
-            </div>
-
-            <div class=" shadow-md  w-full mt-2    relative   items-center    flex rounded-[16px] ">
-                <div class="relative h-full w-[40%] overflow-hidden  rounded-l-[16px]">
-                    <img class="h-full w-full overflow-hidden  object-cover" src="./assets//Rewards1.png"
-                        alt="Brown Inc">
-                </div>
-                <div class=" -ml-2 md:ml-0 relative py-10 w-[60%]  -mt-10 flex  flex-col">
-                    <div class="p-6 ">
-                        <h2 class="text-[14px] font-semibold ">Brown Inc</h2>
-                        <p class="text-[#78909C] text-[12px]   font-[500] ">Gurugram</p>
-                        <div class="flex    whitespace-nowrap  mt-2 items-center space-x-0.5 ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-
-                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-[10px] md:text-[15px]">5.0 (23)</p>
-                        </div>
-                        <button class=" mt-2  text-white bg-black text-[13px] px-8 py-2 rounded-[8px]">Followed</button>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-[#909090]  absolute bottom-0  md:text-base text-xs w-full font-[600] text-white px-3 py-3  rounded-b-[16px]	 text-center">
-                    20% OFF ON NEXT ORDER
-                </div>
-            </div>
-
-
-        </div>
+        <div
+        class="tab-content hidden grid md:grid-cols-3 md:my-10 gap-4 md:gap-10 w-full container mx-auto"
+        id="Expired">
+    </div>
+    
 
     </div>
 
@@ -971,6 +372,7 @@
         </div>
     </div>
 
+    <script src="./scripts/reward.js"></script>
     <script>
 
         const tabHeaders = document.querySelectorAll('.tab-header');
