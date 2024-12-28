@@ -1,87 +1,4 @@
-
-// JavaScript for Tab Switching
-const tabHeaders = document.querySelectorAll('.tab-header');
-const tabContents = document.querySelectorAll('.tab-content');
-
-tabHeaders.forEach((header) => {
-    header.addEventListener('click', () => {
-        // Remove active styles from all tabs
-        tabHeaders.forEach((tab) => tab.classList.remove('text-[#1F41BB]'));
-        tabHeaders.forEach((tab) => tab.classList.add('text-[#909090]'));
-
-        // Hide all tab contents
-        tabContents.forEach((content) => content.classList.add('hidden'));
-
-        // Show the selected tab content
-        const targetTab = header.dataset.tab;
-        document.getElementById(targetTab).classList.remove('hidden');
-
-        // Add active styles to the clicked tab
-        header.classList.remove('text-[#909090]');
-        header.classList.add('text-[#1F41BB]');
-    });
-});
-
-const addRemarkBtn = document.getElementById("addRemarkBtn");
-const remarkPopup = document.getElementById("remarkPopup");
-const cancelBtn = document.getElementById("cancelBtn");
-
-// Show the popup
-addRemarkBtn.addEventListener("click", () => {
-    remarkPopup.classList.remove("hidden");
-});
-
-// Hide the popup
-cancelBtn.addEventListener("click", () => {
-    remarkPopup.classList.add("hidden");
-});
-
-// Optional: Close the popup when clicking outside the modal
-window.addEventListener("click", (event) => {
-    if (event.target === remarkPopup) {
-        remarkPopup.classList.add("hidden");
-    }
-});
-document.getElementById('addRemarkBtn').addEventListener('click', () => {
-    const remarkPopup = document.getElementById('remarkPopup');
-    remarkPopup.classList.remove('hidden');
-    setTimeout(() => remarkPopup.classList.add('active'), 10); // Trigger entrance animation
-});
-
-document.getElementById('cancelBtn').addEventListener('click', () => {
-    const remarkPopup = document.getElementById('remarkPopup');
-    remarkPopup.classList.remove('active');
-    setTimeout(() => remarkPopup.classList.add('hidden'), 300); // Wait for entrance animation to complete
-});
-
-document.getElementById('submitReviewBtn').addEventListener('click', () => {
-    const remarkPopup = document.getElementById('remarkPopup');
-    const thanksPopup = document.getElementById('thanksPopup');
-
-    // Instantly switch between modals (no animation)
-    remarkPopup.classList.remove('active');
-    remarkPopup.classList.add('hidden');
-    thanksPopup.classList.remove('hidden');
-
-    // Trigger exit animation only for thanksPopup
-    setTimeout(() => thanksPopup.classList.remove('hidden'), 10);
-});
-
-document.getElementById('closeThanksPopup').addEventListener('click', () => {
-    const thanksPopup = document.getElementById('thanksPopup');
-    thanksPopup.classList.add('hidden');
-    setTimeout(() => thanksPopup.classList.add('hidden'), 300); // Exit animation
-});
-
-
-document.getElementById('closeThanksPopup').addEventListener('click', () => {
-    const thanksPopup = document.getElementById('thanksPopup');
-    thanksPopup.classList.remove('active');
-    setTimeout(() => thanksPopup.classList.add('hidden'), 300); // Wait for transition to complete
-});
-
-
-
+ 
 // Elements
 const activeNotification = document.getElementById('activeNotification');
 const inactiveNotification = document.getElementById('inactiveNotification');
@@ -437,13 +354,12 @@ const rimarksData = [
 ];
 
 // Target container
-const rimarksContainer = document.getElementById("Rimarks");
+const rimarksContainer = document.getElementById("Rimark");
 
 // Render Rimarks dynamically
-// Render Rimarks dynamically
-rimarksData.map(item => {
+rimarksData.map((item) => {
     const card = document.createElement("div");
-    card.className = " rounded-[12px] md:w-full w-[100%] px-2 md:px-6 py-8 bg-white shadow-md";
+    card.className = "rounded-[12px] md:w-full w-[100%] px-2 md:px-6 py-8 bg-white shadow-md";
     card.style = "box-shadow: 0px 4px 24px 0px #00000014";
 
     // Generate stars dynamically based on the stars property
@@ -454,7 +370,7 @@ rimarksData.map(item => {
     ).join("");
 
     card.innerHTML = `
-        <div class="flex justify-center md:w-full w-[100%] md:items-start space-x-4 ">
+        <div class="flex justify-center md:w-full w-[100%] md:items-start space-x-4">
             <img src=${item.avatar} alt="Profile Image" class="hidden md:block w-12 h-12 rounded-full">
             <div class="md:w-full w-[100%]">
                 <img src="./assets/profileico.png" alt="Profile Image" class="md:hidden block w-12 h-12 rounded-full">
@@ -467,22 +383,15 @@ rimarksData.map(item => {
                         <span class="text-black text-[12px]">${item.reviewer} <span class="text-black/60">• ${item.time}</span></span>
                     </div>
                     <div>
-
-                                <svg width="40" height="40" class="  md:hidden block" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="24" height="24" rx="12" fill="#1F41BB" />
-                                    <path
-                                        d="M12.3799 15.247L12.3355 15.2915L12.2866 15.247C10.1748 13.3309 8.77882 12.0638 8.77882 10.7789C8.77882 9.88978 9.44569 9.22291 10.3349 9.22291C11.0195 9.22291 11.6864 9.66749 11.922 10.2721H12.7489C12.9846 9.66749 13.6514 9.22291 14.3361 9.22291C15.2253 9.22291 15.8921 9.88978 15.8921 10.7789C15.8921 12.0638 14.4962 13.3309 12.3799 15.247ZM14.3361 8.33374C13.5625 8.33374 12.8201 8.69385 12.3355 9.25847C11.8509 8.69385 11.1084 8.33374 10.3349 8.33374C8.96554 8.33374 7.88965 9.40519 7.88965 10.7789C7.88965 12.455 9.40123 13.8288 11.6908 15.905L12.3355 16.4918L12.9801 15.905C15.2697 13.8288 16.7813 12.455 16.7813 10.7789C16.7813 9.40519 15.7054 8.33374 14.3361 8.33374Z"
-                                        fill="white" />
-                                </svg>
-                                <svg width="28" height="28" class=" md:block hidden" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="24" height="24" rx="12" fill="#1F41BB" />
-                                    <path
-                                        d="M12.3799 15.247L12.3355 15.2915L12.2866 15.247C10.1748 13.3309 8.77882 12.0638 8.77882 10.7789C8.77882 9.88978 9.44569 9.22291 10.3349 9.22291C11.0195 9.22291 11.6864 9.66749 11.922 10.2721H12.7489C12.9846 9.66749 13.6514 9.22291 14.3361 9.22291C15.2253 9.22291 15.8921 9.88978 15.8921 10.7789C15.8921 12.0638 14.4962 13.3309 12.3799 15.247ZM14.3361 8.33374C13.5625 8.33374 12.8201 8.69385 12.3355 9.25847C11.8509 8.69385 11.1084 8.33374 10.3349 8.33374C8.96554 8.33374 7.88965 9.40519 7.88965 10.7789C7.88965 12.455 9.40123 13.8288 11.6908 15.905L12.3355 16.4918L12.9801 15.905C15.2697 13.8288 16.7813 12.455 16.7813 10.7789C16.7813 9.40519 15.7054 8.33374 14.3361 8.33374Z"
-                                        fill="white" />
-                                </svg>
-                            </div>
+                        <svg width="40" height="40" class="md:hidden block" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="12" fill="#1F41BB" />
+                            <path d="M12.3799 15.247L12.3355 15.2915L12.2866 15.247C10.1748 13.3309 8.77882 12.0638 8.77882 10.7789C8.77882 9.88978 9.44569 9.22291 10.3349 9.22291C11.0195 9.22291 11.6864 9.66749 11.922 10.2721H12.7489C12.9846 9.66749 13.6514 9.22291 14.3361 9.22291C15.2253 9.22291 15.8921 9.88978 15.8921 10.7789C15.8921 12.0638 14.4962 13.3309 12.3799 15.247ZM14.3361 8.33374C13.5625 8.33374 12.8201 8.69385 12.3355 9.25847C11.8509 8.69385 11.1084 8.33374 10.3349 8.33374C8.96554 8.33374 7.88965 9.40519 7.88965 10.7789C7.88965 12.455 9.40123 13.8288 11.6908 15.905L12.3355 16.4918L12.9801 15.905C15.2697 13.8288 16.7813 12.455 16.7813 10.7789C16.7813 9.40519 15.7054 8.33374 14.3361 8.33374Z" fill="white" />
+                        </svg>
+                        <svg width="28" height="28" class="md:block hidden" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="12" fill="#1F41BB" />
+                            <path d="M12.3799 15.247L12.3355 15.2915L12.2866 15.247C10.1748 13.3309 8.77882 12.0638 8.77882 10.7789C8.77882 9.88978 9.44569 9.22291 10.3349 9.22291C11.0195 9.22291 11.6864 9.66749 11.922 10.2721H12.7489C12.9846 9.66749 13.6514 9.22291 14.3361 9.22291C15.2253 9.22291 15.8921 9.88978 15.8921 10.7789C15.8921 12.0638 14.4962 13.3309 12.3799 15.247ZM14.3361 8.33374C13.5625 8.33374 12.8201 8.69385 12.3355 9.25847C11.8509 8.69385 11.1084 8.33374 10.3349 8.33374C8.96554 8.33374 7.88965 9.40519 7.88965 10.7789C7.88965 12.455 9.40123 13.8288 11.6908 15.905L12.3355 16.4918L12.9801 15.905C15.2697 13.8288 16.7813 12.455 16.7813 10.7789C16.7813 9.40519 15.7054 8.33374 14.3361 8.33374Z" fill="white" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
@@ -490,3 +399,15 @@ rimarksData.map(item => {
 
     rimarksContainer.appendChild(card);
 });
+
+// Dynamically add the 'View More' button after cards
+const viewMoreButton = document.createElement("div");
+viewMoreButton.id = "ViewMoreButton";
+viewMoreButton.className = "mt-4 text-[14px] bg-gray-200 px-3 py-1 rounded-full text-center cursor-pointer";
+viewMoreButton.innerText = "View More";
+
+rimarksContainer.appendChild(viewMoreButton);
+
+
+
+

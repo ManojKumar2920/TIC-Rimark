@@ -57,6 +57,7 @@
         #cancelBtn:hover {
             color: red;
         }
+      
     </style>
 </head>
 
@@ -437,13 +438,11 @@
             </div>
 
 
-            <div id="Rimarks" class="tab-content overflow-hidden w-full grid md:grid-cols-1  px-4 gap-10">
-                <!-- Reviews will be appended dynamically -->
-            </div>
-
-            <div class=" mt-4 text-[14px] bg-gray-200 px-3 py-1 rounded-full">
-                View More
-            </div>
+                <div id="Rimarks" class="tab-content overflow-hidden md:-mt-10  w-full grid md:grid-cols-1  px-4 gap-10">
+                    <!-- Reviews will be appended dynamically -->
+                    
+                </div>
+               
         </div>
 
         <div class=" md:mt-40 md:w-[40%]    px-6 md:px-10    md:block hidden  tab-content " id="Info">
@@ -660,6 +659,90 @@
             });
         }
     });
+    </script>
+    <script>
+        
+        // JavaScript for Tab Switching
+        const tabHeaders = document.querySelectorAll('.tab-header');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabHeaders.forEach((header) => {
+            header.addEventListener('click', () => {
+                // Remove active styles from all tabs
+                tabHeaders.forEach((tab) => tab.classList.remove('text-[#1F41BB]'));
+                tabHeaders.forEach((tab) => tab.classList.add('text-[#909090]'));
+
+                // Hide all tab contents
+                tabContents.forEach((content) => content.classList.add('hidden'));
+
+                // Show the selected tab content
+                const targetTab = header.dataset.tab;
+                document.getElementById(targetTab).classList.remove('hidden');
+                
+
+                // Add active styles to the clicked tab
+                header.classList.remove('text-[#909090]');
+                header.classList.add('text-[#1F41BB]');
+            });
+        });
+
+        const addRemarkBtn = document.getElementById("addRemarkBtn");
+        const remarkPopup = document.getElementById("remarkPopup");
+        const cancelBtn = document.getElementById("cancelBtn");
+
+        // Show the popup
+        addRemarkBtn.addEventListener("click", () => {
+            remarkPopup.classList.remove("hidden");
+        });
+
+        // Hide the popup
+        cancelBtn.addEventListener("click", () => {
+            remarkPopup.classList.add("hidden");
+        });
+
+        // Optional: Close the popup when clicking outside the modal
+        window.addEventListener("click", (event) => {
+            if (event.target === remarkPopup) {
+                remarkPopup.classList.add("hidden");
+            }
+        });
+        document.getElementById('addRemarkBtn').addEventListener('click', () => {
+            const remarkPopup = document.getElementById('remarkPopup');
+            remarkPopup.classList.remove('hidden');
+            setTimeout(() => remarkPopup.classList.add('active'), 10); // Trigger entrance animation
+        });
+
+        document.getElementById('cancelBtn').addEventListener('click', () => {
+            const remarkPopup = document.getElementById('remarkPopup');
+            remarkPopup.classList.remove('active');
+            setTimeout(() => remarkPopup.classList.add('hidden'), 300); // Wait for entrance animation to complete
+        });
+
+        document.getElementById('submitReviewBtn').addEventListener('click', () => {
+            const remarkPopup = document.getElementById('remarkPopup');
+            const thanksPopup = document.getElementById('thanksPopup');
+
+            // Instantly switch between modals (no animation)
+            remarkPopup.classList.remove('active');
+            remarkPopup.classList.add('hidden');
+            thanksPopup.classList.remove('hidden');
+
+            // Trigger exit animation only for thanksPopup
+            setTimeout(() => thanksPopup.classList.remove('hidden'), 10);
+        });
+
+        document.getElementById('closeThanksPopup').addEventListener('click', () => {
+            const thanksPopup = document.getElementById('thanksPopup');
+            thanksPopup.classList.add('hidden');
+            setTimeout(() => thanksPopup.classList.add('hidden'), 300); // Exit animation
+        });
+
+
+        document.getElementById('closeThanksPopup').addEventListener('click', () => {
+            const thanksPopup = document.getElementById('thanksPopup');
+            thanksPopup.classList.remove('active');
+            setTimeout(() => thanksPopup.classList.add('hidden'), 300); // Wait for transition to complete
+        });
     </script>
 </body>
 
