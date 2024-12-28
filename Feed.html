@@ -91,51 +91,19 @@
 
 
             <div id="notificationDropdown"
-                class="absolute z-[300]  select-none hidden pb-16 right-14 mt-2 top-14  w-72 bg-white border rounded-[8px] shadow-lg  ">
-                <div class=" px-4 pt-3 pb-5 gap-2 flex items-center">
-                    <h1 class=" text-[14px]  font-[500]">Your Notification</h1>
-                    <span
-                        class="  bg-[#1F41BB]      rounded-full w-6 h-6 text-center flex   items-center  justify-center text-white text-[12px]">01</span>
-                </div>
-                <div class="px-4 py-3 border-l-[4px] border-[#4E8CFF] rounded-[4px] bg-[#1F41BB1A]   flex items-start">
-                    <div class="text-green-600 mr-2 mt-1">
-                        <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11 7V8M11 10.5V15M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
-                                stroke="#6CBC6E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-gray-800">Note</h3>
-                        <p class="text-sm text-gray-600">
-                            Expedita consequuntur distinctio soluta sunt dolor
-                        </p>
-                    </div>
+                class="absolute z-[300] select-none hidden pb-16 right-14 mt-2 top-14 w-72 bg-white border rounded-[8px] shadow-lg">
+                <!-- Header -->
+                <div class="px-4 pt-3 pb-5 gap-2 flex items-center">
+                    <h1 class="text-[14px] font-[500]">Your Notification</h1>
+                    <span id="notificationCount"
+                        class="bg-[#1F41BB] rounded-full w-6 h-6 text-center flex items-center justify-center text-white text-[12px]">
+                        0
+                    </span>
                 </div>
 
-                <!-- Notification Item -->
-                <div class="p-4 flex  gap-2">
-                    <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
-                    <div class=" ">
-                        <h1 class="font-semibold text-[15px]">
-                            @Sherin
-                        </h1>
-                        <p class="text-gray-600 text-xs">
-                            Expedita consequuntur distinctio soluta sunt dolor.
-                        </p>
-                    </div>
-                </div>
-                <div class="p-4 flex  gap-2">
-                    <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
-                    <div class=" ">
-                        <h1 class="font-semibold text-[15px]">
-                            @Sherin
-                        </h1>
-                        <p class="text-gray-600 text-xs">
-                            Expedita consequuntur distinctio soluta sunt dolor.
-                        </p>
-                    </div>
+                <!-- Dynamic Notifications -->
+                <div id="desktopNotificationContainer" class="flex   flex-col">
+                    <!-- Notifications will be rendered here -->
                 </div>
             </div>
             <a href="./Profile.html">
@@ -209,8 +177,8 @@
     </div>
 
     <!-- Mobile Navbar -->
-    <div class=" bg-[#1F41BB] z-[600] px-4 py-4 flex flex-col    gap-5 md:hidden block">
-        <div class="  items-center justify-between flex">
+    <div class=" bg-[#1F41BB] z-[600]  py-4 flex flex-col  h-fit  gap-5 md:hidden block">
+        <div class=" px-4 items-center justify-between flex">
             <button id="hamburger-menu" class="focus:outline-none">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -221,19 +189,35 @@
             <a href="./index.html">
                 <img src="./assets//logo-white.png" class=" w-20 h-auto" alt="">
             </a>
-            <div class=" flex gap-2 items-center">
-                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+
+            <div class="flex gap-2 items-center">
+                <!-- Active Notification Icon -->
+                <svg width="27" id="activeNotification2" height="27" viewBox="0 0 27 27" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" class="cursor-pointer" onclick="toggleNotification()">
                     <path
                         d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
                         fill="white" />
                 </svg>
+
+                <!-- Inactive Notification Icon -->
+                <svg id="inactiveNotification2" class="cursor-pointer  hidden " width="27" height="27"
+                    viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="toggleNotification()">
+                    <path
+                        d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
+                        fill="white" />
+                </svg>
+
+                <!-- Profile Link -->
                 <a href="./Profile.html">
-                    <img src="./assets//profileico.png" class=" w-8 h-auto" alt="">
+                    <img src="./assets/profileico.png" class="w-8 h-auto" alt="">
                 </a>
             </div>
+
+
         </div>
 
-        <div class=" ">
+        <div class=" px-4 ">
             <!-- First Input Container -->
             <div id="first-container"
                 class="w-full text-gray-500 shadow flex justify-between px-4 py-2 rounded-[10px] outline-none bg-white relative">
@@ -256,9 +240,24 @@
                     placeholder="City or zip code" />
             </div>
             <button id="search-button" class=" mt-2 w-full px-4 py-2 hidden bg-black text-white rounded-[10px] transform 
-            scale-0 opacity-0 transition-transform transition-opacity duration-300">
+        scale-0 opacity-0 transition-transform transition-opacity duration-300">
                 Search
             </button>
+        </div>
+        <!-- mobile notification-->
+        <div id="notificationDropdown2"
+            class="z-[300] select-none md:block hidden overflow-scroll !p-0 -mb-10 right-0 -mt-2 top-40 w-screen bg-white border shadow-lg">
+            <!-- Header -->
+            <div class="px-4 pt-3 pb-5 gap-2 flex items-center">
+                <img src="./assets/Left.png" id="inactiveNotification2"
+                    class="mt-1.5 w-10 left-4 md:left-10 md:top-10 cursor-pointer h-auto" alt=""
+                    onclick="toggleNotification()">
+            </div>
+
+            <!-- Dynamic Notifications -->
+            <div id="notificationContainer" class="flex flex-col h-screen">
+                <!-- Notifications will be rendered here -->
+            </div>
         </div>
     </div>
 
@@ -767,137 +766,11 @@
 
     </script>
     <script>
-        // Elements
-        const activeNotification = document.getElementById('activeNotification');
-        const inactiveNotification = document.getElementById('inactiveNotification');
-        const dropdown = document.getElementById('notificationDropdown');
-
-        let isDropdownVisible = false; // State to track dropdown visibility
-
-        // Toggle dropdown and icons
-        function toggleDropdown() {
-            isDropdownVisible = !isDropdownVisible;
-
-            // Toggle dropdown visibility
-            dropdown.classList.toggle('hidden', !isDropdownVisible);
-
-            // Toggle icons
-            activeNotification.classList.toggle('hidden', isDropdownVisible);
-            inactiveNotification.classList.toggle('hidden', !isDropdownVisible);
-        }
-
-        // Add event listeners for active and inactive notification icons
-        activeNotification.addEventListener('click', toggleDropdown);
-        inactiveNotification.addEventListener('click', toggleDropdown);
-
-        // Close dropdown when clicking outside
-        window.addEventListener('click', (e) => {
-            if (
-                !activeNotification.contains(e.target) &&
-                !inactiveNotification.contains(e.target) &&
-                !dropdown.contains(e.target)
-            ) {
-                dropdown.classList.add('hidden');
-                isDropdownVisible = false;
-
-                // Reset to active notification icon
-                activeNotification.classList.remove('hidden');
-                inactiveNotification.classList.add('hidden');
-            }
-        });
+      
     </script>
 
-    <script>
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-        const sideNav = document.getElementById('side-nav');
-
-        // Function to toggle navigation visibility
-        const toggleNav = (show) => {
-            sideNav.classList.toggle('-translate-x-full', !show);
-            sideNav.classList.toggle('translate-x-0', show);
-        };
-
-        // Open navigation on hamburger menu click
-        hamburgerMenu.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent click from propagating to the document
-            toggleNav(true);
-        });
-
-        // Close navigation on outside click
-        document.addEventListener('click', (event) => {
-            if (!sideNav.contains(event.target) && !hamburgerMenu.contains(event.target)) {
-                toggleNav(false);
-            }
-        });
-
-        const firstInput = document.getElementById("first-input");
-        const secondContainer = document.getElementById("second-container");
-        const searchButton = document.getElementById("search-button");
-        const firstSvg = document.getElementById("first-svg");
-        firstInput.addEventListener("focus", () => {
-            // Show the second input and search button with animation (coming down)
-            secondContainer.classList.remove("hidden", "scale-0", "opacity-0");
-            secondContainer.classList.add("scale-100", "opacity-100");
-            searchButton.classList.remove("hidden", "scale-0", "opacity-0");
-            searchButton.classList.add("scale-100", "opacity-100");
-            firstSvg.style.opacity = "0";
-        });
-
-        // Optional: Add blur to reset states
-        firstInput.addEventListener("blur", () => {
-            setTimeout(() => {
-                secondContainer.classList.add("hidden", "scale-0", "opacity-0");
-                secondContainer.classList.remove("scale-100", "opacity-100");
-                searchButton.classList.add("hidden", "scale-0", "opacity-0");
-                searchButton.classList.remove("scale-100", "opacity-100");
-                firstSvg.style.opacity = "1";
-            }, 200); // Delay to allow click event on the search button
-        });
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const placeholders = ["Category", "Price", "Occasion", "Relationship"];
-            const placeholderText = document.querySelector(".placeholder-text");
-            const inputField = document.querySelector("#inputField");
-
-            let updateCount = 0;
-
-            function updatePlaceholder() {
-                placeholderText.textContent = placeholders[updateCount];
-                updateCount = (updateCount + 1) % placeholders.length;
-            }
-
-            setInterval(updatePlaceholder, 1600);
-
-            inputField.addEventListener("input", () => {
-                const animLabel = document.querySelector(".anim-label");
-                if (inputField.value.trim()) {
-                    animLabel.classList.add("hidden");
-                } else {
-                    animLabel.classList.remove("hidden");
-                }
-            });
-
-            updatePlaceholder();
-        });
-
-
-
-
-
-
-
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const placeholders = ['Category', 'Price', 'Occasion', 'Relationship'];
-            let index = 0;
-
-            const placeholderElement = document.querySelector('.placeholder');
-
-            setInterval(() => {
-                index = (index + 1) % placeholders.length;
-                placeholderElement.textContent = placeholders[index];
-            }, 2000);
-        });
+    <script src="./scripts/feed.js">
+      
     </script>
 
 </body>
