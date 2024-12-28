@@ -193,10 +193,10 @@
             id="background-">
             <div class="container flex">
                 <div>
-                    <a href="./index.html">
+                   
                         <img src="./assets/Left.png"
-                            class="hover:scale-105 absolute w-10 left-4 md:left-10 top-10 cursor-pointer h-auto" alt="">
-                    </a>
+                            class="hover:scale-105 absolute w-10 left-4 md:left-10 top-10 cursor-pointer h-auto" id="goBackButton" alt="">
+                     
                 </div>
                 <div class="flex md:mt-0 mt-10 md:max-w-6xl items-center md:items-end md:space-x-14 md:justify-start justify-center"
                     id="dashboardContainer">
@@ -371,6 +371,18 @@
 
 
     <script src="./scripts/profile.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const goBackButton = document.getElementById("goBackButton");
+
+    if (goBackButton) {
+        goBackButton.addEventListener("click", () => {
+            window.history.back(); // Navigates to the previous page in the browser history
+        });
+    }
+});
+
+    </script>
 </body>
 
 </html>
