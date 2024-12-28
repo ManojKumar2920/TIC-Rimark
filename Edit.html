@@ -53,11 +53,12 @@
         #cancelBtn:hover {
             color: red;
         }
-        .no-scroll {
-    overflow: hidden;
-    height: 100vh; /* Ensure the page doesn't scroll vertically */
-}
 
+        .no-scroll {
+            overflow: hidden;
+            height: 100vh;
+            /* Ensure the page doesn't scroll vertically */
+        }
     </style>
 </head>
 
@@ -101,51 +102,19 @@
 
 
             <div id="notificationDropdown"
-                class="absolute z-[300]  select-none hidden pb-16 right-14 mt-2 top-14  w-72 bg-white border rounded-[8px] shadow-lg  ">
-                <div class=" px-4 pt-3 pb-5 gap-2 flex items-center">
-                    <h1 class=" text-[14px]  font-[500]">Your Notification</h1>
-                    <span
-                        class="  bg-[#1F41BB]      rounded-full w-6 h-6 text-center flex   items-center  justify-center text-white text-[12px]">01</span>
-                </div>
-                <div class="px-4 py-3 border-l-[4px] border-[#4E8CFF] rounded-[4px] bg-[#1F41BB1A]   flex items-start">
-                    <div class="text-green-600 mr-2 mt-1">
-                        <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11 7V8M11 10.5V15M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
-                                stroke="#6CBC6E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-gray-800">Note</h3>
-                        <p class="text-sm text-gray-600">
-                            Expedita consequuntur distinctio soluta sunt dolor
-                        </p>
-                    </div>
+                class="absolute z-[300] select-none hidden pb-16 right-14 mt-2 top-14 w-72 bg-white border rounded-[8px] shadow-lg">
+                <!-- Header -->
+                <div class="px-4 pt-3 pb-5 gap-2 flex items-center">
+                    <h1 class="text-[14px] font-[500]">Your Notification</h1>
+                    <span id="notificationCount"
+                        class="bg-[#1F41BB] rounded-full w-6 h-6 text-center flex items-center justify-center text-white text-[12px]">
+                        0
+                    </span>
                 </div>
 
-                <!-- Notification Item -->
-                <div class="p-4 flex  gap-2">
-                    <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
-                    <div class=" ">
-                        <h1 class="font-semibold text-[15px]">
-                            @Sherin
-                        </h1>
-                        <p class="text-gray-600 text-xs">
-                            Expedita consequuntur distinctio soluta sunt dolor.
-                        </p>
-                    </div>
-                </div>
-                <div class="p-4 flex  gap-2">
-                    <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
-                    <div class=" ">
-                        <h1 class="font-semibold text-[15px]">
-                            @Sherin
-                        </h1>
-                        <p class="text-gray-600 text-xs">
-                            Expedita consequuntur distinctio soluta sunt dolor.
-                        </p>
-                    </div>
+                <!-- Dynamic Notifications -->
+                <div id="desktopNotificationContainer" class="flex   flex-col">
+                    <!-- Notifications will be rendered here -->
                 </div>
             </div>
             <a href="./Profile.html">
@@ -154,188 +123,110 @@
         </div>
     </div>
 
-     <!-- Mobile Navbar -->
-  <!-- Mobile Navbar -->
-  <div class=" bg-[#1F41BB] z-[600]  py-4 flex flex-col  h-full  gap-5 md:hidden block">
-    <div class=" px-4 items-center justify-between flex">
-        <button id="hamburger-menu" class="focus:outline-none">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M2.25 5C2.25 4.586 2.586 4.25 3 4.25H16C16.414 4.25 16.75 4.586 16.75 5C16.75 5.414 16.414 5.75 16 5.75H3C2.586 5.75 2.25 5.414 2.25 5ZM21 11.25H3C2.586 11.25 2.25 11.586 2.25 12C2.25 12.414 2.586 12.75 3 12.75H21C21.414 12.75 21.75 12.414 21.75 12C21.75 11.586 21.414 11.25 21 11.25ZM12 18.25H3C2.586 18.25 2.25 18.586 2.25 19C2.25 19.414 2.586 19.75 3 19.75H12C12.414 19.75 12.75 19.414 12.75 19C12.75 18.586 12.414 18.25 12 18.25Z"
-                    fill="white" />
-            </svg>
-        </button>
-        <a href="./index.html">
-            <img src="./assets//logo-white.png" class=" w-20 h-auto" alt="">
-        </a>
-
-
-        <div class="flex gap-2 items-center">
-            <!-- Active Notification Icon -->
-            <svg width="27" id="activeNotification2" height="27" viewBox="0 0 27 27" fill="none"
-                xmlns="http://www.w3.org/2000/svg" class="cursor-pointer" onclick="toggleNotification()">
-                <path
-                    d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
-                    fill="white" />
-            </svg>
-
-            <!-- Inactive Notification Icon -->
-            <svg id="inactiveNotification2" class="cursor-pointer  hidden " width="27" height="27"
-                viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="toggleNotification()">
-                <path
-                    d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
-                    fill="white" />
-            </svg>
-
-            <!-- Profile Link -->
-            <a href="./Profile.html">
-                <img src="./assets/profileico.png" class="w-8 h-auto" alt="">
+    <!-- Mobile Navbar -->
+    <!-- Mobile Navbar -->
+    <div class=" bg-[#1F41BB] z-[600]  py-4 flex flex-col  h-full  gap-5 md:hidden block">
+        <div class=" px-4 items-center justify-between flex">
+            <button id="hamburger-menu" class="focus:outline-none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M2.25 5C2.25 4.586 2.586 4.25 3 4.25H16C16.414 4.25 16.75 4.586 16.75 5C16.75 5.414 16.414 5.75 16 5.75H3C2.586 5.75 2.25 5.414 2.25 5ZM21 11.25H3C2.586 11.25 2.25 11.586 2.25 12C2.25 12.414 2.586 12.75 3 12.75H21C21.414 12.75 21.75 12.414 21.75 12C21.75 11.586 21.414 11.25 21 11.25ZM12 18.25H3C2.586 18.25 2.25 18.586 2.25 19C2.25 19.414 2.586 19.75 3 19.75H12C12.414 19.75 12.75 19.414 12.75 19C12.75 18.586 12.414 18.25 12 18.25Z"
+                        fill="white" />
+                </svg>
+            </button>
+            <a href="./index.html">
+                <img src="./assets//logo-white.png" class=" w-20 h-auto" alt="">
             </a>
+
+
+            <div class="flex gap-2 items-center">
+                <!-- Active Notification Icon -->
+                <svg width="27" id="activeNotification2" height="27" viewBox="0 0 27 27" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" class="cursor-pointer" onclick="toggleNotification()">
+                    <path
+                        d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
+                        fill="white" />
+                </svg>
+
+                <!-- Inactive Notification Icon -->
+                <svg id="inactiveNotification2" class="cursor-pointer  hidden " width="27" height="27"
+                    viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="toggleNotification()">
+                    <path
+                        d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
+                        fill="white" />
+                </svg>
+
+                <!-- Profile Link -->
+                <a href="./Profile.html">
+                    <img src="./assets/profileico.png" class="w-8 h-auto" alt="">
+                </a>
+            </div>
+
+
         </div>
 
+        <div class=" px-4 ">
+            <!-- First Input Container -->
+            <div id="first-container"
+                class="w-full text-gray-500 shadow flex justify-between px-4 py-2 rounded-[10px] outline-none bg-white relative">
+                <input id="first-input" type="text" class="w-full flex justify-between outline-none bg-white"
+                    placeholder="Search Places..." />
+                <svg id="first-svg" class="transition-opacity duration-300" width="31" height="31" viewBox="0 0 31 31"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15.5" cy="15.5" r="15.5" fill="#1F41BB" />
+                    <path d="M19.898 14.558a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0" fill="#1F41BB" />
+                    <path
+                        d="m21.155 21.156-2.819-2.824m1.562-3.774a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0Z"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
 
-    </div>
-
-    <div class=" px-4 ">
-        <!-- First Input Container -->
-        <div id="first-container"
-            class="w-full text-gray-500 shadow flex justify-between px-4 py-2 rounded-[10px] outline-none bg-white relative">
-            <input id="first-input" type="text" class="w-full flex justify-between outline-none bg-white"
-                placeholder="Search Places..." />
-            <svg id="first-svg" class="transition-opacity duration-300" width="31" height="31" viewBox="0 0 31 31"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="15.5" cy="15.5" r="15.5" fill="#1F41BB" />
-                <path d="M19.898 14.558a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0" fill="#1F41BB" />
-                <path
-                    d="m21.155 21.156-2.819-2.824m1.562-3.774a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0Z"
-                    stroke="#fff" stroke-width="2" stroke-linecap="round" />
-            </svg>
-        </div>
-
-        <!-- Second Input Container and Search Button -->
-        <div id="second-container"
-            class="w-full text-gray-500 hidden shadow flex justify-between px-4 py-3 mt-2 rounded-[10px] outline-none bg-white transform scale-0 opacity-0 transition-transform transition-opacity duration-300">
-            <input type="text" id="second-input" class="w-full flex justify-between outline-none bg-white"
-                placeholder="City or zip code" />
-        </div>
-        <button id="search-button" class=" mt-2 w-full px-4 py-2 hidden bg-black text-white rounded-[10px] transform 
+            <!-- Second Input Container and Search Button -->
+            <div id="second-container"
+                class="w-full text-gray-500 hidden shadow flex justify-between px-4 py-3 mt-2 rounded-[10px] outline-none bg-white transform scale-0 opacity-0 transition-transform transition-opacity duration-300">
+                <input type="text" id="second-input" class="w-full flex justify-between outline-none bg-white"
+                    placeholder="City or zip code" />
+            </div>
+            <button id="search-button" class=" mt-2 w-full px-4 py-2 hidden bg-black text-white rounded-[10px] transform 
         scale-0 opacity-0 transition-transform transition-opacity duration-300">
-            Search
-        </button>
-    </div>
-    <div id="notificationDropdown2"
-    class="  z-[300]  select-none   md:block hidden   overflow-scroll  !p-0   -mb-10 right-0 -mt-2 top-40  w-screen bg-white border   shadow-lg  ">
-    <div class=" px-4 pt-3 pb-5 gap-2 flex items-center">
-        <!-- <h1 class=" text-[14px]  font-[500]">Your Notification</h1>
-        <span
-            class="  bg-[#1F41BB]      rounded-full w-6 h-6 text-center flex   items-center  justify-center text-white text-[12px]">01</span> -->
-            <img src="./assets/Left.png" id="inactiveNotification2"  class=" mt-1.5   w-10 left-4 md:left-10 md:top-10   cursor-pointer h-auto"
-            alt="" onclick="toggleNotification()">
-    </div>
-    <div class="px-4 py-3 border-l-[4px] border-[#4E8CFF] rounded-[4px] bg-[#1F41BB1A]   flex items-start">
-        <div class="text-green-600 mr-2 mt-1">
-            <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M11 7V8M11 10.5V15M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
-                    stroke="#6CBC6E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
+                Search
+            </button>
         </div>
-        <div>
-            <h3 class="font-semibold text-[14px] text-gray-800">Note</h3>
-            <p class="text-xs text-gray-600 w-[95%]">
-                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
-            </p>
+        <!-- mobile notification-->
+        <div id="notificationDropdown2"
+            class="z-[300] select-none md:block hidden overflow-scroll !p-0 -mb-10 right-0 -mt-2 top-40 w-screen bg-white border shadow-lg">
+            <!-- Header -->
+            <div class="px-4 pt-3 pb-5 gap-2 flex items-center">
+                <img src="./assets/Left.png" id="inactiveNotification2"
+                    class="mt-1.5 w-10 left-4 md:left-10 md:top-10 cursor-pointer h-auto" alt=""
+                    onclick="toggleNotification()">
+            </div>
+
+            <!-- Dynamic Notifications -->
+            <div id="notificationContainer" class="flex flex-col h-screen">
+                <!-- Notifications will be rendered here -->
+            </div>
         </div>
     </div>
 
-    <!-- Notification Item -->
-    <div class="p-4 flex  gap-4">
-        <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
-        <div class=" ">
-            <h1 class="font-semibold text-[14px]">
-                @Sherin
-            </h1>
-            <p class="text-gray-600 text-xs  w-[95%]">
-                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
-            </p>
-        </div>
-    </div>
-    <div class="p-4 flex  gap-4">
-        <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
-        <div class=" ">
-            <h1 class="font-semibold text-[14px]">
-                @Sherin
-            </h1>
-            <p class="text-gray-600 text-xs  w-[95%]">
-                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
-            </p>
-        </div>
-    </div>
-    <div class="p-4 flex  gap-4">
-        <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
-        <div class=" ">
-            <h1 class="font-semibold text-[14px]">
-                @Sherin
-            </h1>
-            <p class="text-gray-600 text-xs  w-[95%]">
-                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
-            </p>
-        </div>
-    </div>
-    <div class="p-4 flex  gap-4">
-        <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
-        <div class=" ">
-            <h1 class="font-semibold text-[14px]">
-                @Sherin
-            </h1>
-            <p class="text-gray-600 text-xs  w-[95%]">
-                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
-            </p>
-        </div>
-    </div>
-    <div class="p-4 flex  gap-4">
-        <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
-        <div class=" ">
-            <h1 class="font-semibold text-[14px]">
-                @Sherin
-            </h1>
-            <p class="text-gray-600 text-xs  w-[95%]">
-                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
-            </p>
-        </div>
-    </div>
-    <div class="p-4 flex  gap-4">
-        <img src="./assets/person3.png" class=" w-[24px] h-[24px] " alt="">
-        <div class=" ">
-            <h1 class="font-semibold text-[14px]">
-                @Sherin
-            </h1>
-            <p class="text-gray-600 text-xs  w-[95%]">
-                Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente 
-            </p>
-        </div>
-    </div>
-     
-</div>
-</div>
+    <div id="side-nav"
+        class="fixed z-[500] top-0 left-0 h-full w-3/4 bg-[#1F41BB] transform -translate-x-full transition-transform duration-300">
+        <div class="p-4 text-white">
+            <h2 class="text-lg font-bold">Navigation</h2>
+            <ul class="mt-4 space-y-3">
+                <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                <li><a href="./Rewards.html" class="hover:text-gray-300">Rewards</a></li>
+                <li><a href="./Company.html" class="hover:text-gray-300">Company</a></li>
+                <li><a href="./Feed.html" class="hover:text-gray-300">Feed</a></li>
+                <li><a href="./Search.html" class="hover:text-gray-300">Search</a></li>
+                <li><a href="./Profile.html" class="hover:text-gray-300">Profile</a></li>
 
-<div id="side-nav" class="fixed z-[500] top-0 left-0 h-full w-3/4 bg-[#1F41BB] transform -translate-x-full transition-transform duration-300">
-    <div class="p-4 text-white">
-        <h2 class="text-lg font-bold">Navigation</h2>
-        <ul class="mt-4 space-y-3">
-            <li><a href="#" class="hover:text-gray-300">Home</a></li>
-            <li><a href="./Rewards.html" class="hover:text-gray-300">Rewards</a></li>
-            <li><a href="./Company.html" class="hover:text-gray-300">Company</a></li>
-            <li><a href="./Feed.html" class="hover:text-gray-300">Feed</a></li>
-            <li><a href="./Search.html" class="hover:text-gray-300">Search</a></li>
-            <li><a href="./Profile.html" class="hover:text-gray-300">Profile</a></li>
-
-        </ul>
+            </ul>
+        </div>
     </div>
-</div>
 
-    <div class="md:h-[50vh] h-[40vh] !-z-[1]  md:pl-32 md:pt-28 pb-4 w-full bg-cover bg-bottom relative " id="background-"
+    <div class="md:h-[50vh] h-[40vh] !-z-[1]  md:pl-32 md:pt-28 pb-4 w-full bg-cover bg-bottom relative "
+        id="background-"
         style="background-image: url(./assets/companypage.jpeg);  background-position: 50% 50%; background-size: cover;">
 
     </div>
@@ -344,7 +235,8 @@
     <!-- 2nd Section -->
     <div
         class="flex  flex-col pb-20  md:flex-row md:-mt-52 justify-center md:px-20 rounded-[10px] gap-10  items-center md:items-start ">
-        <img src="./assets/Left.png" class=" -z-[1] absolute w-10 md:hidden block left-10 top-40 cursor-pointer h-auto"/>
+        <img src="./assets/Left.png"
+            class=" -z-[1] absolute w-10 md:hidden block left-10 top-40 cursor-pointer h-auto" />
         <div class="  hidden md:flex flex-col w-[35%] gap-10 ">
             <!-- Profile Card -->
             <div class="max-w-md mx-auto bg-white  rounded-md p-6 border"
@@ -695,132 +587,11 @@
         </div>
     </div>
 
-    <script>
-        function toggleNotification() {
-            const activeIcon = document.getElementById('activeNotification2');
-            const inactiveIcon = document.getElementById('inactiveNotification2');
-            const notificationDropdown = document.getElementById('notificationDropdown2');
-    
-            // Toggle icons visibility
-            activeIcon.classList.toggle('hidden');
-            inactiveIcon.classList.toggle('hidden');
-    
-            // Toggle dropdown visibility
-            if (notificationDropdown.classList.contains('hidden')) {
-                notificationDropdown.classList.remove('hidden');
-                // Prevent scrolling of the background page
-                document.body.classList.add('no-scroll');
-            } else {
-                notificationDropdown.classList.add('hidden');
-                // Allow scrolling of the background page
-                document.body.classList.remove('no-scroll');
-            }
-        }
-    
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (event) => {
-            const notificationDropdown = document.getElementById('notificationDropdown2');
-            const activeIcon = document.getElementById('activeNotification2');
-            const inactiveIcon = document.getElementById('inactiveNotification2');
-    
-            if (
-                !notificationDropdown.contains(event.target) &&
-                !activeIcon.contains(event.target) &&
-                !inactiveIcon.contains(event.target)
-            ) {
-                notificationDropdown.classList.add('hidden');
-                document.body.classList.remove('no-scroll'); // Allow scrolling
-            }
-        });
-    </script>
-    <script>
-        // Elements
-        const activeNotification = document.getElementById('activeNotification');
-        const inactiveNotification = document.getElementById('inactiveNotification');
-        const dropdown = document.getElementById('notificationDropdown');
 
-        let isDropdownVisible = false; // State to track dropdown visibility
+    <script src="./scripts//edit.js"></script>
 
-        // Toggle dropdown and icons
-        function toggleDropdown() {
-            isDropdownVisible = !isDropdownVisible;
 
-            // Toggle dropdown visibility
-            dropdown.classList.toggle('hidden', !isDropdownVisible);
 
-            // Toggle icons
-            activeNotification.classList.toggle('hidden', isDropdownVisible);
-            inactiveNotification.classList.toggle('hidden', !isDropdownVisible);
-        }
-
-        // Add event listeners for active and inactive notification icons
-        activeNotification.addEventListener('click', toggleDropdown);
-        inactiveNotification.addEventListener('click', toggleDropdown);
-
-        // Close dropdown when clicking outside
-        window.addEventListener('click', (e) => {
-            if (
-                !activeNotification.contains(e.target) &&
-                !inactiveNotification.contains(e.target) &&
-                !dropdown.contains(e.target)
-            ) {
-                dropdown.classList.add('hidden');
-                isDropdownVisible = false;
-
-                // Reset to active notification icon
-                activeNotification.classList.remove('hidden');
-                inactiveNotification.classList.add('hidden');
-            }
-        });
-    </script>
-      <script>
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-    const sideNav = document.getElementById('side-nav');
-
-    // Function to toggle navigation visibility
-    const toggleNav = (show) => {
-        sideNav.classList.toggle('-translate-x-full', !show);
-        sideNav.classList.toggle('translate-x-0', show);
-    };
-
-    // Open navigation on hamburger menu click
-    hamburgerMenu.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevent click from propagating to the document
-        toggleNav(true);
-    });
-
-    // Close navigation on outside click
-    document.addEventListener('click', (event) => {
-        if (!sideNav.contains(event.target) && !hamburgerMenu.contains(event.target)) {
-            toggleNav(false);
-        }
-    });
-    
-        const firstInput = document.getElementById("first-input");
-        const secondContainer = document.getElementById("second-container");
-        const searchButton = document.getElementById("search-button");
-        const firstSvg = document.getElementById("first-svg");
-        firstInput.addEventListener("focus", () => {
-            // Show the second input and search button with animation (coming down)
-            secondContainer.classList.remove("hidden", "scale-0", "opacity-0");
-            secondContainer.classList.add("scale-100", "opacity-100");
-            searchButton.classList.remove("hidden", "scale-0", "opacity-0");
-            searchButton.classList.add("scale-100", "opacity-100");
-            firstSvg.style.opacity = "0";
-        });
-    
-        // Optional: Add blur to reset states
-        firstInput.addEventListener("blur", () => {
-            setTimeout(() => {
-                secondContainer.classList.add("hidden", "scale-0", "opacity-0");
-                secondContainer.classList.remove("scale-100", "opacity-100");
-                searchButton.classList.add("hidden", "scale-0", "opacity-0");
-                searchButton.classList.remove("scale-100", "opacity-100");
-                firstSvg.style.opacity = "1";
-            }, 200); // Delay to allow click event on the search button
-        });
-    </script>
-   
 </body>
 
 </html>

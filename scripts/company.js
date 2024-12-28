@@ -1,225 +1,225 @@
 
-        // JavaScript for Tab Switching
-        const tabHeaders = document.querySelectorAll('.tab-header');
-        const tabContents = document.querySelectorAll('.tab-content');
+// JavaScript for Tab Switching
+const tabHeaders = document.querySelectorAll('.tab-header');
+const tabContents = document.querySelectorAll('.tab-content');
 
-        tabHeaders.forEach((header) => {
-            header.addEventListener('click', () => {
-                // Remove active styles from all tabs
-                tabHeaders.forEach((tab) => tab.classList.remove('text-[#1F41BB]'));
-                tabHeaders.forEach((tab) => tab.classList.add('text-[#909090]'));
+tabHeaders.forEach((header) => {
+    header.addEventListener('click', () => {
+        // Remove active styles from all tabs
+        tabHeaders.forEach((tab) => tab.classList.remove('text-[#1F41BB]'));
+        tabHeaders.forEach((tab) => tab.classList.add('text-[#909090]'));
 
-                // Hide all tab contents
-                tabContents.forEach((content) => content.classList.add('hidden'));
+        // Hide all tab contents
+        tabContents.forEach((content) => content.classList.add('hidden'));
 
-                // Show the selected tab content
-                const targetTab = header.dataset.tab;
-                document.getElementById(targetTab).classList.remove('hidden');
+        // Show the selected tab content
+        const targetTab = header.dataset.tab;
+        document.getElementById(targetTab).classList.remove('hidden');
 
-                // Add active styles to the clicked tab
-                header.classList.remove('text-[#909090]');
-                header.classList.add('text-[#1F41BB]');
-            });
-        });
+        // Add active styles to the clicked tab
+        header.classList.remove('text-[#909090]');
+        header.classList.add('text-[#1F41BB]');
+    });
+});
 
-        const addRemarkBtn = document.getElementById("addRemarkBtn");
-        const remarkPopup = document.getElementById("remarkPopup");
-        const cancelBtn = document.getElementById("cancelBtn");
+const addRemarkBtn = document.getElementById("addRemarkBtn");
+const remarkPopup = document.getElementById("remarkPopup");
+const cancelBtn = document.getElementById("cancelBtn");
 
-        // Show the popup
-        addRemarkBtn.addEventListener("click", () => {
-            remarkPopup.classList.remove("hidden");
-        });
+// Show the popup
+addRemarkBtn.addEventListener("click", () => {
+    remarkPopup.classList.remove("hidden");
+});
 
-        // Hide the popup
-        cancelBtn.addEventListener("click", () => {
-            remarkPopup.classList.add("hidden");
-        });
+// Hide the popup
+cancelBtn.addEventListener("click", () => {
+    remarkPopup.classList.add("hidden");
+});
 
-        // Optional: Close the popup when clicking outside the modal
-        window.addEventListener("click", (event) => {
-            if (event.target === remarkPopup) {
-                remarkPopup.classList.add("hidden");
-            }
-        });
-        document.getElementById('addRemarkBtn').addEventListener('click', () => {
-            const remarkPopup = document.getElementById('remarkPopup');
-            remarkPopup.classList.remove('hidden');
-            setTimeout(() => remarkPopup.classList.add('active'), 10); // Trigger entrance animation
-        });
+// Optional: Close the popup when clicking outside the modal
+window.addEventListener("click", (event) => {
+    if (event.target === remarkPopup) {
+        remarkPopup.classList.add("hidden");
+    }
+});
+document.getElementById('addRemarkBtn').addEventListener('click', () => {
+    const remarkPopup = document.getElementById('remarkPopup');
+    remarkPopup.classList.remove('hidden');
+    setTimeout(() => remarkPopup.classList.add('active'), 10); // Trigger entrance animation
+});
 
-        document.getElementById('cancelBtn').addEventListener('click', () => {
-            const remarkPopup = document.getElementById('remarkPopup');
-            remarkPopup.classList.remove('active');
-            setTimeout(() => remarkPopup.classList.add('hidden'), 300); // Wait for entrance animation to complete
-        });
+document.getElementById('cancelBtn').addEventListener('click', () => {
+    const remarkPopup = document.getElementById('remarkPopup');
+    remarkPopup.classList.remove('active');
+    setTimeout(() => remarkPopup.classList.add('hidden'), 300); // Wait for entrance animation to complete
+});
 
-        document.getElementById('submitReviewBtn').addEventListener('click', () => {
-            const remarkPopup = document.getElementById('remarkPopup');
-            const thanksPopup = document.getElementById('thanksPopup');
+document.getElementById('submitReviewBtn').addEventListener('click', () => {
+    const remarkPopup = document.getElementById('remarkPopup');
+    const thanksPopup = document.getElementById('thanksPopup');
 
-            // Instantly switch between modals (no animation)
-            remarkPopup.classList.remove('active');
-            remarkPopup.classList.add('hidden');
-            thanksPopup.classList.remove('hidden');
+    // Instantly switch between modals (no animation)
+    remarkPopup.classList.remove('active');
+    remarkPopup.classList.add('hidden');
+    thanksPopup.classList.remove('hidden');
 
-            // Trigger exit animation only for thanksPopup
-            setTimeout(() => thanksPopup.classList.remove('hidden'), 10);
-        });
+    // Trigger exit animation only for thanksPopup
+    setTimeout(() => thanksPopup.classList.remove('hidden'), 10);
+});
 
-        document.getElementById('closeThanksPopup').addEventListener('click', () => {
-            const thanksPopup = document.getElementById('thanksPopup');
-            thanksPopup.classList.add('hidden');
-            setTimeout(() => thanksPopup.classList.add('hidden'), 300); // Exit animation
-        });
-
-
-        document.getElementById('closeThanksPopup').addEventListener('click', () => {
-            const thanksPopup = document.getElementById('thanksPopup');
-            thanksPopup.classList.remove('active');
-            setTimeout(() => thanksPopup.classList.add('hidden'), 300); // Wait for transition to complete
-        });
+document.getElementById('closeThanksPopup').addEventListener('click', () => {
+    const thanksPopup = document.getElementById('thanksPopup');
+    thanksPopup.classList.add('hidden');
+    setTimeout(() => thanksPopup.classList.add('hidden'), 300); // Exit animation
+});
 
 
-
-         // Elements
-         const activeNotification = document.getElementById('activeNotification');
-         const inactiveNotification = document.getElementById('inactiveNotification');
-         const dropdown = document.getElementById('notificationDropdown');
- 
-         let isDropdownVisible = false; // State to track dropdown visibility
- 
-         // Toggle dropdown and icons
-         function toggleDropdown() {
-             isDropdownVisible = !isDropdownVisible;
- 
-             // Toggle dropdown visibility
-             dropdown.classList.toggle('hidden', !isDropdownVisible);
- 
-             // Toggle icons
-             activeNotification.classList.toggle('hidden', isDropdownVisible);
-             inactiveNotification.classList.toggle('hidden', !isDropdownVisible);
-         }
- 
-         // Add event listeners for active and inactive notification icons
-         activeNotification.addEventListener('click', toggleDropdown);
-         inactiveNotification.addEventListener('click', toggleDropdown);
- 
-         // Close dropdown when clicking outside
-         window.addEventListener('click', (e) => {
-             if (
-                 !activeNotification.contains(e.target) &&
-                 !inactiveNotification.contains(e.target) &&
-                 !dropdown.contains(e.target)
-             ) {
-                 dropdown.classList.add('hidden');
-                 isDropdownVisible = false;
- 
-                 // Reset to active notification icon
-                 activeNotification.classList.remove('hidden');
-                 inactiveNotification.classList.add('hidden');
-             }
-         });
+document.getElementById('closeThanksPopup').addEventListener('click', () => {
+    const thanksPopup = document.getElementById('thanksPopup');
+    thanksPopup.classList.remove('active');
+    setTimeout(() => thanksPopup.classList.add('hidden'), 300); // Wait for transition to complete
+});
 
 
 
+// Elements
+const activeNotification = document.getElementById('activeNotification');
+const inactiveNotification = document.getElementById('inactiveNotification');
+const dropdown = document.getElementById('notificationDropdown');
 
+let isDropdownVisible = false; // State to track dropdown visibility
 
+// Toggle dropdown and icons
+function toggleDropdown() {
+    isDropdownVisible = !isDropdownVisible;
 
-         const hamburgerMenu = document.getElementById('hamburger-menu');
-         const sideNav = document.getElementById('side-nav');
- 
-         // Function to toggle navigation visibility
-         const toggleNav = (show) => {
-             sideNav.classList.toggle('-translate-x-full', !show);
-             sideNav.classList.toggle('translate-x-0', show);
-         };
- 
-         // Open navigation on hamburger menu click
-         hamburgerMenu.addEventListener('click', (event) => {
-             event.stopPropagation(); // Prevent click from propagating to the document
-             toggleNav(true);
-         });
- 
-         // Close navigation on outside click
-         document.addEventListener('click', (event) => {
-             if (!sideNav.contains(event.target) && !hamburgerMenu.contains(event.target)) {
-                 toggleNav(false);
-             }
-         });
- 
-         const firstInput = document.getElementById("first-input");
-         const secondContainer = document.getElementById("second-container");
-         const searchButton = document.getElementById("search-button");
-         const firstSvg = document.getElementById("first-svg");
-         firstInput.addEventListener("focus", () => {
-             // Show the second input and search button with animation (coming down)
-             secondContainer.classList.remove("hidden", "scale-0", "opacity-0");
-             secondContainer.classList.add("scale-100", "opacity-100");
-             searchButton.classList.remove("hidden", "scale-0", "opacity-0");
-             searchButton.classList.add("scale-100", "opacity-100");
-             firstSvg.style.opacity = "0";
-         });
- 
-         // Optional: Add blur to reset states
-         firstInput.addEventListener("blur", () => {
-             setTimeout(() => {
-                 secondContainer.classList.add("hidden", "scale-0", "opacity-0");
-                 secondContainer.classList.remove("scale-100", "opacity-100");
-                 searchButton.classList.add("hidden", "scale-0", "opacity-0");
-                 searchButton.classList.remove("scale-100", "opacity-100");
-                 firstSvg.style.opacity = "1";
-             }, 200); // Delay to allow click event on the search button
-         });
+    // Toggle dropdown visibility
+    dropdown.classList.toggle('hidden', !isDropdownVisible);
 
+    // Toggle icons
+    activeNotification.classList.toggle('hidden', isDropdownVisible);
+    inactiveNotification.classList.toggle('hidden', !isDropdownVisible);
+}
 
+// Add event listeners for active and inactive notification icons
+activeNotification.addEventListener('click', toggleDropdown);
+inactiveNotification.addEventListener('click', toggleDropdown);
 
+// Close dropdown when clicking outside
+window.addEventListener('click', (e) => {
+    if (
+        !activeNotification.contains(e.target) &&
+        !inactiveNotification.contains(e.target) &&
+        !dropdown.contains(e.target)
+    ) {
+        dropdown.classList.add('hidden');
+        isDropdownVisible = false;
 
-         //togel notification for the mobile
-         function toggleNotification() {
-            const activeIcon = document.getElementById('activeNotification2');
-            const inactiveIcon = document.getElementById('inactiveNotification2');
-            const notificationDropdown = document.getElementById('notificationDropdown2');
-    
-            // Toggle icons visibility
-            activeIcon.classList.toggle('hidden');
-            inactiveIcon.classList.toggle('hidden');
-    
-            // Toggle dropdown visibility
-            if (notificationDropdown.classList.contains('hidden')) {
-                notificationDropdown.classList.remove('hidden');
-                // Prevent scrolling of the background page
-                document.body.classList.add('no-scroll');
-            } else {
-                notificationDropdown.classList.add('hidden');
-                // Allow scrolling of the background page
-                document.body.classList.remove('no-scroll');
-            }
-        }
-    
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (event) => {
-            const notificationDropdown = document.getElementById('notificationDropdown2');
-            const activeIcon = document.getElementById('activeNotification2');
-            const inactiveIcon = document.getElementById('inactiveNotification2');
-    
-            if (
-                !notificationDropdown.contains(event.target) &&
-                !activeIcon.contains(event.target) &&
-                !inactiveIcon.contains(event.target)
-            ) {
-                notificationDropdown.classList.add('hidden');
-                document.body.classList.remove('no-scroll'); // Allow scrolling
-            }
-        });
+        // Reset to active notification icon
+        activeNotification.classList.remove('hidden');
+        inactiveNotification.classList.add('hidden');
+    }
+});
 
 
 
 
 
 
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const sideNav = document.getElementById('side-nav');
 
-        
+// Function to toggle navigation visibility
+const toggleNav = (show) => {
+    sideNav.classList.toggle('-translate-x-full', !show);
+    sideNav.classList.toggle('translate-x-0', show);
+};
+
+// Open navigation on hamburger menu click
+hamburgerMenu.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent click from propagating to the document
+    toggleNav(true);
+});
+
+// Close navigation on outside click
+document.addEventListener('click', (event) => {
+    if (!sideNav.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+        toggleNav(false);
+    }
+});
+
+const firstInput = document.getElementById("first-input");
+const secondContainer = document.getElementById("second-container");
+const searchButton = document.getElementById("search-button");
+const firstSvg = document.getElementById("first-svg");
+firstInput.addEventListener("focus", () => {
+    // Show the second input and search button with animation (coming down)
+    secondContainer.classList.remove("hidden", "scale-0", "opacity-0");
+    secondContainer.classList.add("scale-100", "opacity-100");
+    searchButton.classList.remove("hidden", "scale-0", "opacity-0");
+    searchButton.classList.add("scale-100", "opacity-100");
+    firstSvg.style.opacity = "0";
+});
+
+// Optional: Add blur to reset states
+firstInput.addEventListener("blur", () => {
+    setTimeout(() => {
+        secondContainer.classList.add("hidden", "scale-0", "opacity-0");
+        secondContainer.classList.remove("scale-100", "opacity-100");
+        searchButton.classList.add("hidden", "scale-0", "opacity-0");
+        searchButton.classList.remove("scale-100", "opacity-100");
+        firstSvg.style.opacity = "1";
+    }, 200); // Delay to allow click event on the search button
+});
+
+
+
+
+//togel notification for the mobile
+function toggleNotification() {
+    const activeIcon = document.getElementById('activeNotification2');
+    const inactiveIcon = document.getElementById('inactiveNotification2');
+    const notificationDropdown = document.getElementById('notificationDropdown2');
+
+    // Toggle icons visibility
+    activeIcon.classList.toggle('hidden');
+    inactiveIcon.classList.toggle('hidden');
+
+    // Toggle dropdown visibility
+    if (notificationDropdown.classList.contains('hidden')) {
+        notificationDropdown.classList.remove('hidden');
+        // Prevent scrolling of the background page
+        document.body.classList.add('no-scroll');
+    } else {
+        notificationDropdown.classList.add('hidden');
+        // Allow scrolling of the background page
+        document.body.classList.remove('no-scroll');
+    }
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (event) => {
+    const notificationDropdown = document.getElementById('notificationDropdown2');
+    const activeIcon = document.getElementById('activeNotification2');
+    const inactiveIcon = document.getElementById('inactiveNotification2');
+
+    if (
+        !notificationDropdown.contains(event.target) &&
+        !activeIcon.contains(event.target) &&
+        !inactiveIcon.contains(event.target)
+    ) {
+        notificationDropdown.classList.add('hidden');
+        document.body.classList.remove('no-scroll'); // Allow scrolling
+    }
+});
+
+
+
+
+
+
+
+
 const desktopNotifications = [
     {
         type: "note",
