@@ -232,157 +232,392 @@
     </div>
 
 
-     <div>
-        <div class="  grid grid-cols-3   px-32 pb-40 -mt-40 ">
-            <div class=" shadow-2xl  rounded-[8px]  bg-white flex-col flex  mx-auto  object-cover justify-center gap-2 items-center  "  >
-                <div class=" flex object-cover justify-center  mx-auto items-center gap-2 ">
-                    <img src="./assets/tlp.png"  class=" w-12" alt="">
-                    <img src="./assets//boxp.png" class=" w-40 mt-20" alt="">
-                    <img src="./assets//trp.png" class=" w-24" alt="">
+    <div>
+        <div id="pricing-section" class="  grid md:grid-cols-3  relative  px-4   md:px-32 pb-40 -mt-40 ">
+            <div id="basic-plan"
+                class="plan shadow-2xl  px-6 rounded-[8px] relative     bg-white flex-col flex  mx-auto  object-cover justify-center gap-2 items-center  ">
+                <div class=" flex object-cover justify-center  mx-auto px-20 items-center gap-2 ">
+                    <img src="./assets/tlp.png" class=" absolute left-0 w-12" alt="">
+                    <img src="./assets//boxp.png" class=":w-40  mt-20" alt="">
+                    <img src="./assets//trp.png" class=" absolute top-0   right-0 w-24" alt="">
                 </div>
-                <h1 class="  font-semibold text-2xl  !text-center text-[#1F41BB] mb-2 mt-4">Starter Plan</h1>
-                <div  class="  flex items-start justify-center gap-2 flex-col">
-                    <h1 class="  text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1079_1805)">
-                        <path d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z" fill="#4028BD" stroke="#4028BD"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_1079_1805">
-                        <rect width="10" height="10" fill="white" transform="translate(0 0.210205)"/>
-                        </clipPath>
-                        </defs>
+                <h1 class="  font-semibold text-2xl  !text-center text-[#1F41BB] mb-2 mt-4" data-plan="starter">Starter
+                    Plan</h1>
+                <div class="  flex items-start justify-center gap-2 flex-col">
+                    <h1 class="  text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
                         </svg>
-                         Unlimited Customer Outreach</h1>
-                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1079_1805)">
-                        <path d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z" fill="#4028BD" stroke="#4028BD"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_1079_1805">
-                        <rect width="10" height="10" fill="white" transform="translate(0 0.210205)"/>
-                        </clipPath>
-                        </defs>
+                        Unlimited Customer Outreach</h1>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
                         </svg>
                         Rank #1 in your local community</h1>
-                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1079_1805)">
-                        <path d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z" fill="#4028BD" stroke="#4028BD"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_1079_1805">
-                        <rect width="10" height="10" fill="white" transform="translate(0 0.210205)"/>
-                        </clipPath>
-                        </defs>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
                         </svg>
                         Automate New Reviews</h1>
                 </div>
 
-                <div class=" text-center  py-20">
-                    <h1 class=" font-[800]">$0/ mo</h1>
-                    <button class=" bg-black text-white  rounded-full px-6 py-2">Current pack</button>
+                <div class=" text-center   pb-10 md:pt-52 pt-10">
+                    <h1 class=" font-[800]  text-[28px]">$0/ mo</h1>
+                    <button class="select-plan  bg-black text-white  text-[20px] rounded-full px-6 py-2"
+                        data-plan="basic">Current pack</button>
 
                 </div>
             </div>
-            <div class=" shadow-2xl  rounded-[8px] bg-white flex-col flex  mx-auto  object-cover justify-center gap-2 items-center  "  >
-                <div class=" flex object-cover justify-center  mx-auto items-center gap-2 ">
-                    <img src="./assets/tlp.png"  class=" w-12" alt="">
-                    <img src="./assets//boxp.png" class=" w-40 mt-20" alt="">
-                    <img src="./assets//trp.png" class=" w-24" alt="">
+            <div id="standard-plan"
+                class="plan  px-6  shadow-2xl  rounded-[8px] relative    bg-white flex-col flex  mx-auto  object-cover justify-center gap-2 items-center  ">
+                <div class=" flex object-cover justify-center  mx-auto px-20 items-center gap-2 ">
+                    <img src="./assets/tlb.png" class=" absolute left-0 w-12" alt="">
+                    <img src="./assets//box.png" class=" w-40 mt-20" alt="">
+                    <img src="./assets//trb.png" class=" absolute top-0   right-0 w-24" alt="">
                 </div>
-                <h1 class="  font-semibold text-2xl  !text-center text-[#1F41BB] mb-2 mt-4">Starter Plan</h1>
-                <div  class="  flex items-start justify-center gap-2 flex-col">
-                    <h1 class="  text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1079_1805)">
-                        <path d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z" fill="#4028BD" stroke="#4028BD"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_1079_1805">
-                        <rect width="10" height="10" fill="white" transform="translate(0 0.210205)"/>
-                        </clipPath>
-                        </defs>
+                <h1 class="  font-semibold text-2xl  !text-center text-[#1F41BB] mb-2 mt-4">Community plan</h1>
+                <div class="  flex items-start justify-center gap-2 flex-col">
+                    <h1 class="  text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
                         </svg>
-                         Unlimited Customer Outreach</h1>
-                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1079_1805)">
-                        <path d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z" fill="#4028BD" stroke="#4028BD"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_1079_1805">
-                        <rect width="10" height="10" fill="white" transform="translate(0 0.210205)"/>
-                        </clipPath>
-                        </defs>
+                        Unlimited Customer Outreach</h1>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
                         </svg>
                         Rank #1 in your local community</h1>
-                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1079_1805)">
-                        <path d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z" fill="#4028BD" stroke="#4028BD"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_1079_1805">
-                        <rect width="10" height="10" fill="white" transform="translate(0 0.210205)"/>
-                        </clipPath>
-                        </defs>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
                         </svg>
                         Automate New Reviews</h1>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Unlimited Rewards to your customers</h1>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Build trust through recommendations</h1>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Double your Sales Effectiveness</h1>
                 </div>
 
-                <div class=" text-center  py-20">
-                    <h1 class=" font-[800]">$0/ mo</h1>
-                    <button class=" bg-black text-white  rounded-full px-6 py-2">Current pack</button>
+                <div class=" text-center pb-10 pt-12  md:pt-36  ">
+                    <h1 class=" font-[800]  text-[28px]">$20/ mo</h1>
+                    <button
+                        class=" select-plan bg-[#1F41BB] hover:bg-black text-white  text-[20px] rounded-full px-8 py-2 "
+                        data-plan="standard"> Join today</button>
 
                 </div>
             </div>
-            <div class=" shadow-2xl  rounded-[8px] bg-white flex-col flex  mx-auto  object-cover justify-center gap-2 items-center  "  >
-                <div class=" flex object-cover justify-center  mx-auto items-center gap-2 ">
-                    <img src="./assets/tlp.png"  class=" w-12" alt="">
-                    <img src="./assets//boxp.png" class=" w-40 mt-20" alt="">
-                    <img src="./assets//trp.png" class=" w-24" alt="">
+            <div id="premium-plan"
+                class="plan px-6   shadow-2xl   rounded-[8px] relative    bg-white flex-col flex  mx-auto  object-cover justify-center gap-2 items-center  ">
+                <div class=" flex object-cover justify-center  mx-auto px-20 items-center gap-2 ">
+                    <img src="./assets//tly.png" class=" absolute left-0 w-12" alt="">
+                    <img src="./assets//boxo.png" class=" w-40 mt-20" alt="">
+                    <img src="./assets//try.png" class=" absolute top-0   right-0 w-24" alt="">
                 </div>
-                <h1 class="  font-semibold text-2xl  !text-center text-[#1F41BB] mb-2 mt-4">Starter Plan</h1>
-                <div  class="  flex items-start justify-center gap-2 flex-col">
-                    <h1 class="  text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1079_1805)">
-                        <path d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z" fill="#4028BD" stroke="#4028BD"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_1079_1805">
-                        <rect width="10" height="10" fill="white" transform="translate(0 0.210205)"/>
-                        </clipPath>
-                        </defs>
+                <h1 class="  font-semibold text-2xl  !text-center text-[#1F41BB] mb-2 mt-4">Lifetime Partner</h1>
+                <div class="  flex items-start justify-center gap-2 flex-col">
+                    <h1 class="  text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
                         </svg>
-                         Unlimited Customer Outreach</h1>
-                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1079_1805)">
-                        <path d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z" fill="#4028BD" stroke="#4028BD"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_1079_1805">
-                        <rect width="10" height="10" fill="white" transform="translate(0 0.210205)"/>
-                        </clipPath>
-                        </defs>
+                        Rimark Partner & Part owner</h1>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Zero cost for life ($600/yr) in savings</h1>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Access to new premium features</h1>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Unlimited customers Outreach</h1>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
                         </svg>
                         Rank #1 in your local community</h1>
-                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1079_1805)">
-                        <path d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z" fill="#4028BD" stroke="#4028BD"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_1079_1805">
-                        <rect width="10" height="10" fill="white" transform="translate(0 0.210205)"/>
-                        </clipPath>
-                        </defs>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
                         </svg>
                         Automate New Reviews</h1>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Unlimited Rewards to your customers</h1>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Build trust through recommendations</h1>
+                    <h1 class=" text-sm text-[#909090] flex items-center justify-center gap-2"> <svg width="10"
+                            height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1079_1805)">
+                                <path
+                                    d="M2.36612 4.85671L2.01381 4.5044L1.66026 4.85546L1.0686 5.44296L0.71254 5.79651L1.06735 6.15132L3.39651 8.48048L3.75007 8.83403L4.10362 8.48048L9.10362 3.48048L9.45717 3.12693L9.10362 2.77338L8.51612 2.18588L8.16273 1.83249L7.80918 2.18571L3.75023 6.24082L2.36612 4.85671Z"
+                                    fill="#4028BD" stroke="#4028BD" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1079_1805">
+                                    <rect width="10" height="10" fill="white" transform="translate(0 0.210205)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Double your Sales Effectiveness</h1>
                 </div>
 
-                <div class=" text-center  py-20">
-                    <h1 class=" font-[800]">$0/ mo</h1>
-                    <button class=" bg-black text-white  rounded-full px-6 py-2">Current pack</button>
+                <div class=" text-center pb-10   mt-10  ">
+                    <h1 class=" font-[800]  text-[28px]">$500/ mo</h1>
+                    <button
+                        class="select-plan bg-[#1F41BB] hover:bg-black text-white  text-[20px] rounded-full px-8 py-2"
+                        data-plan="premium">Join today</button>
 
                 </div>
+            </div>
+
+            <div id="payment-form" class=" hidden h-[70%]     rounded-[16px] mt-10 absolute right-24 md:w-[60%] bg-white p-8"
+                style="border: 1px solid #E8EBF1">
+                <div class=" flex items-center gap-2">
+                    <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="14" fill="#1F41BB" />
+                        <path
+                            d="M28.1818 13H11.8182C10.814 13 10 13.7835 10 14.75V25.25C10 26.2165 10.814 27 11.8182 27H28.1818C29.186 27 30 26.2165 30 25.25V14.75C30 13.7835 29.186 13 28.1818 13Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M10 18H30" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <div>
+
+                        <h2 class="text-[20px] font-bold  text-[#253058]">Subscription Payment</h2>
+                        <p class=" text-[10px]">Leroms firms geimons jwms </p>
+                    </div>
+                </div>
+                <form class="   w-[80%] mx-auto my-10 space-y-4">
+
+                    <div class=" flex w-full gap-4">
+                        <div class=" w-full">
+
+                            <label for="name" class="block text-sm font-medium text-gray-700">First Name</label>
+                            <input id="name" type="text"
+                                class="block outline-none bg-[#F8F9FB] w-full mt-1 p-2  rounded-md"
+                                style="border: 1px solid #E8EBF1">
+                        </div>
+                        <div class="w-full">
+                            <label for="name" class="block text-sm font-medium text-gray-700">Last Name</label>
+                            <input id="name" type="text"
+                                class="block  outline-none bg-[#F8F9FB] w-full mt-1 p-2 rounded-md"
+                                style="border: 1px solid #E8EBF1">
+                        </div>
+
+
+                    </div>
+
+                    <label for="card-holder-name" class="block text-sm font-medium text-gray-700">Card holder
+                        Name</label>
+                    <input id="card-holder-name" type="text"
+                        class="block outline-none bg-[#F8F9FB] w-full mt-1 p-2 border border-gray-300 rounded-md"
+                        style="border: 1px solid #E8EBF1">
+
+                    <label for="card-number" class="block text-sm font-medium text-gray-700">Card Number</label>
+                    <input id="card-number" autocomplete="cc-number" maxlength="19" pattern="[0-9\s]{13,19}"
+                        inputmode="numeric" type="tel"
+                        placeholder="__ __ __ __    __ __ __ __    __ __ __ __    __ __ __ __"
+                        class="block outline-none bg-[#F8F9FB] w-full mt-1 p-2 border border-gray-300 rounded-md"
+                        style="border: 1px solid #E8EBF1">
+                    <div class=" flex items-center justify-start gap-4">
+
+
+                        <div class=" w-full">
+                            <label for="cvv" class="block mt-4 text-sm font-medium text-gray-700">CVV</label>
+                            <input id="cvv" type="text" placeholder="        ___ ___ ___ "
+                                class="block outline-none bg-[#F8F9FB] w-1/2 mt-1 p-2 border border-gray-300 rounded-md"
+                                style="border: 1px solid #E8EBF1">
+                        </div>
+
+                        <div class=" w-full">
+                            <label for="expiry-date" class="block mt-4 text-sm font-medium text-gray-700">Expiry
+                                Date</label>
+                            <input id="expiry-date" placeholder="MM  /  YY" type="text"
+                                class="block outline-none bg-[#F8F9FB] w-1/2 mt-1 p-2 border border-gray-300 rounded-md"
+                                style="border: 1px solid #E8EBF1">
+                        </div>
+                    </div>
+
+                    <button type="submit"
+                        class="!mt-10 w-full  bg-[#1F41BB] text-white px-4 py-2 rounded-md">Submit</button>
+                </form>
             </div>
         </div>
-     </div>
+    </div>
 
 
     <!-- Footer -->
@@ -493,9 +728,56 @@
 
 
     <script src="./scripts//edit.js"></script>
- 
 
 
+    <script>
+         document.addEventListener("DOMContentLoaded", () => {
+    // Select the form
+    const form = document.querySelector("form");
+
+    // Add an event listener to handle the form submission
+    form.addEventListener("submit", (event) => {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      // Replace the form with the desired content
+      form.outerHTML = `
+           <div class="flex flex-col mt-[10%]  items-center justify-center gap-1">
+                <img src="./assets//logo.png" class=" w-24" alt="">
+                <h1>Payment successfull   </h1>
+                <img src="./assets//done.png" class=" w-32" alt="">
+
+                
+            </div>
+
+            <div class=" text-center left-[25%]  text-[#7C87AA] absolute bottom-10" >Siparişlerim sayfasndan siparişinizi takip edebilirsiniz.</div>
+      `;
+    });
+  });
+        document.querySelectorAll('.select-plan').forEach(button => {
+            button.addEventListener('click', () => {
+                const selectedPlan = button.dataset.plan;
+                const pricingsec = document.getElementById('pricing-section')
+
+                // Hide all plans
+                document.querySelectorAll('.plan').forEach(plan => {
+                    plan.classList.add('hidden');
+                });
+
+                // Show the selected plan
+                const selectedPlanElement = document.getElementById(`${selectedPlan}-plan`);
+                selectedPlanElement.classList.remove('hidden');
+                selectedPlanElement.classList.add('absolute', '-left-40', 'w-[60%]');
+                pricingsec.classList.add('md:grid-cols-2')
+                // Show payment form
+                document.getElementById('payment-form').classList.remove('hidden');
+            });
+        });
+
+    </script>
+    <script>
+      
+      </script>
+      
 </body>
 
 </html>
