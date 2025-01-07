@@ -243,8 +243,8 @@
                 style="box-shadow: 0px 0px 18px 0px #0000001F;">
                 <div class="flex  justify-center gap-6 items-center">
                     <!-- Profile Image -->
-                    <img src="https://via.placeholder.com/100" alt="Profile Picture"
-                        class="rounded-full w-24 h-24 mb-4" />
+                    <img src="https://via.placeholder.com/100" alt="Profile Picture2"
+                        class="rounded-full object-cover w-24 h-24 mb-4" />
                     <!-- Username -->
                     <h2
                         class="text-2xl font-bold text-gray-800 mb-2 bg-gradient-to-r from-[#1F41BB] to-[#0E1E55] bg-clip-text text-transparent">
@@ -387,15 +387,18 @@
                         </div>
                     </div>
                     <div style="box-shadow: 0px 0px 18px 0px #0000001F;"
-                        class=" flex md:block md:!shadow !shadow-none md:mt-0 -mt-32   justify-center  h-auto md:px-14 py-4 rounded-lg md:bg-white">
-                        <div
-                            class="w-[120px] relative h-[120px] rounded-full overflow-hidden  border-[5px] border-[#1F41BB]">
-                            <img src="./assets/editphoto.jpeg" class=" rounded-full  !-z-10  object-cover" alt="">
-                            <div
-                                class="absolute  bottom-0 right-0 bg-[#1F41BB] w-12 p-3  !z-20  rounded-full cursor-pointer">
-                                <img src="./assets/camera.png" class=" " alt="">
+                        class=" h-fit flex md:block md:!shadow !shadow-none md:mt-0 -mt-32   justify-center  h-auto md:px-14 py-4 rounded-lg md:bg-white">
+                        <div class="w-[120px] relative h-[120px] rounded-full border-[5px] border-[#1F41BB]">
+                            <div class="absolute bottom-0 right-0 bg-[#1F41BB] w-12 h-12 flex justify-center items-center rounded-full cursor-pointer shadow-lg"
+                                id="cameraIcon">
+                                <img src="./assets/camera.png" class="w-6 h-6" alt="Camera Icon">
                             </div>
+                            <img src="./assets/editphoto.jpeg" class="w-full h-full  rounded-full object-cover"
+                                alt="Profile Picture">
                         </div>
+
+                        <input type="file" id="fileInput" accept="image/*" class="hidden">
+
                     </div>
                 </div>
                 <div class=" md:hidden  block  w-full mx-auto bg-white p-6 rounded-md shadow-md"
@@ -592,14 +595,37 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-    const goBackButton = document.getElementById("goBackButton");
+            const goBackButton = document.getElementById("goBackButton");
 
-    if (goBackButton) {
-        goBackButton.addEventListener("click", () => {
-            window.history.back(); // Navigates to the previous page in the browser history
+            if (goBackButton) {
+                goBackButton.addEventListener("click", () => {
+                    window.history.back(); // Navigates to the previous page in the browser history
+                });
+            }
         });
-    }
-});
+        const cameraIcon = document.getElementById('cameraIcon');
+        const fileInput = document.getElementById('fileInput');
+
+        cameraIcon.addEventListener('click', () => {
+            // Open file input dialog
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                // Preview or upload logic
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    // Update the image preview
+                    const profileImage = document.querySelector('img[alt="Profile Picture"]');
+                    const profileImage2 = document.querySelector('img[alt="Profile Picture2"]');
+                    profileImage.src = e.target.result;
+                    profileImage2.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
 
     </script>
 
