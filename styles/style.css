@@ -869,6 +869,9 @@ button:disabled {
 #step-claim-name{
   margin-top: 150px;
 }
+#loginclick{
+  color: #0066cc;
+}
 #step-create-rewards{
   margin-top: 150px;
 }

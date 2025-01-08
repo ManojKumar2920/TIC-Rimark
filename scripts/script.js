@@ -4,14 +4,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //individual steps
   const stepSignup = document.getElementById("step-signup");
+  const stepLogin = document.getElementById("step-signin")
   const stepLocation = document.getElementById("step-location");
   const stepRewards = document.getElementById("step-rewards");
   const stepUsername = document.getElementById("step-username");
   const stepCompletion = document.getElementById("step-completion");
+ 
+
+
+ 
 
   //business steps
 
+// const signupLink = document.getElementById("loginclick");
+// const signinLink = document.getElementById("backToAccountType");  // Assuming this triggers sign in
 
+// // Get references to the sign up and sign in form elements
+// const signupForm = document.getElementById("step-signup");
+// const signinForm = document.getElementById("step-signin");
+
+// // Function to show a specific form and hide the other
+// function showForm(formToShow, formToHide) {
+//   formToShow.style.display = "block";
+//   formToHide.style.display = "none";
+// }
+
+// // Add click event listeners to the sign up and sign in links
+// signupLink.addEventListener("click", function() {
+//   showForm(signupForm, signinForm);
+// });
+
+// signinLink.addEventListener("click", function() {
+//   showForm(signinForm, signupForm);
+// });
+
+// Initial setup (hide sign in form by default)
+// signinForm.style.display = "none";
 
   const stepSignupBusiness = document.getElementById("step-signup-business");
   const stepClaimName = document.getElementById("step-claim-name");

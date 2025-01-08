@@ -149,11 +149,11 @@ const renderExpiredRewards = (data) => {
             (reward) => `
    <div class="max-w-md  mx-auto p-8 bg-white rounded-lg shadow-lg">
   <!-- Title -->
-  <h2 class="text-2xl whitespace-nowrap font-semibold text-gray-800 text-center">
+  <h2 class="md:text-2xl whitespace-nowrap font-semibold text-gray-800 text-center">
     Create reward <span class="text-blue-600">${reward.name}</span>
   </h2>
   <!-- Subtitle -->
-  <p class="text-gray-500 text-sm    text-center mt-2">
+  <p class="text-gray-500 text-sm  md:text-base text-xs  text-center mt-2">
     Aspernatur ut eaque dignissimos in id similique et perspiciatis. Voluptatem officia explicabo.
   </p>
   <!-- Input fields -->

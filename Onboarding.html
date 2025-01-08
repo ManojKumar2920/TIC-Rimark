@@ -85,9 +85,9 @@
               To begin this journey, tell us what type of account you'd be
               opening.
             </p>
-            <p class="join-us-mobile2">Discover recommendations from friends and earn 
+            <p class="join-us-mobile2">Discover recommendations from friends and earn
               discount from the best spots from city</p>
-            </div>
+          </div>
 
           <div class="onboarding-option " data-account-type="individual">
             <div>
@@ -197,10 +197,76 @@
               Create Account
             </button>
           </div>
-          <p class="center existing">
-            Already have a account? <a href="">Sign in</a>
+          <p class="center existing login">
+            Already have a account? <span  id="loginclick" style=" color: blue; cursor: pointer; text-decoration: underline;">Sign in</span>
           </p>
         </div>
+
+         <!-- Step 1.1: login Form
+         <div id="step-signin" style=" padding-left: 0px;" class="form-step">
+          <div class="back-btn" id="backToAccountType">
+            <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
+          </div>
+          <div class="center welcome">
+            <h1 style=" margin-top: 40px; font-size: 40px; white-space: nowrap;">Login to Rimark</h1>
+          
+          </div>
+ 
+          <div style=" margin-top: -4px;" class="google-signup">
+            <button type="button" class="google-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0,0,256,256">
+                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                  stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                  font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                  style="mix-blend-mode: normal">
+                  <g transform="scale(8.53333,8.53333)">
+                    <path
+                      d="M15,3c-6.627,0 -12,5.373 -12,12c0,6.016 4.432,10.984 10.206,11.852v-8.672h-2.969v-3.154h2.969v-2.099c0,-3.475 1.693,-5 4.581,-5c1.383,0 2.115,0.103 2.461,0.149v2.753h-1.97c-1.226,0 -1.654,1.163 -1.654,2.473v1.724h3.593l-0.487,3.154h-3.106v8.697c5.857,-0.794 10.376,-5.802 10.376,-11.877c0,-6.627 -5.373,-12 -12,-12z">
+                    </path>
+                  </g>
+                </g>
+              </svg>
+
+              Sign up with Facebook
+            </button>
+          </div>
+
+          <div class="or-divider">
+            <span>or</span>
+          </div>
+
+           
+
+          <label for="email">Email Id</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="example@gmail.com" required />
+          <div id="emailError" class="error-message"></div>
+
+          <div class="flex justify-between">
+            <label for="password">Password</label>
+          </div>
+          <input type="password" id="password" name="password" class="form-input"
+            placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" required />
+          <div id="passwordError" class="error-message"></div>
+
+          <div class="terms-container">
+            <input type="checkbox" id="termsCheckbox" required />
+            <label for="termsCheckbox">
+              I agree to the
+              <a href="/terms" target="_blank">Terms and Conditions</a>
+            </label>
+          </div>
+          <div id="termsError" class="error-message"></div>
+
+          <div class="form-navigation">
+            <button type="button" class="create-acc-btn" id="proceedToLocation">
+              Login 
+            </button>
+          </div>
+          <p class="center existing">
+            Already have a account? <a href="">Sign up</a>
+          </p>
+        </div> -->
+
 
         <!-- Step 2: Location Preference -->
         <div id="step-location" class="form-step">
@@ -292,7 +358,7 @@
             <img src="/assets/Icons/back-arrow.png" width="25px" class="none mobile-back-arrow" alt="" />
           </div>
           <div>
-            
+
             <div class="none mobile-social-invite">
               <h1>Social Invite</h1>
               <p>
@@ -494,12 +560,13 @@
           </div>
 
           <p class="center">I will do this later</p>
-          <div class="form-navigation">
-            <button type="button" id="completeSignup">Complete Signup</button>
-          </div>
-          <div class="back">
-            <p class="back-btn" id="hideUsernameBack">&lt; Back</p>
-          </div>
+          <a href="/bprofile.html" class="complete-signup">
+            <div class="form-navigation">
+              <button type="button" id="completeSignup">Complete Signup</button>
+            </div>
+            <div class="back">
+              <p class="back-btn" id="hideUsernameBack">&lt; Back</p>
+            </div>
         </div>
 
       </div>
