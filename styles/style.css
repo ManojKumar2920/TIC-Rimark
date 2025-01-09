@@ -829,9 +829,61 @@ button:disabled {
   display: none;
 }
 
-
+.loginbtn-ho button{
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #1f41bb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 /* Global Styles for mobile responsiveness */
 @media screen and (max-width: 768px) {
+
+  .mob-arr{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .resetCon{
+    display: flex;
+    flex-direction: column;
+    gap: 0 !important;
+  }
+  .reset{
+    margin-top: 0px;
+  }
+  .onboarding-form1{
+    /* margin-top: 0px !important; */
+  }
+  .holder-reset{
+    display: flex;
+    flex-direction: column;
+    gap: 0 !important;
+    font-size: 12px;
+  }
+  .loginbtn-ho button{
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #1f41bb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .loginbtn{
+     width: 80% !important;
+    
+     /* margin-top: 20px !important; */
+    }
+    .form-navigation1{
+      background-color: #1633a0 !important;
+      border-radius: 10px;
+    }
 
   .progress-bar-container {
     top:60px;
