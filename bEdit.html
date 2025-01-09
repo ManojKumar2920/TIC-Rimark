@@ -160,33 +160,8 @@
 
         </div>
 
-        <div class=" px-4 ">
-            <!-- First Input Container -->
-            <div id="first-container"
-                class="w-full text-gray-500 shadow flex justify-between px-4 py-2 rounded-[10px] outline-none bg-white relative">
-                <input id="first-input" type="text" class="w-full flex justify-between outline-none bg-white"
-                    placeholder="Search Places..." />
-                <svg id="first-svg" class="transition-opacity duration-300" width="31" height="31" viewBox="0 0 31 31"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="15.5" cy="15.5" r="15.5" fill="#1F41BB" />
-                    <path d="M19.898 14.558a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0" fill="#1F41BB" />
-                    <path
-                        d="m21.155 21.156-2.819-2.824m1.562-3.774a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0Z"
-                        stroke="#fff" stroke-width="2" stroke-linecap="round" />
-                </svg>
-            </div>
-
-            <!-- Second Input Container and Search Button -->
-            <div id="second-container"
-                class="w-full text-gray-500 hidden shadow flex justify-between px-4 py-3 mt-2 rounded-[10px] outline-none bg-white transform scale-0 opacity-0 transition-transform transition-opacity duration-300">
-                <input type="text" id="second-input" class="w-full flex justify-between outline-none bg-white"
-                    placeholder="City or zip code" />
-            </div>
-            <button id="search-button" class=" mt-2 w-full px-4 py-2 hidden bg-black text-white rounded-[10px] transform 
-        scale-0 opacity-0 transition-transform transition-opacity duration-300">
-                Search
-            </button>
-        </div>
+       
+        
         <!-- mobile notification-->
         <div id="notificationDropdown2"
             class="z-[300] select-none md:block hidden overflow-scroll !p-0 -mb-10 right-0 -mt-2 top-40 w-screen bg-white border shadow-lg">
@@ -231,7 +206,7 @@
     <div
         class="flex  flex-col pb-20  md:flex-row md:-mt-52 justify-center md:px-20 rounded-[10px] gap-10  items-center md:items-start ">
         <img src="./assets/Left.png" id="goBackButton"
-            class=" -z-[1] absolute w-10 md:hidden block left-10 top-40 cursor-pointer h-auto" />
+            class=" -z-[1] absolute w-10 md:hidden block left-6 top-24 cursor-pointer h-auto" />
         <div class="  hidden md:flex flex-col w-[35%] gap-10 ">
             <!-- Profile Card -->
             <div class="max-w-md mx-auto bg-white  rounded-md p-6 border"
@@ -467,7 +442,7 @@
                         </div>
                     </div>
                 </div>
-                <div class=" md:hidden  block  w-full mx-auto bg-white p-6 rounded-md shadow-md"
+                <div class=" md:hidden  block mt-6  w-full mx-auto bg-white p-6 rounded-md shadow-md"
                     style="box-shadow: 0px 0px 18px 0px #0000001F;">
                     <h2 class="text-[15px] font-bold mb-4">Change Password</h2>
                     <!-- Old Password -->

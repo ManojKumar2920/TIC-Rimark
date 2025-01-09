@@ -129,7 +129,7 @@
                         fill="white" />
                 </svg>
             </button>
-            <a href="./Edit.html">
+            <a href="./pricing.html">
                 <img src="./assets//logo-white.png" class=" w-20 h-auto" alt="">
             </a>
 
@@ -152,7 +152,7 @@
                 </svg>
 
                 <!-- Profile Link -->
-                <a href="./Profile.html">
+                <a href="./bprofile.html">
                     <img src="./assets/profileico.png" class="w-8 h-auto" alt="">
                 </a>
             </div>
@@ -160,40 +160,14 @@
 
         </div>
 
-        <div class=" px-4 ">
-            <!-- First Input Container -->
-            <div id="first-container"
-                class="w-full text-gray-500 shadow flex justify-between px-4 py-2 rounded-[10px] outline-none bg-white relative">
-                <input id="first-input" type="text" class="w-full flex justify-between outline-none bg-white"
-                    placeholder="Search Places..." />
-                <svg id="first-svg" class="transition-opacity duration-300" width="31" height="31" viewBox="0 0 31 31"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="15.5" cy="15.5" r="15.5" fill="#1F41BB" />
-                    <path d="M19.898 14.558a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0" fill="#1F41BB" />
-                    <path
-                        d="m21.155 21.156-2.819-2.824m1.562-3.774a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0Z"
-                        stroke="#fff" stroke-width="2" stroke-linecap="round" />
-                </svg>
-            </div>
-
-            <!-- Second Input Container and Search Button -->
-            <div id="second-container"
-                class="w-full text-gray-500 hidden shadow flex justify-between px-4 py-3 mt-2 rounded-[10px] outline-none bg-white transform scale-0 opacity-0 transition-transform transition-opacity duration-300">
-                <input type="text" id="second-input" class="w-full flex justify-between outline-none bg-white"
-                    placeholder="City or zip code" />
-            </div>
-            <button id="search-button" class=" mt-2 w-full px-4 py-2 hidden bg-black text-white rounded-[10px] transform 
-        scale-0 opacity-0 transition-transform transition-opacity duration-300">
-                Search
-            </button>
-        </div>
+         
         <!-- mobile notification-->
         <div id="notificationDropdown2"
             class="z-[300] select-none md:block hidden overflow-scroll !p-0 -mb-10 right-0 -mt-2 top-40 w-screen bg-white border shadow-lg">
             <!-- Header -->
             <div class="px-4 pt-3 pb-5 gap-2 flex items-center">
                 <img src="./assets/Left.png" id="inactiveNotification2"
-                    class="mt-1.5 w-10 left-4 md:left-10 md:top-10 cursor-pointer h-auto" alt=""
+                    class="mt-1.5 w-10 left-4   md:left-10 md:top-10 cursor-pointer h-auto" alt=""
                     onclick="toggleNotification()">
             </div>
 
@@ -229,8 +203,8 @@
 
     <div>
         <img src="./assets/Left.png" id="goBackButton"
-                class=" absolute w-10 left-4 md:left-10 md:top-10 !top-28 cursor-pointer h-auto" alt="">
-        <div id="pricing-section" class=" w-full  grid md:grid-cols-3  relative  px-4   md:px-32 pb-40 -mt-40 ">
+                class=" absolute w-10 left-4 md:left-10 md:top-10 !top-20 cursor-pointer h-auto" alt="">
+        <div id="pricing-section" class=" w-full  grid md:grid-cols-3  relative  px-4   md:gap-10 gap-10 md:px-32 pb-40 -mt-24 md:-mt-40 ">
             
             <div id="basic-plan"
                 class="plan shadow-2xl  md:px-6 rounded-[8px] relative     bg-white flex-col flex  mx-auto  object-cover justify-center gap-2 items-center  ">
@@ -294,7 +268,7 @@
                 </div>
             </div>
             <div id="standard-plan"
-                class="plan  px-6  shadow-2xl  rounded-[8px] relative    bg-white flex-col flex  mx-auto  object-cover justify-center gap-2 items-center  ">
+                class="plan  md:px-6  shadow-2xl  rounded-[8px] relative    bg-white flex-col flex  mx-auto  object-cover justify-center gap-2 items-center  ">
                 <div class=" flex object-cover justify-center  mx-auto px-20 items-center gap-2 ">
                     <img src="./assets/tlb.png" class=" absolute left-0 w-12" alt="">
                     <img src="./assets//box.png" class=" w-40 mt-20" alt="">
@@ -397,7 +371,7 @@
                 </div>
             </div>
             <div id="premium-plan"
-                class="plan px-6   shadow-2xl   rounded-[8px] relative    bg-white flex-col flex  mx-auto  object-cover justify-center gap-2 items-center  ">
+                class="plan md:px-6   shadow-2xl   rounded-[8px] relative    bg-white flex-col flex  mx-auto  object-cover justify-center gap-2 items-center  ">
                 <div class=" flex object-cover justify-center  mx-auto px-20 items-center gap-2 ">
                     <img src="./assets//tly.png" class=" absolute left-0 w-12" alt="">
                     <img src="./assets//boxo.png" class=" w-40 mt-20" alt="">
