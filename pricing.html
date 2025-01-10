@@ -68,7 +68,7 @@
             <img src="./assets//logo.png" class="  h-full w-24 mb-1" alt="">
         </a>
         <div class="flex relative items-center space-x-8">
-             
+
             <!-- active Notification Icon -->
             <svg id="inactiveNotification" class="hidden   cursor-pointer" width="36" height="36" viewBox="0 0 38 38"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,7 +160,7 @@
 
         </div>
 
-         
+
         <!-- mobile notification-->
         <div id="notificationDropdown2"
             class="z-[300] select-none md:block hidden overflow-scroll !p-0 -mb-10 right-0 -mt-2 top-40 w-screen bg-white border shadow-lg">
@@ -203,11 +203,12 @@
 
     <div>
         <img src="./assets/Left.png" id="goBackButton"
-                class=" absolute w-10 left-4 md:left-10 md:top-10 !top-20 cursor-pointer h-auto" alt="">
-        <div id="pricing-section" class=" w-full  grid md:grid-cols-3  relative  px-4   md:gap-10 gap-10 md:px-32 pb-40 -mt-24 md:-mt-40 ">
-            
+            class=" absolute w-10 left-4 md:left-10 md:top-10 !top-20 cursor-pointer h-auto" alt="">
+        <div id="pricing-section"
+            class=" w-full  grid md:grid-cols-3  relative  px-4   md:gap-10 gap-10 md:px-32 pb-40 -mt-24 md:-mt-40 ">
+
             <div id="basic-plan"
-                class="plan shadow-2xl  md:px-6 rounded-[8px] relative     bg-white flex-col flex  mx-auto  object-cover justify-center gap-2 items-center  ">
+                class="plan shadow-2xl  md:px-6 rounded-[8px] relative bg-white flex-col   flex  mx-auto  object-cover justify-center gap-2 items-center  ">
                 <div id="imgcon1" class=" flex object-cover justify-center  mx-auto  px-20 items-center gap-2 ">
                     <img src="./assets/tlp.png" id="imagep1" class=" absolute left-0 w-12" alt="">
                     <img src="./assets//boxp.png" id="imagep3" class=" w-40  mt-20" alt="">
@@ -267,6 +268,7 @@
 
                 </div>
             </div>
+
             <div id="standard-plan"
                 class="plan  md:px-6  shadow-2xl  rounded-[8px] relative    bg-white flex-col flex  mx-auto  object-cover justify-center gap-2 items-center  ">
                 <div class=" flex object-cover justify-center  mx-auto px-20 items-center gap-2 ">
@@ -516,80 +518,12 @@
                 </div>
             </div>
 
-            <div id="payment-form" class=" hidden h-[70%]     rounded-[16px] mt-10 md:absolute right-24 md:w-[60%] bg-white p-8"
+            <div id="payment-form"
+                class=" hidden md:h-[70%]     rounded-[16px] mt-10 md:absolute right-16 md:w-[60%] bg-white p-8"
                 style="border: 1px solid #E8EBF1">
-                <div>
-                    plan
-                </div>
-                <div class=" flex items-center gap-2">
-                    <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="40" height="40" rx="14" fill="#1F41BB" />
-                        <path
-                            d="M28.1818 13H11.8182C10.814 13 10 13.7835 10 14.75V25.25C10 26.2165 10.814 27 11.8182 27H28.1818C29.186 27 30 26.2165 30 25.25V14.75C30 13.7835 29.186 13 28.1818 13Z"
-                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M10 18H30" stroke="white" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                    <div>
-
-                        <h2 class="text-[20px] font-bold  md:block hidden text-[#253058]">Subscription Payment</h2>
-                        <p class=" text-[10px]">Leroms firms geimons jwms </p>
-                    </div>
-                </div>
-                <form class="   md:w-[80%] mx-auto my-10 space-y-4">
-
-                    <div class=" flex w-full gap-4">
-                        <div class=" w-full">
-
-                            <label for="name" class="block text-sm font-medium text-gray-700">First Name</label>
-                            <input id="name" type="text"
-                                class="block outline-none bg-[#F8F9FB] w-full mt-1 p-2  rounded-md"
-                                style="border: 1px solid #E8EBF1">
-                        </div>
-                        <div class="w-full">
-                            <label for="name" class="block text-sm font-medium text-gray-700">Last Name</label>
-                            <input id="name" type="text"
-                                class="block  outline-none bg-[#F8F9FB] w-full mt-1 p-2 rounded-md"
-                                style="border: 1px solid #E8EBF1">
-                        </div>
 
 
-                    </div>
 
-                    <label for="card-holder-name" class="block text-sm font-medium text-gray-700">Card holder
-                        Name</label>
-                    <input id="card-holder-name" type="text"
-                        class="block outline-none bg-[#F8F9FB] w-full mt-1 p-2 border border-gray-300 rounded-md"
-                        style="border: 1px solid #E8EBF1">
-
-                    <label for="card-number" class="block text-sm font-medium text-gray-700">Card Number</label>
-                    <input id="card-number" autocomplete="cc-number" maxlength="19" pattern="[0-9\s]{13,19}"
-                        inputmode="numeric" type="tel"
-                        placeholder="__ __ __ __    __ __ __ __    __ __ __ __    __ __ __ __"
-                        class="block outline-none bg-[#F8F9FB] w-full mt-1 p-2 border border-gray-300 rounded-md"
-                        style="border: 1px solid #E8EBF1">
-                    <div class=" flex items-center justify-start gap-4">
-
-
-                        <div class=" w-full">
-                            <label for="cvv" class="block mt-4 text-sm font-medium text-gray-700">CVV</label>
-                            <input id="cvv" type="text" placeholder="        ___ ___ ___ "
-                                class="block outline-none bg-[#F8F9FB] w-1/2 mt-1 p-2 border border-gray-300 rounded-md"
-                                style="border: 1px solid #E8EBF1">
-                        </div>
-
-                        <div class=" w-full">
-                            <label for="expiry-date" class="block mt-4 text-sm font-medium text-gray-700">Expiry
-                                Date</label>
-                            <input id="expiry-date" placeholder="MM  /  YY" type="text"
-                                class="block outline-none bg-[#F8F9FB] w-1/2 mt-1 p-2 border border-gray-300 rounded-md"
-                                style="border: 1px solid #E8EBF1">
-                        </div>
-                    </div>
-
-                    <button type="submit"
-                        class="!mt-10 w-full  bg-[#1F41BB] text-white px-4 py-2 rounded-md">Submit</button>
-                </form>
             </div>
         </div>
     </div>
@@ -716,69 +650,139 @@
         });
     </script>
     <script>
-         document.addEventListener("DOMContentLoaded", () => {
-    // Select the form
-    const form = document.querySelector("form");
+        document.addEventListener("DOMContentLoaded", () => {
+            const paymentForm = document.getElementById('payment-form');
 
-    // Add an event listener to handle the form submission
-    form.addEventListener("submit", (event) => {
-      event.preventDefault(); // Prevent the default form submission behavior
+            // Handle plan selection
+            document.querySelectorAll('.select-plan').forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedPlan = button.dataset.plan;
+                    const pricingSection = document.getElementById('pricing-section');
 
-      // Replace the form with the desired content
-      form.outerHTML = `
-           <div class="flex flex-col mt-[10%]  items-center justify-center gap-1">
-                <img src="./assets//logo.png" class=" w-24" alt="">
-                <h1>Payment successfull   </h1>
-                <img src="./assets//done.png" class=" w-32" alt="">
+                    // Hide all other plans on desktop, show only the selected plan
+                    document.querySelectorAll('.plan').forEach(plan => {
+                        if (plan.id !== `${selectedPlan}-plan`) {
+                            plan.classList.add('hidden', 'md:hidden');
+                        } else {
+                            plan.classList.remove('hidden');
+                            plan.classList.add('md:flex');
+                        }
+                    });
 
-                
-            </div>
+                    // Show the payment form
+                    paymentForm.classList.remove('hidden');
 
-            <div class=" text-center left-[25%]  text-[#7C87AA] absolute bottom-10" >Siparişlerim sayfasndan siparişinizi takip edebilirsiniz.</div>
-      `;
-    });
-  });
-        document.querySelectorAll('.select-plan').forEach(button => {
-            button.addEventListener('click', () => {
-                const selectedPlan = button.dataset.plan;
-                const pricingsec = document.getElementById('pricing-section')
-                const imagep1 = document.getElementById('imagep1')
-                const features1 = document.getElementById('features1')
-                const imagep2 = document.getElementById('imagep2')
-                const imagep3 = document.getElementById('imagep3')
-                const button1 = document.getElementById('button1')
-                const imgcon1 = document.getElementById('imgcon1')
-                const basicp  =  document.getElementById('basic-plan')
+                    // If Basic Plan is selected, show the "Already Subscribed" message
+                    if (selectedPlan === 'basic') {
+                        paymentForm.innerHTML = `
+                    <div class="flex flex-col items-center justify-center gap-2 md:py-10">
+                        <img src="./assets/logo.png" class="w-24" alt="Logo">
+                        <h1 class="text-lg text-center font-semibold text-green-600">You are already subscribed to the Basic Plan!</h1>
+                        <img src="./assets/done.png" class="md:w-20 w-10 md:mb-0 mb-10" alt="Done">
+                    </div>`
+                    } else {
+                        // Restore the payment form for Standard and Premium plans
+                        paymentForm.innerHTML = `
+                 <div class=" flex items-center gap-2">
+                    <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="14" fill="#1F41BB" />
+                        <path
+                            d="M28.1818 13H11.8182C10.814 13 10 13.7835 10 14.75V25.25C10 26.2165 10.814 27 11.8182 27H28.1818C29.186 27 30 26.2165 30 25.25V14.75C30 13.7835 29.186 13 28.1818 13Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M10 18H30" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <div>
+
+                        <h2 class="text-[20px] font-bold  md:block hidden text-[#253058]">Subscription Payment</h2>
+                        <p class=" text-[10px]">Leroms firms geimons jwms </p>
+                    </div>
+                </div>
+                    <form class="   md:w-[80%] mx-auto my-10 space-y-4">
+
+                    <div class=" flex w-full gap-4">
+                        <div class=" w-full">
+
+                            <label for="name" class="block text-sm font-medium text-gray-700">First Name</label>
+                            <input id="name" type="text"
+                                class="block outline-none bg-[#F8F9FB] w-full mt-1 p-2  rounded-md"
+                                style="border: 1px solid #E8EBF1">
+                        </div>
+                        <div class="w-full">
+                            <label for="name" class="block text-sm font-medium text-gray-700">Last Name</label>
+                            <input id="name" type="text"
+                                class="block  outline-none bg-[#F8F9FB] w-full mt-1 p-2 rounded-md"
+                                style="border: 1px solid #E8EBF1">
+                        </div>
 
 
-                // Hide all plans
-                document.querySelectorAll('.plan').forEach(plan => {
-                    plan.classList.add('hidden');
+                    </div>
+
+                    <label for="card-holder-name" class="block text-sm font-medium text-gray-700">Card holder
+                        Name</label>
+                    <input id="card-holder-name" type="text"
+                        class="block outline-none bg-[#F8F9FB] w-full mt-1 p-2 border border-gray-300 rounded-md"
+                        style="border: 1px solid #E8EBF1">
+
+                    <label for="card-number" class="block text-sm font-medium text-gray-700">Card Number</label>
+                    <input id="card-number" autocomplete="cc-number" maxlength="19" pattern="[0-9\s]{13,19}"
+                        inputmode="numeric" type="tel"
+                        placeholder="__ __ __ __    __ __ __ __    __ __ __ __    __ __ __ __"
+                        class="block outline-none bg-[#F8F9FB] w-full mt-1 p-2 border border-gray-300 rounded-md"
+                        style="border: 1px solid #E8EBF1">
+                    <div class=" flex items-center justify-start gap-4">
+
+
+                        <div class=" w-full">
+                            <label for="cvv" class="block mt-4 text-sm font-medium text-gray-700">CVV</label>
+                            <input id="cvv" type="text" placeholder="        ___ ___ ___ "
+                                class="block outline-none bg-[#F8F9FB] w-1/2 mt-1 p-2 border border-gray-300 rounded-md"
+                                style="border: 1px solid #E8EBF1">
+                        </div>
+
+                        <div class=" w-full">
+                            <label for="expiry-date" class="block mt-4 text-sm font-medium text-gray-700">Expiry
+                                Date</label>
+                            <input id="expiry-date" placeholder="MM  /  YY" type="text"
+                                class="block outline-none bg-[#F8F9FB] w-1/2 mt-1 p-2 border border-gray-300 rounded-md"
+                                style="border: 1px solid #E8EBF1">
+                        </div>
+                    </div>
+
+                    <button type="submit"
+                        class="!mt-10 w-full  bg-[#1F41BB] text-white px-4 py-2 rounded-md">Submit</button>
+                </form>
+                `;
+
+                        // Handle form submission for payment
+                        const form = document.getElementById('payment-form');
+                        form.addEventListener('submit', (event) => {
+                            event.preventDefault();  // Prevent default form submission
+
+                            // Show payment success message
+                            paymentForm.innerHTML = `
+                        <div class="flex flex-col mt-[10%] items-center mb-[40%] justify-center gap-1">
+                            <img src="./assets/logo.png" class="w-24" alt="Logo">
+                            <h1 class="text-lg font-semibold text-[#253058]">Payment Successful!</h1>
+                            <img src="./assets/done.png" class="w-32" alt="Success">
+                        </div>
+
+                        <div class="text-center md:left-[30%] text-[#7C87AA] md:text-base text-xs  absolute    md:bottom-10">
+                            Anasayfa &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     Siparişlerim   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   Profil
+                        </div>
+                    `;
+                        });
+                    }
                 });
-
-                // Show the selected plan
-                const selectedPlanElement = document.getElementById(`${selectedPlan}-plan`);
-                selectedPlanElement.classList.remove('hidden');
-                selectedPlanElement.classList.add('absolute', 'md:-left-40', 'w-[60%]');
-                pricingsec.classList.add('md:grid-cols-2')
-                // basicp.classList.add('hidden')
-
-                // imagep1.classList.add('md:block hidden')
-                // features1.classList.add('md:block hidden')
-                // imagep2.classList.add('md:block hidden')
-                // button1.classList.add('md:block hidden')
-                // imagep3.classList.remove('w-40')
-                // imgcon1.classList.remove('px-20')
-                // Show payment form
-                document.getElementById('payment-form').classList.remove('hidden');
             });
         });
 
+
     </script>
     <script>
-      
-      </script>
-      
+
+    </script>
+
 </body>
 
 </html>
