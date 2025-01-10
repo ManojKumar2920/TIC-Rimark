@@ -45,7 +45,7 @@ firstInput.addEventListener("blur", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const placeholders = ["Category", "Price", "Occasion", "Relationship"];
+    const placeholders = ['Services', 'Hotels', 'Places', 'Restaurants'];
     const placeholderText = document.querySelector(".placeholder-text");
     const inputField = document.querySelector("#inputField");
 
@@ -78,7 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const placeholders = ['Category', 'Price', 'Occasion', 'Relationship'];
+    
+    const placeholders = ['Services', 'Hotels', 'Places', 'Restaurants'];
     let index = 0;
 
     const placeholderElement = document.querySelector('.placeholder');
