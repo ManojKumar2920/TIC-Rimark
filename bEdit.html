@@ -59,6 +59,33 @@
             height: 100vh;
             /* Ensure the page doesn't scroll vertically */
         }
+        .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 70px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -40px; /* Tooltip above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
     </style>
 </head>
 
@@ -70,7 +97,7 @@
         <div class="flex relative items-center space-x-8">
            
             <!-- active Notification Icon -->
-            <svg id="inactiveNotification" class="hidden   cursor-pointer" width="36" height="36" viewBox="0 0 38 38"
+            <svg id="inactiveNotification" class="hidden   cursor-pointer" width="40" height="40" viewBox="0 0 40 40"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="19" cy="19" r="19" fill="#1F41BB" />
                 <path
@@ -79,7 +106,7 @@
             </svg>
 
             <!-- Inactive Notification Icon -->
-            <svg id="activeNotification" class="cursor-pointer" width="36" height="36" viewBox="0 0 38 38" fill="none"
+            <svg id="activeNotification" class="cursor-pointer" width="40" height="40" viewBox="0 0 40 40" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <circle cx="19" cy="19" r="19" fill="black" />
                 <path
@@ -104,16 +131,18 @@
                     <!-- Notifications will be rendered here -->
                 </div>
             </div>
-            <a href="./bprofile.html">
+            <a href="./bCompany.html" class="tooltip">
                 <img src="./assets//profileico.png" class=" select-none w-9 h-auto object-cover" alt="">
+                <span class="tooltiptext">Profile</span>
             </a>
-            <a href="/Onboarding.html">
-                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a href="/Onboarding.html" class="tooltip">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="19" cy="19" r="19" fill="black" />
                     <path
                         d="M19.24 9C22.385 9 25.297 10.395 27.228 12.744C27.283 12.8106 27.3241 12.8876 27.3487 12.9703C27.3734 13.0531 27.3811 13.14 27.3715 13.2258C27.3619 13.3117 27.3351 13.3947 27.2928 13.47C27.2504 13.5452 27.1934 13.6112 27.125 13.664C26.9858 13.7731 26.8096 13.8237 26.6337 13.805C26.4579 13.7863 26.2962 13.6999 26.183 13.564C25.3387 12.5412 24.2778 11.7185 23.077 11.1555C21.8761 10.5924 20.5653 10.303 19.239 10.308C14.324 10.308 10.339 14.2 10.339 19C10.339 23.8 14.324 27.692 19.239 27.692C20.5844 27.6973 21.9137 27.3995 23.1283 26.8208C24.3429 26.2421 25.4116 25.3972 26.255 24.349C26.3663 24.2117 26.5266 24.1231 26.7021 24.102C26.8776 24.0809 27.0544 24.129 27.195 24.236C27.264 24.2879 27.3218 24.3531 27.3651 24.4277C27.4084 24.5024 27.4362 24.585 27.4469 24.6706C27.4577 24.7563 27.4511 24.8432 27.4275 24.9262C27.404 25.0093 27.364 25.0867 27.31 25.154C25.382 27.564 22.431 29 19.24 29C13.583 29 9 24.523 9 19C9 13.477 13.584 9 19.24 9ZM26.098 16.16L28.804 18.867C29.066 19.128 29.071 19.547 28.816 19.803L26.172 22.446C26.11 22.507 26.0366 22.5552 25.9559 22.5877C25.8752 22.6203 25.7889 22.6366 25.7019 22.6356C25.6149 22.6347 25.529 22.6166 25.449 22.5823C25.3691 22.5481 25.2967 22.4983 25.236 22.436C25.1734 22.3754 25.1235 22.303 25.0891 22.223C25.0546 22.1429 25.0364 22.0569 25.0354 21.9698C25.0343 21.8827 25.0506 21.7962 25.0831 21.7154C25.1157 21.6346 25.1639 21.5611 25.225 21.499L26.772 19.952H16.462C16.375 19.9533 16.2886 19.9374 16.2077 19.9052C16.1269 19.873 16.0532 19.8252 15.991 19.7644C15.9287 19.7036 15.8791 19.6311 15.8449 19.5511C15.8108 19.471 15.7928 19.385 15.792 19.298C15.792 18.936 16.092 18.643 16.462 18.643H26.731L25.173 17.085C25.1106 17.0244 25.0608 16.952 25.0264 16.8721C24.9921 16.7922 24.9739 16.7063 24.9729 16.6193C24.9718 16.5323 24.988 16.446 25.0205 16.3653C25.0529 16.2846 25.101 16.2111 25.162 16.149C25.2241 16.088 25.2976 16.0399 25.3783 16.0075C25.459 15.975 25.5453 15.9588 25.6323 15.9599C25.7193 15.9609 25.8052 15.9791 25.8851 16.0134C25.965 16.0478 26.0374 16.0976 26.098 16.16Z"
                         fill="white" />
                 </svg>
+                <span class="tooltiptext">logout</span>
             </a>
         </div>
     </div>
@@ -185,12 +214,11 @@
             <h2 class="text-lg font-bold">Navigation</h2>
             <ul class="mt-4 space-y-3">
                 <li><a href="#" class="hover:text-gray-300">Home</a></li>
-                <li><a href="./Rewards.html" class="hover:text-gray-300">Rewards</a></li>
-                <li><a href="./Company.html" class="hover:text-gray-300">Company</a></li>
-                <li><a href="./Feed.html" class="hover:text-gray-300">Feed</a></li>
-                <li><a href="./Search.html" class="hover:text-gray-300">Search</a></li>
-                <li><a href="./Profile.html" class="hover:text-gray-300">Profile</a></li>
-
+                <li><a href="./bRewards.html" class="hover:text-gray-300">Rewards</a></li>
+                <li><a href="./bCompany.html" class="hover:text-gray-300">Company</a></li>
+                <li><a href="./bprofile.html" class="hover:text-gray-300">Profile</a></li>
+                <li><a href="./pricing.html" class="hover:text-gray-300">Pricing</a></li>
+                <li><a href="./Onboarding.html" class="hover:text-gray-300">Logout</a></li>
             </ul>
         </div>
     </div>
