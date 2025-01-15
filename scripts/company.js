@@ -1,4 +1,4 @@
- 
+
 // Elements
 const activeNotification = document.getElementById('activeNotification');
 const inactiveNotification = document.getElementById('inactiveNotification');
@@ -407,7 +407,3 @@ viewMoreButton.className = "mt-4 text-[14px] bg-gray-200 px-3 py-1 rounded-full 
 viewMoreButton.innerText = "View More";
 
 rimarksContainer.appendChild(viewMoreButton);
-
-
-
-
