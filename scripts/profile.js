@@ -58,6 +58,7 @@ rimarksData.map(item => {
                 <img src="./assets/profileico.png" alt="Profile Image" class="md:hidden block w-12 h-12 rounded-full">
                 <h3 class="font-bold text-[24px] text-gray-900">${item.title}</h3>
                 <div class="flex items-center space-x-1">${stars}</div>
+                <img src="https://demo.rimark.us/media/review/images/11803e73-1227-409d-96be-f032fbb7f145.jpg"  class=" object-cover object-top  rounded-3xl" alt=""/>
                 <p class="mt-4 md:w-full w-[95%] text-black/60 text-[13px] md:text-[15px]">"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happines."</p>
                 <div class="flex items-center md:gap-0 gap-10 md:justify-between mt-4">
                     <div class="flex items-center space-x-2">
@@ -375,7 +376,7 @@ const userData = {
     },
     memberSince: 2024,
     location: "Los Angeles, CA",
-    description: "Expedita consequuntur distinctio soluta sunt dolorum sed quisquam molestiae eos. Sit omnis quos fugit consequatur possimus. Sapiente voluptates eos consequatur et consectetur amet ipsum aut. Aspernatur deserunt nihil beatae dolores. Accusamus aut et harum distinctio dolore. Consequatur omnis aliquam modi.",
+    description: "Et omnis quos    Aspernatur deserunt nihil beatae dolores. AccusamusEt omnis quos fugit  Aspernatur deserunt nihil beatae dolores. AccusamusEt omnis quos fugit  Aspernatur deserunt nihil beatae dolores. Accusamus aut et harum distinctio dolore. Consequatur omnis aliquam modi.",
     mobileDescription: "Lorem ipsum dolor sit amet consectetur. Erat auctor a aliquam vel congue luctus. Leo diam.",
     buttons: [
         {
@@ -420,8 +421,8 @@ const userData = {
 // Render Dashboard
 const dashboardContainer = document.getElementById("dashboardContainer");
 dashboardContainer.innerHTML = `
-    <div class="md:rounded-[15px] rounded-[32px] overflow-hidden bg-white flex items-center justify-center w-[60%] md:w-1/5">
-        <img src="${userData.profileImage}" class="w-fit" alt="Profile Image">
+    <div class="md:rounded-[15px] mt-2 rounded-[32px] overflow-hidden bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 flex items-center w-[60%] md:w-1/5 justify-center ">
+        <img src="../assets/demopic.jpg" class=" object-cover  w-80 object-top h-48" alt="Profile Image">
     </div>
     <div class="border hidden gap-20 md:flex border-white/15 mx-auto bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 items-end justify-end rounded-[16px] shadow-xl px-8 py-2">
         <div class="flex flex-col mt-2 pb-2">
