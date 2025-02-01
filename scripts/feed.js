@@ -24,8 +24,8 @@ const firstInput = document.getElementById("first-input");
 const secondContainer = document.getElementById("second-container");
 const searchButton = document.getElementById("search-button");
 const firstSvg = document.getElementById("first-svg");
+
 firstInput.addEventListener("focus", () => {
-    // Show the second input and search button with animation (coming down)
     secondContainer.classList.remove("hidden", "scale-0", "opacity-0");
     secondContainer.classList.add("scale-100", "opacity-100");
     searchButton.classList.remove("hidden", "scale-0", "opacity-0");
@@ -33,16 +33,21 @@ firstInput.addEventListener("focus", () => {
     firstSvg.style.opacity = "0";
 });
 
-// Optional: Add blur to reset states
-firstInput.addEventListener("blur", () => {
-    setTimeout(() => {
+// Click outside to close
+document.addEventListener("mousedown", (event) => {
+    if (
+        !firstInput.contains(event.target) && 
+        !secondContainer.contains(event.target) &&
+        !searchButton.contains(event.target)
+    ) {
         secondContainer.classList.add("hidden", "scale-0", "opacity-0");
         secondContainer.classList.remove("scale-100", "opacity-100");
         searchButton.classList.add("hidden", "scale-0", "opacity-0");
         searchButton.classList.remove("scale-100", "opacity-100");
         firstSvg.style.opacity = "1";
-    }, 200); // Delay to allow click event on the search button
+    }
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const placeholders = ['Services', 'Hotels', 'Places', 'Restaurants'];

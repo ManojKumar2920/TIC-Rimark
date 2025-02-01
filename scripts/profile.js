@@ -58,7 +58,10 @@ rimarksData.map(item => {
                 <img src="./assets/profileico.png" alt="Profile Image" class="md:hidden block w-12 h-12 rounded-full">
                 <h3 class="font-bold text-[24px] text-gray-900">${item.title}</h3>
                 <div class="flex items-center space-x-1">${stars}</div>
-                <img src="https://demo.rimark.us/media/review/images/11803e73-1227-409d-96be-f032fbb7f145.jpg"  class=" object-cover object-top  rounded-3xl" alt=""/>
+                <div class=" flex gap-4  px-4 -ml-4   !justify-start !items-start">
+                <img src="https://demo.rimark.us/media/review/images/11803e73-1227-409d-96be-f032fbb7f145.jpg"  class=" mt-4 mb-4 object-cover object-top  w-1/2 rounded-xl md:rounded-3xl" alt=""/>
+                <img src="https://demo.rimark.us/media/review/images/11803e73-1227-409d-96be-f032fbb7f145.jpg"  class=" mt-4 mb-4 object-cover object-top  w-1/2 rounded-xl  md:rounded-3xl" alt=""/>
+                </div>
                 <p class="mt-4 md:w-full w-[95%] text-black/60 text-[13px] md:text-[15px]">"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happines."</p>
                 <div class="flex items-center md:gap-0 gap-10 md:justify-between mt-4">
                     <div class="flex items-center space-x-2">
@@ -236,12 +239,18 @@ document.addEventListener('click', (event) => {
     }
 });
 
+
+
+
+
+
+
 const firstInput = document.getElementById("first-input");
 const secondContainer = document.getElementById("second-container");
 const searchButton = document.getElementById("search-button");
 const firstSvg = document.getElementById("first-svg");
+
 firstInput.addEventListener("focus", () => {
-    // Show the second input and search button with animation (coming down)
     secondContainer.classList.remove("hidden", "scale-0", "opacity-0");
     secondContainer.classList.add("scale-100", "opacity-100");
     searchButton.classList.remove("hidden", "scale-0", "opacity-0");
@@ -249,17 +258,20 @@ firstInput.addEventListener("focus", () => {
     firstSvg.style.opacity = "0";
 });
 
-// Optional: Add blur to reset states
-firstInput.addEventListener("blur", () => {
-    setTimeout(() => {
+// Click outside to close
+document.addEventListener("mousedown", (event) => {
+    if (
+        !firstInput.contains(event.target) && 
+        !secondContainer.contains(event.target) &&
+        !searchButton.contains(event.target)
+    ) {
         secondContainer.classList.add("hidden", "scale-0", "opacity-0");
         secondContainer.classList.remove("scale-100", "opacity-100");
         searchButton.classList.add("hidden", "scale-0", "opacity-0");
         searchButton.classList.remove("scale-100", "opacity-100");
         firstSvg.style.opacity = "1";
-    }, 200); // Delay to allow click event on the search button
+    }
 });
-
 
 
 // Elements

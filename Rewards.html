@@ -260,7 +260,7 @@
 
         <img src="./assets/blackclientbann.jpg" style="  background-position: 50% 50%; background-size: cover;" class=" z-[-1]
         absolute md:h-[60%] h-[40%]  w-full object-cover bg-cover bg-bottom" alt="">
-        <img src="./assets/Left.png"  id="goBackButton" class="   w-10  md:hidden block  relative !-top-10  -left-32 cursor-pointer h-auto" alt="">
+        <img src="./assets/Left.png"  id="goBackButton" class="   w-10  md:hidden block  relative !-top-10  -left-36 cursor-pointer h-auto" alt="">
         <h1 class=" text-[26px] leading-[33px] font-[800] text-center" style=" 
         background: linear-gradient(90deg, #FFFFFF 0%, #1F41BB 100%);
         -webkit-background-clip: text;
@@ -498,29 +498,34 @@
             }
         });
 
-        const firstInput = document.getElementById("first-input");
-        const secondContainer = document.getElementById("second-container");
-        const searchButton = document.getElementById("search-button");
-        const firstSvg = document.getElementById("first-svg");
-        firstInput.addEventListener("focus", () => {
-            // Show the second input and search button with animation (coming down)
-            secondContainer.classList.remove("hidden", "scale-0", "opacity-0");
-            secondContainer.classList.add("scale-100", "opacity-100");
-            searchButton.classList.remove("hidden", "scale-0", "opacity-0");
-            searchButton.classList.add("scale-100", "opacity-100");
-            firstSvg.style.opacity = "0";
-        });
+       
+const firstInput = document.getElementById("first-input");
+const secondContainer = document.getElementById("second-container");
+const searchButton = document.getElementById("search-button");
+const firstSvg = document.getElementById("first-svg");
 
-        // Optional: Add blur to reset states
-        firstInput.addEventListener("blur", () => {
-            setTimeout(() => {
-                secondContainer.classList.add("hidden", "scale-0", "opacity-0");
-                secondContainer.classList.remove("scale-100", "opacity-100");
-                searchButton.classList.add("hidden", "scale-0", "opacity-0");
-                searchButton.classList.remove("scale-100", "opacity-100");
-                firstSvg.style.opacity = "1";
-            }, 200); // Delay to allow click event on the search button
-        });
+firstInput.addEventListener("focus", () => {
+    secondContainer.classList.remove("hidden", "scale-0", "opacity-0");
+    secondContainer.classList.add("scale-100", "opacity-100");
+    searchButton.classList.remove("hidden", "scale-0", "opacity-0");
+    searchButton.classList.add("scale-100", "opacity-100");
+    firstSvg.style.opacity = "0";
+});
+
+// Click outside to close
+document.addEventListener("mousedown", (event) => {
+    if (
+        !firstInput.contains(event.target) && 
+        !secondContainer.contains(event.target) &&
+        !searchButton.contains(event.target)
+    ) {
+        secondContainer.classList.add("hidden", "scale-0", "opacity-0");
+        secondContainer.classList.remove("scale-100", "opacity-100");
+        searchButton.classList.add("hidden", "scale-0", "opacity-0");
+        searchButton.classList.remove("scale-100", "opacity-100");
+        firstSvg.style.opacity = "1";
+    }
+});
 
     </script>
     <script>
