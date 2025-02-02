@@ -433,16 +433,16 @@ const userData = {
 // Render Dashboard
 const dashboardContainer = document.getElementById("dashboardContainer");
 dashboardContainer.innerHTML = `
-    <div class="md:rounded-[15px] mt-2 rounded-[32px] overflow-hidden bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 flex items-center w-[60%] md:w-1/5 justify-center ">
+    <div class="md:rounded-[15px]    rounded-[32px] mt-10 overflow-hidden bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 flex items-center w-[60%] md:w-1/5 justify-center ">
         <img src="../assets/demopic.jpg" class=" object-cover  w-80 object-top h-48" alt="Profile Image">
     </div>
-    <div class="border hidden gap-20 md:flex border-white/15 mx-auto bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 items-end justify-end rounded-[16px] shadow-xl px-8 py-2">
+    <div class="border hidden max-[1200px]:gap-6 gap-20 md:flex max-[1200px]:w-1/2 border-white/15 mx-auto bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 items-end justify-end rounded-[16px] shadow-xl px-8 py-2">
         <div class="flex flex-col mt-2 pb-2">
-            <h2 class="text-white text-[16px] font-semibold mb-4 uppercase">Your Dashboard</h2>
-            <div class="flex text-center !gap-20 text-white gap-4">
-                <div><h1 class="font-bold text-[52px]">${userData.statistics.rimarks}</h1><h2 class="-mt-2 text-[15px]">My Rimarks</h2></div>
-                <div><h1 class="font-bold text-[52px]">${userData.statistics.followers}</h1><h2 class="-mt-2 text-[15px]">My Followers</h2></div>
-                <div><h1 class="font-bold text-[52px]">${userData.statistics.following}</h1><h2 class="-mt-2 text-[15px]">My Following</h2></div>
+            <h2 class="text-white text-[16px] max-[1200px]:text-xs font-semibold mb-4 uppercase">Your Dashboard</h2>
+            <div class="flex text-center   max-[1200px]:text-xs max-[1200px]:gap-4 gap-20 text-white ">
+                <div class="max-[1200px]:space-y-1"><h1 class="font-bold max-[1200px]:text-4xl text-[52px]">${userData.statistics.rimarks}</h1><h2 class="-mt-2 max-[1200px]:text-base text-[15px]">My Rimarks</h2></div>
+                <div class="max-[1200px]:space-y-1"><h1 class="font-bold max-[1200px]:text-4xl text-[52px]">${userData.statistics.followers}</h1><h2 class="-mt-2 max-[1200px]:text-base text-[15px]">My Followers</h2></div>
+                <div class="max-[1200px]:space-y-1"><h1 class="font-bold max-[1200px]:text-4xl text-[52px]">${userData.statistics.following}</h1><h2 class="-mt-2 max-[1200px]:text-base text-[15px]">My Following</h2></div>
             </div>
         </div>
         <div class="text-[#1F41BB] h-full flex flex-col items-center justify-center px-4 py-6 bg-white rounded-[16px] w-fit">
