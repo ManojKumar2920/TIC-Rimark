@@ -1,0 +1,1169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+}
+
+.font-parkinsans {
+  font-family: "Parkinsans";
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.none {
+  display: none;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.text-large {
+  font-size: 60px;
+}
+
+.secondary-color {
+  color: #eac800;
+}
+
+.onboarding-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Left Container */
+.left-container {
+  background-image: url("../assets/onboarding-side-banner.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 45%;
+  position: fixed;
+  height: 100dvh;
+  transition: background-image 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Updated Styles for Logo Placement */
+.theme-overlay {
+  position: relative;
+  background-color: rgba(31, 65, 187, 0.9);
+  /* Blue with 90% opacity */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  font-size: 19px;
+  transition: background-image 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.theme-overlay .logo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 100px;
+
+  transition: background-image 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.theme-overlay .quote {
+  margin-left: 80px;
+  color: white;
+  position: relative;
+
+  transition: background-image 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.quote .quotation-mark {
+  position: absolute;
+  top: -40px;
+
+  transition: background-image 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.theme-overlay p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  width: 100%;
+
+  transition: background-image 0.5s ease-in-out, transform 0.5s ease-in-out;
+  /* transform: translateY(20px); */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  /* white-space: nowrap; */
+}
+
+.brand-name {
+  font-weight: 600;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.quote-vector {
+  position: absolute;
+  bottom: 5%;
+  right: 15%;
+}
+
+/* Right Container */
+.right-container {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding-left: 40%;
+}
+
+.right-container.full-width {
+  width: 100%;
+  padding-left: 0;
+}
+
+.onboarding-form {
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.onboarding-form h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.onboarding-form p {
+  font-size: 16px;
+  color: gray;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.onboarding-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  width: 110%;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  gap: 20px
+}
+
+.onboarding-option:hover {
+
+  border: #1565D8 1px solid;
+}
+
+.onboarding-option:hover .onboarding-icon-individual {
+  content: url('/assets/Icons/individual-icon-hover.png');
+  /* Change the image on hover */
+}
+
+.onboarding-option:hover .onboarding-icon-business {
+  content: url('/assets/Icons/business-icon-hover.png');
+  /* Change the image on hover */
+}
+
+.onboarding-option:hover {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-badge {
+  background-color: #1f41bb;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.onboarding-option h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.onboarding-option p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.onboarding-option svg {
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+}
+
+.top-right p {
+  margin: 0;
+  color: #333;
+}
+
+.top-right a {
+  color: #1f41bb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.top-right a:hover {
+  text-decoration: underline;
+}
+
+.forgot {
+  color: gray;
+  font-size: 12px;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step h1 {
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 35px;
+}
+
+.form-step .rewards-title {
+  font-size: 28px;
+}
+
+.form-step.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-navigation button {
+  width: 100%;
+  padding: 20px 20px;
+  background-color: #1f41bb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-navigation button:hover {
+  background-color: #1633a0;
+}
+
+.form-navigation button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.name-container .form-input {
+  width: 80%;
+}
+
+.form-input {
+  width: 90%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.google-signup {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.create-acc-btn {
+  width: 100%;
+}
+
+.google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background-color: #1877f2;
+  gap: 10px;
+  border: 1px solid #ddd;
+  color: whitesmoke;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-btn img {
+  margin-right: 10px;
+}
+
+.google-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.or-divider {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  line-height: 0.1em;
+  margin: 20px 0;
+}
+
+.or-divider span {
+  background: #fff;
+  padding: 0 10px;
+  color: #888;
+}
+
+.name-row {
+  display: flex;
+  gap: 20px;
+}
+
+.name-container {
+  flex: 1;
+}
+
+.terms-container {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.terms-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.terms-container a {
+  color: #1f41bb;
+  text-decoration: none;
+}
+
+.terms-container a:hover {
+  text-decoration: underline;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #333;
+}
+
+.signin-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+}
+
+.signin-link a {
+  color: #1f41bb;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+  color: #1633a0;
+}
+
+/* Container for progress bar */
+.progress-bar-container {
+  position: absolute;
+  width: 600px;
+  height: 26px;
+  /* Adjust according to need */
+  top: 40px;
+  left: 50%;
+}
+
+/* Line (Background of the Progress Bar) */
+.progress-bar-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 2.5px;
+  /* Thickness of the line */
+  background-color: #1F41BB;
+  border-radius: 2px;
+}
+
+/* Circular Indicator */
+.progress-indicator {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  /* Size of the circle */
+  height: 10px;
+  background-color: #1F41BB;
+  /* Blue color */
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  /* Optional shadow for better visibility */
+  transition: left 0.3s ease-in-out;
+  /* Smooth animation */
+}
+
+.location-box {
+  margin: 20px 0;
+}
+
+.claimname-box {
+  margin: 20px 0;
+}
+
+.create-rewards-box {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+#locationInput {
+  width: 90%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9fb;
+  color: #333;
+  cursor: pointer;
+}
+
+
+#locationInput:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+
+#claimNameInput {
+  width: 90%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9fb;
+  color: #333;
+  cursor: pointer;
+}
+
+#claimNameInput:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+#createRewardsInput {
+  width: 92%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9fb;
+  color: #333;
+  cursor: pointer;
+}
+
+#createRewardsInput:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+#descriptionInput {
+  width: 92%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9fb;
+  color: #333;
+  cursor: pointer;
+}
+
+#descriptionInput:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.claimurl-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* Adjust as needed */
+  max-width: 400px;
+  /* Adjust as needed */
+  border: 1px solid #ddd;
+  /* Border around the entire box */
+  border-radius: 8px;
+  overflow: hidden;
+  /* Ensures rounded corners work properly */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.url-box {
+  background-color: #5367c7;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+
+#claimUrlInput::placeholder {
+  color: #aaa;
+  /* Placeholder text color */
+  font-style: italic;
+}
+
+
+#claimUrlInput {
+  width: 90%;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  color: #333;
+  flex: 1;
+  /* Allows the input field to take up the remaining space */
+  border: none;
+  outline: none;
+  /* Removes the default outline */
+}
+
+#claimUrlInput:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+  position: absolute;
+  z-index: 1000;
+}
+
+.suggestions-list li {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333333;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.suggestions-list li:hover {
+  background-color: #f9f9f9;
+  color: #007bff;
+  /* Highlight with a primary color */
+}
+
+.suggestions-list li:not(:last-child) {
+  border-bottom: 1px solid #f0f0f0;
+  /* Subtle separator between items */
+}
+
+/* Smooth scrollbar styling for better UX */
+.suggestions-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestions-list::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 3px;
+}
+
+.suggestions-list::-webkit-scrollbar-thumb:hover {
+  background-color: #b3b3b3;
+}
+
+.recommendation-box {
+  margin: 20px 0;
+}
+
+#recommendationInput {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9fb;
+  color: #333;
+  cursor: pointer;
+}
+
+#recommendationInput:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+/* Button Styles */
+.form-navigation {
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Info Secured Style */
+.info-secured {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 11px;
+  color: #777;
+}
+
+.form-step .back-btn {
+  color: #1f41bb;
+}
+
+.back {
+  z-index: 100;
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+}
+
+.business-results {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 100%;
+  left: 0;
+}
+
+.business-item {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  position: relative;
+}
+
+.business-item:hover {
+  transform: scale(1.05);
+}
+
+.business-item img {
+  width: 50%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+}
+
+.business-info {
+  padding: 20px;
+}
+
+.business-info h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.business-info p {
+  font-size: 16px;
+  color: #777;
+  margin: 5px 0;
+}
+
+.business-item .offer {
+  background-color: red;
+  color: white;
+  width: 100%;
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+  left: 0;
+}
+
+.rating {
+  font-size: 16px;
+  color: #ffbc00;
+}
+
+.follow-btn {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+
+.next-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.share-box {
+  background-color: #1f41bb;
+  padding: 40px;
+  color: white;
+  box-sizing: border-box;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.share-box p {
+  color: white;
+  margin-bottom: 100px;
+}
+
+.share-socials {
+  background-color: white;
+  position: absolute;
+  border-radius: 20px;
+  padding: 18px;
+  left: 0;
+  bottom: 0;
+}
+.join-us-mobile{
+  display: none;
+}
+.join-us-mobile2
+{
+  display: none;
+}
+
+.loginbtn-ho button{
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #1f41bb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+/* Global Styles for mobile responsiveness */
+@media screen and (max-width: 768px) {
+
+  .mob-arr{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .resetCon{
+    display: flex;
+    flex-direction: column;
+    gap: 0 !important;
+  }
+  .reset{
+    margin-top: 0px;
+  }
+  .onboarding-form1{
+    /* margin-top: 0px !important; */
+  }
+  .holder-reset{
+    display: flex;
+    flex-direction: column;
+    gap: 0 !important;
+    font-size: 12px;
+  }
+  .loginbtn-ho button{
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #1f41bb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .loginbtn{
+     width: 80% !important;
+    
+     /* margin-top: 20px !important; */
+    }
+    .form-navigation1{
+      background-color: #1633a0 !important;
+      border-radius: 10px;
+    }
+
+  .progress-bar-container {
+    top:60px;
+    left: 10%;
+  }
+
+  /* Hide the left container on mobile */
+  .left-container { 
+    display: none;
+  }
+
+  /* Make right container take full width on mobile */
+  .right-container {
+    width: 100%;
+    padding: 0;
+  }
+#locationInput{
+  border-radius: 10px;
+  background-color: #F1F4FF;
+}
+#step-location{
+  /* text-align: left !important; */
+  /* margin-top: 100px !important; */
+}
+.center{
+  /* text-align: left; */
+}
+.form-step input{
+  border-radius: 10px !important;
+  background-color: #F1F4FF !important;
+}
+#step-signup-business{
+  margin-top: 150px;
+}
+#step-claim-name{
+  margin-top: 150px;
+}
+#loginclick{
+  color: #0066cc;
+}
+#step-create-rewards{
+  margin-top: 150px;
+}
+#step-claim-url{
+  margin-top: 150px;
+}
+#step-completion-business{
+  margin-top: 100px;
+}
+.btermsCheckbox{
+  display: none !important;
+}
+#step-location{
+  margin-top: 100px !important;
+}
+#step-rewards{
+  margin-top: 100px !important;
+}
+#step-username{
+  margin-top: 100px !important;
+}
+ 
+  /* Adjust onboarding-form for mobile */
+  .onboarding-form {
+    max-width: 100%;
+    margin: 20px;
+    height: 90dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+.join-us{
+   display: none;
+}
+.join-us-mobile{
+  display: block;
+  font-size: 26px !important;
+  color: #1F41BB;
+  font-weight: 600;
+  width: 100% !important;
+  text-align: center;
+}
+.join-us-desc{
+  display: none;
+}
+.join-us-mobile2{
+  display: block;
+  font-size: 12px;
+  text-align: center;
+}
+.holder{
+  width: 90%;
+}
+.mobile-img{
+  width: 350px;
+}
+  .onboarding-option {
+    width: 90%;
+    display: flex;
+     align-items: center;
+     justify-content: center;
+  }
+  .onboarding-option h4{
+    width: 100%;
+    font-size: 16px;
+    
+  }
+  .onboarding-icon-individual{
+    width: 40px;
+    height: 40px;
+  }
+  .onboarding-icon-business{
+    width: 40px;
+    height: 40px;
+  }
+
+  .onboarding-form h1 {
+    font-size: 26px;
+  }
+
+  .onboarding-form p {
+    font-size: 12px;
+  }
+
+  #step-account-type {
+    margin-top: -20px;
+  }
+
+  #step-account-type img {
+    display: block;
+  }
+
+  .signin-link {
+    display: none;
+  }
+
+  .desktop-back-btn {
+    display: none;
+
+  }
+
+  .form-step {
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  /* Update the form step font size for mobile */
+  .form-step h1 {
+    font-size: 28px;
+  }
+
+  /* Reduce the button size for mobile */
+  .form-navigation button {
+    padding: 15px;
+    position: absolute;
+    bottom: 60px;
+  }
+
+  .info-secured {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .rewards-title {
+    font-size: 22px !important;
+  }
+  #step-signup{
+    width: 90%;
+  }
+  .google-btn{
+    font-size: 16px !important;
+    font-weight: 700;
+    width: 100% !important;
+  }
+  #step-signup .existing {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+  }
+  .center h1{
+    font-size: 26px !important;
+  }
+  .center p{
+    font-size: 10px !important;
+  }
+
+  .mobile-back-arrow {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    background-color: #D9D9D9;
+    border-radius: 100%;
+    padding: 5px;
+  }
+
+  .mobile-social-invite {
+    display: block;
+  }
+
+  #hideLocationBack,
+  #hideRewardsBack,
+  #hideUsernameBack {
+    display: none;
+  }
+
+  #step-rewards,
+  #step-location,
+  #step-signup,
+  #step-username,
+  #step-completion {
+    margin-top: 60px;
+  }
+
+  .welcome {
+    margin-top: 10px;
+  }
+
+  /* Adjust the terms container for mobile */
+  .terms-container {
+    font-size: 14px;
+  }
+
+  /* Update the error message for mobile */
+  .error-message {
+    font-size: 10px;
+  }
+
+  /* Adjust the input field size for mobile */
+  .form-input {
+    width: 90%;
+  }
+  .create-acc-btn{
+    width: 90% !important;
+  }
+  /* Adjust progress bar and indicators for mobile */
+  .progress-bar-container {
+    width: 80%;
+  }
+
+  .progress-indicator {
+    width: 8px;
+    height: 8px;
+  }
+  .form-step label{
+     display: none !important;
+  }
+  .terms-container label{
+    display: none !important;
+  }
+  .termsCheckbox{
+    display: none !important;
+  }
+  .terms-container{
+    display: none !important;
+  }
+
+  /* Ensure the location and recommendation boxes fit on mobile */
+  .location-box,
+  .recommendation-box {
+    margin: 15px 0;
+  }
+
+  #locationInput,
+  #recommendationInput {
+    width: 93%;
+    padding: 12px;
+  }
+
+  .suggestions-list {
+    max-height: 150px;
+    width: 100%;
+  }
+
+  .google-btn {
+    width: 100%;
+  }
+}

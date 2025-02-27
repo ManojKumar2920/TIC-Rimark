@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow Us</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* General body styling */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #f3f4f6;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+
+        /* QR Card Container */
+        .qr-card {
+            background: white;
+            padding: 20px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 350px;
+            width: 90%;
+        }
+
+        /* Title */
+        .title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Logo */
+        .logo {
+            width: 80px;
+            margin: 10px 0;
+        }
+
+        /* QR Code */
+        .qr-code img {
+            width: 160px;
+            height: 160px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        /* Business Link */
+        .link-text {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* Offer Box */
+        .offer-box {
+            border: 2px dashed #555;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+
+        /* Offer Title */
+        .offer-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #444;
+        }
+
+        /* Offer Details */
+        .offer-details {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #d97706;
+            margin-top: 5px;
+        }
+
+        /* Business Name */
+        .business-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #222;
+        }
+
+        /* Thank You Message */
+        .thank-you {
+            font-style: italic;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        /* Description */
+        .description {
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="qr-card">
+        <h2 class="title">FOLLOW US ON</h2>
+        <img src="./assets/logo.png" class="logo" alt="Logo">
+
+        <!-- QR Code -->
+        <div class="qr-code">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/QR_Code_Example.svg/1200px-QR_Code_Example.svg.png"
+                alt="QR Code">
+        </div>
+
+        <p class="link-text">rimark.us/business</p>
+
+        <!-- Discount Offer -->
+        <div class="offer-box">
+            <p class="offer-title">RECEIVE:</p>
+            <p class="offer-details">20% off your next order</p>
+        </div>
+
+        <!-- Business Name -->
+        <p class="business-name">Business Name</p>
+        <p class="thank-you">Thank you!</p>
+
+        <!-- Description -->
+        <p class="description">“Discover the best local spots with real recommendations from friends—plus receive
+            exclusive deals!”</p>
+    </div>
+</body>
+
+</html>

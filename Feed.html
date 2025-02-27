@@ -1,0 +1,998 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rimark Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/search.css" />
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .no-scroll {
+            overflow: hidden;
+            height: 100vh;
+            /* Ensure the page doesn't scroll vertically */
+        }
+    </style>
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 70px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: -40px;
+            /* Tooltip above the icon */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 12px;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="antialiased ">
+    <div class="  hidden  bg-white px-14  w-full md:flex justify-between items-center py-4">
+        <a href="./Feed.html">
+            <img src="./assets//logo.png" class="  h-full w-24 mb-1" alt="">
+        </a>
+        <div class="flex relative items-center space-x-8">
+            <a href="./Rewards.html" class="  hover:text-[#4E8CFF] text-gray-700 text-[18px]">Rewards</a>
+            <a href="/Search.html" class="tooltip">
+
+                <svg width="36" height="36" viewBox="0 0 37 38" class="   cursor-pointer" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18.5" cy="19" r="18.5" fill="black" />
+                    <path
+                        d="M23.75 17.875C23.75 19.5658 23.0784 21.1873 21.8828 22.3828C20.6873 23.5784 19.0658 24.25 17.375 24.25C15.6842 24.25 14.0627 23.5784 12.8672 22.3828C11.6716 21.1873 11 19.5658 11 17.875C11 16.1842 11.6716 14.5627 12.8672 13.3672C14.0627 12.1716 15.6842 11.5 17.375 11.5C19.0658 11.5 20.6873 12.1716 21.8828 13.3672C23.0784 14.5627 23.75 16.1842 23.75 17.875Z"
+                        fill="black" />
+                    <path
+                        d="M25.25 25.75L21.8855 22.3795M23.75 17.875C23.75 19.5658 23.0784 21.1873 21.8828 22.3828C20.6873 23.5784 19.0658 24.25 17.375 24.25C15.6842 24.25 14.0627 23.5784 12.8672 22.3828C11.6716 21.1873 11 19.5658 11 17.875C11 16.1842 11.6716 14.5627 12.8672 13.3672C14.0627 12.1716 15.6842 11.5 17.375 11.5C19.0658 11.5 20.6873 12.1716 21.8828 13.3672C23.0784 14.5627 23.75 16.1842 23.75 17.875Z"
+                        stroke="white" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span class="tooltiptext">search</span>
+            </a>
+            <!-- active Notification Icon -->
+            <svg id="inactiveNotification" class="hidden    cursor-pointer" width="40" height="40" viewBox="0 0 40 40"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="19" cy="19" r="19" fill="#1F41BB" />
+                <path
+                    d="M19 9C23.97 9 28 13.043 28 18.031V27H10V18.031C10 13.043 14.03 9 19 9ZM16.5 28H21.5C21.5 28.663 21.2366 29.2989 20.7678 29.7678C20.2989 30.2366 19.663 30.5 19 30.5C18.337 30.5 17.7011 30.2366 17.2322 29.7678C16.7634 29.2989 16.5 28.663 16.5 28Z"
+                    fill="white" />
+            </svg>
+
+
+            <!-- Inactive Notification Icon -->
+            <svg id="activeNotification" class="cursor-pointer" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="19" cy="19" r="19" fill="black" />
+                <path
+                    d="M19 9C23.97 9 28 13.043 28 18.031V27H10V18.031C10 13.043 14.03 9 19 9ZM16.5 28H21.5C21.5 28.663 21.2366 29.2989 20.7678 29.7678C20.2989 30.2366 19.663 30.5 19 30.5C18.337 30.5 17.7011 30.2366 17.2322 29.7678C16.7634 29.2989 16.5 28.663 16.5 28Z"
+                    fill="white" />
+            </svg>
+
+
+            <div id="notificationDropdown"
+                class="absolute z-[300] select-none hidden pb-16 right-14 mt-2 top-14 w-72 bg-white border rounded-[8px] shadow-lg">
+                <!-- Header -->
+                <div class="px-4 pt-3 pb-5 gap-2 flex items-center  ">
+                    <h1 class="text-[14px] font-[500]">Your Notification</h1>
+                    <span id="notificationCount"
+                        class="bg-[#1F41BB] rounded-full w-6 h-6 text-center flex items-center justify-center text-white text-[12px]">
+                        0
+                    </span>
+                </div>
+
+                <!-- Dynamic Notifications -->
+                <div id="desktopNotificationContainer" class="flex   flex-col">
+                    <!-- Notifications will be rendered here -->
+                </div>
+            </div>
+            <a href="./Profile.html" class="tooltip">
+                <img src="./assets//profileico.png" class=" select-none w-9 h-auto object-cover" alt="">
+                <span class="tooltiptext">Profile</span>
+            </a>
+            <a href="/Onboarding.html" class="tooltip">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="19" cy="19" r="19" fill="black" />
+                    <path
+                        d="M19.24 9C22.385 9 25.297 10.395 27.228 12.744C27.283 12.8106 27.3241 12.8876 27.3487 12.9703C27.3734 13.0531 27.3811 13.14 27.3715 13.2258C27.3619 13.3117 27.3351 13.3947 27.2928 13.47C27.2504 13.5452 27.1934 13.6112 27.125 13.664C26.9858 13.7731 26.8096 13.8237 26.6337 13.805C26.4579 13.7863 26.2962 13.6999 26.183 13.564C25.3387 12.5412 24.2778 11.7185 23.077 11.1555C21.8761 10.5924 20.5653 10.303 19.239 10.308C14.324 10.308 10.339 14.2 10.339 19C10.339 23.8 14.324 27.692 19.239 27.692C20.5844 27.6973 21.9137 27.3995 23.1283 26.8208C24.3429 26.2421 25.4116 25.3972 26.255 24.349C26.3663 24.2117 26.5266 24.1231 26.7021 24.102C26.8776 24.0809 27.0544 24.129 27.195 24.236C27.264 24.2879 27.3218 24.3531 27.3651 24.4277C27.4084 24.5024 27.4362 24.585 27.4469 24.6706C27.4577 24.7563 27.4511 24.8432 27.4275 24.9262C27.404 25.0093 27.364 25.0867 27.31 25.154C25.382 27.564 22.431 29 19.24 29C13.583 29 9 24.523 9 19C9 13.477 13.584 9 19.24 9ZM26.098 16.16L28.804 18.867C29.066 19.128 29.071 19.547 28.816 19.803L26.172 22.446C26.11 22.507 26.0366 22.5552 25.9559 22.5877C25.8752 22.6203 25.7889 22.6366 25.7019 22.6356C25.6149 22.6347 25.529 22.6166 25.449 22.5823C25.3691 22.5481 25.2967 22.4983 25.236 22.436C25.1734 22.3754 25.1235 22.303 25.0891 22.223C25.0546 22.1429 25.0364 22.0569 25.0354 21.9698C25.0343 21.8827 25.0506 21.7962 25.0831 21.7154C25.1157 21.6346 25.1639 21.5611 25.225 21.499L26.772 19.952H16.462C16.375 19.9533 16.2886 19.9374 16.2077 19.9052C16.1269 19.873 16.0532 19.8252 15.991 19.7644C15.9287 19.7036 15.8791 19.6311 15.8449 19.5511C15.8108 19.471 15.7928 19.385 15.792 19.298C15.792 18.936 16.092 18.643 16.462 18.643H26.731L25.173 17.085C25.1106 17.0244 25.0608 16.952 25.0264 16.8721C24.9921 16.7922 24.9739 16.7063 24.9729 16.6193C24.9718 16.5323 24.988 16.446 25.0205 16.3653C25.0529 16.2846 25.101 16.2111 25.162 16.149C25.2241 16.088 25.2976 16.0399 25.3783 16.0075C25.459 15.975 25.5453 15.9588 25.6323 15.9599C25.7193 15.9609 25.8052 15.9791 25.8851 16.0134C25.965 16.0478 26.0374 16.0976 26.098 16.16Z"
+                        fill="white" />
+                </svg>
+                <span class="tooltiptext">logout</span>
+            </a>
+        </div>
+    </div>
+    <div class="h-auto pb-20 md:block hidden  w-full bg-cover bg-bottom relative transition-all duration-1000 ease-in-out"
+        id="background-swiper">
+        <swiper-container class="mySwiper absolute z-[-1]" space-between="0" loop="true" centered-slides="true"
+            autoplay-delay="2500" autoplay-disable-on-interaction="false">
+            <swiper-slide>
+                <img src="./assets/feed.png" class="w-full h-[500px] object-cover" alt="">
+            </swiper-slide>
+            <swiper-slide>
+                <img src="./assets/feed2.png" class="w-full h-[500px] object-cover" alt="">
+            </swiper-slide>
+            <swiper-slide>
+                <img src="./assets/feed3.png" class="w-full h-[500px] object-cover" alt="">
+            </swiper-slide>
+
+        </swiper-container>
+        <div class="container mx-auto p-8">
+            <div
+                class="border border-white/15 py-8 max-w-4xl mx-auto bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 p-6 rounded-[16px] shadow-xl mt-20">
+                <h2 class="text-white text-[16px] font-semibold mb-4">Discover the new Places around you</h2>
+                <div class="flex gap-4">
+                    <div class="w-full flex">
+
+                        <div
+                            class="container2 w-[60%]  -pr-20 -pr-4 flex-grow h-fit  rounded-l-[41px] outline-none bg-white">
+                            <div class=" w-[60%]">
+                                <label for="inputField" class=" -ml-14 anim-label">
+                                    Search by <span class="placeholder-text"></span>
+                                </label>
+                                <input type="text" id="inputField"
+                                    class="styled-input  -ml-20 -pr-6 flex-grow h-fit p-2  rounded-l-[41px] outline-none bg-white h-fit  !w-[400px] outline-none" />
+                            </div>
+                        </div>
+                        <div
+                            class="container2 w-[40%]  -pr-20 -pr-4 flex-grow h-fit  rounded-r-[41px] outline-none bg-white">
+                            <div class=" w-[60%]">
+                                <label for="inputField" class=" -ml-14 anim-label">
+                                    City
+                                </label>
+                                <input type="text" id="inputField"
+                                    class="styled-input !border-l !border-[#909090] -ml-20 -pr-6 flex-grow h-fit p-2  rounded-r-[41px] outline-none bg-white h-fit  !w-[400px] outline-none" />
+                            </div>
+                        </div>
+                        <!-- <input type="text" class="flex-grow text-[18px] w-[40%] border-l p-2 h-fit rounded-r-[41px] outline-none"
+                            placeholder="City"> -->
+                    </div>
+                    <span class="border border-[1px] top-4 absolute h-[80%] right-36"></span>
+                    <button
+                        class="bg-[#1F41BB] text-white rounded-[41px] px-8 font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vertical Dots using Images -->
+        <div class="absolute top-1/2 right-4 flex flex-col items-center gap-2 -translate-y-1/2">
+            <img src="./assets/inactive-dot.png" alt="Inactive Dot" class="dot w-5 h-5 transition-all duration-500"
+                id="dot-0">
+            <img src="./assets/inactive-dot.png" alt="Inactive Dot" class="dot w-5 h-5 transition-all duration-500"
+                id="dot-1">
+            <img src="./assets/inactive-dot.png" alt="Inactive Dot" class="dot w-5 h-5 transition-all duration-500"
+                id="dot-2">
+        </div>
+    </div>
+
+    <!-- Mobile Navbar -->
+    <div class=" bg-[#1F41BB] z-[600]  py-4 flex flex-col  h-fit  gap-5 md:hidden block">
+        <div class=" px-4 items-center justify-between flex">
+            <button id="hamburger-menu" class="focus:outline-none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M2.25 5C2.25 4.586 2.586 4.25 3 4.25H16C16.414 4.25 16.75 4.586 16.75 5C16.75 5.414 16.414 5.75 16 5.75H3C2.586 5.75 2.25 5.414 2.25 5ZM21 11.25H3C2.586 11.25 2.25 11.586 2.25 12C2.25 12.414 2.586 12.75 3 12.75H21C21.414 12.75 21.75 12.414 21.75 12C21.75 11.586 21.414 11.25 21 11.25ZM12 18.25H3C2.586 18.25 2.25 18.586 2.25 19C2.25 19.414 2.586 19.75 3 19.75H12C12.414 19.75 12.75 19.414 12.75 19C12.75 18.586 12.414 18.25 12 18.25Z"
+                        fill="white" />
+                </svg>
+            </button>
+            <a href="./Feed.html">
+                <img src="./assets//logo-white.png" class=" w-20 h-auto" alt="">
+            </a>
+
+
+            <div class="flex gap-2 items-center">
+                <!-- Active Notification Icon -->
+                <svg width="27" id="activeNotification2" height="27" viewBox="0 0 27 27" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" class="cursor-pointer" onclick="toggleNotification()">
+                    <path
+                        d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
+                        fill="white" />
+                </svg>
+
+                <!-- Inactive Notification Icon -->
+                <svg id="inactiveNotification2" class="cursor-pointer  hidden " width="27" height="27"
+                    viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="toggleNotification()">
+                    <path
+                        d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
+                        fill="white" />
+                </svg>
+
+                <!-- Profile Link -->
+                <a href="./Profile.html">
+                    <img src="./assets/profileico.png" class="w-8 h-auto" alt="">
+                </a>
+            </div>
+
+
+        </div>
+
+        <div class=" px-4 ">
+            <!-- First Input Container -->
+            <div id="first-container"
+                class="w-full text-gray-500 shadow flex justify-between px-4 py-2 rounded-[10px] outline-none bg-white relative">
+                <input id="first-input" type="text" class="w-full flex justify-between outline-none bg-white"
+                    placeholder="Search Places..." />
+                <svg id="first-svg" class="transition-opacity duration-300" width="31" height="31" viewBox="0 0 31 31"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15.5" cy="15.5" r="15.5" fill="#1F41BB" />
+                    <path d="M19.898 14.558a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0" fill="#1F41BB" />
+                    <path
+                        d="m21.155 21.156-2.819-2.824m1.562-3.774a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0Z"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+
+            <!-- Second Input Container and Search Button -->
+            <div id="second-container"
+                class="w-full text-gray-500 hidden shadow flex justify-between px-4 py-3 mt-2 rounded-[10px] outline-none bg-white transform scale-0 opacity-0 transition-transform transition-opacity duration-300">
+                <input type="text" id="second-input" class="w-full flex justify-between outline-none bg-white"
+                    placeholder="City or zip code" />
+            </div>
+            <button id="search-button" class=" mt-2 w-full px-4 py-2 hidden bg-black text-white rounded-[10px] transform 
+        scale-0 opacity-0 transition-transform transition-opacity duration-300">
+                Search
+            </button>
+        </div>
+        <!-- mobile notification-->
+        <div id="notificationDropdown2"
+            class="z-[300] select-none md:block hidden overflow-scroll !p-0 -mb-10 right-0 -mt-2 top-40 w-screen bg-white border shadow-lg">
+            <!-- Header -->
+            <div class="px-4 pt-3 pb-5 gap-2 flex items-center">
+                <img src="./assets/Left.png" id="inactiveNotification2"
+                    class="mt-1.5 w-10 left-4 md:left-10 md:top-10 cursor-pointer h-auto" alt=""
+                    onclick="toggleNotification()">
+            </div>
+
+            <!-- Dynamic Notifications -->
+            <div id="notificationContainer" class="flex flex-col h-screen">
+                <!-- Notifications will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="side-nav"
+        class="fixed z-[500] top-0 left-0 h-full w-3/4 bg-[#1F41BB] transform -translate-x-full transition-transform duration-300">
+        <div class="p-4 text-white">
+            <h2 class="text-lg font-bold">Navigation</h2>
+            <ul class="mt-4 space-y-3">
+                <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                <li><a href="./Rewards.html" class="hover:text-gray-300">Rewards</a></li>
+                <li><a href="./Company.html" class="hover:text-gray-300">Company</a></li>
+                <li><a href="./Feed.html" class="hover:text-gray-300">Feed</a></li>
+                <li><a href="./Search.html" class="hover:text-gray-300">Search</a></li>
+                <li><a href="./Profile.html" class="hover:text-gray-300">Profile</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="flex  justify-center py-6 pb-20 md:py-20   bg-white  gap-8   items-start ">
+        <div class=" items-center flex flex-col md:gap-8   relative">
+
+            <div class="bg-white  -space-x-2   rounded-[16px] overflow-hidden flex  md:scale-100 scale-90 w-full md:max-w-3xl"
+                style="box-shadow: 0px 4px 40px 0px #00000014;">
+                <div class=" flex flex-col  items-start my-2  scale-90 md:w-full w-[40%] h-full gap-2">
+                    <img src="./assets/recfeed2.png" alt="Sanjai Kumar"
+                        class="responsive-image w-full md:block hidden h-52 bg-gray-500 rounded-2xl overflow-hidden object-cover">
+
+
+                    <img src="./assets//Feedmob1.png" alt="Sanjai Kumar"
+                        class="w-full md:hidden block rounded-[12px] h-[220px] object-top	 object-cover">
+                    <span class=" hidden md:block text-[#424242]/50 text-[10px]">24 - 09 - 2024 </span>
+                </div>
+                <div class="px-6 py-4 md:block flex flex-col md:w-full  w-[60%]  md:mt-0      md:gap-0 ">
+                    <h2
+                        class="truncate-text md:text-[30px] text-[18px] font-semibold text-black md:text-[#284B80] w-full overflow-hidden text-ellipsis whitespace-nowrap">
+                        User One recommended The Pie Guy Pizza</h2>
+
+
+
+                    <div
+                        class="flex md:justify-between md:gap-0 gap-6 md:bg-[#F7F9FF] md:px-12 py-1   rounded-[8px] items-center mt-4">
+                        <div class="text-gray-600 md:text-center">
+                            <p class="md:text-[16px]  text-[12px] text-[#8D98AA] font-[500]">Rimarks</p>
+                            <p class="md:text-[28px]  text-[18px] text-[#284B80]   font-[500">176</p>
+                        </div>
+                        <div class="text-gray-600  md:text-center">
+                            <p class="md:text-[16px]  text-[12px] text-[#8D98AA]">Followers</p>
+                            <p class="md:text-[28px] text-[18px] text-[#284B80]   font-[500]">373</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full items-center mt-4 gap-4">
+                        <button
+                            class="bg-black  text-sm  text-white px-4 py-2 rounded-md hover:bg-[#909090] hover:text-white w-full transition-colors duration-300">Follow</button>
+                        <button
+                            class="text-black text-sm  px-4 py-2 rounded-md hover:bg-gray-100 border-black border w-full transition-colors duration-300">view</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white   -space-x-2   rounded-[16px] overflow-hidden flex  md:scale-100 scale-90 w-full md:max-w-3xl"
+                style="box-shadow: 0px 4px 40px 0px #00000014;">
+                <div class=" flex flex-col  items-start my-2  scale-90 md:w-full w-[40%] h-full gap-2">
+                    <img src="./assets/demopic.jpg" alt="Sanjai Kumar"
+                        class="responsive-image w-[100%] md:block hidden h-52 object-top bg-gray-500 rounded-2xl overflow-hidden object-cover">
+                    <img src="./assets//editphoto.jpeg" alt="Sanjai Kumar"
+                        class="w-full md:hidden rounded-[12px] block h-[220px] object-top	 object-cover">
+                    <span class=" hidden md:block text-[#424242]/50 text-[10px]">24 - 09 - 2024 </span>
+                </div>
+                <div class="px-6 md:!mr-10 py-4 md:block flex flex-col md:w-full       w-[60%]  md:mt-0      md:gap-0 ">
+                    <h2
+                        class="truncate-text md:text-[30px] text-[18px] font-semibold text-black md:text-[#284B80] w-full overflow-hidden text-ellipsis whitespace-nowrap ">
+                        Sanjai Kumar Follows
+                    </h2>
+
+                    <h3>
+                        JK Hotel Likes your Review
+                    </h3>
+                    <div class="flex justify-between w-full items-center mt-20 gap-4">
+                        <button
+                            class="bg-black  md:text-sm text-xs text-white px-4 py-2 rounded-md hover:bg-[#909090] hover:text-white w-full transition-colors duration-300">Follow</button>
+                        <button
+                            class="text-black md:text-sm text-xs px-4 py-2 rounded-md hover:bg-gray-100 border-black border w-full transition-colors duration-300">view</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white  -space-x-2   rounded-[16px] overflow-hidden flex  md:scale-100 scale-90 w-full md:max-w-3xl"
+                style="box-shadow: 0px 4px 40px 0px #00000014;">
+                <div class=" flex flex-col  items-start my-2  scale-90 md:w-full w-[40%] h-full gap-2">
+                    <img src="./assets/Recfeed3.png" alt="Sanjai Kumar"
+                        class="responsive-image w-full md:block hidden h-52 bg-gray-500 rounded-2xl overflow-hidden object-cover">
+                    <img src="./assets//Feedmob1.png" alt="Sanjai Kumar"
+                        class="w-full md:hidden block rounded-[12px] h-[220px] object-top	object-cover">
+                    <span class=" hidden md:block text-[#424242]/50 text-[10px]">24 - 09 - 2024 </span>
+                </div>
+                <div class="px-6 py-4 md:block flex flex-col md:w-full  w-[60%]  md:mt-0      md:gap-0 ">
+                    <h2
+                        class="truncate-text md:text-[30px] text-[18px] font-semibold text-black md:text-[#284B80] w-full overflow-hidden text-ellipsis whitespace-nowrap">
+                        User One recommended The Pie Guy Pizza</h2>
+
+                    <div
+                        class="flex md:justify-between md:gap-0 gap-6 md:bg-[#F7F9FF] md:px-12 py-1   rounded-[8px] items-center mt-4">
+                        <div class="text-gray-600 md:text-center">
+                            <p class="md:text-[16px]  text-[12px] text-[#8D98AA] font-[500]">Rimarks</p>
+                            <p class="md:text-[28px]  text-[18px] text-[#284B80]   font-[500]">176</p>
+                        </div>
+                        <div class="text-gray-600  md:text-center">
+                            <p class="md:text-[16px]  text-[12px] text-[#8D98AA]">Followers</p>
+                            <p class="md:text-[28px] text-[18px] text-[#284B80]   font-[500]">373</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full items-center mt-4 gap-4">
+                        <button
+                            class="bg-black  md:text-sm text-xs text-white px-4 py-2 rounded-md hover:bg-[#909090] hover:text-white w-full transition-colors duration-300">Follow</button>
+                        <button
+                            class="text-black md:text-sm text-xs px-4 py-2 rounded-md hover:bg-gray-100 border-black border w-full transition-colors duration-300">view</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="bg-white rounded-[16px]  -space-x-2  md:-my-10 md:scale-[0.9] scale-90 w-full md:max-w-3xl">
+
+                <div class=" flex flex-col">
+                    <div
+                        class=" shadow-md h-full mt-2 w-full md:!h-80  scale-90   md:relative  md:space-x-0 -space-x-2   items-center    flex rounded-[16px] ">
+                        <div class="relative h-full w-full overflow-hidden  md:w-96 rounded-l-[16px]">
+                            <a href="./Company.html" class=" relative w-full">
+                                <img class="md:h-[100%] md:w-fit w-full    h-[250px] overflow-hidden  object-cover"
+                                    src="./assets//SearchCard1.png" alt="Brown Inc">
+                                <div
+                                    class="bg-[#E20028]  md:hidden text-[11px]  justify-center  h-auto flex items-center absolute  whitespace-nowrap  bottom-0  mt-2.5 w-full font-[600] text-white px-2 py-4  rounded-es-[9px]	 text-center">
+                                    20% OFF ON NEXT ORDER
+    
+                                </div>
+                            </a>
+                        </div>
+                        <div class=" relative w-[60%] md:w-full  h-full  justify-between    flex  flex-col">
+    
+                            <div class="px-6  md:mt-0 -mt-10 flex flex-col justify-between items-start h-full relative   ">
+                                <div>
+    
+                                <a href="./Company.html" >
+                                    <h2 class="md:text-[24px] text-[15px] font-semibold ">Brown Inc</h2>
+                                </a>
+                                <p class="text-[#78909C] text-[10px] md:text-[18px]  font-[500] ">MPM Millenium Wajhuddin Estate, Hotel Grand Himayat Plot No. 3-6-552 to 558 &558/1, opp. Minerva, Himayatnagar, Hyderabad, Telangana 500029, India
+                                </p>
+                                <div class="flex mt-1  items-center space-x-0.5 ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+    
+                                    <p class="text-[#0000008A]/55 pl-2 font-[500] text-xs md:text-[15px]">5.0 (23 review)
+                                    </p>
+                                </div>
+                            </div>
+                                <hr class="   w-[80%] border-[1px]  border-[#F1F1F1]">
+    
+                                <div class="md:pb-14  px-0  ">
+                                    <h1 class=" text-[13px] md:text-[14px] font-medium">Availability</h1>
+                                    <p class="text-[#607D8A] font-[600] text-[13px] md:text-[18px] tracking-wide mb-4">Open
+                                        10:00 am - close
+                                        10:00pm</p>
+                                </div>
+                                <div
+                                class="       px-6 w-full  md:hidden   flex absolute left-0 -bottom-8 text-left  w-full items-center justify-start gap-2    ">
+                                <img src="./assets//SearchPer.png" class=" w-6" alt="">
+                                <h1 id="" class="recText text-[#1F41BB] text-[11px] font-semibold">
+                                    Recommended by Fedric ,bob, mill, makaram and 12 more
+                                </h1>
+                            </div>
+                            </div>
+    
+                           
+                            
+                            <a href="./Company.html" class=" absolute w-full  bottom-0">
+                                <div
+                                    class="bg-[#FC3903] hidden md:block   mt-3 w-full font-[600] text-white px-4 py-4  rounded-ee-[9px]	 text-center">
+                                    20% OFF ON NEXT ORDER
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class=" px-10  -mt-3 hidden md:flex items-center justify-start">
+                        <img src="./assets/Image-60.png"  class="w-8  h-auto"> 
+                        <p class=" text-[#1F41BB]  text-[14px] ml-2  font-[600]">
+                            Recommended by 1 local resident in Community
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bg-white  -space-x-2   rounded-[16px] overflow-hidden flex  md:scale-100 scale-90 w-full md:max-w-3xl"
+                style="box-shadow: 0px 4px 40px 0px #00000014;">
+                <div class=" flex flex-col  items-start my-2  scale-90 md:w-full w-[40%] h-full gap-2">
+                    <img src="./assets/demopic.jpg" alt="Sanjai Kumar"
+                        class="responsive-image w-full md:block hidden h-52 bg-gray-500 rounded-2xl overflow-hidden object-cover">
+                    <img src="./assets//editphoto.jpeg" alt="Sanjai Kumar"
+                        class="w-full md:hidden block rounded-[12px] h-[220px] object-top object-cover">
+                    <span class=" hidden md:block text-[#424242]/50 text-[10px]">24 - 09 - 2024 </span>
+                </div>
+                <div class="px-6 py-4 md:block flex flex-col md:w-full  w-[60%]  md:mt-0      md:gap-0 ">
+                    <h2
+                        class="md:text-[30px] text-[18px] font-semibold   md:whitespace-nowrap whitespace-wrap text-black md:text-[#284B80]">
+                        JK Hotel Likes your Review
+                    </h2>
+                    <div
+                        class="flex md:justify-between md:gap-0 gap-6 md:bg-[#F7F9FF] md:px-12 py-1   rounded-[8px] items-center mt-4">
+                        <div class="text-gray-600 md:text-center">
+                            <p class="md:text-[16px]  text-[12px] text-[#8D98AA] font-[500]">Rimarks</p>
+                            <p class="md:text-[28px]  text-[18px] text-[#284B80]   font-[500">176</p>
+                        </div>
+                        <div class="text-gray-600  md:text-center">
+                            <p class="md:text-[16px]  text-[12px] text-[#8D98AA]">Followers</p>
+                            <p class="md:text-[28px] text-[18px] text-[#284B80]   font-[500]">373</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full items-center mt-4 gap-4">
+                        <button
+                            class="bg-black  md:text-sm text-xs text-white px-4 py-2 rounded-md hover:bg-[#909090] hover:text-white w-full transition-colors duration-300">Follow</button>
+                        <button
+                            class="text-black md:text-sm text-xs px-4 py-2 rounded-md hover:bg-gray-100 border-black border w-full transition-colors duration-300">view</button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="text-center  md:mt-10 pt-40  absolute  flex items-center justify-center bottom-0 left-0 w-full md:w-[110%] h-1/4 bg-gradient-to-t from-white to-white/10 ml-">
+                <!-- <div class="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-white to-transparent"></div> -->
+
+                <a href="#"
+                    class=" bg-gray-200 rounded-full  px-4 py-1 hover:text-indigo-800  text-gray-600 mt-40 md:mt-60 ">View
+                    more</a>
+            </div>
+        </div>
+
+        <div class=" flex flex-col hidden md:block gap-4 ">
+            <div class=" max-h-6xl bg-white   rounded-[16px] overflow-hidden flex flex-col w-72  h-80"
+                style="box-shadow: 0px 4px 40px 0px #00000014;">
+                <div class=" text-[14px] flex w-full">
+                    <!-- <button class=" text-[#1F41BB] bg-[#F6F5F5]  font-[500] py-4 px-6  w-full"
+                        style="box-shadow: 0px 4px 4px 0px #1F41BB17;">
+                        My Rimark</button> -->
+                    <button class=" text-[#1F41BB] font-bold bg-white hover:bg-[#F6F5F5] font-[500] w-full py-4 px-6">My
+                        Freinds</button>
+                </div>
+                <div class=" px-6 flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div>
+                            <img src="./assets/demopic.jpg" alt="Sanjai" class="w-10 h-10 rounded-full">
+                        </div>
+                        <div class=" text-start">
+                            <p class="text-[14px] font-[500]">@Sanjai</p>
+                            <p class="text-[12px] text-[#8D98AA]">Follows you</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div>
+                            <img src="./assets/demopic.jpg" alt="Sanjai" class="w-10 h-10 rounded-full">
+                        </div>
+                        <div class=" text-start">
+                            <p class="text-[14px] font-[500]">@Sanjai</p>
+                            <p class="text-[12px] text-[#8D98AA]">Follows you</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div>
+                            <img src="./assets/demopic.jpg" alt="Sanjai" class="w-10 h-10 rounded-full">
+                        </div>
+                        <div class=" text-start">
+                            <p class="text-[14px] font-[500]">@Sanjai</p>
+                            <p class="text-[12px] text-[#8D98AA]">Follows you</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" bg-white   rounded-[16px] overflow-hidden text-center pt-4 pb-14"
+                style="box-shadow: 0px 4px 40px 0px #00000014;">
+                <h1 class=" text-[#1F41BB] text-[14px] font-[600]">My Rewards</h1>
+                <h1 class=" font-[700] text-[50px]">223</h1>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Testimonials Wrapper -->
+    <section class="pt-12 bg-white hidden md:block px-20">
+        <div class="container mx-auto px-24    space-y-[77px]  ">
+            <!-- Heading -->
+            <div class="  text-left">
+                <h3 class="text-[40px] font-bold text-[#1E3240] tracking-wide  ">Top Rimarks</h3>
+                <div class=" flex items-center justify-start gap-2  ">
+                    <h2 class="text-[18px] font-normal text-[#BDBDBD] ">Turpis facilisis tempor pulvinar in lobortis
+                        ornare magna.</h2>
+
+                </div>
+            </div>
+
+
+            <div class="relative ">
+
+                <div
+                    class="flex space-x-[24px]    bg-gray-50/0  testimonial-scroll-container  overflow-x-auto scrollbar-hide -mx-6 h-full px-6 snap-x">
+                    <div
+                        class="relative min-w-fit shadow-xl h-fit  cursor-pointer   transition-all   flex items-center justify-center  rounded-2xl  overflow-hidden">
+                        <div class="bg-white rounded-[20px]  overflow-hidden shadow-xl p-3  w-[20rem]  "
+                            style="box-shadow: 0px 4px 40px 0px #00000014;">
+                            <!-- Image placeholder for card 1 -->
+                            <img src="../assets//Rectangle 1763.png" alt="Placeholder image of a forest landscape"
+                                class="w-full  rounded-[16px]  h-48 overflow-hidden object-cover">
+                            <div class=" px- py-4">
+                                <h3 class=" text-[#284B80] font-bold text-[22px] mb-2">Qui optio quod explicabo. Ea
+                                    ipsum soluta
+                                    et assumenda.</h3>
+                                <div class="mb-6 gap-4 mt-6 text-gray-700 flex">
+                                    <img src="../assets//Image-60.png" class=" w-14 h-full" alt="">
+                                    <div>
+                                        <p class=" text-[20px] text-[#284B80]">Ajay</p>
+                                        <p class=" text-[#8D98AA] text-[16px] whitespace-nowrap">Smoothie maker of
+                                            the year</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6 mt-4 items-center justify-start text-gray-800">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6425 20.7833 11.8195 20.8327 12 20.8327C12.1805 20.8327 12.3575 20.7833 12.512 20.69C21.126 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                            stroke="#B21C1C" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.2222 0V4.8C4.44444 6 1.11111 12 0 18C2.77778 13.8 6.66667 11.88 12.2222 11.88V16.8L20 8.4L12.2222 0ZM14.4444 5.796L16.8556 8.4L14.4444 11.004V9.48H12.2222C9.92222 9.48 7.85556 9.936 5.93333 10.62C7.48889 8.952 9.48889 7.644 12.5333 7.2L14.4444 6.876V5.796Z"
+                                            fill="#9F9F9F" />
+                                    </svg>
+
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.0508 0H3.32422C2.82422 0 2.41406 0.40625 2.41406 0.910156V20L9.6875 12.7266L16.9609 20V0.910156C16.9609 0.40625 16.5547 0 16.0508 0Z"
+                                            fill="#9F9F9F" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative  min-w-fit shadow-xl h-fit   cursor-pointer    transition-all   flex items-center justify-center   rounded-2xl  overflow-hidden">
+                        <div class="bg-white rounded-[20px] overflow-hidden shadow-xl p-3 h-fit  w-[20rem]"
+                            style="box-shadow: 0px 4px 40px 0px #00000014;">
+                            <!-- Image placeholder for card 1 -->
+                            <img src="../assets/Rec2.png" alt="Placeholder image of a forest landscape"
+                                class="w-full  rounded-[16px]  h-48 overflow-hidden object-cover">
+                            <div class=" px- py-4">
+                                <h3 class=" text-[#284B80] font-bold text-[22px] mb-2">Qui optio quod explicabo. Ea
+                                    ipsum soluta
+                                    et assumenda.</h3>
+                                <div class="mb-6 gap-4 mt-6 text-gray-700 flex">
+                                    <img src="../assets//Image-60.png" class=" w-14 h-full" alt="">
+                                    <div>
+                                        <p class=" text-[20px] text-[#284B80]">Ajay</p>
+                                        <p class=" text-[#8D98AA] text-[16px] whitespace-nowrap">Smoothie maker of
+                                            the year</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6 mt-4 items-center justify-start text-gray-800">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6425 20.7833 11.8195 20.8327 12 20.8327C12.1805 20.8327 12.3575 20.7833 12.512 20.69C21.126 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                            stroke="#B21C1C" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.2222 0V4.8C4.44444 6 1.11111 12 0 18C2.77778 13.8 6.66667 11.88 12.2222 11.88V16.8L20 8.4L12.2222 0ZM14.4444 5.796L16.8556 8.4L14.4444 11.004V9.48H12.2222C9.92222 9.48 7.85556 9.936 5.93333 10.62C7.48889 8.952 9.48889 7.644 12.5333 7.2L14.4444 6.876V5.796Z"
+                                            fill="#9F9F9F" />
+                                    </svg>
+
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.0508 0H3.32422C2.82422 0 2.41406 0.40625 2.41406 0.910156V20L9.6875 12.7266L16.9609 20V0.910156C16.9609 0.40625 16.5547 0 16.0508 0Z"
+                                            fill="#9F9F9F" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative min-w-fit  shadow-xl h-fit   cursor-pointer   transition-all   flex items-center justify-center  rounded-2xl  overflow-hidden">
+                        <div class="bg-white rounded-[20px] overflow-hidden   p-3  w-[20rem] "
+                            style="box-shadow: 0px 4px 40px 0px #00000014;">
+                            <!-- Image placeholder for card 1 -->
+                            <img src="../assets/Rec3.png" alt="Placeholder image of a forest landscape"
+                                class="w-full  rounded-[16px]  h-48 overflow-hidden object-cover">
+                            <div class=" px- py-4">
+                                <h3 class=" text-[#284B80] font-bold text-[22px] mb-2">Qui optio quod explicabo. Ea
+                                    ipsum soluta
+                                    et assumenda.</h3>
+                                <div class="mb-6 gap-4 mt-6 text-gray-700 flex">
+                                    <img src="../assets//Image-60.png" class=" w-14 h-full" alt="">
+                                    <div>
+                                        <p class=" text-[20px] text-[#284B80]">Ajay</p>
+                                        <p class=" text-[#8D98AA] text-[16px] whitespace-nowrap">Smoothie maker of
+                                            the year</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-6 mt-4 items-center justify-start text-gray-800">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7 3C4.239 3 2 5.216 2 7.95C2 10.157 2.875 15.395 11.488 20.69C11.6425 20.7833 11.8195 20.8327 12 20.8327C12.1805 20.8327 12.3575 20.7833 12.512 20.69C21.126 15.395 22 10.157 22 7.95C22 5.216 19.761 3 17 3C14.239 3 12 6 12 6C12 6 9.761 3 7 3Z"
+                                            stroke="#B21C1C" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.2222 0V4.8C4.44444 6 1.11111 12 0 18C2.77778 13.8 6.66667 11.88 12.2222 11.88V16.8L20 8.4L12.2222 0ZM14.4444 5.796L16.8556 8.4L14.4444 11.004V9.48H12.2222C9.92222 9.48 7.85556 9.936 5.93333 10.62C7.48889 8.952 9.48889 7.644 12.5333 7.2L14.4444 6.876V5.796Z"
+                                            fill="#9F9F9F" />
+                                    </svg>
+
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.0508 0H3.32422C2.82422 0 2.41406 0.40625 2.41406 0.910156V20L9.6875 12.7266L16.9609 20V0.910156C16.9609 0.40625 16.5547 0 16.0508 0Z"
+                                            fill="#9F9F9F" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer Wrapper -->
+    <div class=" md:px-20 relative w-full bg-cover bg-center md:pb-20 pb-8 md:mt-0  pt-10"
+        style="background-image: url('../assets//footer.png');">
+        <!-- Overlay for better text visibility -->
+        <!-- <div class="absolute inset-0  "></div> -->
+
+        <!-- Footer Content -->
+        <div
+            class="relative hidden  max-w-7xl mx-auto py-10 px-6 text-white md:flex flex-col md:flex-row md:justify-between gap-8">
+
+            <!-- Brand and Copyright -->
+            <div class="flex flex-col items-start justify-center">
+                <img src="../assets//logo-white.png" class=" w-24" alt="">
+                <p class="text-sm font-semibold text-[#F5F5F1] mt-4">Copyright © 2022. lorem. All rights <br> reserved.
+                </p>
+            </div>
+
+            <!-- Inside Prohouse -->
+            <div
+                class=" relative whitespace-nowrap flex-col md:flex-row flex w-full justify-between  mr-40 items-start md:w-1/2 gap-8">
+
+                <div class=" ml-20">
+                    <h3 class="font-semibold text-lg  mb-4">Inside Prohouse</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Terms and Conditions</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Cancellation Policy</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Guest Rules</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Reservation Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- About -->
+                <div class=" ml-10">
+                    <h3 class="font-semibold  text-lg mb-4">About</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Our Story</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Contact with indie</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Blog</a></li>
+                        <li><a href="#" class="hover:text-gray-100">F.A.Q</a></li>
+                    </ul>
+                </div>
+
+                <!-- Best Homies -->
+                <div class=" ml-10">
+                    <h3 class="font-semibold text-lg mb-4">Best Homies</h3>
+                    <ul class="space-y-4 text-[#909090]  text-[14px]">
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                        <li><a href="#" class="hover:text-gray-100">Sample</a></li>
+                    </ul>
+                </div>
+                <div class="    absolute md:-right-40">
+                    <img src="../assets//Backtotop.png" class="  w-14" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class=" block md:hidden flex flex-col items-center justify-center gap-4">
+            <div>
+                <img src="./assets//logo-white.png" class="mb-5 w-32" alt="">
+            </div>
+            <div class=" mb-2 tracking-wide items-center justify-center flex flex-col gap-3 text-[#5C5F66] text-xs">
+                <h1>Products & Service</h1>
+                <h1>Resources</h1>
+                <h1>Contact</h1>
+                <h1>About</h1>
+            </div>
+            <div class=" mb-4  items-center justify-center flex gap-4">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M24 12.0694C24 5.71811 18.8513 0.569391 12.5 0.569391C6.14872 0.569391 1 5.71811 1 12.0694C1 17.8094 5.20538 22.567 10.7031 23.4297V15.3936H7.7832V12.0694H10.7031V9.5358C10.7031 6.65361 12.42 5.06158 15.0468 5.06158C16.305 5.06158 17.6211 5.28619 17.6211 5.28619V8.11627H16.171C14.7424 8.11627 14.2969 9.00273 14.2969 9.91218V12.0694H17.4863L16.9765 15.3936H14.2969V23.4297C19.7946 22.567 24 17.8094 24 12.0694Z"
+                        fill="#5C5F66" />
+                </svg>
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.00078 11.7445C9.00078 9.95069 10.4555 8.4961 12.2504 8.4961C14.0453 8.4961 15.5008 9.95069 15.5008 11.7445C15.5008 13.5384 14.0453 14.993 12.2504 14.993C10.4555 14.993 9.00078 13.5384 9.00078 11.7445ZM7.24368 11.7445C7.24368 14.5081 9.48518 16.7482 12.2504 16.7482C15.0156 16.7482 17.2571 14.5081 17.2571 11.7445C17.2571 8.98099 15.0156 6.74084 12.2504 6.74084C9.48518 6.74084 7.24368 8.98099 7.24368 11.7445ZM16.2853 6.54244C16.2852 6.77371 16.3537 6.99982 16.4822 7.19217C16.6107 7.38452 16.7934 7.53447 17.0071 7.62306C17.2209 7.71165 17.4561 7.7349 17.6831 7.68987C17.9101 7.64485 18.1186 7.53356 18.2823 7.37009C18.446 7.20662 18.5575 6.99831 18.6028 6.77149C18.648 6.54468 18.6249 6.30955 18.5365 6.09585C18.448 5.88214 18.2981 5.69946 18.1057 5.57089C17.9134 5.44232 17.6872 5.37365 17.4558 5.37356H17.4553C17.1451 5.37371 16.8477 5.49689 16.6283 5.71605C16.4089 5.93521 16.2855 6.23243 16.2853 6.54244ZM8.31123 19.6764C7.36061 19.6331 6.84392 19.4748 6.50055 19.3412C6.04532 19.164 5.72051 18.9531 5.37902 18.6123C5.03752 18.2714 4.82613 17.9471 4.64969 17.4922C4.51583 17.1492 4.35749 16.6326 4.31427 15.6826C4.267 14.6554 4.25757 14.3469 4.25757 11.7446C4.25757 9.14236 4.26778 8.83467 4.31427 7.80666C4.35757 6.8566 4.51708 6.34108 4.64969 5.99706C4.82691 5.5421 5.03799 5.21749 5.37902 4.8762C5.72005 4.53491 6.04454 4.32364 6.50055 4.14731C6.84376 4.01353 7.36061 3.85528 8.31123 3.8121C9.339 3.76485 9.64774 3.75542 12.2504 3.75542C14.853 3.75542 15.1621 3.76563 16.1907 3.8121C17.1413 3.85536 17.6572 4.01478 18.0014 4.14731C18.4566 4.32364 18.7814 4.53537 19.1229 4.8762C19.4644 5.21702 19.675 5.5421 19.8523 5.99706C19.9861 6.34006 20.1445 6.8566 20.1877 7.80666C20.2349 8.83467 20.2444 9.14236 20.2444 11.7446C20.2444 14.3469 20.2349 14.6546 20.1877 15.6826C20.1444 16.6326 19.9853 17.149 19.8523 17.4922C19.675 17.9471 19.464 18.2717 19.1229 18.6123C18.7819 18.9528 18.4566 19.164 18.0014 19.3412C17.6582 19.4749 17.1413 19.6332 16.1907 19.6764C15.1629 19.7236 14.8542 19.733 12.2504 19.733C9.64657 19.733 9.33869 19.7236 8.31123 19.6764ZM8.2305 2.05901C7.19251 2.10625 6.48323 2.27074 5.86381 2.51163C5.22231 2.76039 4.67925 3.09412 4.13658 3.6356C3.59392 4.17709 3.26084 4.72068 3.01193 5.36179C2.7709 5.98123 2.60632 6.6897 2.55905 7.72706C2.511 8.76607 2.5 9.09824 2.5 11.7445C2.5 14.3908 2.511 14.723 2.55905 15.762C2.60632 16.7995 2.7709 17.5079 3.01193 18.1273C3.26084 18.768 3.59399 19.3122 4.13658 19.8535C4.67917 20.3947 5.22231 20.728 5.86381 20.9775C6.4844 21.2183 7.19251 21.3828 8.2305 21.4301C9.27067 21.4773 9.6025 21.4891 12.2504 21.4891C14.8983 21.4891 15.2307 21.4781 16.2703 21.4301C17.3083 21.3828 18.0172 21.2183 18.637 20.9775C19.2781 20.728 19.8215 20.395 20.3642 19.8535C20.9069 19.312 21.2392 18.768 21.4888 18.1273C21.7299 17.5079 21.8952 16.7994 21.9417 15.762C21.989 14.7222 22 14.3908 22 11.7445C22 9.09824 21.989 8.76607 21.9417 7.72706C21.8945 6.68962 21.7299 5.98084 21.4888 5.36179C21.2392 4.72107 20.906 4.17794 20.3642 3.6356C19.8224 3.09326 19.2781 2.76039 18.6378 2.51163C18.0172 2.27074 17.3083 2.10547 16.2711 2.05901C15.2314 2.01177 14.8991 2 12.2512 2C9.60328 2 9.27067 2.01099 8.2305 2.05901Z"
+                        fill="#5C5F66" />
+                </svg>
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M21.9133 5.93098C21.2825 6.20244 20.6194 6.39148 19.9402 6.4934C20.2577 6.43898 20.7249 5.86748 20.9109 5.63616C21.1934 5.28723 21.4087 4.88891 21.5459 4.46142C21.5459 4.42967 21.5776 4.38431 21.5459 4.36163C21.5299 4.3529 21.5119 4.34832 21.4937 4.34832C21.4755 4.34832 21.4576 4.3529 21.4416 4.36163C20.7041 4.76096 19.9193 5.06574 19.1057 5.26877C19.0773 5.27743 19.0471 5.27821 19.0184 5.27102C18.9896 5.26383 18.9633 5.24894 18.9424 5.22795C18.8791 5.15253 18.8109 5.08132 18.7383 5.01477C18.4064 4.71743 18.0299 4.47407 17.6225 4.2936C17.0726 4.06798 16.4786 3.97027 15.8853 4.00785C15.3097 4.0442 14.7478 4.19859 14.2344 4.46142C13.7288 4.73851 13.2845 5.11495 12.9281 5.56812C12.5532 6.03455 12.2825 6.57585 12.1343 7.15561C12.0121 7.70709 11.9983 8.27706 12.0935 8.83382C12.0935 8.92907 12.0935 8.94268 12.0119 8.92907C8.77792 8.45282 6.12455 7.30529 3.95649 4.84241C3.86124 4.73356 3.81135 4.73356 3.73424 4.84241C2.79082 6.27569 3.24892 8.54354 4.4282 9.66385C4.58695 9.81353 4.75023 9.95867 4.92259 10.0947C4.3819 10.0564 3.85441 9.90983 3.37138 9.66385C3.28067 9.60489 3.23078 9.63664 3.22624 9.74549C3.21338 9.89641 3.21338 10.0481 3.22624 10.1991C3.32088 10.9223 3.60591 11.6075 4.05219 12.1844C4.49847 12.7614 5.08998 13.2095 5.76623 13.4829C5.93108 13.5535 6.10286 13.6067 6.27876 13.6416C5.77821 13.7402 5.26484 13.7555 4.7593 13.687C4.65045 13.6643 4.60963 13.7233 4.65045 13.8276C5.31719 15.6419 6.76408 16.1952 7.82543 16.5037C7.97057 16.5263 8.11571 16.5263 8.279 16.5626C8.279 16.5626 8.279 16.5626 8.25178 16.5898C7.93882 17.1613 6.67336 17.5469 6.0928 17.7464C5.03311 18.1271 3.90329 18.2726 2.78175 18.1728C2.60485 18.1456 2.56403 18.1501 2.51868 18.1728C2.47332 18.1955 2.51868 18.2454 2.56857 18.2907C2.79535 18.4404 3.02214 18.5719 3.25799 18.6989C3.96014 19.0819 4.70245 19.3861 5.47141 19.6061C9.45374 20.7037 13.935 19.8964 16.924 16.9255C19.2735 14.5941 20.099 11.3783 20.099 8.158C20.099 8.03554 20.2487 7.96297 20.3349 7.89947C20.9293 7.43633 21.4533 6.88937 21.8906 6.27569C21.9663 6.18421 22.0052 6.06774 21.9995 5.94912C21.9995 5.88109 21.9995 5.89469 21.9133 5.93098Z"
+                        fill="#5C5F66" />
+                </svg>
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3.94117 2C3.14548 2 2.5 2.62583 2.5 3.39684V20.1036C2.5 20.8747 3.14556 21.5 3.94117 21.5H20.5588C21.3548 21.5 22 20.8746 22 20.1034V3.39684C22 2.62583 21.3548 2 20.5588 2H3.94117ZM8.4257 9.54002V18.319H5.50771V9.54002H8.4257ZM8.61804 6.82502C8.61804 7.66748 7.98467 8.34161 6.96732 8.34161L6.9482 8.34153C5.96886 8.34153 5.33572 7.66741 5.33572 6.82495C5.33572 5.96337 5.98798 5.30806 6.98667 5.30806C7.98467 5.30806 8.599 5.96337 8.61804 6.82502ZM12.9586 18.319H10.0409C10.0409 18.319 10.0791 10.3639 10.041 9.54032H12.9588V10.7829C13.3467 10.1849 14.0409 9.3342 15.5887 9.3342C17.5084 9.3342 18.9478 10.589 18.9478 13.2854V18.319H16.0301V13.623C16.0301 12.4427 15.6076 11.6377 14.552 11.6377C13.7457 11.6377 13.2656 12.1806 13.0547 12.705C12.9777 12.8922 12.9586 13.1549 12.9586 13.4169V18.319Z"
+                        fill="#5C5F66" />
+                </svg>
+
+            </div>
+            <svg width="344" height="1" viewBox="0 0 344 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="343" height="1" transform="translate(0.5)" fill="#E6E6E6" />
+            </svg>
+            <div class=" mt-4">
+                <div class=" text-xs mb-4 text-[#5C5F66] items-center justify-center flex gap-4">
+                    <h1>English</h1>
+                    <h1>Privacy</h1>
+                    <h1>Legal</h1>
+                </div>
+                <span class=" text-xs text-[#A6A7AB] ">© 2023 Cadet UI. All Rights Reserved.</span>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".responsive-image").forEach((img) => {
+                function updateImageClass() {
+                    if (img.naturalWidth > img.naturalHeight) {
+                        img.classList.add("object-cover");
+                        img.classList.remove("object-contain");
+                    } else {
+                        img.classList.add("object-contain");
+                        img.classList.remove("object-cover");
+                    }
+                }
+
+                if (img.complete) {
+                    // If image is already loaded
+                    updateImageClass();
+                } else {
+                    img.onload = updateImageClass;
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll(".truncate-text").forEach((element) => {
+            let text = element.innerText;
+            element.innerText = text.length > 20 ? text.substring(0, 20) + "..." : text;
+        });
+
+        document.querySelectorAll(".recText").forEach((element) => {
+            let text = element.innerText;
+            element.innerText = text.length > 20? text.substring(0, 45) + "..." : text;
+        });
+
+const truncateText = (text, length) => 
+    text.length > length ? text.slice(0, length) + "..." : text;
+
+    </script>
+
+    <script>
+        // Swiper Background Image Array
+
+        const backgroundImages = [
+            "./assets/feed.png",        // First image
+            "./assets/feed2.png",       // Second image
+            "./assets/feed3.png"        // Third image
+        ];
+
+        const activeDotImage = "./assets/activedot.png";    // Path to active dot image
+        const inactiveDotImage = "./assets/dot.png"; // Path to inactive dot image
+
+        let currentImageIndex = 0;
+
+        // Get the background container element
+        const backgroundSwiper = document.getElementById("background-swiper");
+
+        // Get dot elements
+        const dots = document.querySelectorAll('.dot');
+
+        // Function to update the background image
+        function updateBackgroundImage() {
+            // Set the current background image
+            // backgroundSwiper.style.backgroundImage = `url('${backgroundImages[currentImageIndex]}')`;
+
+            // Update dot indicators
+            updateDots();
+
+            // Increment index to the next image
+            currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+        }
+
+        // Function to update active dot images
+        function updateDots() {
+            dots.forEach((dot, index) => {
+                if (index === currentImageIndex) {
+                    dot.src = activeDotImage; // Active dot image
+                } else {
+                    dot.src = inactiveDotImage; // Inactive dot image
+                }
+            });
+        }
+
+        // Initial call to set the first image
+        updateBackgroundImage();
+
+        // Automatic image swapping every 2 seconds
+        setInterval(updateBackgroundImage, 5500);
+
+
+    </script>
+
+
+    <script src="./scripts/feed.js">
+
+    </script>
+
+</body>
+
+</html>

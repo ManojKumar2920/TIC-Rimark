@@ -1,0 +1,44 @@
+/* Hide scrollbar for this section only */
+.testimonial-scroll-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE and Edge */
+}
+
+.testimonial-scroll-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+ 
+/* Add custom styles for swiper elements, dots, navigation arrows, etc.
+   e.g., customizing dot appearance or navigation arrow styles */
+
+   .swiper-container {
+    width: 100%; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+  }
+  
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Dot styles (if using existing dots) */
+  .dot {
+    cursor: pointer;
+  }
+  
+  /* Navigation arrows styles (if using navigation arrows) */
+  .swiper-button-next,
+  .swiper-button-prev {
+    /* Customize navigation arrow styles */
+  }
