@@ -250,7 +250,7 @@
         </div>
     </div>
     <img src="./assets/blackclientbann.jpg" style="   background-position: 50% 50%; background-size: cover;" class=" z-[-1]
-      absolute md:h-[60%] h-[40%]  scale-100 w-full object-cover bg-cover bg-bottom" alt="">
+      absolute md:h-[40%] h-[40%]  scale-100 w-full object-cover bg-cover bg-bottom" alt="">
 
     <div class="md:h-fit    md:mt-0 mt-32 md:pl-32 md:pt-28 pb-4 w-full bg-cover bg-bottom relative " id="background-">
         <!-- style="background-image: url(./assets/companypage.jpeg);  background-position: 50% 50%; background-size: cover;"> -->
@@ -258,10 +258,10 @@
 
 
 
-        <div class="container   mx-auto flex   ">
+        <div class="container  -mt-20  mx-auto flex   ">
             <img src="./assets/Left.png" id="goBackButton"
-                class=" absolute w-10 left-4 md:left-10 md:top-10 -top-28 cursor-pointer h-auto" alt="">
-            <div class=" flex items-center md:hidden block -top-28 right-4 absolute text-white rounded-full px-2 py-1 bg-white/15 backdrop-blur gap-1"
+                class=" absolute w-10 left-4 md:left-10 md:top-10 -top-2 cursor-pointer h-auto" alt="">
+            <div class=" flex items-center md:hidden block -top-2 right-4 absolute text-white rounded-full px-2 py-1 bg-white/15 backdrop-blur gap-1"
                 style="border: 1px solid #FFFFFF33">
                 <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -271,7 +271,7 @@
                 <h1 class=" text-[13px]  font-semibold">Share</h1>
             </div>
             <div class="flex md:flex-row    flex-col max-w-7xl  items-center  md:items-end  md:gap-5 ">
-                <div class="  rounded-[8px] bg-white w-[55%]  md:w-1/4    md:border-2 border-[#909090] ">
+                <div class="  rounded-[8px] bg-white w-[55%]  md:w-1/4     border-[#909090] ">
                     <img src="./assets//burgerking.png" class="w-fit px-6 py-2 " alt="">
 
                     <div class="  block bg-[#FC3903]  text-white text-[12px] text-center py-3  rounded-b-[8px]">
@@ -362,94 +362,9 @@
 
 
 
-    <!-- Popup Modal -->
-    <!-- Popup Modal -->
-    <div id="remarkPopup" class="fixed inset-0 bg-black bg-opacity-10 flex items-center justify-center hidden">
-        <div class="bg-white   scale-95 shadow-md rounded-md p-8 max-w-xl w-full relative">
-            <button id="cancelBtn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800"><svg width="24"
-                    height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
-                        fill="black" />
-                </svg>
-            </button>
-            <h2 class="text-[24px] text-center font-bold mb-4">Leave a Rimark for <span class="  text-[#1F41BB]"> Jacobs
-                    Corner</span></h2>
-            <p class="text-gray-600 text-center text-[16px] mb-4">How would you rate jacobs corner </p>
-            <div class="flex justify-center mb-4">
-                <svg width="299" height="33" viewBox="0 0 299 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M17.0916 0L22.3729 10.6994L34.1833 12.4256L25.6374 20.7492L27.6543 32.5083L17.0916 26.9535L6.529 32.5083L8.54581 20.7492L0 12.4256L11.8103 10.6994L17.0916 0Z"
-                        fill="#EAC800" />
-                    <path
-                        d="M83.2752 0L88.5565 10.6994L100.367 12.4256L91.821 20.7492L93.8379 32.5083L83.2752 26.9535L72.7126 32.5083L74.7294 20.7492L66.1836 12.4256L77.9939 10.6994L83.2752 0Z"
-                        fill="#EAC800" />
-                    <path
-                        d="M149.459 0L154.74 10.6994L166.55 12.4256L158.005 20.7492L160.021 32.5083L149.459 26.9535L138.896 32.5083L140.913 20.7492L132.367 12.4256L144.178 10.6994L149.459 0Z"
-                        fill="#EAC800" />
-                    <path
-                        d="M215.642 0L220.924 10.6994L232.734 12.4256L224.188 20.7492L226.205 32.5083L215.642 26.9535L205.08 32.5083L207.097 20.7492L198.551 12.4256L210.361 10.6994L215.642 0Z"
-                        fill="#EAC800" />
-                    <path
-                        d="M281.826 0L287.107 10.6994L298.918 12.4256L290.372 20.7492L292.389 32.5083L281.826 26.9535L271.263 32.5083L273.28 20.7492L264.734 12.4256L276.545 10.6994L281.826 0Z"
-                        fill="#EAC800" />
-                </svg>
+ 
 
-            </div>
-            <textarea placeholder="Write your here"
-                class=" outline-none bg-[#F6F6F6]  p-4 review h-36 mt-4 border rounded-md  w-full mb-4"></textarea>
-            <div class="mb-4 space-y-1">
-                <h1 class=" text-[14px] font-medium">First Name</h1>
-                <input type="text" placeholder="First Name" class="outline-none border rounded-md px-4 py-2 w-full" />
-            </div>
-            <div class="mb-4  space-y-1">
-                <h1 class=" text-[14px] font-medium">Last Name</h1>
-                <input type="text" placeholder="Last Name" class="outline-none border rounded-md px-4 py-2 w-full" />
-            </div>
-            <div class="mb-4  space-y-1">
-                <h1 class=" text-[14px] font-medium">Your Title </h1>
-                <input type="text" placeholder="Your Title" class="outline-none border rounded-md px-4 py-2 w-full" />
-            </div>
-            <button id="submitReviewBtn"
-                class="bg-[#1F41BB] hover:bg-black text-white font-bold py-2 px-4 rounded-full mt-2 mb-2 w-full">Submit
-                Review</button>
-            <p class="text-gray-600 text-xs w-full whitespace-wrap mt-2">All reviews on rimar.l. Reviews are verified
-                within 48 hours before
-                posting to ensure authenticity and accuracy.</p>
-        </div>
-    </div>
-
-    <!-- Thanks Popup -->
-    <div id="thanksPopup" class="fixed inset-0 bg-black bg-opacity-50   flex items-center justify-center hidden">
-        <div
-            class="bg-white   shadow-md rounded-[8px] flex  items-center text-center px-8 py-2 max-w-lg w-full relative">
-
-            <button id="closeThanksPopup" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800"><svg
-                    width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
-                        fill="black" />
-                </svg>
-            </button>
-            <div
-                class="bg-white  flex flex-col items-center justify-center  gap-4  rounded-md p-8 max-w-md w-full text-center">
-                <svg width="136" height="137" viewBox="0 0 136 137" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M26.0615 134.841C29.5024 137.279 32.8717 137.207 36.1692 134.626L67.9978 110.325L99.8264 134.626C103.124 137.207 106.493 137.279 109.934 134.841C113.375 132.404 114.522 129.178 113.375 125.164L101.117 85.378L132.3 63.227C135.741 60.7897 136.782 57.5638 135.423 53.5494C134.058 49.535 131.296 47.5278 127.139 47.5278H88.6433L76.17 6.23668C75.4531 4.22947 74.3406 2.68679 72.8323 1.60863C71.3298 0.536213 69.7183 0 67.9978 0C66.2773 0 64.6658 0.536213 63.1633 1.60863C61.655 2.68679 60.5425 4.22947 59.8256 6.23668L47.3522 47.5278H8.85689C4.69911 47.5278 1.94063 49.535 0.581467 53.5494C-0.783433 57.5638 0.254579 60.7897 3.6955 63.227L34.8789 85.378L22.6206 125.164C21.4736 129.178 22.6206 132.404 26.0615 134.841ZM93.2838 72.1022C91.2391 74.2868 87.5943 77.6354 82.1465 80.1617C80.5711 80.8924 75.158 83.2561 68.1214 83.4814C58.898 83.7767 49.5514 80.5498 42.2863 73.735L42.2999 73.7205C41.7342 73.1807 41.2355 72.6662 40.794 72.19C40.794 72.19 43.6722 66.1463 45.355 67.9616C45.9444 68.5973 47.247 69.7739 48.691 71.0347C54.3389 75.4179 61.1635 77.4814 67.9223 77.2651C73.7432 77.0786 78.2696 75.1039 79.5298 74.5194L79.5299 74.5193C84.0346 72.4304 87.0514 69.6593 88.7429 67.8521C90.4344 66.0448 93.2838 72.1022 93.2838 72.1022Z"
-                        fill="#EAC800" />
-                </svg>
-
-                <h2 class="text-[24px] text-[#0D0C22] whitespace-nowrap font-medium mb-4">Thank you for submitting your
-                    review!</h2>
-                <p class=" text-[16px] w-full  text-[#0D0C22]">All reviews on rimark. Reviews are verified within 48
-                    hours before posting to ensure authenticity and accuracy.</p>
-                <button id="closeThanksPopup"
-                    class="bg-[#5465FF] hover:bg-black w-full text-white font-bold py-2 px-4 rounded-full">Keep
-                    Browsing</button>
-            </div>
-        </div>
-    </div>
-
+ 
 
 
 
@@ -458,13 +373,9 @@
 
 
 
-        <div class=" md:pb-0 pb-20 md:overflow-normal overflow-hidden flex flex-col items-center justify-center tab-content md:w-[40%] gap-4 md:gap-10  "
+        <div class=" md:pb-0 pb-20 md:-mt-10 md:overflow-normal overflow-hidden flex flex-col items-center justify-center tab-content md:w-[40%] gap-4 md:gap-10  "
             id="Rimark">
-            <div class=" md:block hidden flex flex-col -ml-14 py-4 items-start gap">
-                <h1 class=" text-[40px] font-bold">Lorem ipsum</h1>
-                <h2 class=" text-[#BDBDBD] text-[18px]">Turpis facilisis tempor pulvinar in lobortis ornare magna.</h2>
-            </div>
-
+           
 
             <div id="Rimarks" class="tab-content overflow-hidden md:-mt-10  w-full grid md:grid-cols-1  px-4 gap-10">
                 <!-- Reviews will be appended dynamically -->
@@ -473,7 +384,7 @@
 
         </div>
 
-        <div class=" md:mt-40 md:w-[40%]    px-6 md:px-10    md:block hidden  tab-content " id="Info">
+        <div class=" md:-mt-10 md:w-[40%]    px-6 md:px-10    md:block hidden  tab-content " id="Info">
             <div class="bg-white rounded-[12px]  p-6" style="box-shadow: 0px 4px 24px 0px #0000001F;">
                 <div class="flex justify-center py-2 items-center space-x-4">
                     <img src="/assets//burgerking.png" alt="Burger King Logo"

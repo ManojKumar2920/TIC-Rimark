@@ -296,8 +296,8 @@ const generateStars = (rating) => {
 // Dynamically render the content
 const container = document.getElementById("businessInfo");
 container.innerHTML = `
-<div class="md:shadow-none gap-2 shadow-xl bg-white md:bg-transparent rounded-[6px] md:block flex items-center flex-col md:p-0 px-2 py-4">
-    <h1 class="text-[20px] md:text-[70px] font-semibold md:font-bold text-[#3E4462] md:text-white">
+<div class="md:shadow-none gap-2  shadow-xl bg-white md:bg-transparent rounded-[6px] md:block flex items-center flex-col md:p-0 px-2 py-4">
+    <h1 class="text-[20px] md:text-[60px] font-semibold md:font-bold text-[#3E4462] md:text-white">
         ${businessDetails.name}
     </h1>
     <h2 class="md:hidden block text-[#7E7E7E] text-[16px]">${businessDetails.address}</h2>

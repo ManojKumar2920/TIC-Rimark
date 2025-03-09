@@ -11,6 +11,13 @@
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
+            /* max-width: 1500px; */
+            /* margin: 0 auto; */
+            /* display:  flex;
+            align-items: center;
+            flex-direction: column; */
+            
+            /* background-color: white; */
         }
 
         .no-scroll {
@@ -110,7 +117,7 @@
     </style>
 </head>
 
-<body class="antialiased ">
+<body class="antialiased  xl:max-w-[160rem]   md:flex md:flex-col md:items-center mx-auto">
     <div class="  hidden  bg-white px-14  w-full md:flex justify-between items-center py-4">
         <a href="./Feed.html">
             <img src="./assets//logo.png" class="  h-full w-24 mb-1" alt="">
@@ -282,14 +289,14 @@
             </ul>
         </div>
     </div>
-    <img src="./assets/mainblueclientba.jpg" style="   background-position: 50% 50%; background-size: cover;" class=" z-[-1]
-      absolute md:h-[60%] h-[40%]  w-full object-cover bg-cover bg-bottom md:block hidden" alt="">
-
+   <img src="./assets/mainblueclientba.jpg" style="background-position: 50% 50%; background-size: cover;" 
+    class="z-[-1] absolute md:h-[60%] h-[40%] max-w-[94rem] xl:max-w-[160rem] w-full -mt-24 object-cover bg-cover bg-bottom md:block hidden" 
+    alt="">
       <img src="./assets/blackclientbann.jpg" style="  background-position: 50% 50%; background-size: cover;" class=" z-[-1]
       absolute md:h-[60%] h-[40%]  w-full md:hidden block object-cover bg-cover bg-bottom" alt="">
 
 
-    <div class="md:h-fit    md:mt-0 mt-32 md:pl-32 md:pt-28 pb-4 w-full bg-cover bg-bottom relative " id="background-">
+    <div class="md:h-fit    md:mt-10 mt-32 md:pl-32 md:pt-28 pb-4 w-full bg-cover bg-bottom relative " id="background-">
         <!-- style="background-image: url(./assets/companypage.jpeg);  background-position: 50% 50%; background-size: cover;"> -->
 
 
@@ -307,9 +314,9 @@
                 </svg>
                 <h1 class=" text-[13px]  font-semibold">Share</h1>
             </div>
-            <div class="flex md:flex-row    flex-col max-w-7xl  items-center  md:items-end  md:gap-5 ">
+            <div class="flex md:flex-row   -mt-28  flex-col max-w-7xl  items-center  md:items-end  md:gap-5 ">
                 <div class="  mt-4 rounded-[8px] bg-white w-[55%]  md:w-1/4    md:border-2 border-[#909090] ">
-                    <img src="./assets/business-dummy.jpeg" class="w-fit  rounded-t  object-cover " alt="">
+                    <img src="./assets/business-dummy.jpeg" class="w-[100%]  rounded-t  object-cover " alt="">
                     <div
                         class=" hidden md:block bg-[#FC3903] cursor-pointer  text-white text-[14px] text-center py-1 rounded-b-[8px]">
                         20% OFF ON NEXT ORDER <br /> CLAIM FAST
@@ -319,6 +326,7 @@
                         20% OFF ON NEXT ORDER
                     </div>
                 </div>
+
                 <div class="   md:mt-0 mt-2 md:bg-transparent flex flex-col gap-2 items-center md:items-start">
                     <div id="businessInfo"></div>
 
@@ -347,7 +355,7 @@
                         </svg>
                     </div>
                     <div
-                        class=" absolute   text-center  hidden md:flex !w-1/6 rounded-[32px]  py-2 items-center justify-center flex-col  bg-white bottom-4  right-10 ">
+                        class=" absolute   text-center  hidden md:flex !w-1/6 rounded-[32px]  py-2 items-center justify-center flex-col  bg-white bottom-4  right-40 ">
                         <img src="./assets/recpic.png" class="w-16 h-auto cursor-pointer" alt="">
                         <h1 class=" text-[#1F41BB]  w-[70%] text-sm">Recommended by daiana from Community </h1>
                     </div>
@@ -508,26 +516,15 @@
 
 
     <!-- 2nd Section -->
-    <div class="flex  z-[4000]    justify-center md:py-20   px-4    bg-white  gap-8   items-start ">
-
-
-
-        <div class=" md:pb-0 pb-20 md:overflow-normal overflow-hidden flex flex-col items-center justify-center tab-content md:w-[40%] gap-4 md:gap-10  "
+    <div class="flex z-[4000] flex-col md:flex-row justify-center md:py-20 px-4 w-full mx-auto gap-8 items-start">
+        <div class="md:pb-0 pb-20 md:overflow-normal overflow-hidden flex flex-col items-center justify-center tab-content w-full md:w-[40%] gap-4 md:gap-10"
             id="Rimark">
-            <div class=" md:block hidden flex flex-col -ml-14 py-4 items-start gap">
-                <h1 class=" text-[40px] font-bold">Lorem ipsum</h1>
-                <h2 class=" text-[#BDBDBD] text-[18px]">Turpis facilisis tempor pulvinar in lobortis ornare magna.</h2>
-            </div>
-
-
-            <div id="Rimarks" class="tab-content overflow-hidden md:-mt-10  w-full grid md:grid-cols-1  px-4 gap-10">
+            <div id="Rimarks" class="tab-content overflow-hidden md:-mt-10 w-full grid md:grid-cols-1 px-4 gap-10">
                 <!-- Reviews will be appended dynamically -->
-
             </div>
-
         </div>
 
-        <div class=" md:mt-40 md:w-[40%]    px-6 md:px-10    md:block hidden  tab-content " id="Info">
+        <div class=" md:mt-0 md:w-[40%]    px-6 md:px-10    md:block hidden  tab-content " id="Info">
             <div class="bg-white rounded-[12px]  p-6" style="box-shadow: 0px 4px 24px 0px #0000001F;">
                 <div class="flex justify-center py-2 items-center space-x-4">
                     <img src="/assets//burgerking.png" alt="Burger King Logo"

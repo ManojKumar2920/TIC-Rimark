@@ -378,7 +378,7 @@ notificationCount.textContent = desktopNotifications.length;
 
 // Example user data
 const userData = {
-    name: "Danial <br /> Jason La",
+    name: "Danial  Jason La",
     profileImage: "./assets/ProfilePage.png",
     statistics: {
         rimarks: 27,
@@ -433,7 +433,7 @@ const userData = {
 // Render Dashboard
 const dashboardContainer = document.getElementById("dashboardContainer");
 dashboardContainer.innerHTML = `
-    <div class="md:rounded-[15px]    rounded-[32px] mt-10 overflow-hidden bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 flex items-center w-[60%] md:w-1/5 justify-center ">
+    <div class="md:rounded-[15px] rounded-[32px] mt-10 overflow-hidden bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 flex items-center w-[40%] md:w-1/6 justify-center ">
         <img src="../assets/demopic.jpg" class=" object-cover  w-80 object-top h-48" alt="Profile Image">
     </div>
     <div class="border hidden max-[1200px]:gap-6 gap-20 md:flex max-[1200px]:w-1/2 border-white/15 mx-auto bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 items-end justify-end rounded-[16px] shadow-xl px-8 py-2">

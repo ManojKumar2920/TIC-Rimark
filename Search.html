@@ -12,6 +12,7 @@
         body {
             font-family: 'Open Sans', sans-serif;
         }
+
         .no-scroll {
             overflow: hidden;
             height: 100vh;
@@ -53,33 +54,35 @@
             height: 100%;
             object-fit: cover;
         }
+
         .tooltip {
-  position: relative;
-  display: inline-block;
-}
+            position: relative;
+            display: inline-block;
+        }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 70px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 4px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: -40px; /* Tooltip above the icon */
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-size: 12px;
-}
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 70px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: -40px;
+            /* Tooltip above the icon */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 12px;
+        }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -187,7 +190,7 @@
         </div>
     </div>
 
-    <div class="h-fit md:block hidden pb-20 w-full bg-cover bg-bottom relative transition-all duration-1000 ease-in-out"
+    <div class="h-1/3 md:block hidden pb-20 w-full bg-cover bg-bottom relative transition-all duration-1000 ease-in-out"
         id="background-swiper">
         <swiper-container class="mySwiper absolute z-[-1]" space-between="0" loop="true" centered-slides="true"
             autoplay-delay="2500" autoplay-disable-on-interaction="false">
@@ -203,14 +206,11 @@
 
         </swiper-container>
         <div class="container mx-auto p-8">
-            <img 
-    src="./assets/Left.png" 
-    class="absolute w-10 left-10 cursor-pointer h-auto" 
-    alt="Go Back" 
-    id="goBackButton">
+            <img src="./assets/Left.png" class="absolute w-10 left-10 cursor-pointer h-auto" alt="Go Back"
+                id="goBackButton">
 
             <div
-                class="border border-white/15 py-8 max-w-4xl mx-auto bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 p-6 rounded-[16px] shadow-xl mt-20">
+                class="border border-white/15 py-8 max-w-4xl mx-auto bg-black bg-clip-padding backdrop-filter backdrop-blur bg-opacity-20 p-6 rounded-[16px] shadow-xl mt-10">
                 <h2 class="text-white text-[16px] font-semibold mb-4">Discover the new Places around you</h2>
                 <div class="flex gap-4">
                     <div class="w-full flex">
@@ -279,8 +279,8 @@
                 <a href="./Search.html">
                     <img src="./assets//logo-white.png" class=" w-20 h-auto" alt="">
                 </a>
-    
-    
+
+
                 <div class="flex gap-2 items-center">
                     <!-- Active Notification Icon -->
                     <svg width="27" id="activeNotification2" height="27" viewBox="0 0 27 27" fill="none"
@@ -289,33 +289,35 @@
                             d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
                             fill="white" />
                     </svg>
-    
+
                     <!-- Inactive Notification Icon -->
                     <svg id="inactiveNotification2" class="cursor-pointer  hidden " width="27" height="27"
-                        viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="toggleNotification()">
+                        viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        onclick="toggleNotification()">
                         <path
                             d="M13.5 2.25C19.0912 2.25 23.625 6.79837 23.625 12.4099V22.5H3.375V12.4099C3.375 6.79837 7.90875 2.25 13.5 2.25ZM10.6875 23.625H16.3125C16.3125 24.3709 16.0162 25.0863 15.4887 25.6137C14.9613 26.1412 14.2459 26.4375 13.5 26.4375C12.7541 26.4375 12.0387 26.1412 11.5113 25.6137C10.9838 25.0863 10.6875 24.3709 10.6875 23.625Z"
                             fill="white" />
                     </svg>
-    
+
                     <!-- Profile Link -->
                     <a href="./Profile.html">
-                        
-                    <img src="./assets/profilepico.jpg" class=" select-none w-8 h-8 rounded-full object-cover" alt="">
+
+                        <img src="./assets/profilepico.jpg" class=" select-none w-8 h-8 rounded-full object-cover"
+                            alt="">
                     </a>
                 </div>
-    
-    
+
+
             </div>
-    
+
             <div class=" px-4 ">
                 <!-- First Input Container -->
                 <div id="first-container"
                     class="w-full text-gray-500 shadow flex justify-between px-4 py-2 rounded-[10px] outline-none bg-white relative">
                     <input id="first-input" type="text" class="w-full flex justify-between outline-none bg-white"
                         placeholder="Search Places..." />
-                    <svg id="first-svg" class="transition-opacity duration-300" width="31" height="31" viewBox="0 0 31 31"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="first-svg" class="transition-opacity duration-300" width="31" height="31"
+                        viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="15.5" cy="15.5" r="15.5" fill="#1F41BB" />
                         <path d="M19.898 14.558a5.341 5.341 0 1 1-10.682 0 5.341 5.341 0 0 1 10.682 0" fill="#1F41BB" />
                         <path
@@ -323,7 +325,7 @@
                             stroke="#fff" stroke-width="2" stroke-linecap="round" />
                     </svg>
                 </div>
-    
+
                 <!-- Second Input Container and Search Button -->
                 <div id="second-container"
                     class="w-full text-gray-500 hidden shadow flex justify-between px-4 py-3 mt-2 rounded-[10px] outline-none bg-white transform scale-0 opacity-0 transition-transform transition-opacity duration-300">
@@ -335,7 +337,7 @@
                     Search
                 </button>
             </div>
-    
+
             <!-- mobile notification-->
             <div id="notificationDropdown2"
                 class="z-[300] select-none md:block hidden overflow-scroll !p-0 -mb-10 right-0 -mt-2 top-40 w-screen bg-white border shadow-lg">
@@ -345,7 +347,7 @@
                         class="mt-1.5 w-10 left-4 md:left-10 md:top-10 cursor-pointer h-auto" alt=""
                         onclick="toggleNotification()">
                 </div>
-    
+
                 <!-- Dynamic Notifications -->
                 <div id="notificationContainer" class="flex flex-col h-screen">
                     <!-- Notifications will be rendered here -->
@@ -364,7 +366,7 @@
                     <li><a href="./Feed.html" class="hover:text-gray-300">Feed</a></li>
                     <li><a href="./Search.html" class="hover:text-gray-300">Search</a></li>
                     <li><a href="./Profile.html" class="hover:text-gray-300">Profile</a></li>
-    
+
                 </ul>
             </div>
         </div>
@@ -373,13 +375,9 @@
         <div
             class="flex  relative md:flex-row flex-col justify-center py-20  md:px-32   bg-white items-center     md:items-start ">
 
-            <div class=" mb-6  md:hidden flex  flex-col items-center  justify-center ">
+            <div class=" mb-10 md:mb-6  md:hidden flex  flex-col items-center  justify-center ">
                 <div class=" absolute top-0 left-0 mt-4 ml-4 cursor-pointer">
-                    <img 
-                    src="./assets/Left.png" 
-                    class="   w-10 h-auto" 
-                    alt="Go Back" 
-                    id="goBackButton2">
+                    <img src="./assets/Left.png" class="   w-10 h-auto" alt="Go Back" id="goBackButton2">
 
                 </div>
                 <div class=" md:mt-0 -mt-10 flex flex-col items-center gap-2">
@@ -399,18 +397,14 @@
                 </div>
             </div>
 
-            <div class="  flex flex-col gap-4  ">
-                <div class=" hidden md:block flex flex-col items-start  mb-4 gap">
-                    <h1 class=" text-[40px] font-bold">Lorem ipsum</h1>
-                    <h2 class=" text-[#BDBDBD] text-[18px]">Turpis facilisis tempor pulvinar in lobortis ornare magna.
-                    </h2>
-                </div>
+            <div class="  flex flex-col  md:-space-y-12  -space-y-8 -mt-14">
+
 
                 <div
-                    class=" shadow-md h-full mt-2 w-full md:!h-80  scale-90   md:relative  md:space-x-0 -space-x-2   items-center    flex rounded-[16px] ">
-                    <div class="relative h-full w-full overflow-hidden  md:w-96 rounded-l-[16px]">
-                        <a href="./Company.html" class=" relative w-full">
-                            <img class="md:h-[100%] md:w-fit w-full    h-[250px] overflow-hidden  object-cover"
+                    class=" shadow-md h-full  mt-2 w-full md:!h-80  scale-[0.8]   md:relative  md:space-x-0 -space-x-2   items-center    flex rounded-[16px] ">
+                    <div class="md:relative h-full w-fit overflow-hidden  md:w-96 rounded-l-[16px]">
+                        <a href="./Company.html" class=" relative md:w-full w-fit block">
+                            <img class="md:h-[100%] md:w-full w-[200px]    h-[250px] overflow-hidden  object-cover"
                                 src="./assets//SearchCard1.png" alt="Brown Inc">
                             <div
                                 class="bg-[#E20028]  md:hidden text-[11px]  justify-center  h-auto flex items-center absolute  whitespace-nowrap  bottom-0  mt-2.5 w-full font-[600] text-white px-2 py-4  rounded-es-[9px]	 text-center">
@@ -424,10 +418,206 @@
                         <div class="px-6 md:mt-0  -mt-8   flex flex-col justify-between items-start h-full relative   ">
                             <div>
 
-                            <a href="./Company.html" >
+                                <a href="./Company.html">
+                                    <h2 class="md:text-[24px] text-[15px] font-semibold ">Brown Inc</h2>
+                                </a>
+                                <p class="text-[#78909C]    text-[10px] md:text-[18px]  font-[500] ">MPM
+                                    Millenium WaMillenium Wajhuddin Estate, Hotel Grand Himayat Plot No. 3-6-552 to 558
+                                    &558/1, opp. Minerva, Himayatnagar, Hyderabad, Telangana 500029, India
+                                </p>
+                                <div class="flex mt-1  items-center space-x-0.5 ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+
+                                    <p class="text-[#0000008A]/55 pl-2 font-[500] text-xs md:text-[15px]">5.0 (23
+                                        review)
+                                    </p>
+                                </div>
+                            </div>
+                            <hr class="   w-[80%] border-[1px]  border-[#F1F1F1]">
+
+                            <div class="md:pb-14  px-0   ">
+                                <h1 class=" text-[13px] md:text-[14px] font-medium">Availability</h1>
+                                <p class="text-[#607D8A] font-[600] text-[13px] md:text-[18px] tracking-wide mb-4">Open
+                                    10:00 am - close
+                                    10:00pm</p>
+                            </div>
+                            <div
+                                class="       px-6 w-full  md:hidden   flex absolute left-0 -bottom-8 text-left  w-full items-center justify-start gap-2    ">
+                                <img src="./assets//SearchPer.png" class=" w-6" alt="">
+                                <h1 id="" class="recText text-[#1F41BB] text-[11px] font-semibold">
+                                    Recommended by Fedric ,bob, mill, makaram and 12 more from the company
+                                </h1>
+                            </div>
+                        </div>
+
+
+
+                        <a href="./Company.html" class=" absolute w-full  bottom-0">
+                            <div
+                                class="bg-[#FC3903] hidden md:block   mt-3 w-full font-[600] text-white px-4 py-4  rounded-ee-[9px]	 text-center">
+                                20% OFF ON NEXT ORDER
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+                <div
+                    class=" shadow-md h-full  mt-2 w-full md:!h-80  scale-[0.8]   md:relative  md:space-x-0 -space-x-2   items-center    flex rounded-[16px] ">
+                    <div class="md:relative h-full w-fit overflow-hidden  md:w-96 rounded-l-[16px]">
+                        <a href="./Company.html" class=" relative md:w-full w-fit block">
+                            <img class="md:h-[100%] md:w-full w-[200px]    h-[250px] overflow-hidden  object-cover"
+                                src="./assets//SearchCard1.png" alt="Brown Inc">
+                            <div
+                                class="bg-[#E20028]  md:hidden text-[11px]  justify-center  h-auto flex items-center absolute  whitespace-nowrap  bottom-0  mt-2.5 w-full font-[600] text-white px-2 py-4  rounded-es-[9px]	 text-center">
+                                20% OFF ON NEXT ORDER
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class=" relative w-[60%] md:w-full  h-full  justify-between    flex  flex-col">
+
+                        <div class="px-6 md:mt-0  -mt-8   flex flex-col justify-between items-start h-full relative   ">
+                            <div>
+
+                                <a href="./Company.html">
+                                    <h2 class="md:text-[24px] text-[15px] font-semibold ">Brown Inc</h2>
+                                </a>
+                                <p class="text-[#78909C]    text-[10px] md:text-[18px]  font-[500] ">MPM
+                                    Millenium WaMillenium Wajhuddin Estate, Hotel Grand Himayat Plot No. 3-6-552 to 558
+                                    &558/1, opp. Minerva, Himayatnagar, Hyderabad, Telangana 500029, India
+                                </p>
+                                <div class="flex mt-1  items-center space-x-0.5 ">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="24" height="24" fill="#EAC800" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
+                                            fill="white" />
+                                    </svg>
+
+                                    <p class="text-[#0000008A]/55 pl-2 font-[500] text-xs md:text-[15px]">5.0 (23
+                                        review)
+                                    </p>
+                                </div>
+                            </div>
+                            <hr class="   w-[80%] border-[1px]  border-[#F1F1F1]">
+
+                            <div class="md:pb-14  px-0   ">
+                                <h1 class=" text-[13px] md:text-[14px] font-medium">Availability</h1>
+                                <p class="text-[#607D8A] font-[600] text-[13px] md:text-[18px] tracking-wide mb-4">Open
+                                    10:00 am - close
+                                    10:00pm</p>
+                            </div>
+                            <div
+                                class="       px-6 w-full  md:hidden   flex absolute left-0 -bottom-8 text-left  w-full items-center justify-start gap-2    ">
+                                <img src="./assets//SearchPer.png" class=" w-6" alt="">
+                                <h1 id="" class="recText text-[#1F41BB] text-[11px] font-semibold">
+                                    Recommended by Fedric ,bob, mill, makaram and 12 more
+                                </h1>
+                            </div>
+                        </div>
+
+
+
+                        <a href="./Company.html" class=" absolute w-full  bottom-0">
+                            <div
+                                class="bg-[#FC3903] hidden md:block   mt-3 w-full font-[600] text-white px-4 py-4  rounded-ee-[9px]	 text-center">
+                                20% OFF ON NEXT ORDER
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div
+                class=" shadow-md h-full  mt-2 w-full md:!h-80  scale-[0.8]   md:relative  md:space-x-0 -space-x-2   items-center    flex rounded-[16px] ">
+                <div class="md:relative h-full w-fit overflow-hidden  md:w-96 rounded-l-[16px]">
+                    <a href="./Company.html" class=" relative md:w-full w-fit block">
+                        <img class="md:h-[100%] md:w-full w-[200px]    h-[250px] overflow-hidden  object-cover"
+                            src="./assets//SearchCard1.png" alt="Brown Inc">
+                        <div
+                            class="bg-[#E20028]  md:hidden text-[11px]  justify-center  h-auto flex items-center absolute  whitespace-nowrap  bottom-0  mt-2.5 w-full font-[600] text-white px-2 py-4  rounded-es-[9px]	 text-center">
+                            20% OFF ON NEXT ORDER
+
+                        </div>
+                    </a>
+                </div>
+                <div class=" relative w-[60%] md:w-full  h-full  justify-between    flex  flex-col">
+
+                    <div class="px-6 md:mt-0  -mt-8   flex flex-col justify-between items-start h-full relative   ">
+                        <div>
+
+                            <a href="./Company.html">
                                 <h2 class="md:text-[24px] text-[15px] font-semibold ">Brown Inc</h2>
                             </a>
-                            <p class="text-[#78909C] turncate3 text-[10px] md:text-[18px]  font-[500] ">MPM Millenium WaMillenium Wajhuddin Estate, Hotel Grand Himayat Plot No. 3-6-552 to 558 &558/1, opp. Minerva, Himayatnagar, Hyderabad, Telangana 500029, India
+                            <p class="text-[#78909C]    text-[10px] md:text-[18px]  font-[500] ">MPM
+                                Millenium WaMillenium Wajhuddin Estate, Hotel Grand Himayat Plot No. 3-6-552 to 558
+                                &558/1, opp. Minerva, Himayatnagar, Hyderabad, Telangana 500029, India
                             </p>
                             <div class="flex mt-1  items-center space-x-0.5 ">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -466,105 +656,11 @@
                                         fill="white" />
                                 </svg>
 
-                                <p class="text-[#0000008A]/55 pl-2 font-[500] text-xs md:text-[15px]">5.0 (23 review)
+                                <p class="text-[#0000008A]/55 pl-2 font-[500] text-xs md:text-[15px]">5.0 (23
+                                    review)
                                 </p>
                             </div>
                         </div>
-                            <hr class="   w-[80%] border-[1px]  border-[#F1F1F1]">
-
-                            <div class="md:pb-14  px-0   ">
-                                <h1 class=" text-[13px] md:text-[14px] font-medium">Availability</h1>
-                                <p class="text-[#607D8A] font-[600] text-[13px] md:text-[18px] tracking-wide mb-4">Open
-                                    10:00 am - close
-                                    10:00pm</p>
-                            </div>
-                            <div
-                            class="       px-6 w-full  md:hidden   flex absolute left-0 -bottom-8 text-left  w-full items-center justify-start gap-2    ">
-                            <img src="./assets//SearchPer.png" class=" w-6" alt="">
-                            <h1 id="" class="recText text-[#1F41BB] text-[11px] font-semibold">
-                                Recommended by Fedric ,bob, mill, makaram and 12 more
-                            </h1>
-                        </div>
-                        </div>
-
-                       
-                        
-                        <a href="./Company.html" class=" absolute w-full  bottom-0">
-                            <div
-                                class="bg-[#FC3903] hidden md:block   mt-3 w-full font-[600] text-white px-4 py-4  rounded-ee-[9px]	 text-center">
-                                20% OFF ON NEXT ORDER
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-           
- 
-
-                <div
-                class=" shadow-md h-full mt-2 w-full md:!h-80  scale-90   md:relative  md:space-x-0 -space-x-2   items-center    flex rounded-[16px] ">
-                <div class="relative h-full w-full overflow-hidden  md:w-96 rounded-l-[16px]">
-                    <a href="./Company.html" class=" relative w-full">
-                        <img class="md:h-[100%] md:w-fit w-full    h-[250px] overflow-hidden  object-cover"
-                            src="./assets//SearchCard1.png" alt="Brown Inc">
-                        <div
-                            class="bg-[#E20028]  md:hidden text-[11px]  justify-center  h-auto flex items-center absolute  whitespace-nowrap  bottom-0  mt-2.5 w-full font-[600] text-white px-2 py-4  rounded-es-[9px]	 text-center">
-                            20% OFF ON NEXT ORDER
-
-                        </div>
-                    </a>
-                </div>
-                <div class=" relative w-[60%] md:w-full  h-full  justify-between    flex  flex-col">
-
-                    <div class="px-6 -mt-8 md:mt-0   flex flex-col justify-between items-start h-full relative   ">
-                        <div>
-
-                        <a href="./Company.html" >
-                            <h2 class="md:text-[24px] text-[15px] font-semibold ">Brown Inc</h2>
-                        </a>
-                        <p class="text-[#78909C] turncate3 text-[10px] md:text-[18px]  font-[500] ">MPM Millenium WaMillenium Wajhuddin Estate, Hotel Grand Himayat Plot No. 3-6-552 to 558 &558/1, opp. Minerva, Himayatnagar, Hyderabad, Telangana 500029, India
-                        </p>
-                        <div class="flex mt-1  items-center space-x-0.5 ">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" fill="#EAC800" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                    fill="white" />
-                            </svg>
-
-                            <p class="text-[#0000008A]/55 pl-2 font-[500] text-xs md:text-[15px]">5.0 (23 review)
-                            </p>
-                        </div>
-                    </div>
                         <hr class="   w-[80%] border-[1px]  border-[#F1F1F1]">
 
                         <div class="md:pb-14  px-0   ">
@@ -574,16 +670,16 @@
                                 10:00pm</p>
                         </div>
                         <div
-                        class="       px-6 w-full  md:hidden   flex absolute left-0 -bottom-8 text-left  w-full items-center justify-start gap-2    ">
-                        <img src="./assets//SearchPer.png" class=" w-6" alt="">
-                        <h1 id="" class="recText text-[#1F41BB] text-[11px] font-semibold">
-                            Recommended by Fedric ,bob, mill, makaram and 12 more
-                        </h1>
-                    </div>
+                            class="       px-6 w-full  md:hidden   flex absolute left-0 -bottom-8 text-left  w-full items-center justify-start gap-2    ">
+                            <img src="./assets//SearchPer.png" class=" w-6" alt="">
+                            <h1 id="" class="recText text-[#1F41BB] text-[11px] font-semibold">
+                                Recommended by Fedric ,bob, mill, makaram and 12 more
+                            </h1>
+                        </div>
                     </div>
 
-                   
-                    
+
+
                     <a href="./Company.html" class=" absolute w-full  bottom-0">
                         <div
                             class="bg-[#FC3903] hidden md:block   mt-3 w-full font-[600] text-white px-4 py-4  rounded-ee-[9px]	 text-center">
@@ -594,124 +690,43 @@
             </div>
 
 
-            <div
-            class=" shadow-md h-full mt-2 w-full md:!h-80  scale-90   md:relative  md:space-x-0 -space-x-2   items-center    flex rounded-[16px] ">
-            <div class="relative h-full w-full overflow-hidden  md:w-96 rounded-l-[16px]">
-                <a href="./Company.html" class=" relative w-full">
-                    <img class="md:h-[100%] md:w-fit w-full    h-[250px] overflow-hidden  object-cover"
-                        src="./assets//SearchCard1.png" alt="Brown Inc">
-                    <div
-                        class="bg-[#E20028]  md:hidden text-[11px]  justify-center  h-auto flex items-center absolute  whitespace-nowrap  bottom-0  mt-2.5 w-full font-[600] text-white px-2 py-4  rounded-es-[9px]	 text-center">
-                        20% OFF ON NEXT ORDER
-
-                    </div>
-                </a>
             </div>
-            <div class=" relative w-[60%] md:w-full  h-full  justify-between    flex  flex-col">
 
-                <div class="px-6 md:mt-0 -mt-8   flex flex-col justify-between items-start h-full relative   ">
-                    <div>
-
-                    <a href="./Company.html" >
-                        <h2 class="md:text-[24px] text-[15px] font-semibold ">Brown Inc</h2>
-                    </a>
-                    <p class="text-[#78909C] turncate3 text-[10px] md:text-[18px]  font-[500] ">MPM Millenium WaMillenium Wajhuddin Estate, Hotel Grand Himayat Plot No. 3-6-552 to 558 &558/1, opp. Minerva, Himayatnagar, Hyderabad, Telangana 500029, India
-                    </p>
-                    <div class="flex mt-1  items-center space-x-0.5 ">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" fill="#EAC800" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                fill="white" />
-                        </svg>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" fill="#EAC800" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                fill="white" />
-                        </svg>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" fill="#EAC800" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                fill="white" />
-                        </svg>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" fill="#EAC800" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                fill="white" />
-                        </svg>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" fill="#EAC800" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M14.1251 9.97931L12.0004 3.44017L9.87566 9.97931H3L8.56252 14.0207L6.43783 20.5599L12.0004 16.5184L17.5629 20.5599L15.7305 14.9203L12.4904 16.1309L15.4384 14.0213L15.4382 14.0207L21.0007 9.97931H14.1251Z"
-                                fill="white" />
-                        </svg>
-
-                        <p class="text-[#0000008A]/55 pl-2 font-[500] text-xs md:text-[15px]">5.0 (23 review)
-                        </p>
-                    </div>
-                </div>
-                    <hr class="   w-[80%] border-[1px]  border-[#F1F1F1]">
-
-                    <div class="md:pb-14  px-0   ">
-                        <h1 class=" text-[13px] md:text-[14px] font-medium">Availability</h1>
-                        <p class="text-[#607D8A] font-[600] text-[13px] md:text-[18px] tracking-wide mb-4">Open
-                            10:00 am - close
-                            10:00pm</p>
-                    </div>
-                    <div
-                    class="       px-6 w-full  md:hidden   flex absolute left-0 -bottom-8 text-left  w-full items-center justify-start gap-2    ">
-                    <img src="./assets//SearchPer.png" class=" w-6" alt="">
-                    <h1 id="" class="recText text-[#1F41BB] text-[11px] font-semibold">
-                        Recommended by Fedric ,bob, mill, makaram and 12 more
-                    </h1>
-                </div>
-                </div>
-
-               
-                
-                <a href="./Company.html" class=" absolute w-full  bottom-0">
-                    <div
-                        class="bg-[#FC3903] hidden md:block   mt-3 w-full font-[600] text-white px-4 py-4  rounded-ee-[9px]	 text-center">
-                        20% OFF ON NEXT ORDER
-                    </div>
-                </a>
-            </div>
+            <div class=" -mt-14 md:block hidden ">
+              <div class="justify-between items-center py-1 px-2 flex flex-wrap">
+    <h1 class="text-[15px] break-words font-[600] max-w-[200px] sm:max-w-none">Search result : <br> 
+        <span class="text-[#1F41BB] break-words"> food-Aurangabad, Maharashtra, India</span>
+    </h1>
+    <div class="flex">
+        <svg width="20" height="25" class="mt-2" viewBox="0 0 30 35" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M25.6067 4.24569C19.7484 -1.41523 10.2516 -1.41523 4.39331 4.24569C3.00331 5.58063 1.89829 7.17503 1.14329 8.93553C0.38829 10.696 0 12.587 0 14.4972C0 16.4072 0.38829 18.2982 1.14329 20.0587C1.89829 21.8192 3.00331 23.4137 4.39331 24.7485L14.9984 35L25.6067 24.7485C26.9967 23.4137 28.1017 21.8192 28.8567 20.0587C29.6117 18.2982 30 16.4072 30 14.4972C30 12.587 29.6117 10.696 28.8567 8.93553C28.1017 7.17503 26.9967 5.58063 25.6067 4.24569ZM14.9984 19.342C13.7467 19.342 12.5717 18.863 11.6833 17.9935C10.8067 17.129 10.3133 15.9578 10.3133 14.7366C10.3133 13.5154 10.8067 12.3442 11.6833 11.4797C12.5683 10.6103 13.7467 10.1313 14.9984 10.1313C16.2517 10.1313 17.4284 10.6103 18.315 11.4797C19.1917 12.3442 19.685 13.5154 19.685 14.7366C19.685 15.9578 19.1917 17.129 18.315 17.9935C17.4284 18.863 16.2517 19.342 14.9984 19.342Z"
+                fill="#1F41BB" />
+        </svg>
+        <div class="flex items-start ml-2 flex-col">
+            <h1 class="text-[15px] font-[700] break-words max-w-[150px] sm:max-w-none">Brown Inc</h1>
+            <h2 class="text-[#717171] text-[14px] font-[500] break-words max-w-[150px] sm:max-w-none">Hyderabad, Telangana, India</h2>
         </div>
+    </div>
+</div>
 
-
-            </div>
-
-            <div class=" mt-24  md:block hidden">
-                <div class=" justify-between items-center py-1  px-2 flex">
-                    <h1 class=" text-[15px]  whitespace-nowrap font-[600]">Search result : <br> <span class=" text-[#1F41BB]"> food-Aurangabad, Maharashtra, India
-                    </span></h1>
-                    <div class=" flex">
-                        <svg width="20" height="25" class=" mt-2" viewBox="0 0 30 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M25.6067 4.24569C19.7484 -1.41523 10.2516 -1.41523 4.39331 4.24569C3.00331 5.58063 1.89829 7.17503 1.14329 8.93553C0.38829 10.696 0 12.587 0 14.4972C0 16.4072 0.38829 18.2982 1.14329 20.0587C1.89829 21.8192 3.00331 23.4137 4.39331 24.7485L14.9984 35L25.6067 24.7485C26.9967 23.4137 28.1017 21.8192 28.8567 20.0587C29.6117 18.2982 30 16.4072 30 14.4972C30 12.587 29.6117 10.696 28.8567 8.93553C28.1017 7.17503 26.9967 5.58063 25.6067 4.24569ZM14.9984 19.342C13.7467 19.342 12.5717 18.863 11.6833 17.9935C10.8067 17.129 10.3133 15.9578 10.3133 14.7366C10.3133 13.5154 10.8067 12.3442 11.6833 11.4797C12.5683 10.6103 13.7467 10.1313 14.9984 10.1313C16.2517 10.1313 17.4284 10.6103 18.315 11.4797C19.1917 12.3442 19.685 13.5154 19.685 14.7366C19.685 15.9578 19.1917 17.129 18.315 17.9935C17.4284 18.863 16.2517 19.342 14.9984 19.342Z"
-                                fill="#1F41BB" />
-                        </svg>
-                        <div class="   flex items-start ml-2 flex-col">
-                            <h1 class=" text-[15px] font-[700] whitespace-nowrap">Brown Inc</h1>
-                            <h2 class=" text-[#717171] text-[14px]  font-[500] whitespace-nowrap">Hyderabad, Telangana, India</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <gmp-map center="43.4142989,-124.2301242" class=" md:block mt-2 hidden" zoom="4" map-id="DEMO_MAP_ID"
-                    style="height: 450px; width: 550px; border-radius: 10px; overflow: hidden; border: 2px solid #ccc;">
-                    <gmp-advanced-marker position="37.4220656,-122.0840897"
-                        title="Mountain View, CA"></gmp-advanced-marker>
-                    <gmp-advanced-marker position="47.648994,-122.3503845" title="Seattle, WA"></gmp-advanced-marker>
-                </gmp-map>
+                <gmp-map center="43.4142989,-124.2301242" class="md:block mt-2 hidden" zoom="4" map-id="DEMO_MAP_ID"
+        style="border-radius: 10px; overflow: hidden; border: 2px solid #ccc;
+            @media (min-width: 1400px) {
+                height: 450px;
+                width: 550px;
+            }
+            @media (min-width: 1200px) and (max-width: 1399px) {
+                height: 400px;
+                width: 500px;
+            }
+            @media (max-width: 1199px) {
+                height: 350px;
+                width: 450px;
+            }">
+        <gmp-advanced-marker position="37.4220656,-122.0840897" title="Mountain View, CA"></gmp-advanced-marker>
+        <gmp-advanced-marker position="47.648994,-122.3503845" title="Seattle, WA"></gmp-advanced-marker>
+    </gmp-map>
             </div>
 
 
@@ -828,16 +843,16 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
-<script src="./scripts/search.js"></script>
+    <script src="./scripts/search.js"></script>
     <script>
         // Swiper Background Image Array
         document.querySelectorAll(".recText").forEach((element) => {
             let text = element.innerText;
-            element.innerText = text.length > 20? text.substring(0, 45) + "..." : text;
+            element.innerText = text.length > 20 ? text.substring(0, 65) + "..." : text;
         });
         document.querySelectorAll(".turncate3").forEach((element) => {
             let text = element.innerText;
-            element.innerText = text.length > 20? text.substring(0, 140) + "..." : text;
+            element.innerText = text.length > 20 ? text.substring(0, 140) + "..." : text;
         });
         const backgroundImages = [
             "./assets/feed.png",        // First image
@@ -892,20 +907,20 @@
         defer></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-    const goBackButton = document.getElementById("goBackButton");
-    const goBackButton2 = document.getElementById("goBackButton2");
+            const goBackButton = document.getElementById("goBackButton");
+            const goBackButton2 = document.getElementById("goBackButton2");
 
-    if (goBackButton) {
-        goBackButton.addEventListener("click", () => {
-            window.history.back(); // Navigates to the previous page in the browser history
+            if (goBackButton) {
+                goBackButton.addEventListener("click", () => {
+                    window.history.back(); // Navigates to the previous page in the browser history
+                });
+            }
+            if (goBackButton2) {
+                goBackButton2.addEventListener("click", () => {
+                    window.history.back(); // Navigates to the previous page in the browser history
+                });
+            }
         });
-    }
-    if (goBackButton2) {
-        goBackButton2.addEventListener("click", () => {
-            window.history.back(); // Navigates to the previous page in the browser history
-        });
-    }
-});
 
         // your code goes here
         const hamburgerMenu = document.getElementById('hamburger-menu');
@@ -1013,37 +1028,60 @@
 
 
     <script>
-       
-const firstInput = document.getElementById("first-input");
-const secondContainer = document.getElementById("second-container");
-const searchButton = document.getElementById("search-button");
-const firstSvg = document.getElementById("first-svg");
 
-firstInput.addEventListener("focus", () => {
-    secondContainer.classList.remove("hidden", "scale-0", "opacity-0");
-    secondContainer.classList.add("scale-100", "opacity-100");
-    searchButton.classList.remove("hidden", "scale-0", "opacity-0");
-    searchButton.classList.add("scale-100", "opacity-100");
-    firstSvg.style.opacity = "0";
-});
+        const firstInput = document.getElementById("first-input");
+        const secondContainer = document.getElementById("second-container");
+        const searchButton = document.getElementById("search-button");
+        const firstSvg = document.getElementById("first-svg");
 
-// Click outside to close
-document.addEventListener("mousedown", (event) => {
-    if (
-        !firstInput.contains(event.target) && 
-        !secondContainer.contains(event.target) &&
-        !searchButton.contains(event.target)
-    ) {
-        secondContainer.classList.add("hidden", "scale-0", "opacity-0");
-        secondContainer.classList.remove("scale-100", "opacity-100");
-        searchButton.classList.add("hidden", "scale-0", "opacity-0");
-        searchButton.classList.remove("scale-100", "opacity-100");
-        firstSvg.style.opacity = "1";
-    }
-});
+        firstInput.addEventListener("focus", () => {
+            secondContainer.classList.remove("hidden", "scale-0", "opacity-0");
+            secondContainer.classList.add("scale-100", "opacity-100");
+            searchButton.classList.remove("hidden", "scale-0", "opacity-0");
+            searchButton.classList.add("scale-100", "opacity-100");
+            firstSvg.style.opacity = "0";
+        });
+
+        // Click outside to close
+        document.addEventListener("mousedown", (event) => {
+            if (
+                !firstInput.contains(event.target) &&
+                !secondContainer.contains(event.target) &&
+                !searchButton.contains(event.target)
+            ) {
+                secondContainer.classList.add("hidden", "scale-0", "opacity-0");
+                secondContainer.classList.remove("scale-100", "opacity-100");
+                searchButton.classList.add("hidden", "scale-0", "opacity-0");
+                searchButton.classList.remove("scale-100", "opacity-100");
+                firstSvg.style.opacity = "1";
+            }
+        });
     </script>
 
+<style>
+    /* Add this to your existing styles */
+    gmp-map {
+        border-radius: 10px;
+        overflow: hidden;
+        border: 2px solid #ccc;
+        height: 350px;
+        width: 450px;
+    }
 
+    @media (min-width: 900px) and (max-width: 1399px) {
+        gmp-map {
+            height: 350px;
+            width: 400px;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        gmp-map {
+            height: 450px;
+            width: 550px;
+        }
+    }
+</style>
 </body>
 
 </html>

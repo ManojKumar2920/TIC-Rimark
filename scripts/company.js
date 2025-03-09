@@ -273,7 +273,7 @@ notifications.forEach(notification => {
 
 // Business Info Data
 const businessDetails = {
-    name: "Burger King Burger King Burger King Burger King",
+    name: "Burger K  ",
     address: "Hush Life, Plot No H-154, B Block, Sector 63, Noida, Uttar Pradesh 201301, India",
     hours: "Open 8 am - 10 pm",
     mutualFriendsText: "See your mutual Friends Suggestion",
@@ -303,8 +303,8 @@ const truncateText = (text, length) =>
 const container = document.getElementById("businessInfo");
 container.innerHTML = `
 <div class="md:shadow-none gap-2 md:w-full  w-[20rem] shadow-xl bg-white md:bg-transparent rounded-[6px] md:block flex items-center flex-col md:p-0 px-2 py-4">
-   <h1 class="text-[20px] md:text-[70px] font-semibold md:font-bold text-[#3E4462] md:text-white">
-        ${truncateText(businessDetails.name, 14)}
+   <h1 class="text-[20px] md:text-[50px] font-semibold md:font-bold text-[#3E4462] md:text-white">
+        ${truncateText(businessDetails.name, 20)}
     </h1>
     <h2 class="md:hidden block text-center text-[#7E7E7E] text-[16px]">${businessDetails.address}</h2>
     <h3 class="md:hidden block -mt-2 text-[14px]">Open <span class="text-[#7E7E7E]">${businessDetails.hours}</span></h3>
@@ -365,8 +365,8 @@ const rimarksContainer = document.getElementById("Rimark");
 // Render Rimarks dynamically
 rimarksData.map((item) => {
     const card = document.createElement("div");
-    card.className = "rounded-[12px] md:w-full w-[100%] px-2 md:px-6 py-8 bg-white shadow-md";
-    card.style = "box-shadow: 0px 4px 24px 0px #00000014";
+    card.className = "rounded-[12px] md:w-full w-[100%] px-2 md:px-6 py-8 bg-white shadow-md ";
+    card.style = "box-shadow: 0px 4px 24px 0px #00000014; border: 1px solid #00000014";
 
     // Generate stars dynamically based on the stars property
     const stars = Array.from({ length: 5 }, (_, index) =>
@@ -376,7 +376,7 @@ rimarksData.map((item) => {
     ).join("");
 
     card.innerHTML = `
-        <div class="flex justify-center md:w-full w-[100%] md:items-start space-x-4">
+        <div class="flex justify-center md:w-full w-[100%] md:items-start space-x-4" >
             <img src=${item.avatar} alt="Profile Image" class="hidden md:block w-12 h-12 rounded-full">
             <div class="md:w-full w-[100%]">
                 <img src="./assets/profileico.png" alt="Profile Image" class="md:hidden block w-12 h-12 rounded-full">

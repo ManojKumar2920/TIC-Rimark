@@ -270,7 +270,7 @@ notifications.forEach(notification => {
 
 // Business Info Data
 const businessDetails = {
-    name: "Burger King Hush Life, Plot No H-154, B Block, Sector 63, Noida, Uttar Pradesh 201301, India",
+    name: "Burger King Hush  ",
     address: "Hush Life, Plot No H-154, B Block, Sector 63, Noida, Uttar Pradesh 201301, India",
     hours: "Open 8 am - 10 pm",
     mutualFriendsText: "See your mutual Friends Suggestion",
@@ -298,9 +298,9 @@ const truncateText = (text, length) =>
     text.length > length ? text.slice(0, length) + "..." : text;
 
 document.getElementById("businessInfo").innerHTML = `
-<div class="md:shadow-none gap-2 shadow-xl md:w-full  w-[20rem] bg-white md:bg-transparent rounded-[6px] md:block flex items-center flex-col md:p-0 px-2 py-4">
-    <h1 class="text-[20px] md:text-[70px] font-semibold md:font-bold text-[#3E4462] md:text-white">
-        ${truncateText(businessDetails.name, 20)}
+<div class="md:shadow-none gap-2 shadow-xl md:w-full   text-center  w-[20rem] bg-white md:bg-transparent rounded-[6px] md:block flex items-center flex-col md:p-0 px-2 py-4">
+    <h1 class="text-[20px] md:text-[50px] font-semibold md:font-bold text-[#3E4462] md:text-white">
+        ${truncateText(businessDetails.name, 25)}
     </h1>
     <h2 class="md:hidden block text-[#7E7E7E] text-[16px]">${businessDetails.address}</h2>
     <h3 class="md:hidden block -mt-2 text-[14px]">Open <span class="text-[#7E7E7E]">${businessDetails.hours}</span></h3>
